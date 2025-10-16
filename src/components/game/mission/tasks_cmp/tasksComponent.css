@@ -1,0 +1,129 @@
+/* Basic styling for each task item */
+.task-item {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-left: 4px solid #4a90e2;
+  padding: 15px 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  opacity: 0; /* Start hidden for animation */
+  transform: translateX(-100%); /* Start off-screen to the left */
+  display: flex;
+  align-items: center; /* Center align the items vertically */
+  gap: 15px; /* Increased gap for better spacing */
+}
+
+.task-item-icon {
+  width: 60px; /* Increased size */
+  height: 60px; /* Increased size */
+  min-width: 60px; /* Ensure it doesn't shrink */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: 'game-font';
+  font-weight: 900;
+  /* Shining box shadow effect */
+  box-shadow: 0 0 10px #4a90e2, 0 0 20px rgba(74, 144, 226, 0.5);
+  position: relative; /* For alignment reference */
+  animation: glowPulse 2s infinite ease-in-out;
+  overflow: hidden; /* To keep the icon content within the circle */
+}
+
+/* Task number styling */
+.task-number {
+  font-family: 'game-font';
+  font-size: 1.4rem; /* Larger font for the number */
+  position: absolute;
+}
+
+/* Create the check icon using a pseudo-element */
+.task-item-icon::before {
+  content: '✓';
+  position: absolute;
+  font-size: 1.8rem;
+  opacity: 0;
+  transform: scale(0);
+  text-shadow: 0 0 10px white, 0 0 15px white;
+  color: #2dfc52; /* Bright green color for check mark */
+}
+
+/* Make the description align to the left */
+.task-description {
+  align-items: flex-start;
+  min-height: 50px; /* Match the height of the icon */
+  flex: 1;
+  padding-top: 15px; /* Add padding to align with icon center */
+}
+
+/* Animation for a pulsing glow effect */
+@keyframes glowPulse {
+  0% {
+    box-shadow: 0 0 10px #4a90e2, 0 0 20px rgba(74, 144, 226, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 15px #4a90e2, 0 0 30px rgba(74, 144, 226, 0.7),
+      0 0 40px rgba(74, 144, 226, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 10px #4a90e2, 0 0 20px rgba(74, 144, 226, 0.5);
+  }
+}
+
+/* Animation definition for slide in */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Apply the animation */
+.task-item.animate-slide-in {
+  animation: slideInFromLeft 0.5s ease-out forwards;
+}
+
+/* Style adjustments for text inside task items */
+.task-item h2 {
+  margin-top: 0;
+  margin-bottom: 5px;
+  color: #e0e0e0; /* Lighter color for title */
+}
+.final-content-block h1 {
+  font-family: Arial, sans-serif;
+}
+.task-item p {
+  margin-bottom: 0;
+  color: #f6f5f5; /* Slightly dimmer color for description */
+  font-size: 1.2rem;
+  font-family: 'content-font-bold';
+}
+
+/* Ensure the container scrolls */
+.tasks-final-text-area {
+  max-height: 230px; /* Adjust as needed */
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding-right: 10px; /* Add some padding so scrollbar doesn't overlap content */
+}
+
+/* Styling for scrollbar (optional, webkit browsers) */
+.tasks-final-text-area::-webkit-scrollbar {
+  width: 20px;
+}
+
+.tasks-final-text-area::-webkit-scrollbar-track {
+  background: rgba(155, 77, 67, 0.1);
+  border-radius: 4px;
+}
+
+.tasks-final-text-area::-webkit-scrollbar-thumb {
+  background-color: rgba(23, 96, 241, 0.3);
+  border-radius: 4px;
+  width: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}

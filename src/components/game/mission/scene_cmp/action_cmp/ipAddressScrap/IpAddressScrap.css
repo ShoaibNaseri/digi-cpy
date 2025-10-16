@@ -1,0 +1,67 @@
+.ip-address-scrap-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.ip-address-img-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  position: relative;
+}
+
+.ip-address-img {
+  max-width: 70vh;
+  width: 100%;
+  height: auto;
+  display: block;
+  cursor: pointer;
+}
+
+.close-icon-container {
+  position: absolute;
+  right: 10px;
+  z-index: 10;
+  pointer-events: all;
+}
+
+/* For screens where image is at max-width (450px) */
+@media (min-width: 490px) {
+}
+
+/* For smaller screens where image fills available width */
+@media (max-width: 489px) {
+  .close-icon-container {
+    right: 30px;
+  }
+}
+
+.close-icon {
+  width: 35px;
+  height: 35px;
+  background: rgba(0, 0, 0, 0.7);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.close-icon:hover {
+  background: rgba(0, 0, 0, 0.9);
+  border-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}

@@ -1,0 +1,1321 @@
+{
+    "id": 3,
+    "title": "Online Scams & Password Protection",
+    "background_image_src": "assets/game/missions/mission_one/bg_imgs/mission_one_bg.webp",
+    "dialogue_bg_image_src": "assets/game/missions/mission_one/bg_imgs/dialogue_bg.webp",
+    "intro_scene": {
+        "background": "digipalz_headquarter.webp",
+        "next_scene": "article",
+        "characters": {
+            "astra": {
+                "name": "Astra",
+                "image": "astra.png",
+                "canAnimate": true,
+                "position": "center"
+            },
+            "robotoro": {
+                "name": "Robotoro",
+                "image": "robotoro.png",
+                "canAnimate": false,
+                "position": "left"
+            }
+        },
+        "dialogues": [
+            {
+                "sequence": 1294,
+                "speaker": "robotoro",
+                "text": "Great job on the last mission, Digipalz! Exciting news - we have a new Digipal! This is Astra!",
+                "narration": "game/missions/mission_3/narrations/Robotoro_1294.mp3",
+                "animation": "fadeIn",
+                "hasAction": false
+            },
+            {
+                "sequence": 1305,
+                "speaker": "astra",
+                "text": "Hey friends! I’m so excited to join the mission, let’s go!",
+                "narration": "game/missions/mission_3/narrations/Astra_1305.mp3",
+                "animation": "fadeIn",
+                "hasAction": false
+            },
+            {
+                "sequence": 1296,
+                "speaker": "robotoro",
+                "text": "Before you start your next mission, I’d like to tell you about a story reported in several online newspapers about a baby monitor being hacked in Houston, Texas. It was a very frightening experience for the parents. Listen to the story. I want you to think about how many speakers you may have in your house that could be hacked – your computer, a baby monitor, a smart speaker and even a doorbell camera which more and more families are using for their houses.",
+                "narration": "game/missions/mission_3/narrations/Robotoro_1296.mp3",
+                "animation": "fadeIn",
+                "hasAction": false
+            }
+        ]
+    },
+    "article": {
+        "next_scene": "aza-check",
+        "content": [
+            {
+                "title": "I’m In Your Baby’s Room",
+                "content": "Could you imagine hearing a creepy stranger's voice coming from your baby's room in the middle of the night? That's exactly what happened to the Roberts family in Texas, and their story is like something out of a scary movie – except it was real. One night, Ellen and Nathan Roberts were sound asleep when a weird beeping noise jolted them awake. Then something terrifying happened: a man's voice started coming through their baby monitor. Ellen said the voice gave her chills. Nathan raced to the baby's room, heart pounding. But here's the weird part – no one was there. They quickly unplugged the baby monitor and their Wi-Fi and called the police. Later, they discovered the shocking truth: a hacker had broken into their baby monitor through the internet. You might be thinking, how is that even possible? Well, the Roberts were using a Bella baby monitor, which connects to Wi-Fi so parents can check on their baby using their phones. Pretty cool, right? But here's the catch – if you don't set it up safely, hackers can break into the device. The company, Bella, said this often happens when people use the same passwords they've used on other websites that have been hacked. And get this – the Roberts aren't alone. Other families have reported odd things happening with their baby monitors too. Some have seen their cameras moving by themselves, and in one case, a person claiming to be a \"security researcher\" started chatting with a family through their camera. Talk about creepy! The Roberts were lucky – the hacker just scared them, but because they turned it off right away, nothing else happened. But their story teaches us something super important: anything connected to the internet needs to be protected, whether it's a baby monitor, a security camera, or even a smart speaker. The best way to protect your devices is by using a strong and unique password."
+            }
+        ],
+        "profile_image": "baby_article.webp"
+    },
+    "azabuki_check": {
+        "character_name": "Azabuki",
+        "title": "Mr. Azabuki Check In",
+        "message": "I can only imagine how frightening that would be for a parent and how scared they were, thinking someone was in their baby’s room. If you ever encounter a stranger speaking to you through a device, do what the Robert’s did: immediately unplug the device, cover any cameras and tell your parent or a trusted adult. In this mission you’ll learn why your best line of defense against hackers is to use strong passwords. Don’t worry, we’ll cover how to do that. Ready to start your mission?",
+        "narration": "game/missions/mission_3/narrations/Azabuki_1473.mp3",
+        "next_scene": "mission_brief"
+    },
+    "mission_brief": [
+        {
+            "title": "Mission Brief",
+            "description": "Every time you log in to a game, send a message, or use an app, you're unlocking a door to your online world. But just like in real-life, doors need strong locks to stay safe. In this mission, you’ll learn how to build powerful passwords that protect your accounts — and what can happen if someone breaks in. That kind of break-in is called an account takeover, or ATO, and it can lead to stolen messages, changed settings, or even deleted progress in your favorite game. You’ll also discover four simple habits that help keep your passwords strong over time, how to stay safe when using shared or public devices, and why multi-factor authentication is like having an extra lock on your door. By the end of this mission, you’ll have the tools to guard your digital life — and stop others from getting into your accounts without permission. ",
+            "narration": "game/missions/mission_3/narrations/Robotoro_1474.mp3",
+            "duration": 45
+        },
+        {
+            "title": "Mission Brief",
+            "description": "Your mission awaits you. Mrs. Delavoy has called you Digipalz to help with a scary situation she is facing. She needs your help in solving what’s happening at her home.",
+            "narration": "game/missions/mission_3/narrations/Robotoro_1475.mp3",
+            "duration": 10,
+            "next_scene": "mission_tasks"
+        }
+    ],
+    "mission_tasks": {
+        "title": "Mission Tasks",
+        "next_scene": "scenes",
+        "important_info": "Your mission tasks.  Read them carefully.   This is what you will be quizzed on.",
+        "tasks": [
+            {
+                "id": 1,
+                "title": "Task 1",
+                "description": "Explain the importance of creating strong passwords and how to do it",
+                "narration": "game/missions/mission_3/narrations//Robotoro_1480.mp3"
+            },
+            {
+                "id": 2,
+                "title": "Task 2",
+                "description": "Define account takeover (ATO), how it happens, and what could happen as a result",
+                "narration": "game/missions/mission_3/narrations/Robotoro_1481.mp3"
+            },
+            {
+                "id": 3,
+                "title": "Task 3",
+                "description": "Identify and explain four steps to keep passwords protected over time",
+                "narration": "game/missions/mission_3/narrations/Robotoro_1482.mp3"
+            },
+            {
+                "id": 4,
+                "title": "Task 4",
+                "description": "Demonstrate safe habits when using shared or public devices.",
+                "narration": "game/missions/mission_3/narrations/Robotoro_1483.mp3"
+            },
+            {
+                "id": 5,
+                "title": "Task 5",
+                "description": "Define multi-factor authentication (MFA) and explain why it is important",
+                "narration": "game/missions/mission_3/narrations/Robotoro_1485.mp3"
+            },
+            {
+                "id": 6,
+                "title": "Task 6",
+                "description": "Understand what biometric data is and how it works",
+                "narration": "game/missions/mission_3/narrations/Robotoro_1486.mp3"
+            }
+        ]
+    },
+    "scenes": [
+        {
+            "id": "1",
+            "background": "digipalz_headquarter.webp",
+            "characters": {
+                "milo": {
+                    "name": "Milo",
+                    "image": "milo.png",
+                    "position": "center",
+                    "canAnimate": true
+                },
+                "luna": {
+                    "name": "Luna",
+                    "image": "luna.png",
+                    "position": "center",
+                    "canAnimate": true
+                }
+            },
+            "dialogues": [
+                {
+                    "sequence": 1,
+                    "hasOnlyAction": true,
+                    "action": {
+                        "type": "receive_phone_call",
+                        "action_data": {
+                            "callerName": "Mrs. Delavoy",
+                            "callerImage": "mrs_delavoy.png",
+                            "callNarrations": [
+                                "game/missions/mission_3/narrations/Mrs.D_1315.mp3",
+                                "game/missions/mission_3/narrations/Luna_1351.mp3",
+                                "game/missions/mission_3/narrations/Mrs.D_1316.mp3",
+                                "game/missions/mission_3/narrations/Luna_1360.mp3",
+                                "game/missions/mission_3/narrations/Mrs.D_1318.mp3"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "id": "2",
+            "background": "kitchen.jpg",
+            "characters": {
+                "mrsDelavoy": {
+                    "name": "Mrs. Delavoy",
+                    "image": "mrs_delavoy.png",
+                    "canAnimate": false,
+                    "position": "left"
+                },
+                "luna": {
+                    "name": "Luna",
+                    "image": "luna.png",
+                    "position": "center",
+                    "canAnimate": true
+                },
+                "astra": {
+                    "name": "Astra",
+                    "image": "astra.png",
+                    "position": "center",
+                    "canAnimate": true
+                },
+                "milo": {
+                    "name": "Milo",
+                    "image": "milo.png",
+                    "position": "center",
+                    "canAnimate": true
+                },
+                "declan": {
+                    "name": "Declan",
+                    "image": "declan.png",
+                    "position": "center",
+                    "canAnimate": true
+                }
+            },
+            "dialogues": [
+                {
+                    "sequence": 1326,
+                    "speaker": "mrsDelavoy",
+                    "text": "Welcome back Digipalz. Thank you for getting here so quickly. I’m just putting a batch of chocolate chip cookies in the oven.",
+                    "narration": "game/missions/mission_3/narrations/Mrs.D_1326.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1361,
+                    "speaker": "luna",
+                    "text": "I brought another member of the Digipalz team with us, this is Astra.",
+                    "narration": "game/missions/mission_3/narrations/Luna_1361.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1328,
+                    "speaker": "mrsDelavoy",
+                    "text": "Hello Astra, I’m glad you could come.",
+                    "narration": "game/missions/mission_3/narrations/Mrs.D_1328.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1389,
+                    "speaker": "astra",
+                    "text": "I’m pleased to meet you Mrs. Delavoy. What a beautiful kitchen you have. I’m happy to see so many smart appliances.",
+                    "narration": "game/missions/mission_3/narrations/Astra_1389.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1439,
+                    "speaker": "mrsDelavoy",
+                    "text": "Yes, they make life so much easier.",
+                    "narration": "game/missions/mission_3/narrations/Mrs.D_1439.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1390,
+                    "speaker": "astra",
+                    "text": "I heard Luna and Milo were discussing Digital Footprints with you last time they were here.",
+                    "narration": "game/missions/mission_3/narrations/Astra_1390.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1564,
+                    "speaker": "declan",
+                    "text": "I never thought I’d say this, but am I glad to see you! Wait, who are you?",
+                    "narration": "game/missions/mission_3/narrations/Declan_1564.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1391,
+                    "speaker": "astra",
+                    "text": "Hi! My name’s Astra and I just joined the Digipalz team. I assume you’re Declan. We’re here to help. What’s going on?",
+                    "narration": "game/missions/mission_3/narrations/Astra_1391.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1331,
+                    "speaker": "mrsDelavoy",
+                    "text": "OK, everybody, the cookies are out of the oven. Come have some milk and cookies while I explain why I called you up here.",
+                    "narration": "game/missions/mission_3/narrations/Mrs.D_1331.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1441,
+                    "speaker": "milo",
+                    "text": "Mrs. D., I thought you’d never ask… About the cookies, I mean.",
+                    "narration": "game/missions/mission_3/narrations/Milo_1441.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1394,
+                    "speaker": "astra",
+                    "text": "They smell soooo good! I’m diabetic, so unfortunately, I can’t have any, but I’m happy to munch on these carrot sticks you have on the table.",
+                    "narration": "game/missions/mission_3/narrations/Astra_1394.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": true,
+                    "action": {
+                        "type": "image_popup",
+                        "action_data": {
+                            "image_url": "cookies.png",
+                            "animation": "fadeIn",
+                            "has_sound": true,
+                            "sound_url": "eat.wav",
+                            "sound_duration": 1000,
+                            "sound_volume": 1,
+                            "sound_play": "onClick"
+                        }
+                    }
+                },
+                {
+                    "sequence": 1332,
+                    "speaker": "mrsDelavoy",
+                    "text": "I can see you’re really hungry Milo. Watch the crumbs on the floor, dear. OK, so here’s what’s happening. We have been hearing strange noises and creepy music coming from the smart speaker in Sophie’s room, usually in the middle of the night.",
+                    "narration": "game/missions/mission_3/narrations/Mrs.D_1332.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1395,
+                    "speaker": "astra",
+                    "text": "Who’s Sophie?",
+                    "narration": "game/missions/mission_3/narrations/Astra_1395.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1419,
+                    "speaker": "declan",
+                    "text": "She’s my annoying 3-year-old sister.",
+                    "narration": "game/missions/mission_3/narrations/Declan_1419.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1335,
+                    "speaker": "mrsDelavoy",
+                    "text": "She’s not annoying Declan, she just wants to play with you. Anyways, the noises, whispering and creepy music have been playing on and off for the last week. We thought it would go away, but it keeps coming back!",
+                    "narration": "game/missions/mission_3/narrations/Mrs.D_1335.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1421,
+                    "speaker": "declan",
+                    "text": "Like it really freaks me out. Mom! I told you this house is haunted!",
+                    "narration": "game/missions/mission_3/narrations/Declan_1421.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": true,
+                    "action": {
+                        "type": "ghost_hunt"
+                    }
+                },
+                {
+                    "sequence": 1336,
+                    "speaker": "mrsDelavoy",
+                    "text": "Oh Declan, that’s absurd. The house isn’t haunted. I think it might be some sort of interference.",
+                    "narration": "game/missions/mission_3/narrations/Mrs.D_1336.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1422,
+                    "speaker": "declan",
+                    "text": "Oh yes it is! We’ve both heard the ghosts and gone into Sophie’s room – no one’s there! It’s haunted, I tell you!",
+                    "narration": "game/missions/mission_3/narrations/Declan_1422.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1337,
+                    "speaker": "mrsDelavoy",
+                    "text": "Declan, you’re being ridiculous. Let’s go upstairs and see.",
+                    "narration": "game/missions/mission_3/narrations/Mrs.D_1337.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                }
+            ]
+        },
+        {
+            "id": "3",
+            "background": "baby_room.webp",
+            "characters": {
+                "declan": {
+                    "name": "Declan",
+                    "image": "declan.png",
+                    "canAnimate": true,
+                    "position": "left"
+                },
+                "astra": {
+                    "name": "Astra",
+                    "image": "astra.png",
+                    "position": "center",
+                    "canAnimate": true
+                },
+                "luna": {
+                    "name": "Luna",
+                    "image": "luna.png",
+                    "position": "center",
+                    "canAnimate": true
+                }
+            },
+            "dialogues": [
+                {
+                    "sequence": 1487,
+                    "speaker": "astra",
+                    "text": "You mentioned that you’re hearing whispers. What are they whispering?",
+                    "narration": "game/missions/mission_3/narrations/Astra_1487.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1437,
+                    "speaker": "declan",
+                    "text": "I don’t know what they’re saying, I think it’s in a different language.",
+                    "narration": "game/missions/mission_3/narrations/Declan_1437.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1365,
+                    "speaker": "luna",
+                    "text": "Declan, I can see you’re frightened. It’s normal to feel that way, especially when you don’t know where the sounds are coming from. You don’t feel safe, do you?",
+                    "narration": "game/missions/mission_3/narrations/Luna_1365.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1438,
+                    "speaker": "declan",
+                    "text": "I definitely don’t feel safe. And little Sophie is not safe either.",
+                    "narration": "game/missions/mission_3/narrations/Declan_1438.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                }
+            ]
+        },
+        {
+            "id": "4",
+            "background": "baby_monitor.webp",
+            "characters": {
+                "speaker": {
+                    "name": "Smart Speaker",
+                    "image": "speaker.png",
+                    "canAnimate": true,
+                    "position": "left"
+                },
+                "declan": {
+                    "name": "Declan",
+                    "image": "declan.png",
+                    "position": "center",
+                    "canAnimate": true
+                },
+                "luna": {
+                    "name": "Luna",
+                    "image": "luna.png",
+                    "position": "center",
+                    "canAnimate": true
+                },
+                "astra": {
+                    "name": "Astra",
+                    "image": "astra.png",
+                    "position": "center",
+                    "canAnimate": true
+                },
+                "mrsDelavoy": {
+                    "name": "Mrs. Delavoy",
+                    "image": "mrs_delavoy.png",
+                    "position": "left",
+                    "canAnimate": true
+                }
+            },
+            "dialogues": [
+                {
+                    "sequence": 1468,
+                    "hasOnlyNarration": true,
+                    "narration": "game/missions/mission_3/narrations/Smart_Speaker_1468.mp3",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1556,
+                    "speaker": "declan",
+                    "text": "Did you hear that? It’s so creepy.",
+                    "narration": "game/missions/mission_3/narrations/Declan_1556.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1466,
+                    "hasOnlyNarration": true,
+                    "narration": "game/missions/mission_3/narrations/Smart_Speaker_1466.mp3",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1535,
+                    "speaker": "luna",
+                    "text": "I’m calling Headquarters right now.",
+                    "narration": "game/missions/mission_3/narrations/Luna_1535.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 4000,
+                    "hasOnlyAction": true,
+                    "action": {
+                        "type": "phone_call",
+                        "action_data": {
+                            "phoneNumber": "705-996-1111",
+                            "callerName": "Luna",
+                            "callingTo": "Robotoro",
+                            "callingToImage": "robotoro.png",
+                            "callerImage": "luna.png",
+                            "callNarrations": [
+                                "game/missions/mission_3/narrations/Robotoro_1476.mp3",
+                                "game/missions/mission_3/narrations/Luna_1507.mp3",
+                                "game/missions/mission_3/narrations/Robotoro_1460.mp3",
+                                "game/missions/mission_3/narrations/Luna_1510.mp3",
+                                "game/missions/mission_3/narrations/Robotoro_1477.mp3"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "sequence": 1516,
+                    "speaker": "luna",
+                    "text": "Not only that, but microphones on smart speakers are always active because they are waiting for your verbal commands or questions! In fact, someone could be listening to us right now!",
+                    "narration": "game/missions/mission_3/narrations/Luna_1516.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1397,
+                    "speaker": "astra",
+                    "text": "Mrs. Delavoy, do you have a PIN or password on this smart speaker? All webcams are connected to the home wifi network. Hackers have many ways to access webcams, and there are even websites that scan the web and list millions of webcams that are not secure.",
+                    "narration": "game/missions/mission_3/narrations/Astra_1397.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1343,
+                    "speaker": "mrsDelavoy",
+                    "text": "The speaker came preloaded with the PIN, “1234” so I just plugged it in.",
+                    "narration": "game/missions/mission_3/narrations/Mrs.D_1343.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1371,
+                    "speaker": "luna",
+                    "text": "Hackers always try the easy PINs first, like “1234” or “0000”. It makes it very easy for experienced hackers to gain access to your system. You should never use the default PIN or password; instead change it to a number that is hard to guess. Even better, if you can make it six numbers instead of four, that’ll be even more secure.",
+                    "narration": "game/missions/mission_3/narrations/Luna_1371.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1424,
+                    "speaker": "declan",
+                    "text": "How do we make it more secure?",
+                    "narration": "game/missions/mission_3/narrations/Declan_1424.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1536,
+                    "speaker": "mrsDelavoy",
+                    "text": "Before we talk about that I need to kick everyone out. It’s time for Sophie to take her nap now. Why don’t we go to Declan’s room?",
+                    "narration": "game/missions/mission_3/narrations/Mrs.D_1536.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                }
+            ]
+        },
+        {
+            "id": "5",
+            "background": "declan_bedroom.webp",
+            "characters": {
+                "declan": {
+                    "name": "Declan",
+                    "image": "declan.png",
+                    "canAnimate": true,
+                    "position": "left"
+                },
+                "milo": {
+                    "name": "Milo",
+                    "image": "milo.png",
+                    "position": "center",
+                    "canAnimate": true
+                },
+                "luna": {
+                    "name": "Luna",
+                    "image": "luna.png",
+                    "position": "center",
+                    "canAnimate": true
+                },
+                "mrsDelavoy": {
+                    "name": "Mrs. Delavoy",
+                    "image": "mrs_delavoy.png",
+                    "position": "left",
+                    "canAnimate": true
+                },
+                "astra": {
+                    "name": "Astra",
+                    "image": "astra.png",
+                    "position": "center",
+                    "canAnimate": true
+                }
+            },
+            "dialogues": [
+                {
+                    "sequence": 1558,
+                    "speaker": "declan",
+                    "text": "Ok, can you explain how we’re supposed to make our pins or passwords more secure?",
+                    "narration": "game/missions/mission_3/narrations/Declan_1558.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1443,
+                    "speaker": "milo",
+                    "text": "For PINs, you want to use a unique set of numbers. For passwords, you should have at least 12 characters containing a mixture of symbols, numbers, capital letters and lowercase letters. Most browsers ask if you want to remember your password, you can check “yes” because it saves it in a secure place.",
+                    "narration": "game/missions/mission_3/narrations/Milo_1443.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1518,
+                    "speaker": "luna",
+                    "text": "But don’t forget this! If the device is a shared device, like a school library computer, never check the box that says “remember your password”. Only check it off if you own the device personally.",
+                    "narration": "game/missions/mission_3/narrations/Luna_1518.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": true,
+                    "action": {
+                        "type": "save_password"
+                    }
+                },
+                {
+                    "sequence": 1,
+                    "hasOnlyAction": true,
+                    "action": {
+                        "type": "receive_phone_call",
+                        "action_data": {
+                            "callerName": "Robotoro",
+                            "callerImage": "robotoro.png",
+                            "callNarrations": [
+                                "game/missions/mission_3/narrations/Robotoro_1459.mp3"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "sequence": 2,
+                    "hasOnlyAction": true,
+                    "action": {
+                        "type": "password_inspector"
+                    }
+                },
+                {
+                    "sequence": 1401,
+                    "speaker": "astra",
+                    "text": "Mrs. Delavoy and Declan, there are 4 other things you must remember about passwords:",
+                    "narration": "game/missions/mission_3/narrations/Astra_1401.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 5000,
+                    "hasOnlyAction": true,
+                    "action": {
+                        "type": "image_sound",
+                        "action_data": {
+                            "images": [
+                                {
+                                    "image": "password_rule1.png",
+                                    "voiceover": "game/missions/mission_3/narrations/Astra_1488.mp3",
+                                    "alt": "Password rule 1"
+                                },
+                                {
+                                    "image": "password_rule2.png",
+                                    "voiceover": "game/missions/mission_3/narrations/Astra_1489.mp3",
+                                    "alt": "Password rule 2"
+                                },
+                                {
+                                    "image": "password_rule3.png",
+                                    "voiceover": "game/missions/mission_3/narrations/Astra_1490.mp3",
+                                    "alt": "Password rule 3"
+                                },
+                                {
+                                    "image": "password_rule4.png",
+                                    "voiceover": "game/missions/mission_3/narrations/Astra_1491.mp3",
+                                    "alt": "Password rule 4"
+                                }
+                            ],
+                            "volume": 0.9,
+                            "hasButton": true,
+                            "buttonText": "Next"
+                        }
+                    }
+                },
+                {
+                    "sequence": 1344,
+                    "speaker": "mrsDelavoy",
+                    "text": "Oh, my goodness, there’s so much to remember! Other than weird sounds coming through the speakers, are there other ways to tell if someone else is accessing our device?",
+                    "narration": "game/missions/mission_3/narrations/Mrs.D_1344.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1492,
+                    "speaker": "milo",
+                    "text": "Good question, Mrs. D. These are the red flags to watch out for…",
+                    "narration": "game/missions/mission_3/narrations/Milo_1492.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": true,
+                    "action": {
+                        "type": "image_sound",
+                        "action_data": {
+                            "images": [
+                                {
+                                    "image": "red_flag1.png",
+                                    "voiceover": "game/missions/mission_3/narrations/Milo_1493.mp3",
+                                    "alt": "Red flag 1"
+                                },
+                                {
+                                    "image": "red_flag2.png",
+                                    "voiceover": "game/missions/mission_3/narrations/Milo_1494.mp3",
+                                    "alt": "Red flag 2"
+                                },
+                                {
+                                    "image": "red_flag3.png",
+                                    "voiceover": "game/missions/mission_3/narrations/Milo_1495.mp3",
+                                    "alt": "Red flag 3"
+                                }
+                            ],
+                            "volume": 0.9,
+                            "hasButton": true,
+                            "buttonText": "Next"
+                        }
+                    }
+                },
+                {
+                    "sequence": 1496,
+                    "speaker": "milo",
+                    "text": "If any of these things are happening, change your device passwords immediately.",
+                    "narration": "game/missions/mission_3/narrations/Milo_1496.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1521,
+                    "speaker": "luna",
+                    "text": "That’s not all – we haven’t discussed something called “Multi-Factor Authentication” which is an extra step you have to take when logging into your online bank account, and on many different websites and apps.",
+                    "narration": "game/missions/mission_3/narrations/Luna_1521.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1426,
+                    "speaker": "declan",
+                    "text": "Multi-Factor Authentication? Wow, that’s a mouthful. What is it, anyhow?",
+                    "narration": "game/missions/mission_3/narrations/Declan_1426.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1522,
+                    "speaker": "luna",
+                    "text": "It’s one step further in terms of security. Even if hackers figure out your password, they still need a special code that is sent to your phone to get in.",
+                    "narration": "game/missions/mission_3/narrations/Luna_1522.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1497,
+                    "speaker": "milo",
+                    "text": "It’s like having a double lock on your door. If you go on a site that requires Multi-Factor Authentication, you first have to enter your username. Next, you enter your password. The site will then send a 4 or 5 digit code to your device, usually your cell phone, which looks like this…",
+                    "narration": "game/missions/mission_3/narrations/Milo_1497.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": true,
+                    "action": {
+                        "type": "phone_code"
+                    }
+                },
+                {
+                    "sequence": 1565,
+                    "speaker": "milo",
+                    "text": "Or it can be in the form of an email sent right to your inbox. It looks like this….",
+                    "narration": "game/missions/mission_3/narrations/Milo_1565.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": true,
+                    "action": {
+                        "type": "image_popup",
+                        "action_data": {
+                            "image_url": "email.png",
+                            "animation": "fadeIn",
+                            "has_sound": false
+                        }
+                    }
+                },
+                {
+                    "sequence": 1499,
+                    "speaker": "milo",
+                    "text": "You then have a few minutes to enter that code on the website or app, or it won’t give you access to your account.",
+                    "narration": "game/missions/mission_3/narrations/Milo_1499.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1380,
+                    "speaker": "luna",
+                    "text": "OK Digipal, what are you waiting for? Put the code in before it times out!",
+                    "narration": "game/missions/mission_3/narrations/Luna_1380.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": true,
+                    "action": {
+                        "type": "authentication_factor_game"
+                    }
+                },
+                {
+                    "sequence": 1408,
+                    "speaker": "astra",
+                    "text": "Typically, if you have three failed attempts, then you are locked out of your account.",
+                    "narration": "game/missions/mission_3/narrations/Astra_1408.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1428,
+                    "speaker": "declan",
+                    "text": "What do you mean you’re locked out of your account? Forever?",
+                    "narration": "game/missions/mission_3/narrations/Declan_1428.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1409,
+                    "speaker": "astra",
+                    "text": "No, usually just for 24 hours. But if you keep trying and getting locked out, it could be much longer. I know it’s all a bit overwhelming, but you will get used to it.",
+                    "narration": "game/missions/mission_3/narrations/Astra_1409.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1429,
+                    "speaker": "declan",
+                    "text": "This is filling up my brain. I’m starting to get a headache.",
+                    "narration": "game/missions/mission_3/narrations/Declan_1429.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1384,
+                    "speaker": "luna",
+                    "text": "I know, but it’s important to follow these safety steps. They may seem like extra work, but it’s way better than having a creepy stranger eaves-dropping on you or your family through your devices.",
+                    "narration": "game/missions/mission_3/narrations/Luna_1384.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1537,
+                    "speaker": "mrsDelavoy",
+                    "text": "We have a computer that we all share in the family office. Shouldn’t we go there to make sure it’s secure too?",
+                    "narration": "game/missions/mission_3/narrations/Mrs.D_1537.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1538,
+                    "speaker": "astra",
+                    "text": "Good thinking, Mrs. Delavoy. Yes, let’s check it out.",
+                    "narration": "game/missions/mission_3/narrations/Astra_1538.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                }
+            ]
+        },
+        {
+            "id": "6",
+            "background": "cabin_family_room.webp",
+            "characters": {
+                "declan": {
+                    "name": "Declan",
+                    "image": "declan.png",
+                    "canAnimate": true,
+                    "position": "left"
+                },
+                "mrsDelavoy": {
+                    "name": "Mrs.Delavoy",
+                    "image": "mrs_delavoy.png",
+                    "position": "left",
+                    "canAnimate": true
+                },
+                "milo": {
+                    "name": "Milo",
+                    "image": "milo.png",
+                    "position": "center",
+                    "canAnimate": true
+                },
+                "astra": {
+                    "name": "Astra",
+                    "image": "astra.png",
+                    "position": "center",
+                    "canAnimate": true
+                }
+            },
+            "dialogues": [
+                {
+                    "sequence": 1539,
+                    "speaker": "astra",
+                    "text": "What’s the first thing you notice about this setup?",
+                    "narration": "game/missions/mission_3/narrations/Astra_1539.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": true,
+                    "action": {
+                        "type": "what_you_see"
+                    }
+                },
+                {
+                    "sequence": 1638,
+                    "speaker": "milo",
+                    "text": "There’s one more physical step you can take to protect yourself. If your computer or smart device doesn’t come with a lens cover, it’s extremely important to cover up your camera unless you are using it. You can use tape, a sticky note, or a sticker! You would not believe how easy it is for hackers to watch you through the camera lens. That means they can turn your camera on and off, and take photos and videos.",
+                    "narration": "game/missions/mission_3/narrations/Milo_1638.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1430,
+                    "speaker": "declan",
+                    "text": "Well, that definitely wouldn’t happen to me. I have a red light that goes on when my camera is on. So I would see it if a hacker turned my camera on.",
+                    "narration": "game/missions/mission_3/narrations/Declan_1430.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1451,
+                    "speaker": "milo",
+                    "text": "Oh, no, Declan. Hackers are way beyond that nowadays. They also know how to turn that light off. Webcam hackers can remotely activate your camera, often through code that’s embedded in a virus you’ve been sent. You won’t even know. Tape over your camera or ask your mom to buy a sliding webcam cover to stick onto your monitor. They’re ultra thin and can be used on a laptop too. If you have attached your webcam to the top of your computer, or it sits on the desk beside your computer, just put a sock over it!",
+                    "narration": "game/missions/mission_3/narrations/Milo_1451.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1431,
+                    "speaker": "declan",
+                    "text": "OK, well, now I know what to do with the other sock.",
+                    "narration": "game/missions/mission_3/narrations/Declan_1431.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": true,
+                    "action": {
+                        "type": "image_popup",
+                        "action_data": {
+                            "image_url": "sock.png",
+                            "animation": "fadeIn",
+                            "has_sound": true,
+                            "sound_url": "eww.mp3",
+                            "sound_duration": 1000,
+                            "sound_volume": 1,
+                            "sound_play": "onClick"
+                        }
+                    }
+                },
+                {
+                    "sequence": 1452,
+                    "speaker": "milo",
+                    "text": "What do you mean?",
+                    "narration": "game/missions/mission_3/narrations/Milo_1452.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1432,
+                    "speaker": "declan",
+                    "text": "Mom always tells me to put a sock in it when I talk too much.",
+                    "narration": "game/missions/mission_3/narrations/Declan_1432.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1345,
+                    "speaker": "mrsDelavoy",
+                    "text": "Oh Declan, I don’t say it that often. It’s a figure of speech, you don’t actually put the sock in your mouth!",
+                    "narration": "game/missions/mission_3/narrations/Mrs.D_1345.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1433,
+                    "speaker": "declan",
+                    "text": "I did it once, and it was nasty.",
+                    "narration": "game/missions/mission_3/narrations/Declan_1433.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1410,
+                    "speaker": "astra",
+                    "text": "OK, well, I’ll let you two sort that out. Anyhow, the highest level of security is when you are asked for your fingerprint or facial recognition. The newer computers and cell phones use that technology a lot now.",
+                    "narration": "game/missions/mission_3/narrations/Astra_1410.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": true,
+                    "action": {
+                        "type": "thumb_scan"
+                    }
+                },
+                {
+                    "sequence": 1436,
+                    "speaker": "declan",
+                    "text": "I know where else they use facial recognition. When we flew to the Cayman Islands on our last trip, we had to scan our faces at security and again before boarding. But I don’t really know how it works.",
+                    "narration": "game/missions/mission_3/narrations/Declan_1436.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1542,
+                    "speaker": "astra",
+                    "text": "We Digipalz have a superpower that we use sometimes called portal transit. When we use it, we can travel through a portal to a new location! Let’s try it to see if we can go to the airport.",
+                    "narration": "game/missions/mission_3/narrations/Astra_1542.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": true,
+                    "action": {
+                        "type": "image_popup",
+                        "action_data": {
+                            "image_url": "portal.png",
+                            "animation": "fadeIn",
+                            "has_sound": true,
+                            "sound_url": "magic.wav",
+                            "sound_duration": 1000,
+                            "sound_volume": 1,
+                            "sound_play": "onClick"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "id": "7",
+            "background": "cayman_airport.webp",
+            "characters": {
+                "declan": {
+                    "name": "Declan",
+                    "image": "declan.png",
+                    "canAnimate": true,
+                    "position": "center"
+                },
+                "milo": {
+                    "name": "Milo",
+                    "image": "milo.png",
+                    "position": "center",
+                    "canAnimate": true
+                }
+            },
+            "dialogues": [
+                {
+                    "sequence": 1559,
+                    "speaker": "declan",
+                    "text": "Wow, that’s really cool!",
+                    "narration": "game/missions/mission_3/narrations/Declan_1559.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1500,
+                    "speaker": "milo",
+                    "text": "Let’s ask security what their technology does!",
+                    "narration": "game/missions/mission_3/narrations/Milo_1500.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                }
+            ]
+        },
+        {
+            "id": "8",
+            "background": "cayman_security_gate.webp",
+            "characters": {
+                "officerEbanks": {
+                    "name": "Officer Ebanks",
+                    "image": "officer_ebanks.png",
+                    "position": "left",
+                    "canAnimate": false
+                },
+                "declan": {
+                    "name": "Declan",
+                    "image": "declan.png",
+                    "canAnimate": true,
+                    "position": "center"
+                },
+                "mrsDelavoy": {
+                    "name": "Mrs.Delavoy",
+                    "image": "mrs_delavoy.png",
+                    "position": "center",
+                    "canAnimate": true
+                },
+                "milo": {
+                    "name": "Milo",
+                    "image": "milo.png",
+                    "position": "center",
+                    "canAnimate": true
+                },
+                "luna": {
+                    "name": "Luna",
+                    "image": "luna.png",
+                    "position": "center",
+                    "canAnimate": true
+                },
+                "astra": {
+                    "name": "Astra",
+                    "image": "astra.png",
+                    "position": "center",
+                    "canAnimate": true
+                }
+            },
+            "dialogues": [
+                {
+                    "sequence": 1545,
+                    "speaker": "officerEbanks",
+                    "text": "Whoa there Digipalz! Do you have a boarding pass?",
+                    "narration": "game/missions/mission_3/narrations/Ebanks_1545.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1543,
+                    "speaker": "astra",
+                    "text": "Actually sir, we’re here to ask you how your facial recognition software works.",
+                    "narration": "game/missions/mission_3/narrations/Astra_1543.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1546,
+                    "speaker": "officerEbanks",
+                    "text": "At the airport, our document scanner captures your picture from your passport and stores it. Then when you go through security to check-in, our software analyzes your face — things like the distance between your eyes, the width of your mouth, and the length of your nose. It creates a unique facial map that helps confirm your identity.",
+                    "narration": "game/missions/mission_3/narrations/Ebanks_1546.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1549,
+                    "speaker": "declan",
+                    "text": "Why do you do all that work?",
+                    "narration": "game/missions/mission_3/narrations/Declan_1549.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1547,
+                    "speaker": "officerEbanks",
+                    "text": "It’s for security. We use this technology to confirm that the person holding the passport is really who they say they are. That helps stop identity fraud, catch people using fake or stolen documents, and flag individuals who might be a threat — all before they even board the plane.",
+                    "narration": "game/missions/mission_3/narrations/Ebanks_1547.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1501,
+                    "speaker": "milo",
+                    "text": "I think there’s a special word for that. It’s biometric data.",
+                    "narration": "game/missions/mission_3/narrations/Milo_1501.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1548,
+                    "speaker": "officerEbanks",
+                    "text": "Exactly. Biometric data means information about your body that’s unique to you — like your face, fingerprints, or how your voice sounds. Computers can use this to recognize who you are, kind of like a digital ID.",
+                    "narration": "game/missions/mission_3/narrations/Ebanks_1548.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1552,
+                    "speaker": "astra",
+                    "text": "Time to blast back to Blue Mountain!",
+                    "narration": "game/missions/mission_3/narrations/Astra_1552.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": true,
+                    "action": {
+                        "type": "image_popup",
+                        "action_data": {
+                            "image_url": "portal.png",
+                            "animation": "fadeIn",
+                            "has_sound": true,
+                            "sound_url": "magic.wav",
+                            "sound_duration": 1000,
+                            "sound_volume": 1,
+                            "sound_play": "onClick"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "id": "9",
+            "background": "cabin_living_room.webp",
+            "characters": {
+                "milo": {
+                    "name": "Milo",
+                    "image": "milo.png",
+                    "position": "center",
+                    "canAnimate": true
+                },
+                "luna": {
+                    "name": "Luna",
+                    "image": "luna.png",
+                    "position": "center",
+                    "canAnimate": true
+                },
+                "astra": {
+                    "name": "Astra",
+                    "image": "astra.png",
+                    "position": "center",
+                    "canAnimate": true
+                },
+                "declan": {
+                    "name": "Declan",
+                    "image": "declan.png",
+                    "position": "center",
+                    "canAnimate": true
+                },
+                "mrsDelavoy": {
+                    "name": "Mrs.Delavoy",
+                    "image": "mrs_delavoy.png",
+                    "position": "left",
+                    "canAnimate": true
+                },
+                "robotoro": {
+                    "name": "Robotoro",
+                    "image": "robotoro.png",
+                    "position": "center",
+                    "canAnimate": true
+                },
+                "speaker": {
+                    "name": "",
+                    "image": "speaker.png",
+                    "canAnimate": true,
+                    "position": "left"
+                }
+            },
+            "dialogues": [
+                {
+                    "sequence": 1553,
+                    "speaker": "astra",
+                    "text": "Remember, the internet is amazing, but just like you wouldn’t leave your front door wide open, you shouldn’t leave your online devices unprotected either. Stay smart, stay safe and keep those hackers out.",
+                    "narration": "game/missions/mission_3/narrations/Astra_1553.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1550,
+                    "speaker": "declan",
+                    "text": "Do you guys hear that? I think the speaker is saying something but you have to turn it up all the way to hear the sound.",
+                    "narration": "game/missions/mission_3/narrations/Declan_1550.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": true,
+                    "action": {
+                        "type": "speaker_volume"
+                    }
+                },
+                {
+                    "sequence": 1413,
+                    "hasOnlyNarration": true,
+                    "hasAction": false,
+                    "narration": "game/missions/mission_3/narrations/Robotoro_1413.mp3"
+                },
+                {
+                    "sequence": 1455,
+                    "speaker": "milo",
+                    "text": "Robotoro! Have you been listening in on our conversations? Ruuude!",
+                    "narration": "game/missions/mission_3/narrations/Milo_1455.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1468,
+                    "hasAction": false,
+                    "hasOnlyNarration": true,
+                    "narration": "game/missions/mission_3/narrations/Robotoro_1414.mp3"
+                },
+                {
+                    "sequence": 1457,
+                    "speaker": "milo",
+                    "text": "I’m going to do that right now! Good bye Robotoro!",
+                    "narration": "game/missions/mission_3/narrations/Milo_1457.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "hasOnlyAction": true,
+                    "action": {
+                        "type": "out_smart"
+                    }
+                },
+                {
+                    "sequence": 1386,
+                    "speaker": "luna",
+                    "text": "Ok I think we’ve given them enough to work on. We better get back to Headquarters. We’ve been gone a long time.",
+                    "narration": "game/missions/mission_3/narrations/Luna_1386.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1458,
+                    "speaker": "milo",
+                    "text": "Mrs. Delavoy, any chance we could take some of those delicious chocolate chip cookies for the road?",
+                    "narration": "game/missions/mission_3/narrations/Milo_1458.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1348,
+                    "speaker": "mrsDelavoy",
+                    "text": "Of course, Milo. Safe travels Digipalz! And thanks again for all your help.",
+                    "narration": "game/missions/mission_3/narrations/Mrs.D_1348.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": true,
+                    "action": {
+                        "type": "image_popup",
+                        "action_data": {
+                            "image_url": "gift.png",
+                            "animation": "fadeIn",
+                            "has_sound": true,
+                            "sound_url": "sparkle.wav",
+                            "sound_duration": 1000,
+                            "sound_volume": 1,
+                            "sound_play": "onClick",
+                            "has_dismiss_effect": true,
+                            "dismiss_effect_type": "sparkle"
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}

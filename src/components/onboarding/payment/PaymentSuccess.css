@@ -1,0 +1,50 @@
+@import './PaymentForm.css';
+
+.payment-success__status {
+  color: #4caf50;
+  background-color: rgba(76, 175, 80, 0.1);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.payment-success__spinner {
+  animation: spin 1s linear infinite !important;
+  font-size: 16px;
+  display: inline-block !important;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg) !important;
+  }
+  100% {
+    transform: rotate(360deg) !important;
+  }
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg) !important;
+  }
+  100% {
+    -webkit-transform: rotate(360deg) !important;
+  }
+}
+
+@-moz-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg) !important;
+  }
+  100% {
+    -moz-transform: rotate(360deg) !important;
+  }
+}
+
+.payment__submit-button .payment-success__spinner {
+  animation: spin 1s linear infinite !important;
+  display: inline-block !important;
+  margin-left: 5px;
+}

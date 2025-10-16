@@ -1,0 +1,281 @@
+.game-note-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 10000;
+}
+
+.game-note-container {
+  position: absolute;
+  background: #e80f25;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  pointer-events: all;
+  user-select: none;
+  min-width: 200px;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease;
+}
+
+.game-note-container:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.game-note-container.dragging {
+  cursor: grabbing;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5);
+}
+
+.note-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background: #c51388;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: move;
+}
+
+.note-status {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: center;
+}
+
+.saving-indicator {
+  font-size: 11px;
+  color: #666;
+  font-style: italic;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.color-picker {
+  display: flex;
+  gap: 6px;
+}
+
+.color-option {
+  width: 20px;
+  height: 20px;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.color-option:hover {
+  transform: scale(1.1);
+  border-color: rgba(0, 0, 0, 0.3);
+}
+
+.color-option.active {
+  border-color: #000;
+  transform: scale(1.15);
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.8);
+}
+
+.header-buttons {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.drag-note {
+  background: #f4f7f8;
+  color: rgb(9, 9, 9);
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  cursor: move;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.drag-note:hover {
+  background: #5a6268;
+  transform: scale(1.1);
+}
+
+.close-note {
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.close-note:hover {
+  background: #c82333;
+  transform: scale(1.1);
+}
+
+.formatting-toolbar {
+  display: flex;
+  gap: 4px;
+  padding: 6px 12px;
+  background: rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  justify-content: center;
+  cursor: default;
+}
+
+.format-btn {
+  background: #f8f9fa;
+  color: #495057;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.format-btn:hover {
+  background: #e9ecef;
+  border-color: #adb5bd;
+  transform: scale(1.05);
+}
+
+.format-btn:active {
+  background: #dee2e6;
+  transform: scale(0.95);
+}
+
+.format-btn.active {
+  background: #007bff;
+  color: white;
+  border-color: #0056b3;
+}
+
+.format-btn.active:hover {
+  background: #0056b3;
+  border-color: #004085;
+}
+
+.note-contenteditable {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 12px;
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  background: transparent;
+  color: #333;
+  min-height: 100px;
+  overflow-y: auto;
+  cursor: text;
+}
+
+.note-contenteditable:empty:before,
+.note-contenteditable[data-placeholder]:not(
+    [data-placeholder='']
+  ):empty:before {
+  content: attr(data-placeholder);
+  color: rgba(0, 0, 0, 0.5);
+  font-style: italic;
+  pointer-events: none;
+}
+
+.note-contenteditable:empty {
+  min-height: 100px;
+}
+
+.note-contenteditable h3 {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.note-contenteditable strong {
+  font-weight: bold;
+}
+
+.note-contenteditable em {
+  font-style: italic;
+}
+
+.resize-handle {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  cursor: se-resize;
+  background: linear-gradient(
+    -45deg,
+    transparent 30%,
+    rgba(0, 0, 0, 0.3) 30%,
+    rgba(0, 0, 0, 0.3) 40%,
+    transparent 40%,
+    transparent 60%,
+    rgba(0, 0, 0, 0.3) 60%,
+    rgba(0, 0, 0, 0.3) 70%,
+    transparent 70%
+  );
+  border-radius: 0 0 12px 0;
+  z-index: 10;
+  pointer-events: auto;
+}
+
+.resize-handle:hover {
+  background: linear-gradient(
+    -45deg,
+    transparent 30%,
+    rgba(0, 0, 0, 0.5) 30%,
+    rgba(0, 0, 0, 0.5) 40%,
+    transparent 40%,
+    transparent 60%,
+    rgba(0, 0, 0, 0.5) 60%,
+    rgba(0, 0, 0, 0.5) 70%,
+    transparent 70%
+  );
+  transform: scale(1.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .game-note-container {
+    min-width: 250px;
+    min-height: 180px;
+  }
+
+  .note-contenteditable {
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+}

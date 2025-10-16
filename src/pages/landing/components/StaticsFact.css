@@ -1,0 +1,223 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap');
+
+/* Add this new class for the background image overlay */
+.digipalz-landing-statistics__background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../../../assets/LandingPage/background.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 1; /* Adjust this value to control transparency (0.0 to 1.0) */
+  z-index: 2; /* Place it below the content but above the gradient */
+  border-top-left-radius: 80px;
+  border-top-right-radius: 80px;
+}
+
+.digipalz-landing-statistics__container {
+  width: 80%;
+  /* max-width: 1200px; */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  position: relative; /* Ensure content stays above the overlay */
+  z-index: 2; /* Position above the background overlay */
+  font-family: 'Inter', sans-serif;
+  height: 400px;
+}
+
+.digipalz-landing-statistics__title {
+  font-size: var(--lp-font-size-36);
+  margin-bottom: 1.5rem;
+  line-height: 52px;
+  font-family: 'Inter', sans-serif;
+  width: 893px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+  line-height: normal;
+  text-align: center;
+  color: var(--lp-color-neon);
+  width: 900px;
+  word-wrap: break-word;
+}
+
+.digipalz-landing-statistics__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 150px; /* Added to maintain consistent height during transitions */
+  transition: opacity 0.3s ease-in-out; /* Smooth transition when content changes */
+  font-family: 'Inter', sans-serif;
+}
+
+.digipalz-landing-statistics__statistic {
+  min-height: 95px;
+  width: 100%;
+  max-width: 700px;
+  color: white;
+  font-size: 24px;
+  font-family: Inter;
+  font-weight: 600;
+  word-wrap: break-word;
+  margin-bottom: 2.5rem;
+}
+
+.digipalz-landing-statistics__source {
+  font-size: 1rem;
+  opacity: 0.9;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+.digipalz-landing-statistics__indicators {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.digipalz-landing-statistics__indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 2px solid white;
+  display: inline-block;
+  cursor: pointer; /* Add cursor pointer to indicate it's clickable */
+  transition: background-color 0.3s ease; /* Smooth transition for indicator */
+}
+
+.digipalz-landing-statistics__indicator--active {
+  background-color: white;
+}
+
+/* Hover effect for indicators */
+.digipalz-landing-statistics__indicator:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Wide screen styles (above 1440px) */
+@media (min-width: 1441px) {
+  .digipalz-landing-statistics__container {
+    max-width: 1400px;
+  }
+
+  .digipalz-landing-statistics__statistic {
+    max-width: 600px;
+    font-size: 22px;
+  }
+
+  .digipalz-landing-statistics__indicator {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+/* Large desktop screens */
+@media (min-width: 1200px) and (max-width: 1440px) {
+  /* This is your target design size, so no changes needed */
+}
+
+/* Regular desktops and small laptops */
+@media (min-width: 1025px) and (max-width: 1199px) {
+  .digipalz-landing-statistics__title {
+    font-size: 40px;
+    height: auto;
+  }
+}
+
+/* Tablets and landscape phones */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .digipalz-landing-statistics__section {
+    padding-top: 8%;
+    margin-top: -13%;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+  }
+
+  .digipalz-landing-statistics__title {
+    font-size: 38px;
+    height: auto;
+    white-space: normal;
+  }
+
+  .digipalz-landing-statistics__statistic {
+    width: 100%;
+    font-size: 18px;
+  }
+
+  .digipalz-landing-statistics__content {
+    min-height: 100px;
+  }
+}
+
+/* Tablets portrait */
+@media (min-width: 601px) and (max-width: 767px) {
+  .digipalz-landing-statistics__section {
+    padding-top: 10%;
+    margin-top: -8%;
+    min-height: 280px;
+  }
+
+  .digipalz-landing-statistics__title {
+    font-size: 32px;
+    height: auto;
+    white-space: normal;
+  }
+
+  .digipalz-landing-statistics__statistic {
+    width: 100%;
+    font-size: 18px;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 600px) {
+  .digipalz-landing-statistics__section {
+    padding: -20px 0rem;
+    margin-top: -10%;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+  }
+
+  .digipalz-landing-statistics__background-overlay {
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+  }
+
+  .digipalz-landing-statistics__title {
+    font-size: var(--lp-font-size-36);
+    height: auto;
+    white-space: normal;
+  }
+
+  .digipalz-landing-statistics__statistic {
+    font-size: 18px;
+    width: 100%;
+  }
+
+  .digipalz-landing-statistics__source {
+    font-size: 0.9rem;
+  }
+
+  .digipalz-landing-statistics__indicator {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 320px) {
+  .digipalz-landing-statistics__title {
+    font-size: 24px;
+  }
+
+  .digipalz-landing-statistics__statistic {
+    font-size: 14px;
+  }
+}

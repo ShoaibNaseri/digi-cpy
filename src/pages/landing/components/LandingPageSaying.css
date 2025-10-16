@@ -1,0 +1,163 @@
+/* LandingPageSaying.css */
+/* Import Inter font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+
+.digipalz-landing-quote__background {
+  width: 100%;
+  padding-top: 10%;
+  padding-bottom: 5%;
+  background: linear-gradient(
+    90deg,
+    rgba(123, 53, 192, 1) 0%,
+    rgba(0, 122, 255, 1) 100%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 4rem;
+  padding-bottom: 7rem;
+  border-top-left-radius: 80px;
+  border-top-right-radius: 80px;
+  position: relative; /* Added for z-index to work */
+  z-index: 65; /* Lower than testimonial section */
+  margin-top: -1%;
+}
+
+.digipalz-landing-quote__content {
+  height: auto;
+  max-width: 100%;
+  width: 80%;
+}
+
+.digipalz-landing-quote__heading {
+  color: transparent;
+  font-family: 'Inter', sans-serif;
+  font-size: 45px;
+  font-weight: 700;
+  width: 100%;
+  text-align: center;
+  height: auto;
+}
+
+.digipalz-landing-quote__heading--yellow {
+  color: #cafd06;
+}
+
+.digipalz-landing-quote__heading--white {
+  color: #ffffff;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .digipalz-landing-reviews__section {
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+    padding-bottom: 100rem;
+  }
+  .digipalz-landing-reviews__container {
+    max-width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .digipalz-landing-reviews__feedback-container {
+    width: 100%;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+  }
+  .digipalz-landing-reviews__card {
+    border-bottom-style: solid;
+    border-bottom-width: 5px;
+    border-color: #000000;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    color: white;
+    text-align: left;
+    position: relative;
+  }
+  .digipalz-landing-reviews__card-content {
+    width: 100%;
+    position: relative;
+    align-items: flex-start;
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+  }
+  .digipalz-landing-reviews__name {
+    height: 19px;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    margin-top: auto;
+    margin-top: 1rem;
+    margin-bottom: 2.5rem;
+  }
+  .digipalz-landing-reviews__quote {
+    width: 90%;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
+    margin-top: 4%;
+  }
+  .digipalz-landing-reviews__cta-button {
+    background-color: #cafd06;
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    height: 40px;
+    justify-content: center;
+    padding: 5px 5px;
+    position: relative;
+    color: #000000;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+    width: 40%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 480px) {
+  .digipalz-landing-quote__background {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+
+  .digipalz-landing-quote__heading {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .digipalz-landing-quote__background {
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+    margin-top: -8%;
+  }
+}
+@media (max-width: 768px) {
+  .digipalz-landing-quote__background {
+    margin-top: -6%;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+    padding-bottom: 7rem;
+  }
+  .digipalz-landing-quote__heading {
+    font-size: 2rem;
+  }
+}

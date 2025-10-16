@@ -1,0 +1,1066 @@
+    {
+        "id": 1,
+        "title": "Cyberbullying",
+        "background_image_src": "assets/game/missions/mission_one/bg_imgs/mission_one_bg.webp",
+        "dialogue_bg_image_src": "assets/game/missions/mission_one/bg_imgs/dialogue_bg.webp",
+        "intro_scene": {
+            "background": "digipalz_headquarter.webp",
+            "next_scene": "welcome",
+            "characters": {
+                "milo": {
+                    "name": "Milo",
+                    "image": "milo.png",
+                    "canAnimate": true,
+                    "position": "center"
+                },
+                "luna": {
+                    "name": "Luna",
+                    "image": "luna.png",
+                    "canAnimate": true,
+                    "position": "center"
+                },
+                "robotoro": {
+                    "name": "Robotoro",
+                    "image": "robotoro.png",
+                    "canAnimate": false,
+                    "position": "left"
+                }
+            },
+            "dialogues": [
+                {
+                    "sequence": 1,
+                    "speaker": "robotoro",
+                    "text": "Hi friends! Welcome to Digipalz Headquarters, where we monitor cyber threats across the globe. My name is Robotoro. I’m an artificial intelligence robot and cybersecurity expert designed to help you solve missions and understand the online world.",
+                    "narration": "game/missions/mission_1/narrations/Robotoro_1965.mp3"
+                },
+                {
+                    "sequence": 2,
+                    "speaker": "robotoro",
+                    "text": "It's a tough job, but luckily I have you, to help my pals solve missions. Speaking of the Digipalz, here's Luna!",
+                    "narration": "game/missions/mission_1/narrations/Robotoro_1967.mp3"
+                },
+                {
+                    "sequence": 3,
+                    "speaker": "luna",
+                    "text": "You know how much we love you, Robotoro. Thanks to you, Milo and I get to keep a pulse on what is going on in the cyber world.",
+                    "narration": "game/missions/mission_1/narrations/Luna_2241.mp3"
+                },
+                {
+                    "sequence": 4,
+                    "speaker": "milo",
+                    "text": "When you send us on missions, you give us the chance to help others who need support.",
+                    "narration": "game/missions/mission_1/narrations/Milo_2103.mp3"
+                },
+                {
+                    "sequence": 2026,
+                    "speaker": "luna",
+                    "text": "We work together every day to solve missions that help people around our community. The best part is that we get to work with you, the agent behind the screen, to help us solve these missions.",
+                    "narration": "game/missions/mission_1/narrations/Luna_2026.mp3"
+                },
+                {
+                    "sequence": 2104,
+                    "speaker": "milo",
+                    "text": "Shouldn’t we tell our new agent here where we are and what this super cool room is?",
+                    "narration": "game/missions/mission_1/narrations/Milo_2104.mp3"
+                },
+                {
+                    "sequence": 1969,
+                    "speaker": "robotoro",
+                    "text": "Allow me! This is our home base, Digipalz Headquarters. From here, I monitor all the digital threats across the world. When there is a problem that needs our help, I task the Digipalz to solve the mission.",
+                    "narration": "game/missions/mission_1/narrations/Robotoro_1969.mp3"
+                },
+                {
+                    "sequence": 2105,
+                    "speaker": "milo",
+                    "text": "What’s the goal behind each mission?",
+                    "narration": "game/missions/mission_1/narrations/Milo_2105.mp3"
+                },
+                {
+                    "sequence": 1970,
+                    "speaker": "robotoro",
+                    "text": "Every time we start a new mission, I’ll give you a Mission Brief, which is essential information you’ll need for your work ahead.",
+                    "narration": "game/missions/mission_1/narrations/Robotoro_1970.mp3"
+                },
+                {
+                    "sequence": 2106,
+                    "speaker": "milo",
+                    "text": "These missions empower us to stay safe in the online world.",
+                    "narration": "game/missions/mission_1/narrations/Milo_2106.mp3"
+                },
+                {
+                    "sequence": 1971,
+                    "speaker": "robotoro",
+                    "text": "And don’t forget the most important part: the cyber threats you are solving are based on true stories that happen in the real world, too. What you learn in the missions will help you stay safe.",
+                    "narration": "game/missions/mission_1/narrations/Robotoro_1971.mp3"
+                },
+                {
+                    "sequence": 2033,
+                    "speaker": "luna",
+                    "text": "Good point, Robotoro. These missions are important life lessons. You can follow the same steps we take to help others in your life, too!",
+                    "narration": "game/missions/mission_1/narrations/Luna_2033.mp3"
+                }
+            ]
+        },
+        "welcome": {
+            "title": "Cyberbullying",
+            "welcome_message": "We start each mission, by reading a true story. They may be upsetting to read at times, but it is important to understand why each mission you solve is important. The story you are about to read for today’s mission demonstrates the impact that cyberbullying can have on a victim.",
+            "narration": "game/missions/mission_1/narrations/Narrator_2137.mp3",
+            "next_scene": "article",
+            "duration": 16
+        },
+        "article": {
+            "next_scene": "spider_scenes",
+            "content": [
+                {
+                    "title": "Charley's Story",
+                    "content": "Charley was 12 years old when she started getting bullied online.\nShe never quite fit in at school. She was friendly, but different - and there is absolutely nothing wrong with that. However, Charley wanted to find friends that shared her interests, so she went online to make friends, looking for people who liked the same music and hobbies she did. She created an Instagram page about her favorite band, and it felt good to be herself. Charley started meeting others online who shared her interests. For the first time, she felt seen and accepted.\nBut then kids from school found the page.Instead of cheering her on, they began mocking her — first with jokes, then with cruel comments. They teased her about how she looked, called her names like \"fat\" and \"ugly,\" and even told her to \"go die.\" Even people she didn't know — total strangers — began posting hurtful things.\nWhen one fake account got reported, the bullies made another. It felt never-ending.\n\nCharley couldn't escape it. At school, people whispered and laughed. At home, her phone lit up with mean messages. What used to be her safe space became a constant reminder of the things people said about her. She felt anxious all the time, checking her phone day and night to see what was being said. She felt embarrassed, angry, and completely alone.\nEventually, it started affecting her school life. Some of her friends stopped coming to school because they were being bullied too. Charley began skipping school and didn't want to go at all. She felt like no matter where she was, she was being watched, judged, and targeted.\nShe said what hurt the most was that many of the bullies acted nice in real life, but online, they became someone else. It made her feel like she couldn't trust anyone.\n\n Charley's story shows how real and harmful online bullying can be. It didn't just hurt her feelings... it affected her health, her learning, and her ability to feel safe anywhere.\nThis kind of bullying happens more than you think. In fact, 1 in 3 kids experience cyberbullying. That means it could be happening to someone in your class — or even to you.\nBut there's something you can do about it.\nIf you're being bullied online: It's not your fault. Tell a trusted adult right away. You do not have to face it alone.\nIf you see someone being bullied: Speak up. Report it. Show kindness. It could mean everything to that person.\nIf you're tempted to make fun of someone online: Pause. Ask yourself how you'd feel if it happened to you. Your words and actions matter, so be kind online and offline.\n",
+                    "narration": "game/missions/mission_1/narrations/Narrator_1024.mp3"
+                }
+            ],
+            "profile_image": "autom_img.png"
+        },
+        "spider_scenes": [
+            {
+                "id": "1",
+                "background": "guidance_counselor_office.jpg",
+                "characters": {
+                    "mr_azabuki": {
+                        "name": "Mr. Azabuki",
+                        "image": "mr_azabuki.png",
+                        "position": "left",
+                        "canAnimate": false
+                    }
+                },
+                "dialogues": [
+                    {
+                        "sequence": 2139,
+                        "speaker": "mr_azabuki",
+                        "text": "Hi everyone. I’m Mr. Azabuki, the school guidance counsellor. That was a challenging article to read, and it is understandable if you feel affected by the story. If you or someone you know is experiencing bullying, talk to a parent, teacher, or school counsellor. Every student deserves to feel safe at school and online. Ready to start your mission?",
+                        "narration": "game/missions/mission_1/narrations/Azabuke_2139.mp3"
+                    },
+                    {
+                        "hasOnlyAction": true,
+                        "action": {
+                            "type": "receive_phone_call",
+                            "action_data": {
+                                "callerName": "Robotoro",
+                                "callerImage": "robotoro.png",
+                                "callNarrations": [
+                                    "game/missions/mission_1/narrations/Luna_2046.mp3",
+                                    "game/missions/mission_1/narrations/Robotoro_1974.mp3"
+                                ]
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "2",
+                "background": "digipalz_headquarter.webp",
+                "characters": {
+                    "robotoro": {
+                        "name": "Robotoro",
+                        "image": "robotoro.png",
+                        "canAnimate": true,
+                        "position": "left"
+                    },
+                    "milo": {
+                        "name": "Milo",
+                        "image": "milo.png",
+                        "position": "center",
+                        "canAnimate": true
+                    },
+                    "luna": {
+                        "name": "Luna",
+                        "image": "luna.png",
+                        "position": "center",
+                        "canAnimate": true
+                    }
+                },
+                "dialogues": [
+                    {
+                        "sequence": 2050,
+                        "speaker": "luna",
+                        "text": "Robotoro, what’s the emergency?",
+                        "narration": "game/missions/mission_1/narrations/Luna_2050.mp3"
+                    },
+                    {
+                        "sequence": 1979,
+                        "speaker": "robotoro",
+                        "text": "There's a spider in here and I am scared of spiders.",
+                        "narration": "game/missions/mission_1/narrations/Robotoro_1979.mp3"
+                    },
+                    {
+                        "sequence": 2107,
+                        "speaker": "milo",
+                        "text": "You do know that spiders can climb don't you?",
+                        "narration": "game/missions/mission_1/narrations/Milo_2107.mp3"
+                    },
+                    {
+                        "sequence": 1988,
+                        "speaker": "robotoro",
+                        "text": "There it is! It's on the computer, I can see it. Eeew! And all those hairy legs!",
+                        "narration": "game/missions/mission_1/narrations/Robotoro_1988.mp3"
+                    },
+                    {
+                        "sequence": 2109,
+                        "speaker": "milo",
+                        "text": "What's the spider doing?",
+                        "narration": "game/missions/mission_1/narrations/Milo_2109.mp3"
+                    },
+                    {
+                        "sequence": 2057,
+                        "speaker": "robotoro",
+                        "text": "It looks like It's building a website!",
+                        "narration": "game/missions/mission_1/narrations/Robotoro_2057.mp3"
+                    },
+                    {
+                        "sequence": 2055,
+                        "speaker": "luna",
+                        "text": "Robotoro we have important work to do. You deal with the spider. We’re heading back to Mr.Azabuki’s office.",
+                        "narration": "game/missions/mission_1/narrations/Luna_2055.mp3"
+                    }
+                ]
+            }
+        ],
+        "azabuki_check": {
+            "background": "guidance_counselor_office.jpg",
+            "character_name": "Azabuki",
+            "title": "Mr. Azabuki Check In",
+            "message": "Hi everyone. I’m Mr. Azabuki, the school guidance counsellor. That was a challenging article to read, and it is understandable if you feel affected by the story. If you or someone you know is experiencing bullying, talk to a parent, teacher, or school counsellor. Every student deserves to feel safe at school and online. Ready to start your mission?",
+            "narration": "game/missions/mission_1/narrations/Azabuke_2139.mp3",
+            "next_scene": "mission_brief"
+        },
+        "mission_brief": [
+            {
+                "title": "Mission Brief",
+                "description": "Cyberbullying is when someone uses technology to harm, threaten, or harass another person. This could happen through social media, text messages, online games, or websites. There are different forms of cyberbullying and it’s important to understand how it can affect students like you. Recognizing these behaviors is a crucial step in taking action and supporting students who might be affected.",
+                "narration": "game/missions/mission_1/narrations/Azabuke_2141.mp3",
+                "duration": 25
+            },
+            {
+                "title": "Mission Brief",
+                "description": "Rumors are going around Red Valley Elementary School that a student has been cyberbullying several classmates. Let’s uncover who it is and what happened. I will share important information along the way about the online world. Your mission awaits!",
+                "narration": "game/missions/mission_1/narrations/Robotoro_1995.mp3",
+                "duration": 14,
+                "next_scene": "mission_tasks"
+            }
+        ],
+        "mission_tasks": {
+            "title": "Mission Tasks",
+            "next_scene": "scenes",
+            "important_info": "Read the following mission tasks carefully – you’ll be quizzed later!",
+            "tasks": [
+                {
+                    "id": 1,
+                    "title": "Task 1",
+                    "description": "<strong>Define</strong> cyberbullying and identify its various forms.",
+                    "narration": "game/missions/mission_1/narrations/task1.mp3"
+                },
+                {
+                    "id": 2,
+                    "title": "Task 2",
+                    "description": "<strong>Understand</strong> how to effectively <strong>handle</strong> the experience of being cyberbullied using techniques like <strong>stop</strong>, <strong>screenshot</strong>, <strong>block</strong>, and <strong>reporting</strong>.",
+                    "narration": "game/missions/mission_1/narrations/task2.mp3"
+                },
+                {
+                    "id": 3,
+                    "title": "Task 3",
+                    "description": "Recognize the importance of reporting <strong> cyberbullying incidents </strong> to a trusted adult and learn what to do.",
+                    "narration": "game/missions/mission_1/narrations/task3.mp3"
+                },
+                {
+                    "id": 4,
+                    "title": "Task 4",
+                    "description": "Develop strategies to support peers who are being cyberbullied and become an <strong>active ally</strong>.",
+                    "narration": "game/missions/mission_1/narrations/task4.mp3"
+                },
+                {
+                    "id": 5,
+                    "title": "Task 5",
+                    "description": "<strong>Explore</strong> the psychological and social reasons behind bullying behavior.",
+                    "narration": "game/missions/mission_1/narrations/task5.mp3"
+                }
+            ]
+        },
+        "scenes": [
+            {
+                "id": "1",
+                "background": "elementry_school_bg.svg",
+                "characters": {
+                    "mr_spivak": {
+                        "name": "Mr. Spivak",
+                        "image": "mr_spivak.png",
+                        "canAnimate": false,
+                        "position": "left"
+                    },
+                    "milo": {
+                        "name": "Milo",
+                        "image": "milo.png",
+                        "position": "center",
+                        "canAnimate": true
+                    },
+                    "luna": {
+                        "name": "Luna",
+                        "image": "luna.png",
+                        "position": "center",
+                        "canAnimate": true
+                    }
+                },
+                "dialogues": [
+                    {
+                        "sequence": 2163,
+                        "speaker": "mr_spivak",
+                        "text": "Hey Milo and Luna. Thank you for stopping by on such short notice.",
+                        "narration": "game/missions/mission_1/narrations/Spivak_2163.mp3"
+                    },
+                    {
+                        "sequence": 2058,
+                        "speaker": "luna",
+                        "text": "Your call sounded urgent.",
+                        "narration": "game/missions/mission_1/narrations/Luna_2058.mp3"
+                    },
+                    {
+                        "sequence": 2165,
+                        "speaker": "mr_spivak",
+                        "text": "I'm afraid it is. Our school's policy has been breached, and we need your help getting to the bottom of it. We've been getting reports of... let's call it 'unsavory' behavior in our school's online chatrooms.",
+                        "narration": "game/missions/mission_1/narrations/Spivak_2165.mp3"
+                    },
+                    {
+                        "sequence": 2110,
+                        "speaker": "milo",
+                        "text": "Yikes, it sounds like you need our help.",
+                        "narration": "game/missions/mission_1/narrations/Milo_2110.mp3"
+                    },
+                    {
+                        "sequence": 2166,
+                        "speaker": "mr_spivak",
+                        "text": "We take online bullying very seriously. This student has done their best to conceal their identity. Can you help us figure out who is behind this?",
+                        "narration": "game/missions/mission_1/narrations/Spivak_2166.mp3"
+                    },
+                    {
+                        "sequence": 2111,
+                        "speaker": "milo",
+                        "text": "Everybody likes to joke around and have fun with their classmates online. However, once a little playful banter crosses the line into bullying, it needs to be taken seriously.",
+                        "narration": "game/missions/mission_1/narrations/Milo_2111.mp3"
+                    },
+                    {
+                        "sequence": 2167,
+                        "speaker": "mr_spivak",
+                        "text": "Here's a copy of our school chatroom policies you can review for yourself.",
+                        "narration": "game/missions/mission_1/narrations/Spivak_2167.mp3"
+                    },
+                    {
+                        "hasOnlyAction": true,
+                        "action": {
+                            "type": "image_popup",
+                            "action_data": {
+                                "image_url": "3onlineRules.png",
+                                "animation": "fadeIn",
+                                "has_sound": false
+                            }
+                        }
+                    },
+                    {
+                        "sequence": 2065,
+                        "speaker": "luna",
+                        "text": "Thanks, Mr. Spivak, we’ll see what’s going on in the chatrooms.",
+                        "narration": "game/missions/mission_1/narrations/Luna_2065.mp3"
+                    },
+                    {
+                        "sequence": 11,
+                        "hasOnlyAction": true,
+                        "action": {
+                            "type": "cyber_definition"
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "2",
+                "background": "computerLab.jpg",
+                "characters": {
+                    "mr_pasternak": {
+                        "name": "Mr. Pasternak",
+                        "image": "pasternak.png",
+                        "position": "left",
+                        "canAnimate": false
+                    },
+                    "milo": {
+                        "name": "Milo",
+                        "image": "milo.png",
+                        "position": "center",
+                        "canAnimate": true
+                    },
+                    "luna": {
+                        "name": "Luna",
+                        "image": "luna.png",
+                        "position": "center",
+                        "canAnimate": true
+                    }
+                },
+                "dialogues": [
+                    {
+                        "sequence": 2181,
+                        "speaker": "mr_pasternak",
+                        "text": "Well, good afternoon Digipalz, my good friends.  I'm very happy to see you both again.",
+                        "narration": "game/missions/mission_1/narrations/Pasternak_2181.mp3"
+                    },
+                    {
+                        "sequence": 2112,
+                        "speaker": "milo",
+                        "text": "Hey! It's good to see you too, Mr. Pasternak! Our favourite technology teacher.",
+                        "narration": "game/missions/mission_1/narrations/Milo_2112.mp3"
+                    },
+                    {
+                        "sequence": 2189,
+                        "speaker": "mr_pasternak",
+                        "text": "I've heard you've come to help us with our chatroom bully problem. This is very good!",
+                        "narration": "game/missions/mission_1/narrations/Pasternak_2189.mp3"
+                    },
+                    {
+                        "sequence": 2068,
+                        "speaker": "luna",
+                        "text": "A bully is using the school chatroom. What should we be looking out for?",
+                        "narration": "game/missions/mission_1/narrations/Luna_2068.mp3"
+                    },
+                    {
+                        "sequence": 2192,
+                        "speaker": "mr_pasternak",
+                        "text": "Let's see. There are different kinds of inappropriate behaviors to look out for. First, there is inappropriate language.",
+                        "narration": "game/missions/mission_1/narrations/Pasternak_2192.mp3"
+                    },
+                    {
+                        "sequence": 2194,
+                        "speaker": "mr_pasternak",
+                        "text": "Secondly, hate speech or intimidation. And finally, threatening to share photos without the owner's permission.",
+                        "narration": "game/missions/mission_1/narrations/Pasternak_2194.mp3"
+                    },
+                    {
+                        "sequence": 11,
+                        "speaker": "luna",
+                        "text": "I see. That can be very serious.",
+                        "narration": "game/missions/mission_1/narrations/Luna_11.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 2198,
+                        "speaker": "mr_pasternak",
+                        "text": "Indeed. Take a look through the chat history, and see what you can find. Good luck!",
+                        "narration": "game/missions/mission_1/narrations/Pasternak_2198.mp3"
+                    },
+                    {
+                        "hasOnlyAction": true,
+                        "action": {
+                            "type": "start_game_mode"
+                        }
+                    },
+                    {
+                        "sequence": 2071,
+                        "speaker": "luna",
+                        "text": "Ummm... Mr. Pasternak?",
+                        "narration": "game/missions/mission_1/narrations/Luna_2071.mp3"
+                    },
+                    {
+                        "sequence": 14,
+                        "speaker": "mr_pasternak",
+                        "text": "Yes, Luna, what have you found?",
+                        "narration": "game/missions/mission_1/narrations/14.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 15,
+                        "speaker": "luna",
+                        "text": "These messages are not appropriate. Did you see the message threatening to post a photo of Katie in her underwear? That one really concerns me - we should escalate this.",
+                        "narration": "game/missions/mission_1/narrations/Luna_2280.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 2114,
+                        "speaker": "milo",
+                        "text": "Yes, on top of all the other disturbing examples, like hate speech, intimidation and threats.",
+                        "narration": "game/missions/mission_1/narrations/Milo_2114.mp3"
+                    },
+                    {
+                        "sequence": 2072,
+                        "speaker": "luna",
+                        "text": "Okay, Milo, why don’t you go see Principal Finley. I have somewhere I need to go first. Meet me outside afterwards – we have to talk to Katie.",
+                        "narration": "game/missions/mission_1/narrations/Luna_2072.mp3"
+                    }
+                ]
+            },
+            {
+                "id": "3",
+                "background": "principal_office.jpg",
+                "characters": {
+                    "principal_finley": {
+                        "name": "Principal Finley",
+                        "image": "principal_finley.png",
+                        "position": "left",
+                        "canAnimate": false
+                    },
+                    "milo": {
+                        "name": "Milo",
+                        "image": "milo.png",
+                        "position": "center",
+                        "canAnimate": true
+                    },
+                    "luna": {
+                        "name": "Luna",
+                        "image": "luna.png",
+                        "position": "center",
+                        "canAnimate": true
+                    }
+                },
+                "dialogues": [
+                    {
+                        "sequence": 2202,
+                        "speaker": "principal_finley",
+                        "text": "Welcome Milo, please make yourself comfortable. What brings you into my office, dear?",
+                        "narration": "game/missions/mission_1/narrations/Principal_2202.mp3"
+                    },
+                    {
+                        "sequence": 2115,
+                        "speaker": "milo",
+                        "text": "Principal Finley, I'll cut right to the chase. There is some CRAZY stuff going on in the school's chatroom.",
+                        "narration": "game/missions/mission_1/narrations/Milo_2115.mp3"
+                    },
+                    {
+                        "sequence": 2203,
+                        "speaker": "principal_finley",
+                        "text": "Hmmmm, can you be more specific, Milo?",
+                        "narration": "game/missions/mission_1/narrations/Principal_2203.mp3"
+                    },
+                    {
+                        "sequence": 2119,
+                        "speaker": "milo",
+                        "text": "Someone named ‘Hockey_291’ in the school's chatroom is violating the bullying policy. They’re threatening to post pictures of one of your students in their underwear.",
+                        "narration": "game/missions/mission_1/narrations/Milo_2119.mp3"
+                    },
+                    {
+                        "sequence": 2205,
+                        "speaker": "principal_finley",
+                        "text": "Oh, that is serious! We must find out which student is behind this. Threatening to share revealing photos without consent violates our school policy.",
+                        "narration": "game/missions/mission_1/narrations/Principal_2205.mp3"
+                    },
+                    {
+                        "sequence": 2122,
+                        "speaker": "milo",
+                        "text": "Do you think we could call customer support from Chatroom Technologies to see if they can help us track this bully down?",
+                        "narration": "game/missions/mission_1/narrations/Milo_2122.mp3"
+                    },
+                    {
+                        "sequence": 2206,
+                        "speaker": "principal_finley",
+                        "text": "That’s a great idea Milo! Can the Digipalz take the lead on this?",
+                        "narration": "game/missions/mission_1/narrations/Principal_2206.mp3"
+                    },
+                    {
+                        "sequence": 2208,
+                        "speaker": "milo",
+                        "text": "Of course! We'll get to the bottom of this, Principal Finley.",
+                        "narration": "game/missions/mission_1/narrations/Milo_2208.mp3"
+                    }
+                ]
+            },
+            {
+                "id": "4",
+                "background": "playground.jpg",
+                "characters": {
+                    "luna": {
+                        "name": "Luna",
+                        "image": "luna.png",
+                        "position": "center",
+                        "canAnimate": true
+                    },
+                    "katie": {
+                        "name": "Katie",
+                        "image": "katie.png",
+                        "position": "left",
+                        "canAnimate": false
+                    }
+                },
+                "dialogues": [
+                    {
+                        "sequence": 1,
+                        "speaker": "luna",
+                        "text": "Hey, are you Katie?",
+                        "narration": "game/missions/mission_1/narrations/Luna_1.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 2212,
+                        "speaker": "katie",
+                        "text": "Ughhh, what do you want?",
+                        "narration": "game/missions/mission_1/narrations/Katie_2212.mp3"
+                    },
+                    {
+                        "sequence": 2081,
+                        "speaker": "luna",
+                        "text": "Hi Katie. I’m Luna. I saw the messages in the school chatroom...",
+                        "narration": "game/missions/mission_1/narrations/Luna_2235.mp3"
+                    },
+                    {
+                        "sequence": 2213,
+                        "speaker": "katie",
+                        "text": "Seriously? People have been teasing me about this all day. I don't know who it is, or how they got a photo of me... in my underwear... But, it’s destroying my life right now.",
+                        "narration": "game/missions/mission_1/narrations/Katie_2213.mp3"
+                    },
+                    {
+                        "sequence": 2088,
+                        "speaker": "luna",
+                        "text": "Katie, I'm not here to tease you, I’m actually trying to get to the bottom of this. I also think you should talk to someone about this.",
+                        "narration": "game/missions/mission_1/narrations/Luna_2088.mp3"
+                    },
+                    {
+                        "sequence": 2214,
+                        "speaker": "katie",
+                        "text": "Like who?",
+                        "narration": "game/missions/mission_1/narrations/Katie_2214.mp3"
+                    },
+                    {
+                        "sequence": 2090,
+                        "speaker": "luna",
+                        "text": "You should talk to the school's guidance counsellor, Mr. Azabuki. He's very kind and understanding.",
+                        "narration": "game/missions/mission_1/narrations/Luna_2090.mp3"
+                    },
+                    {
+                        "sequence": 2216,
+                        "speaker": "katie",
+                        "text": "No way! Enough people know already! Besides, what good is he going to do?",
+                        "narration": "game/missions/mission_1/narrations/Katie_2215.mp3"
+                    },
+                    {
+                        "sequence": 2097,
+                        "speaker": "luna",
+                        "text": "I think talking to a supportive, trusted adult will help you cope with this. Let's go together, Katie.",
+                        "narration": "game/missions/mission_1/narrations/Luna_2097.mp3"
+                    },
+                    {
+                        "sequence": 10,
+                        "speaker": "katie",
+                        "text": "Ughhh. Okay. Fine.",
+                        "narration": "game/missions/mission_1/narrations/katie_914.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    }
+                ]
+            },
+            {
+                "id": "5",
+                "background": "guidance_counselor_office.jpg",
+                "characters": {
+                    "mr_azabuki": {
+                        "name": "Mr. Azabuki",
+                        "image": "mr_azabuki.png",
+                        "position": "left",
+                        "canAnimate": false
+                    },
+                    "katie": {
+                        "name": "Katie",
+                        "image": "katie.png",
+                        "position": "center",
+                        "canAnimate": true
+                    },
+                    "luna": {
+                        "name": "Luna",
+                        "image": "luna.png",
+                        "position": "center",
+                        "canAnimate": true
+                    },
+                    "milo": {
+                        "name": "Milo",
+                        "image": "milo.png",
+                        "position": "center",
+                        "canAnimate": true
+                    },
+                    "robotoro": {
+                        "name": "Robotoro",
+                        "image": "robotoro.png",
+                        "position": "center",
+                        "canAnimate": true
+                    }
+                },
+                "dialogues": [
+                    {
+                        "sequence": 2219,
+                        "speaker": "katie",
+                        "text": "Hey Mr. Azabuki, Luna suggested I come talk to you. Someone in the school chatrooms has been threatening to share embarrassing photos of me.",
+                        "narration": "game/missions/mission_1/narrations/Katie_2219.mp3"
+                    },
+                    {
+                        "sequence": 2142,
+                        "speaker": "mr_azabuki",
+                        "text": "Thank you for trusting me Katie. You did the right thing by coming to talk to me. Do you have screenshots that you can share with me?",
+                        "narration": "game/missions/mission_1/narrations/Azabuke_2142.mp3"
+                    },
+                    {
+                        "sequence": 2220,
+                        "speaker": "katie",
+                        "text": "Yes, I do. I remember you taught us that when someone starts to attack us online, we need to stop responding, screenshot the message, block the bully and seek out help.",
+                        "narration": "game/missions/mission_1/narrations/Katie_2220.mp3"
+                    },
+                    {
+                        "sequence": 2143,
+                        "speaker": "mr_azabuki",
+                        "text": "That's absolutely right, Katie. I am so sorry you are going through this, and I'm going to do everything I can to help you. Can you show me the messages?",
+                        "narration": "game/missions/mission_1/narrations/Azabuke_2143.mp3"
+                    },
+                    {
+                        "sequence": 1,
+                        "hasOnlyAction": true,
+                        "action": {
+                            "type": "backpack"
+                        }
+                    },
+                    {
+                        "sequence": 2146,
+                        "speaker": "mr_azabuki",
+                        "text": "These chat messages are incredibly alarming Katie. I can only imagine how upset you must be. Students who are being cyberbullied show all sorts of emotional and physical symptoms.",
+                        "narration": "game/missions/mission_1/narrations/Azabuke_2146.mp3"
+                    },
+                    {
+                        "sequence": 2,
+                        "speaker": "milo",
+                        "text": "Yeah, like headaches and throwing up.",
+                        "narration": "game/missions/mission_1/narrations/Milo_2.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 2099,
+                        "speaker": "luna",
+                        "text": "You might feel lonely, helpless or ashamed. This may cause you to withdraw from school, even your friends.",
+                        "narration": "game/missions/mission_1/narrations/Luna_2099.mp3"
+                    },
+                    {
+                        "sequence": 2221,
+                        "speaker": "katie",
+                        "text": "I can’t sleep. I don’t feel like eating. I don’t even want to go to school... this person is threatening to post pictures of me in my underwear for everyone to see.",
+                        "narration": "game/missions/mission_1/narrations/Katie_2221.mp3"
+                    },
+                    {
+                        "sequence": 2149,
+                        "speaker": "mr_azabuki",
+                        "text": "There are many different symptoms that appear when you are being bullied. Digipalz team, your task is to sort the emotional versus physical symptoms in this next mini game.",
+                        "narration": "game/missions/mission_1/narrations/Azabuke_2149.mp3"
+                    },
+                    {
+                        "sequence": 6,
+                        "hasOnlyAction": true,
+                        "action": {
+                            "type": "sort_the_symptoms"
+                        }
+                    },
+                    {
+                        "sequence": 2150,
+                        "speaker": "mr_azabuki",
+                        "text": "Being a victim of bullying is certainly very painful. Most bullies attack others as a way to make themselves feel big, strong, or in charge. But deep down, they feel weak or insecure.",
+                        "narration": "game/missions/mission_1/narrations/Azabuke_2150.mp3"
+                    },
+                    {
+                        "sequence": 7,
+                        "speaker": "milo",
+                        "text": "Really? I never thought about it that way.",
+                        "narration": "game/missions/mission_1/narrations/milo_916.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 2151,
+                        "speaker": "mr_azabuki",
+                        "text": "Messages like this are often done 'for fun’. Bullies want to be popular. When I see language like this, I see an individual who is begging to be accepted and looked up to by their peers! Unfortunately, in the mind of the bully, the easiest way to make oneself popular is to make someone else look weak!",
+                        "narration": "game/missions/mission_1/narrations/Azabuke_2151.mp3"
+                    },
+                    {
+                        "sequence": 10,
+                        "speaker": "katie",
+                        "text": "You're saying these bullies just crave attention?",
+                        "narration": "game/missions/mission_1/narrations/Katie_10.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 2152,
+                        "speaker": "mr_azabuki",
+                        "text": "Indeed. We all want to be liked. That's human nature. But, we cannot resort to hurting others to make ourselves feel more popular.",
+                        "narration": "game/missions/mission_1/narrations/Azabuke_2152.mp3"
+                    },
+                    {
+                        "sequence": 12,
+                        "speaker": "luna",
+                        "text": "It's our responsibility to help put an end to this behavior. What should we do next?",
+                        "narration": "game/missions/mission_1/narrations/12.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 2153,
+                        "speaker": "mr_azabuki",
+                        "text": "First, Katie, I want to make sure you’re doing okay. It's normal to feel overwhelmed and scared when there is someone targeting you at school or online.",
+                        "narration": "game/missions/mission_1/narrations/Azabuke_2153.mp3"
+                    },
+                    {
+                        "sequence": 2154,
+                        "speaker": "mr_azabuki",
+                        "text": "It is not acceptable for anyone to make you feel unsafe, you must know that it is not your fault. You have done nothing wrong.",
+                        "narration": "game/missions/mission_1/narrations/Azabuke_2154.mp3"
+                    },
+                    {
+                        "sequence": 2100,
+                        "speaker": "luna",
+                        "text": "He’s right Katie. This is not your fault.",
+                        "narration": "game/missions/mission_1/narrations/Luna_2100.mp3"
+                    },
+                    {
+                        "sequence": 7,
+                        "speaker": "milo",
+                        "text": "And you haven’t done anything wrong.",
+                        "narration": "game/missions/mission_1/narrations/milo_2237.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 2155,
+                        "speaker": "mr_azabuki",
+                        "text": "Often the hardest part of these situations is talking to a trusted adult. However, it is really important that students report incidents like this as soon as possible.",
+                        "narration": "game/missions/mission_1/narrations/Azabuke_2155.mp3"
+                    },
+                    {
+                        "sequence": 19,
+                        "speaker": "katie",
+                        "text": "So what should I do?!",
+                        "narration": "game/missions/mission_1/narrations/Katie_19.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 2130,
+                        "speaker": "milo",
+                        "text": "Let’s call Robotoro, he’s an expert at this!",
+                        "narration": "game/missions/mission_1/narrations/Milo_2130.mp3"
+                    },
+                    {
+                        "sequence": 4000,
+                        "hasOnlyAction": true,
+                        "action": {
+                            "type": "phone_call",
+                            "action_data": {
+                                "phoneNumber": "705-996-1111",
+                                "callerName": "Milo",
+                                "callingTo": "Robotoro",
+                                "callingToImage": "robotoro.png",
+                                "callerImage": "milo.png",
+                                "callNarrations": [
+                                    "game/missions/mission_1/narrations/Robotoro_2000.mp3",
+                                    "game/missions/mission_1/narrations/Milo_2132.mp3",
+                                    "game/missions/mission_1/narrations/Robotoro_2001.mp3",
+                                    "game/missions/mission_1/narrations/Robotoro_2002.mp3",
+                                    "game/missions/mission_1/narrations/Robotoro_2003.mp3",
+                                    "game/missions/mission_1/narrations/Robotoro_2004.mp3",
+                                    "game/missions/mission_1/narrations/Robotoro_2005.mp3",
+                                    "game/missions/mission_1/narrations/Milo_2133.mp3"
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "sequence": 919,
+                        "speaker": "milo",
+                        "text": "I have a question: what if my friend is being bullied? How do I help them?",
+                        "narration": "game/missions/mission_1/narrations/milo_919.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 2157,
+                        "speaker": "mr_azabuki",
+                        "text": "It can be hard to witness a friend being bullied and it is normal to want to help. But consider how you are responding and ask yourself if your response is helping the situation or worsening it.",
+                        "narration": "game/missions/mission_1/narrations/Azabuke_2157.mp3"
+                    },
+                    {
+                        "sequence": 26,
+                        "speaker": "luna",
+                        "text": "How do we know if we are helping or making it worse?",
+                        "narration": "game/missions/mission_1/narrations/26.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 27,
+                        "speaker": "mr_azabuki",
+                        "text": "Well, there are two ways you can respond. The first way is to be ‘reactive’. This means that you are acting quickly based on your feelings without thinking first. If you are seeing your friend being bullied, you might feel really angry right away and want to yell at the bully or say something mean back.",
+                        "narration": "game/missions/mission_1/narrations/27.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 921,
+                        "speaker": "milo",
+                        "text": "I can relate to that for sure.",
+                        "narration": "game/missions/mission_1/narrations/milo_921.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 29,
+                        "speaker": "mr_azabuki",
+                        "text": "It's completely normal to feel those strong emotions! But responding this way is kind of like knocking over a glass of water when you're upset - it creates an even bigger mess to clean up.",
+                        "narration": "game/missions/mission_1/narrations/29.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 30,
+                        "speaker": "luna",
+                        "text": "What is the second way?",
+                        "narration": "game/missions/mission_1/narrations/30.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 31,
+                        "speaker": "mr_azabuki",
+                        "text": "The second way to respond is called using 'emotional intelligence.' This is like being a detective of your own feelings. When you use emotional intelligence, you notice your feelings first - like feeling angry or upset when someone is being bullied - but you don't let those feelings be the boss of what you do next.",
+                        "narration": "game/missions/mission_1/narrations/31.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 32,
+                        "speaker": "milo",
+                        "text": "How do we respond with emotional intelligence?",
+                        "narration": "game/missions/mission_1/narrations/32.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 33,
+                        "speaker": "mr_azabuki",
+                        "text": "You pause, take a deep breath, and choose a smarter way to help. This takes practice - just like learning any new skill! The cool thing is that when you respond with emotional intelligence, you have much more power to actually fix the problem. You're in control, not your feelings.",
+                        "narration": "game/missions/mission_1/narrations/33.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 2101,
+                        "speaker": "luna",
+                        "text": "Hmm… maybe we should practice.",
+                        "narration": "game/missions/mission_1/narrations/Luna_2101.mp3"
+                    },
+                    {
+                        "sequence": 2159,
+                        "speaker": "mr_azabuki",
+                        "text": "Great idea, Luna. There is a resource I like to provide to students. It's a game called \"How Would You React?\"",
+                        "narration": "game/missions/mission_1/narrations/Azabuke_2159.mp3"
+                    },
+                    {
+                        "sequence": 2135,
+                        "speaker": "milo",
+                        "text": "Well Let’s see it!",
+                        "narration": "game/missions/mission_1/narrations/Milo_2135.mp3"
+                    },
+                    {
+                        "sequence": 37,
+                        "speaker": "mr_azabuki",
+                        "text": "The directions are simple - when you are presented with a scenario, select a response based on how you would react in that moment. I'll guide you along the way.",
+                        "narration": "game/missions/mission_1/narrations/37.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 37,
+                        "hasOnlyAction": true,
+                        "action": {
+                            "type": "how_would_you_react"
+                        }
+                    },
+                    {
+                        "sequence": 38,
+                        "speaker": "mr_azabuki",
+                        "text": "You all did so well.",
+                        "narration": "game/missions/mission_1/narrations/38.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 39,
+                        "speaker": "milo",
+                        "text": "Sometimes I amaze even myself.",
+                        "narration": "game/missions/mission_1/narrations/39.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 40,
+                        "speaker": "luna",
+                        "text": "This is about Katie, remember?!",
+                        "narration": "game/missions/mission_1/narrations/40.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 2160,
+                        "speaker": "mr_azabuki",
+                        "text": "I've got one more task for you. I want you to think about three adults in your life whom you feel comfortable talking to. If you are being threatened, bullied, targeted, or made to feel scared or unsafe, these are the adults you should talk to.",
+                        "narration": "game/missions/mission_1/narrations/Azabuke_2160.mp3"
+                    },
+                    {
+                        "sequence": 44,
+                        "speaker": "milo",
+                        "text": "One quick question, what do you mean by a trusted adult?",
+                        "narration": "game/missions/mission_1/narrations/44.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 2161,
+                        "speaker": "mr_azabuki",
+                        "text": "This can be a parent, guidance counsellor, teacher, relative, or even an older sibling. To complete the exercise, type three names into the bars provided.",
+                        "narration": "game/missions/mission_1/narrations/Azabuke_2161.mp3"
+                    },
+                    {
+                        "sequence": 45,
+                        "hasOnlyAction": true,
+                        "action": {
+                            "type": "trusted_adults"
+                        }
+                    },
+                    {
+                        "sequence": 2162,
+                        "speaker": "mr_azabuki",
+                        "text": "Well done.",
+                        "narration": "game/missions/mission_1/narrations/Azabuke_2162.mp3"
+                    },
+                    {
+                        "sequence": 2136,
+                        "speaker": "milo",
+                        "text": "You run a tight ship here, Mr. Azabuki. There’s still a bully to catch, so we’re off to the Computer Lab.",
+                        "narration": "game/missions/mission_1/narrations/Milo_2136.mp3"
+                    },
+                    {
+                        "sequence": 2224,
+                        "speaker": "katie",
+                        "text": "Thank you, Luna, for bringing me to Mr. Azabuki’s office. I kind of feel better about this already.",
+                        "narration": "game/missions/mission_1/narrations/Katie_2224.mp3"
+                    },
+                    {
+                        "sequence": 2007,
+                        "speaker": "robotoro",
+                        "text": "Wait, before you go, can you try out the “Block the Bully” game I’ve created? Here it is.",
+                        "narration": "game/missions/mission_1/narrations/Robotoro_2007.mp3"
+                    },
+                    {
+                        "hasOnlyAction": true,
+                        "action": {
+                            "type": "game_pacman"
+                        }
+                    }
+                ]
+            }
+        ]
+    }

@@ -1,0 +1,81 @@
+.luna-post-container {
+  width: 100vw;
+  height: 100vh;
+  background: transparent;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.luna-post-img-container {
+  position: relative;
+  width: 100%;
+  max-width: 50vw;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .luna-post-img-container {
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .luna-post-img-container {
+    max-width: 240px;
+  }
+}
+
+.luna-post-img-container:hover {
+  transform: scale(1.02);
+}
+
+.luna-post-img-container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.close-icon {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 24px;
+  height: 24px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.close-icon:hover {
+  background-color: rgba(255, 0, 0, 0.8);
+}
+
+.close-icon::before,
+.close-icon::after {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 2px;
+  background-color: white;
+  border-radius: 1px;
+}
+
+.close-icon::before {
+  transform: rotate(45deg);
+}
+
+.close-icon::after {
+  transform: rotate(-45deg);
+}

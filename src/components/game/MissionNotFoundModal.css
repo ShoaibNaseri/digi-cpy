@@ -1,0 +1,236 @@
+.mission-not-found-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(31, 41, 55, 0.75);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  animation: fadeIn 0.3s ease-out;
+  font-family: 'Urbanist', sans-serif;
+}
+
+.mission-not-found-container {
+  background: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  width: 90%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow: hidden;
+  animation: modalSlideIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+}
+
+.mission-not-found-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(74, 144, 226, 0.05),
+    rgba(74, 144, 226, 0.05) 1px,
+    transparent 1px,
+    transparent 20px
+  );
+  pointer-events: none;
+}
+
+.mission-not-found-header {
+  padding: 32px 32px 24px;
+  text-align: center;
+  border-bottom: 1px solid #f3f4f6;
+  position: relative;
+  z-index: 1;
+}
+
+.mission-error-icon-large {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 24px;
+  background: linear-gradient(90deg, #d60c7b 0%, #8b2db3 100%);
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.mission-error-icon-large span {
+  font-size: 2.5rem;
+  filter: grayscale(100%) brightness(2);
+}
+
+.mission-not-found-title {
+  color: #1f2937;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: -0.025em;
+}
+
+.mission-not-found-body {
+  padding: 24px 32px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.mission-not-found-message {
+  color: #6b7280;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+  font-weight: 400;
+}
+
+.mission-not-found-message strong {
+  color: #374151;
+  font-weight: 600;
+}
+
+.mission-not-found-footer {
+  padding: 24px 32px 32px;
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid #f3f4f6;
+  position: relative;
+  z-index: 1;
+}
+
+.mission-not-found-button {
+  background: linear-gradient(90deg, #d60c7b 0%, #8b2db3 100%);
+  border: 1px solid #374151;
+  color: #ffffff;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 120px;
+  justify-content: center;
+}
+
+.mission-not-found-button:hover {
+  background: linear-gradient(90deg, #8b2db3 0%, #d60c7b 100%);
+  border-color: #1f2937;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.mission-not-found-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.1);
+}
+
+.mission-btn-icon {
+  background: linear-gradient(90deg, #d60c7b 0%, #8b2db3 100%);
+  font-size: 16px;
+  transition: transform 0.2s ease;
+}
+
+.mission-not-found-button:hover .mission-btn-icon {
+  transform: translateX(-2px);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-32px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .mission-not-found-container {
+    width: 95%;
+    margin: 20px;
+  }
+
+  .mission-not-found-header {
+    padding: 24px 24px 20px;
+  }
+
+  .mission-not-found-body {
+    padding: 20px 24px;
+  }
+
+  .mission-not-found-footer {
+    padding: 20px 24px 24px;
+  }
+
+  .mission-error-icon-large {
+    background: linear-gradient(90deg, #d60c7b 0%, #8b2db3 100%);
+    width: 64px;
+    height: 64px;
+    margin-bottom: 20px;
+  }
+
+  .mission-error-icon-large span {
+    font-size: 2rem;
+  }
+
+  .mission-not-found-title {
+    font-size: 20px;
+  }
+
+  .mission-not-found-message {
+    font-size: 14px;
+  }
+
+  .mission-not-found-button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mission-not-found-container {
+    width: 98%;
+    margin: 10px;
+  }
+
+  .mission-not-found-header {
+    padding: 20px 20px 16px;
+  }
+
+  .mission-not-found-body {
+    padding: 16px 20px;
+  }
+
+  .mission-not-found-footer {
+    padding: 16px 20px 20px;
+  }
+
+  .mission-not-found-title {
+    font-size: 18px;
+  }
+}

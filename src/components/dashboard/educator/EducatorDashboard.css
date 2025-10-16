@@ -1,0 +1,14 @@
+.educator-dashboard-container {
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.educator-dashboard-content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Using EducatorSchoolDetails styles for title and subtitle */

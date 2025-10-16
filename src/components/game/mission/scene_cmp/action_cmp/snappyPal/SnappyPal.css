@@ -1,0 +1,349 @@
+/* SnappyPal Component Styles */
+
+.snappy-pal-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.snappy-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  position: relative;
+}
+
+/* Glowing Social Media Icon */
+.snappy-icon {
+  position: relative;
+  width: 120px;
+  height: 10vh;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(255, 255, 255, 0.3);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 10px;
+  user-select: none;
+  cursor: pointer;
+}
+
+.snappy-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+}
+
+/* Glowing Effect Animation */
+.glow-effect {
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  right: -15px;
+  bottom: -15px;
+  background: linear-gradient(
+    45deg,
+    #ff6b6b,
+    #4ecdc4,
+    #45b7d1,
+    #96ceb4,
+    #feca57
+  );
+  border-radius: 50%;
+  z-index: 1;
+  filter: blur(12px);
+}
+
+/* Profile Card Wrapper */
+.profile-card-wrapper {
+  position: relative;
+  display: inline-block;
+
+  /* border-radius: 20px; */
+  overflow: hidden;
+  /* box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3); */
+}
+
+.profile-card-image {
+  display: block;
+  max-width: 100%;
+  height: 50vh;
+  /* border-radius: 20px; */
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+}
+
+/* Close Button - Always visible on profile card */
+.close-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s ease;
+}
+
+.close-button.always-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.close-button:hover {
+  opacity: 1;
+  background: rgba(255, 107, 107, 0.9);
+  transform: scale(1.1);
+}
+
+/* Floating Stars for Kid-Friendly Effect */
+.floating-star {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(45deg, #feca57, #ff9ff3, #54a0ff);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.floating-star::before {
+  content: '★';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 12px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+/* Sparkle effects around the icon when profile is shown */
+.snappy-content::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.1) 1px,
+    transparent 1px
+  );
+  background-size: 20px 20px;
+  animation: sparkle 4s linear infinite;
+  pointer-events: none;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes sparkle {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* Responsive Design */
+
+/* Large Desktop */
+@media (min-width: 1440px) {
+  .snappy-content {
+    gap: 50px;
+  }
+
+  .snappy-icon {
+    width: 140px;
+    height: 140px;
+    padding: 12px;
+  }
+
+  .profile-card-image {
+    max-width: 700px;
+    min-width: 600px;
+  }
+
+  .close-button {
+    width: 60px;
+    height: 60px;
+    font-size: 36px;
+    top: 25px;
+    right: 25px;
+  }
+
+  .floating-star {
+    width: 25px;
+    height: 25px;
+  }
+
+  .floating-star::before {
+    font-size: 15px;
+  }
+}
+
+/* Desktop */
+@media (max-width: 1439px) and (min-width: 1024px) {
+  .snappy-content {
+    gap: 45px;
+  }
+
+  .snappy-icon {
+    width: 120px;
+    height: 120px;
+  }
+
+  .profile-card-image {
+    max-width: 600px;
+    min-width: 500px;
+  }
+
+  .close-button {
+    width: 55px;
+    height: 55px;
+    font-size: 32px;
+    top: 20px;
+    right: 20px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 1023px) and (min-width: 768px) {
+  .snappy-pal-container {
+    padding: 15px;
+  }
+
+  .snappy-content {
+    gap: 35px;
+  }
+
+  .snappy-icon {
+    width: 100px;
+    height: 100px;
+    padding: 8px;
+  }
+
+  .profile-card-image {
+    max-width: 500px;
+    min-width: 400px;
+  }
+
+  .close-button {
+    width: 50px;
+    height: 50px;
+    font-size: 28px;
+    top: 15px;
+    right: 15px;
+  }
+
+  .floating-star {
+    width: 18px;
+    height: 18px;
+  }
+
+  .floating-star::before {
+    font-size: 10px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .snappy-pal-container {
+    padding: 10px;
+    height: 100vh;
+  }
+
+  .snappy-content {
+    gap: 25px;
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .snappy-icon {
+    width: 80px;
+    height: 80px;
+    padding: 6px;
+  }
+
+  .profile-card-image {
+    max-width: 100%;
+    width: 100%;
+    min-width: 320px;
+  }
+
+  .close-button {
+    width: 45px;
+    height: 45px;
+    font-size: 24px;
+    top: 12px;
+    right: 12px;
+    /* Make close button always visible on mobile for better UX */
+    opacity: 0.8;
+    visibility: visible;
+  }
+
+  .profile-card-wrapper:hover .close-button,
+  .close-button:hover {
+    opacity: 1;
+  }
+
+  .floating-star {
+    width: 15px;
+    height: 15px;
+  }
+
+  .floating-star::before {
+    font-size: 8px;
+  }
+}
+
+/* High DPI Display Support */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .snappy-icon img,
+  .profile-card-image {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Accessibility Improvements */
+@media (prefers-reduced-motion: reduce) {
+  .sparkle,
+  .floating-star {
+    animation: none;
+  }
+
+  .snappy-content::before {
+    display: none;
+  }
+}
+
+/* Focus states for accessibility */
+.close-button:focus,
+.snappy-icon:focus {
+  outline: 3px solid rgba(255, 255, 255, 0.8);
+  outline-offset: 2px;
+}

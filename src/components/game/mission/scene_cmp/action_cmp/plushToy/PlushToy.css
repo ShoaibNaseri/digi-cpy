@@ -1,0 +1,334 @@
+.plush-toy-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'game-font', system-ui;
+  background: linear-gradient(135deg, #87ceeb 0%, #e0f6ff 50%, #87cefa 100%);
+}
+
+/* Toy wrapper positioning */
+.toy-wrapper {
+  position: absolute;
+}
+.plush-toy-title {
+  position: absolute;
+  top: 8%;
+  left: 10px;
+  color: #1241e9;
+  font-size: 1rem;
+  font-weight: 600;
+  z-index: 10000;
+  text-align: center;
+  width: 100%;
+}
+.toy-wrapper.center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.toy-wrapper.upper-left {
+  top: 10%;
+  left: 10%;
+}
+
+.toy-wrapper.upper-right {
+  top: 10%;
+  right: 10%;
+}
+
+.toy-wrapper.lower-left {
+  bottom: 10%;
+  left: 10%;
+}
+
+.toy-wrapper.lower-right {
+  bottom: 10%;
+  right: 10%;
+}
+
+/* Base plush toy styling */
+.plush-toy {
+  position: relative;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.plush-toy img {
+  width: 280px;
+  height: 280px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+  transition: all 0.3s ease;
+}
+
+/* Toy visibility and entrance animations */
+.plush-toy.visible {
+  animation: toyEntrance 1s ease-out forwards;
+}
+
+.plush-toy.center img {
+  width: 220px;
+  height: 220px;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+/* Entrance animation */
+@keyframes toyEntrance {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  70% {
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Interactive states */
+.toy-wrapper:hover .plush-toy {
+  z-index: 15;
+}
+
+.toy-wrapper:hover .plush-toy img {
+  transform: scale(1.05);
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.3)) brightness(1.1);
+}
+
+/* Price tag hover effect when toy wrapper is hovered */
+.toy-wrapper:hover .price-tag.visible {
+  transform: scale(1.05) rotate(360deg);
+}
+
+/* Click animation for both toy and price tag */
+.toy-wrapper.clicked .plush-toy,
+.toy-wrapper.clicked .price-tag {
+  animation: clickedAnimation 0.8s ease-out forwards;
+  z-index: 20;
+}
+
+@keyframes clickedAnimation {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  30% {
+    transform: scale(1.2);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+    filter: brightness(1.3);
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+/* Price tag styling */
+.price-tag {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  z-index: 15;
+  pointer-events: none; /* Don't interfere with toy clicking */
+}
+
+.price-tag img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+/* Price tag visibility states */
+.price-tag.visible {
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+  animation: priceTagEntrance 1s ease-out 0.5s; /* Delayed to appear after toy */
+  transition: transform 0.6s ease-in-out, opacity 0.3s ease;
+}
+
+.price-tag.removed {
+  display: none;
+}
+
+/* Price tag entrance animation */
+@keyframes priceTagEntrance {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) rotate(-10deg);
+  }
+  70% {
+    opacity: 0.8;
+    transform: scale(1.1) rotate(5deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+/* Cursor pointer styling */
+.cursor-pointer {
+  position: absolute;
+  z-index: 25;
+  pointer-events: none;
+  animation: cursorBounce 1s ease-in-out infinite;
+}
+
+.cursor-pointer.upper-left {
+  top: 25%;
+  left: 20%;
+  transform: translate(-50px, -30px);
+}
+
+.cursor-pointer.lower-left {
+  bottom: 25%;
+  left: 20%;
+  transform: translate(-50px, 30px);
+}
+
+.cursor-pointer.center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-120px, -50%);
+}
+
+.cursor-pointer.upper-right {
+  top: 25%;
+  right: 20%;
+  transform: translate(50px, -30px);
+}
+
+.cursor-pointer.lower-right {
+  bottom: 25%;
+  right: 20%;
+  transform: translate(50px, 30px);
+}
+
+.cursor-gif {
+  font-size: 40px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  animation: pointAnimation 0.8s ease-in-out infinite;
+}
+
+@keyframes cursorBounce {
+  0%,
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-10px);
+    opacity: 0.8;
+  }
+}
+
+@keyframes pointAnimation {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+/* Removed toys */
+.plush-toy.removed {
+  display: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .plush-toy img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .plush-toy.center img {
+    width: 190px;
+    height: 190px;
+  }
+
+  .price-tag img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .cursor-gif {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .plush-toy img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .plush-toy.center img {
+    width: 160px;
+    height: 160px;
+  }
+
+  .price-tag img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .price-tag {
+    top: -5px;
+    right: -5px;
+  }
+
+  .cursor-gif {
+    font-size: 28px;
+  }
+}
+
+/* Simple loading styles - same as PostBook */
+.plush-toy-loading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: transparent;
+  color: #2c3e50;
+  font-family: 'game-font', sans-serif;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.plush-toy-loading p {
+  font-size: 18px;
+  color: #34495e;
+  margin: 0;
+}

@@ -1,0 +1,708 @@
+/* Keyframe Animations */
+@keyframes ip-address-fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes ip-address-scoreFloat {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) translateY(-50px);
+  }
+}
+
+@keyframes ip-address-bounce {
+  0%,
+  20%,
+  53%,
+  80%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  40%,
+  43% {
+    transform: translate3d(0, -10px, 0);
+  }
+  70% {
+    transform: translate3d(0, -5px, 0);
+  }
+  90% {
+    transform: translate3d(0, -2px, 0);
+  }
+}
+
+/* Main Game Container */
+.ip-address-game-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.ip-address-game-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Loading Screen */
+.ip-address-loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ip-address-loading-text {
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+/* Title Screen */
+.ip-address-title-screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.ip-address-title-container {
+  text-align: center;
+}
+
+.ip-address-title-container-fixed {
+  position: absolute;
+  top: 2%;
+  /* left: 50%;
+  transform: translateX(-50%); */
+  text-align: center;
+  z-index: 10;
+}
+
+.ip-address-game-title {
+  color: #ef4444;
+  font-weight: bold;
+  font-size: 12rem;
+  margin-bottom: 1rem;
+  font-family: 'Comic Sans MS', 'Chalkboard SE', 'Bradley Hand', cursive,
+    sans-serif;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+  filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04))
+    drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+}
+
+.ip-address-game-title-image {
+  max-width: 100%;
+  height: auto;
+  max-height: 40vh;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04))
+    drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+}
+
+.ip-address-title-line {
+  line-height: 0.9;
+}
+
+.ip-address-continue-button {
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  background-color: #2563eb;
+  color: white;
+  font-size: 1.25rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  transition: all 0.2s;
+}
+
+.ip-address-continue-button:hover {
+  background-color: #1d4ed8;
+  transform: scale(1.05);
+}
+
+/* Instructions Screen */
+.ip-address-instructions-screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.ip-address-instructions-content {
+  position: absolute;
+  bottom: 12%; /* Position relative to title which is at 2% */
+  /* left: 50%;
+  transform: translateX(-50%); */
+  text-align: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 2rem;
+  z-index: 5;
+}
+
+.ip-address-instructions-title {
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: rgb(247, 244, 244);
+  font-family: 'arial', sans-serif;
+  /* text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8); */
+}
+
+.ip-address-instructions-title-image {
+  max-width: 100%;
+  height: auto;
+  max-height: 40vh;
+  object-fit: contain;
+  margin-bottom: 3rem;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+}
+
+.ip-address-instructions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-bottom: 4rem;
+}
+
+.ip-address-instruction-item {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.ip-address-instruction-number {
+  display: none;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fbbf24;
+  font-family: 'arial', sans-serif;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  border: 3px solid #fbbf24;
+}
+
+.ip-address-instruction-text {
+  font-size: 2rem;
+  color: rgb(246, 240, 240);
+  font-family: 'arial', sans-serif;
+  font-weight: 700;
+  /* text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8); */
+}
+
+.ip-address-keyboard-keys {
+  display: flex;
+  gap: 1rem;
+  margin: 0 1rem;
+}
+
+.ip-address-keyboard-key {
+  padding: 1rem 1.5rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 0.75rem;
+  border: 3px solid #374151;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  font-size: 1.75rem;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-weight: bold;
+  color: #374151;
+}
+
+.ip-address-start-game-button {
+  padding: 1.5rem 3rem; /* Reduced from 2rem 4rem */
+  background: linear-gradient(45deg, #0e4eae, #068ae3);
+  color: white;
+  font-size: 2rem; /* Reduced from 2.5rem */
+  font-weight: bold;
+  border: none;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  font-family: 'arial', sans-serif;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  /* border: 4px solid white; */
+}
+
+.ip-address-start-game-button:hover {
+  background: linear-gradient(45deg, #068ae3, #0e4eae);
+  transform: scale(1.05);
+}
+
+/* Game UI */
+.ip-address-game-ui {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  top: 1rem;
+  right: 1rem;
+  color: rgb(2, 2, 2);
+  font-size: 1.8rem;
+  font-weight: bold;
+  font-family: 'arial', sans-serif;
+  padding: 1.5rem;
+  border-radius: 1rem;
+}
+
+.ip-address-score-display,
+.ip-address-timer-display {
+  margin-bottom: 0.5rem;
+  padding: 1rem;
+  background-color: rgba(243, 190, 212, 0.955);
+  border-radius: 1rem;
+  letter-spacing: 0.1rem;
+}
+
+/* Score Animations */
+.ip-address-score-animation {
+  position: absolute;
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-family: 'arial', sans-serif;
+  animation: ip-address-scoreFloat 2s ease-out forwards;
+  pointer-events: none;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.ip-address-score-positive {
+  color: #4ade80;
+}
+
+.ip-address-score-negative {
+  color: #f87171;
+}
+
+/* Falling Items */
+.ip-address-falling-item {
+  position: absolute;
+  width: 11rem;
+  height: 11rem;
+  object-fit: contain;
+  transform: translate(-50%, -50%);
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+  transition: top 0.1s linear;
+}
+
+/* Basket */
+.ip-address-game-basket {
+  position: absolute;
+  bottom: 2rem;
+  width: 13rem;
+  height: 6rem;
+  background: linear-gradient(to bottom, #8b4513, #654321);
+  border-radius: 0 0 2rem 2rem;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.3), 0 4px 6px -4px rgb(0 0 0 / 0.2);
+  transition: all 0.1s ease-out;
+  transform: translateX(-50%);
+  border: 3px solid #a0522d;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.ip-address-basket-mesh {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 8px,
+      rgba(139, 69, 19, 0.3) 8px,
+      rgba(139, 69, 19, 0.3) 12px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 8px,
+      rgba(139, 69, 19, 0.3) 8px,
+      rgba(139, 69, 19, 0.3) 12px
+    );
+  z-index: 2;
+}
+
+.ip-address-basket-rim {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1.5rem;
+  background: linear-gradient(to bottom, #d2691e, #a0522d);
+  border-radius: 1.5rem 1.5rem 0 0;
+  border: 2px solid #8b4513;
+  z-index: 3;
+}
+
+.ip-address-basket-handle-left {
+  position: absolute;
+  top: 0.25rem;
+  left: -1rem;
+  width: 2rem;
+  height: 1rem;
+  background: #8b4513;
+  border-radius: 1rem;
+  border: 2px solid #654321;
+  z-index: 4;
+}
+
+.ip-address-basket-handle-right {
+  position: absolute;
+  top: 0.25rem;
+  right: -1rem;
+  width: 2rem;
+  height: 1rem;
+  background: #8b4513;
+  border-radius: 1rem;
+  border: 2px solid #654321;
+  z-index: 4;
+}
+
+/* Game Over Modal */
+.ip-address-game-over-screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.ip-address-game-over-modal {
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  padding: 3rem;
+  text-align: center;
+  max-width: 32rem;
+  margin: 0 1rem;
+  border: 4px solid #ef4444;
+}
+
+.ip-address-game-over-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #ef4444;
+  font-family: 'arial', sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.ip-address-final-score {
+  font-size: 5rem;
+  font-weight: bold;
+  color: #2563eb;
+  margin-bottom: 1.5rem;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.ip-address-score-label {
+  font-size: 1.5rem;
+  color: #4b5563;
+  margin-bottom: 2rem;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-weight: 600;
+}
+
+.ip-address-game-over-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.ip-address-play-again-button {
+  width: 100%;
+  padding: 1rem 2rem;
+  background-color: #059669;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  font-size: 1.25rem;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  transition: all 0.2s;
+}
+
+.ip-address-play-again-button:hover {
+  background-color: #047857;
+  transform: scale(1.05);
+}
+
+.ip-address-continue-game-button {
+  width: 100%;
+  padding: 1rem 2rem;
+  background-color: #2563eb;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  font-size: 1.25rem;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  transition: all 0.2s;
+}
+
+.ip-address-continue-game-button:hover {
+  background-color: #1d4ed8;
+  transform: scale(1.05);
+}
+@media (max-width: 1200px) {
+  .ip-address-instructions-content {
+    bottom: 3%;
+  }
+}
+@media (max-width: 1100px) {
+  .ip-address-instructions-content {
+    bottom: 3%;
+  }
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .ip-address-game-title {
+    font-size: 6rem;
+  }
+
+  .ip-address-game-title-image {
+    max-height: 900px;
+  }
+
+  .ip-address-title-container-fixed {
+    top: 1%;
+  }
+
+  .ip-address-instructions-content {
+    bottom: 3%; /* Adjusted for mobile to maintain spacing from title */
+    padding: 0 1rem;
+  }
+
+  .ip-address-instructions-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .ip-address-instructions-title-image {
+    max-height: 150px;
+    margin-bottom: 2rem;
+  }
+
+  .ip-address-instruction-text {
+    font-size: 1.5rem;
+  }
+
+  .ip-address-instruction-number {
+    font-size: 2rem;
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .ip-address-instruction-item {
+    gap: 1rem;
+  }
+
+  .ip-address-keyboard-key {
+    padding: 0.75rem 1rem;
+    font-size: 1.25rem;
+  }
+
+  .ip-address-start-game-button {
+    font-size: 1.75rem; /* Reduced from 2rem */
+    padding: 1.25rem 2.5rem; /* Reduced from 1.5rem 3rem */
+  }
+
+  .ip-address-game-ui {
+    font-size: 1.25rem;
+    padding: 1rem;
+  }
+
+  .ip-address-game-over-title {
+    font-size: 2rem;
+  }
+
+  .ip-address-final-score {
+    font-size: 3.5rem;
+  }
+
+  .ip-address-falling-item {
+    width: 8.5rem;
+    height: 8.5rem;
+  }
+
+  .ip-address-game-basket {
+    width: 10rem;
+    height: 5rem;
+  }
+
+  .ip-address-basket-rim {
+    height: 1.25rem;
+  }
+
+  .ip-address-basket-handle-left,
+  .ip-address-basket-handle-right {
+    width: 1.5rem;
+    height: 0.8rem;
+    top: 0.2rem;
+  }
+
+  .ip-address-basket-handle-left {
+    left: -0.8rem;
+  }
+
+  .ip-address-basket-handle-right {
+    right: -0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .ip-address-game-title {
+    font-size: 4rem;
+  }
+
+  .ip-address-game-title-image {
+    max-height: 600px;
+  }
+
+  .ip-address-title-container-fixed {
+    top: 0%;
+  }
+
+  .ip-address-instructions-content {
+    top: 25%; /* Adjusted for smaller screens */
+    padding: 0 0.5rem;
+  }
+
+  .ip-address-instructions-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .ip-address-instructions-title-image {
+    max-height: 100px;
+    margin-bottom: 1.5rem;
+  }
+
+  .ip-address-instructions-list {
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .ip-address-instruction-item {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .ip-address-instruction-text {
+    font-size: 1.25rem;
+  }
+
+  .ip-address-instruction-number {
+    font-size: 1.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .ip-address-keyboard-key {
+    padding: 0.5rem 0.75rem;
+    font-size: 1rem;
+  }
+
+  .ip-address-start-game-button {
+    font-size: 1.25rem; /* Reduced from 1.5rem */
+    padding: 0.875rem 1.75rem; /* Reduced from 1rem 2rem */
+  }
+
+  .ip-address-game-ui {
+    top: 0.5rem;
+    right: 0.5rem;
+    font-size: 1rem;
+    padding: 0.75rem;
+  }
+
+  .ip-address-game-basket {
+    width: 8rem;
+    height: 4rem;
+  }
+
+  .ip-address-falling-item {
+    width: 7rem;
+    height: 7rem;
+  }
+
+  .ip-address-basket-rim {
+    height: 1rem;
+  }
+
+  .ip-address-basket-handle-left,
+  .ip-address-basket-handle-right {
+    width: 1.25rem;
+    height: 0.6rem;
+    top: 0.15rem;
+  }
+
+  .ip-address-basket-handle-left {
+    left: -0.6rem;
+  }
+
+  .ip-address-basket-handle-right {
+    right: -0.6rem;
+  }
+}

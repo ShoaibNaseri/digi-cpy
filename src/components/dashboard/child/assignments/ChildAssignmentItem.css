@@ -1,0 +1,41 @@
+.ch-assignment {
+  display: flex;
+  align-items: center;
+  padding: o 1rem 0 1rem;
+  background-color: #f3f4f6;
+  border-radius: 12px;
+}
+
+.ch-assignment img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.ch-assignment__item-content {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ch-assignment__item-title {
+  font-size: 16px;
+  font-weight: 400;
+  color: #1f2937;
+}
+
+.ch-assignment__item-due {
+  font-size: 14px;
+  color: #9ca3af;
+}
+
+.ch-assignment__item-start {
+  padding: 10px 16px;
+  background-color: #374151;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}

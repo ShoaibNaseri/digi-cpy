@@ -1,0 +1,66 @@
+/* Stat card */
+.gr-stat-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  width: 100%;
+  height: 160px;
+  min-width: 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  border: 1px solid #f1f5f9;
+  border-bottom: 4px solid black;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.gr-state-top-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.gr-stat-content p {
+  font-size: 12px;
+  font-weight: 600;
+  color: #64748b;
+  white-space: nowrap;
+  font-family: 'Urbanist', sans-serif;
+  line-height: 1.2;
+}
+.gr-stat-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  margin-bottom: 0;
+  align-self: flex-start;
+  border-radius: 10px;
+}
+.gr-stat-data {
+  display: flex;
+  flex-direction: column;
+  gap: 5%;
+}
+.gra-stat-data h3 {
+  margin-bottom: -10px;
+  margin-top: 0;
+}
+.gr-stat-title {
+  margin-top: 10%;
+  font-size: 12px;
+  font-weight: 600;
+  color: #64748b;
+  white-space: nowrap;
+  font-family: 'Urbanist', sans-serif;
+}
+
+.gr-stat-value {
+  font-size: 32px;
+  font-weight: 700;
+  font-family: 'Urbanist', sans-serif;
+  line-height: 1.2;
+}

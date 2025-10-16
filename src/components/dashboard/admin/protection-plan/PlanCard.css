@@ -1,0 +1,63 @@
+.protection-plan-card {
+  min-width: 90%;
+  background-color: #374151;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.protection-plan-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.protection-plan-card-header h2 {
+  color: white;
+  font-size: 20px;
+  margin: 0;
+  white-space: normal;
+  overflow: visible;
+  word-wrap: break-word;
+  max-width: 60%;
+}
+
+.status-badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.status-badge.published {
+  background-color: rgb(25, 178, 122);
+  color: #fff;
+}
+
+.protection-plan-card-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.protection-plan-card-action-button-view-report {
+  flex-grow: 1;
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.protection-plan-card-action-button-view-report:hover {
+  background-color: #f0f0f0;
+}

@@ -1,0 +1,63 @@
+.info-modal__backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.info-modal__container {
+  background: #1a2733;
+  border-radius: 12px;
+  padding: 20px;
+  min-width: 500px;
+  max-width: 90vw;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.info-modal__title {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 12px 0;
+  text-align: center;
+}
+
+.info-modal__description {
+  color: #bfc9d1;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.info-modal__actions {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.info-modal__confirm {
+  background: #e74c3c;
+  border: none;
+  color: #fff;
+  padding: 8px 24px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.info-modal__confirm:hover {
+  background: #c0392b;
+}

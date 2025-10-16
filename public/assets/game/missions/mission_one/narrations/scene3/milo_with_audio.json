@@ -1,0 +1,76 @@
+{
+  "dialogues": [
+    {
+      "sequence": 2,
+      "speaker": "milo",
+      "text": "Principal Finley, I'll cut right to the chase... I've always wanted to say that, it makes me sound like a 1940s detective... Anyway, It's the school's chatroom.",
+      "narration": "audio/narration/sceneX/2.mp3",
+      "animation": "fadeIn",
+      "hasAction": false,
+      "start_ms": 24400,
+      "end_ms": 34600,
+      "duration_ms": 10200,
+      "extracted_audio": "generatedAudio/sequence2_.mp3"
+    },
+    {
+      "sequence": 3,
+      "speaker": "milo",
+      "text": "Some CRAZY stuff is going on in there. Like, not 'crazy' crazy, like 'man, that's crazy' but more like\u2026 'man\u2026 that's crazy'. You know?",
+      "narration": "audio/narration/sceneX/3.mp3",
+      "animation": "fadeIn",
+      "start_ms": 34600,
+      "end_ms": 43600,
+      "hasAction": false,
+      "duration_ms": 9000,
+      "extracted_audio": "generatedAudio/sequence3_.mp3"
+    },
+    {
+      "sequence": 5,
+      "speaker": "milo",
+      "text": "Someone named \u2018Hockey_291\u2019 on your school's online chatroom seems to be violating your bullying policy and is threatening to post pictures of another student in their underwear.",
+      "narration": "audio/narration/sceneX/5.mp3",
+      "animation": "fadeIn",
+      "start_ms": 43600,
+      "end_ms": 55400,
+      "hasAction": false,
+      "duration_ms": 11800,
+      "extracted_audio": "generatedAudio/sequence5_.mp3"
+    },
+    {
+      "sequence": 7,
+      "speaker": "milo",
+      "text": "As I was on my way over here, I had a thought - could we call customer support from Chatroom Technologies to see if they can assist us in tracking this student bully down?",
+      "narration": "audio/narration/sceneX/7.mp3",
+      "animation": "fadeIn",
+      "hasAction": false,
+      "start_ms": 55600,
+      "end_ms": 64800,
+      "duration_ms": 9200,
+      "extracted_audio": "generatedAudio/sequence7_.mp3"
+    },
+    {
+      "sequence": 9,
+      "speaker": "milo",
+      "text": "Is it that crazy, though?",
+      "narration": "audio/narration/sceneX/9.mp3",
+      "animation": "fadeIn",
+      "hasAction": false,
+      "start_ms": 64800,
+      "end_ms": 66300,
+      "duration_ms": 1500,
+      "extracted_audio": "generatedAudio/sequence9_.mp3"
+    },
+    {
+      "sequence": 11,
+      "speaker": "milo",
+      "text": "Tell them to meet me and Luna in the Computer Lab! We'll get to the bottom of this - there\u2019s just something we have to do first.",
+      "narration": "audio/narration/sceneX/11.mp3",
+      "animation": "fadeIn",
+      "hasAction": false,
+      "start_ms": 23600,
+      "end_ms": 24400,
+      "duration_ms": 800,
+      "extracted_audio": "generatedAudio/sequence11_.mp3"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+.layout {
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  min-height: 100svh;
+  max-height: 100svh;
+  margin: auto;
+  overflow: auto;
+}
+
+.main__container {
+  height: 100vh;
+  padding: 32px;
+  scrollbar-width: none;
+  background-color: #f9f9f9;
+  width: calc(100% - 256px);
+  margin-left: 256px;
+}
+
+@media (min-width: 1024px) {
+  .main__container {
+    /* padding-bottom: 24px; */
+    overflow-y: auto;
+  }
+}
+
+.main__container-support-chat {
+  width: calc(100% - 256px);
+  height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
+  position: relative;
+  margin-left: 256px;
+}

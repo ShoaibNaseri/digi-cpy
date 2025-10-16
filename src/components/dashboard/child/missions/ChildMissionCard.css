@@ -1,0 +1,70 @@
+.mission-card {
+  background: #f7f7f7;
+  border-radius: 12px;
+  padding: 24px;
+  cursor: pointer;
+}
+
+.mission-card__content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.mission-card__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 8px;
+  width: 100%;
+  min-height: 160px;
+  margin-bottom: 19px;
+}
+
+.mission-card__icon img {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+}
+
+.mission-card__title {
+  font-size: 18px;
+  font-weight: 500;
+  color: #1f2937;
+  margin: 0 0 12px 0;
+}
+
+.mission-card__description {
+  font-size: 14px;
+  color: #374151;
+  margin: 0 0 20px 0;
+  line-height: 1.5;
+}
+
+.mission-card__tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.mission-card__tag {
+  padding: 6px 12px;
+  background: #374151;
+  border-radius: 20px;
+  font-size: 12px;
+  color: #ffffff;
+}
+
+.mission-card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.mission-card__duration {
+  font-size: 14px;
+  color: #9ca3af;
+}

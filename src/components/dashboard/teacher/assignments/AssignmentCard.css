@@ -1,0 +1,249 @@
+/* AssignmentCard.css - Matching TeacherQuizzes design */
+
+.teacher-assignments__card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+  width: 100%;
+  height: 25.5rem;
+  min-height: 400px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+
+
+.teacher-assignments__card-header {
+  display: flex;
+  justify-content: start;
+  align-items: flex-end;
+  margin-bottom: 0;
+  background-color: #7B34BF; 
+  width: 100%;
+  height: 9.875rem !important;
+  border-radius: 8px;
+  position: relative;
+}
+
+/* Header background colors for different assignment cards */
+.teacher-assignments__card-header.bg-purple {
+  background-color: #7B34BF;
+}
+
+.teacher-assignments__card-header.bg-blue {
+  background-color: #0454AC;
+}
+
+.teacher-assignments__card-header.bg-pink {
+  background-color: #DD9097;
+}
+
+.teacher-assignments__card-header.bg-red {
+  background-color: #EF0067;
+}
+
+.teacher-assignments__card-header.bg-cyan {
+  background-color: #00C6FF;
+}
+
+.teacher-assignments__card-header.bg-green {
+  background-color: #44CA76;
+}
+
+/* Set Learning Button - Top Left */
+.teacher-assignments__set-learning-btn {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  display: inline-flex;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 100px;
+  background: #FFF;
+  color: #000;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.teacher-assignments__set-learning-btn:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.teacher-assignments__card-title-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+  padding: 1rem;
+}
+
+.teacher-assignments__card-title {
+  color: #FFF;
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+
+.teacher-assignments__card-meta {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* Assignment content card */
+.teacher-assignments__assignment-card {
+  background-color: #f8fafc;
+  border-radius: 8px;
+  padding: 0rem 1rem 0rem 1rem;
+  width: 100%;
+  transition: all 0.3s ease;
+  /* margin-bottom: 1rem; */
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Metrics Section */
+.teacher-assignments__metrics-section {
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+  background-color: #ffffff;
+  /* padding: 1rem; */
+  border-radius: 6px;
+}
+
+.teacher-assignments__metric-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+
+.teacher-assignments__metric-row:last-child {
+  margin-bottom: 0;
+}
+
+.teacher-assignments__metric-label {
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.75);
+  font-weight: 400;
+}
+
+.teacher-assignments__metric-value {
+  font-size: 16px;
+  color: #000;
+  font-weight: 600;
+}
+
+/* Status Badge */
+.teacher-assignments__status-badge {
+  border-radius: 3px;
+  color: #000;
+  padding: 8px 10px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.teacher-assignments__status-badge.in-progress {
+  background-color: #CAFD06;
+  color: #000000;
+}
+
+.teacher-assignments__status-badge.completed {
+  background-color: #10b981;
+  color: #000;
+}
+
+/* Action Buttons */
+.teacher-assignments__action-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+  /* padding: 1rem; */
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+/* 
+@media (max-width: 768px) {
+  .teacher-assignments__action-buttons {
+    flex-direction: column;
+  }
+  
+  .teacher-assignments__edit-button,
+  .teacher-assignments__view-results-button {
+    width: 100%;
+  }
+} */
+
+.teacher-assignments__edit-button {
+  display: flex;
+  align-items: center;
+  background-color: #E5E7EB;
+  color: #4B5563;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  width: 50%;
+  height: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  justify-content: center;
+}
+
+.teacher-assignments__edit-button:hover {
+  background-color: #e5e7eb;
+}
+
+.teacher-assignments__view-results-button {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(90deg, #D60C7B 0%, #8B2DB3 100%);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex: 1;
+  height: 50px;
+  width: 50%;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #FFF;
+  justify-content: center;
+}
+
+.teacher-assignments__view-results-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(236, 72, 153, 0.3);
+}
+
+.teacher-assignments__button-icon {
+  font-size: 18px;
+  margin-right: 0.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .teacher-assignments__card {
+    width: 100%;
+    max-width: 32.188rem;
+  }
+}
+

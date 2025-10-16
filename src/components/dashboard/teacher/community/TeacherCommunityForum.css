@@ -1,0 +1,298 @@
+/* TeacherCommunityForum.css */
+/* Using 'tcf' prefix for all class names to avoid conflicts */
+.tcf-container,
+.tcf-container * {
+  box-sizing: border-box;
+}
+
+.tcf-container {
+  background-color: #111827;
+  color: white;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    sans-serif;
+  padding: 1.5rem;
+  min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.tcf-header {
+  margin-bottom: 0;
+}
+
+.tcf-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0;
+  text-align: left;
+  align-self: flex-start;
+}
+
+.tcf-subtitle {
+  color: #cbd5e1;
+  margin-top: 4px;
+  margin-bottom: 0;
+  font-size: 16px;
+}
+
+.tcf-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.tcf-new-discussion-btn {
+  background-color: #1e40af;
+  color: white;
+  border: none;
+  border-radius: 0.375rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.2s;
+}
+
+.tcf-new-discussion-btn:hover {
+  background-color: #4a5568;
+}
+
+.tcf-plus-icon {
+  margin-right: 0.5rem;
+  font-weight: bold;
+}
+
+.tcf-search-filter {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.tcf-search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.tcf-search-icon-placeholder {
+  position: absolute;
+  left: 0.75rem;
+  width: 18px;
+  height: 18px;
+  /* You can remove this background if you want to add your own icon implementation */
+  background-color: #718096;
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'%3E%3C/line%3E%3C/svg%3E");
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'%3E%3C/line%3E%3C/svg%3E");
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+}
+
+.tcf-search-input {
+  background-color: #2d3748;
+  color: white;
+  border: none;
+  border-radius: 0.375rem;
+  padding: 0.5rem 0.75rem 0.5rem 2.25rem;
+  width: 200px;
+  font-size: 0.875rem;
+}
+
+.tcf-search-input::placeholder {
+  color: #718096;
+}
+
+.tcf-dropdown-container {
+  position: relative;
+}
+
+.tcf-category-dropdown {
+  background-color: #1e40af;
+  color: white;
+  border: none;
+  border-radius: 0.375rem;
+  padding: 0.5rem 2rem 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.tcf-dropdown-container::after {
+  content: '';
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid white;
+  pointer-events: none;
+}
+
+.tcf-discussions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.tcf-discussion-card {
+  background-color: #2d3748;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: background-color 0.2s;
+}
+
+.tcf-discussion-card:hover {
+  background-color: #3a4659;
+}
+
+.tcf-avatar-container {
+  flex-shrink: 0;
+}
+
+.tcf-avatar {
+  width: 40px;
+  height: 40px;
+  background-color: #4a5568;
+  border-radius: 50%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23a0aec0'%3E%3Cpath d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'/%3E%3C/svg%3E");
+  background-size: 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.tcf-discussion-content {
+  flex-grow: 1;
+}
+
+.tcf-discussion-title {
+  font-size: 1rem;
+  margin: 0 0 0.5rem;
+  font-weight: 500;
+}
+
+.tcf-discussion-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #a0aec0;
+  font-size: 0.75rem;
+}
+
+.tcf-tag {
+  background-color: #4a5568;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+}
+
+.tcf-discussion-stats {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #a0aec0;
+}
+
+.tcf-like-button {
+  background-color: transparent;
+  border: #a0aec0;
+}
+
+.tcf-comments,
+.tcf-likes {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.875rem;
+}
+
+.tcf-comments::before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23a0aec0'%3E%3Cpath d='M21 6h-2v9H6v2c0 .55.45 1 1 1h11l4 4V7c0-.55-.45-1-1-1zm-4 6V3c0-.55-.45-1-1-1H3c-.55 0-1 .45-1 1v14l4-4h10c.55 0 1-.45 1-1z'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.tcf-likes::before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23a0aec0'%3E%3Cpath d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.tcf-trending-section {
+  background-color: #2d3748;
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+}
+
+.tcf-trending-title {
+  font-size: 1.125rem;
+  margin: 0 0 1rem;
+  font-weight: 500;
+}
+
+.tcf-trending-topics {
+  display: flex;
+  gap: 1rem;
+}
+
+.tcf-trending-topic {
+  background-color: #1a202c;
+  border-radius: 0.375rem;
+  padding: 0.75rem 1rem;
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tcf-hashtag {
+  font-weight: 500;
+  color: #4299e1;
+}
+
+.tcf-post-count {
+  color: #a0aec0;
+  font-size: 0.875rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .tcf-controls {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  .tcf-search-filter {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .tcf-search-input,
+  .tcf-category-dropdown {
+    width: 100%;
+  }
+
+  .tcf-trending-topics {
+    flex-direction: column;
+  }
+}

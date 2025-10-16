@@ -1,0 +1,139 @@
+/* ClassSetupComplete.css */
+.class-setup-complete-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(15, 23, 42, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.class-setup-complete-container {
+  background-color: #1e293b;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 100%;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: white;
+}
+
+.class-setup-success-icon {
+  width: 48px;
+  height: 48px;
+  background-color: #10b981;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.class-setup-icon {
+  color: white;
+}
+
+.class-setup-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+}
+
+.class-setup-description {
+  font-size: 14px;
+  color: #94a3b8;
+  margin: 0 0 24px 0;
+}
+
+.class-setup-info-box {
+  background-color: #0f172a;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  text-align: left;
+  margin-bottom: 24px;
+}
+
+.class-setup-info-icon {
+  margin-right: 12px;
+  margin-top: 2px;
+  color: #38bdf8;
+}
+
+.class-setup-note-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.class-setup-info-content {
+  flex: 1;
+}
+
+.class-setup-info-text {
+  font-size: 14px;
+  margin: 0 0 12px 0;
+  line-height: 1.5;
+}
+
+.class-setup-info-subtext {
+  font-size: 13px;
+  color: #94a3b8;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.class-setup-website {
+  color: #3b82f6;
+  font-weight: 500;
+}
+
+/* New centered action container */
+.class-setup-actions-centered {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.class-setup-close-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 30px;
+  background-color: #4bad82;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+/* Email notification styles */
+.email-notification-results {
+  margin: 16px 0;
+}
+
+/* Optional: Use a different background color for email notifications */
+.email-notification-results.class-setup-info-box {
+  background-color: #0f172a; /* Keep consistent with other info boxes */
+}
+
+/* Status colors */
+.email-success {
+  color: #16a34a;
+}
+
+.email-partial {
+  color: #f59e0b;
+}
+
+.email-failed {
+  color: #ef4444;
+}

@@ -1,0 +1,591 @@
+.manage-lessons-page {
+  background-color: #f9f9f9;
+  padding: 2rem;
+  /* max-width: 1400px; */
+  margin: 0 auto;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Page Header */
+.manage-lessons-header h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+}
+
+/* Main Content Layout */
+.manage-lessons-content {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+/* Left Column - Main Content */
+.manage-lessons-left-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Child Profile Section */
+.child-profile-section {
+  margin-bottom: 1rem;
+}
+
+.child-profile-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  /* width: 100%; */
+  border: 1px solid #e5e7eb;
+}
+
+.child-avatar {
+  flex-shrink: 0;
+}
+
+.child-info {
+  flex: 1;
+}
+
+.child-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0 0 0.2rem 0;
+}
+
+.child-details {
+  font-size: 1.125rem;
+  color: #98198E;
+  font-weight: 500;
+
+  margin: 0 0 0.2rem 0;
+}
+
+.current-mission {
+  font-size: 0.75rem;
+  color: #4b5563;
+  margin: 0;
+}
+
+.switch-child-btn {
+  background: #cafd06;
+  color: #000000;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  gap: 0.5rem;
+  width: 258px;
+  height: 50px;
+  display: flex;
+  font-weight: 400;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.switch-child-btn:hover {
+  background: #65a30d;
+  transform: translateY(-1px);
+}
+
+/* Lesson List */
+.lesson-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.lesson-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  border: 1px solid #e5e7eb;
+  transition: all 0.2s ease;
+}
+.lesson-card.locekd{
+  background-color: #FAFBFC;
+}
+
+  
+
+.lesson-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.lesson-card.completed {
+  background: #e5e7eb40;
+  color: #000;
+}
+
+.lesson-card.in-progress {
+  background: #e5e7eb40;
+  color: #000;
+}
+
+.lesson-card.not_started {
+  background: #f9fafb;
+  color: #9ca3af;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.lesson-card.not_started .lesson-title {
+  color: #9ca3af;
+}
+
+.lesson-card.not_started .lesson-number {
+  color: #4B5563;
+}
+
+/* Fade lesson titles for locked lessons */
+.lesson-card.locked .lesson-title {
+  color: #4B5563;
+  opacity: 0.6;
+}
+
+.lesson-card.not_started .status-icon.not_started {
+  background: #d1d5db;
+  color: #4B5563;
+}
+
+.lesson-card.not_started .review-lesson-btn {
+  background: #d1d5db;
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.lesson-card.not_started .access-toggle {
+  opacity: 0.5;
+}
+
+.lesson-card.not_started .toggle-switch input {
+  cursor: not-allowed;
+}
+
+.lesson-card.not_started .toggle-slider {
+  background-color: #d1d5db;
+  cursor: not-allowed;
+}
+
+/* Lesson Status Icons */
+.lesson-status {
+  flex-shrink: 0;
+}
+
+.status-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.5rem;
+  background-color: #4B5563;
+}
+
+.status-icon.completed {
+  background: #4b5563;
+  color: #fff;
+}
+
+.status-icon.in-progress {
+  background: #1f2937;
+  color: white;
+}
+
+.status-icon.not_started {
+  background: #e5e7eb;
+  color: #6b7280;
+}
+
+/* Lesson Content */
+.lesson-content {
+  flex: 1;
+}
+
+.lesson-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0.2rem 0 0 0;
+}
+
+.lesson-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.lesson-number {
+  font-size: 0.75rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.lesson-status-text {
+  font-size: 0.875rem;
+  color: #22c55e;
+  font-weight: 500;
+}
+
+.lesson-availability {
+  font-size: 0.875rem;
+  color: #9ca3af;
+}
+
+/* Lesson Actions */
+.lesson-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-end;
+  flex-shrink: 0;
+}
+
+.lesson-score {
+  background: #4b5563;
+  color: white;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.875rem;
+  width: 124px;
+  height: 33px;
+  font-weight: 500;
+}
+
+.preview-lesson-btn {
+  background: #4b5563;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  width: 124px;
+  height: 33px;
+  transition: all 0.2s ease;
+}
+
+.preview-lesson-btn:hover {
+  background: #374151;
+}
+
+.review-lesson-btn {
+  background: #e5e7eb;
+  color: #6b7280;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: not-allowed;
+}
+
+/* Access Toggle */
+.access-toggle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 24px;
+}
+
+.toggle-slider:before {
+  position: absolute;
+  content: '';
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .toggle-slider {
+  background: linear-gradient(90deg, #d60c7b 0%, #8b2db3 100%);
+}
+
+input:checked + .toggle-slider:before {
+  transform: translateX(20px);
+}
+
+.toggle-label {
+  font-size: 0.75rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.lesson-card.completed .toggle-label,
+.lesson-card.in-progress .toggle-label {
+  color: #9ca3af;
+}
+
+/* Right Sidebar */
+.manage-lessons-right-sidebar {
+  width: 320px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.sidebar-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #98198E;
+  margin: 0 0 1.5rem 0;
+}
+
+/* Lesson Progress Card */
+.lesson-progress-card {
+  text-align: left;
+}
+
+.progress-circle {
+  position: relative;
+  display: inline-block;
+  stroke: #D60C7B !important;
+  margin-bottom: 1rem;
+  flex-shrink: 0;
+}
+
+.progress-text {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #D60C7B;
+}
+
+.progress-summary {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #D60C7B;
+  text-align: start;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  white-space: wrap;
+}
+
+.progress-description {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin: 0;
+  line-height: 1.5;
+  padding-top: 1rem;
+}
+
+/* Progress container for flexbox layout */
+.progress-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Mission Badge Card */
+.mission-badge-card {
+  text-align: left;
+}
+.mission-badge-card h3 {
+  color: #98198e;
+}
+.badge-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.badge-info {
+  flex: 1;
+}
+
+.badge-name {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0 0 0.5rem 0;
+}
+
+.badge-description {
+  font-size: 0.8rem;
+  color: #6b7280;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.badge-icon {
+  flex-shrink: 0;
+}
+
+.detective-icon {
+  font-size: 3rem;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f3f4f6;
+  border-radius: 8px;
+  border: 1px solid #dddfe2;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+.detective-icon:hover {
+  transform: scale(1.05);
+}
+
+/* Loading and Error States */
+.manage-lessons-loading,
+.manage-lessons-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  gap: 1rem;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #e5e7eb;
+  border-top: 4px solid #8b5cf6;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.manage-lessons-error p {
+  color: #ef4444;
+  font-size: 1.125rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .manage-lessons-content {
+    flex-direction: column;
+  }
+
+  .manage-lessons-right-sidebar {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .manage-lessons-page {
+    padding: 1rem;
+  }
+
+  .manage-lessons-header h1 {
+    font-size: 2rem;
+  }
+
+  .child-profile-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .lesson-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .lesson-actions {
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .access-toggle {
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .manage-lessons-page {
+    padding: 0.75rem;
+  }
+
+  .manage-lessons-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .child-profile-card {
+    padding: 1rem;
+  }
+
+  .lesson-card {
+    padding: 1rem;
+  }
+
+  .sidebar-card {
+    padding: 1rem;
+  }
+}

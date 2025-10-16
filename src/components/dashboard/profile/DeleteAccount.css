@@ -1,0 +1,120 @@
+/* DeleteAccount.css */
+.delete-account-button {
+  background-color: #ff4d4f;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  display: block;
+  width: 100%;
+}
+
+.delete-account-button:hover {
+  background-color: #d93636;
+}
+
+.delete-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.delete-modal {
+  background-color: white;
+  border-radius: 8px;
+  padding: 24px;
+  width: 90%;
+  max-width: 450px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.delete-modal h3 {
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.delete-modal p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.delete-modal-content {
+  margin-bottom: 24px;
+}
+
+.delete-account-password {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+.delete-account-password:focus {
+  border-color: #ff4d4f;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(255, 77, 79, 0.2);
+}
+
+.delete-account-error {
+  color: #ff4d4f;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.delete-modal-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.delete-modal-cancel {
+  background-color: transparent;
+  color: #666;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.delete-modal-cancel:hover {
+  color: #333;
+  border-color: #999;
+}
+
+.delete-modal-confirm {
+  background-color: #ff4d4f;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.delete-modal-confirm:hover {
+  background-color: #d93636;
+}
+
+.delete-modal-confirm:disabled,
+.delete-modal-cancel:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

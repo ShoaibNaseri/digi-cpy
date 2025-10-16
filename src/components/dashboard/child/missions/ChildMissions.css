@@ -1,0 +1,54 @@
+.missions__header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 34px;
+}
+
+.missions__header p {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.missions__header h1 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.missions__list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(250px, 1fr));
+  gap: 20px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 1024px) {
+  .missions__list {
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .missions__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .missions__list {
+    grid-template-columns: 1fr;
+  }
+
+  .missions__header {
+    margin-bottom: 24px;
+  }
+
+  .missions__header h1 {
+    font-size: 24px;
+  }
+
+  .missions__header p {
+    font-size: 14px;
+  }
+}

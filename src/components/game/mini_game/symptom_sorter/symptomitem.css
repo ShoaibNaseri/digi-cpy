@@ -1,0 +1,78 @@
+.symptom-item {
+  padding: 10px 15px;
+  margin: 8px;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  user-select: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.symptom-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.symptom-item:active {
+  transform: translateY(1px);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.symptom-text {
+  margin-right: 10px;
+}
+
+.check-icon {
+  display: flex;
+  align-items: center;
+}
+
+.correct-item {
+  animation: correct-pulse 0.5s ease-in-out;
+}
+
+@keyframes correct-pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.shake-animation {
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-8px);
+  }
+  50% {
+    transform: translateX(8px);
+  }
+  75% {
+    transform: translateX(-4px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .symptom-item {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+}

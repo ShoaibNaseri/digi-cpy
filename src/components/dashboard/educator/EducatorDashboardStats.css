@@ -1,0 +1,375 @@
+.educator-dashboard-stats {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.educator-dashboard-stats__section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.educator-dashboard-stats__section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #374151;
+  margin: 0;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.educator-dashboard-stats__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+.educator-dashboard-stats__card {
+  background: #fff;
+  border-radius: 12px;
+  box-sizing: border-box;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  min-width: 220px;
+  padding: 22px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.educator-dashboard-stats__card:hover {
+  transform: translateY(-2px);
+  box-shadow: rgba(99, 99, 99, 0.3) 0px 4px 12px 0px;
+}
+
+.educator-dashboard-stats__icon {
+  /* font-size: 1.7rem; */
+  color: #374151;
+  background-color: #f3f4f6;
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.educator-dashboard-stats__value {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.educator-dashboard-stats__label {
+  color: #888;
+  font-size: 1.05rem;
+}
+
+.educator-dashboard-stats__change {
+  font-size: 0.98rem;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.educator-dashboard-stats__up {
+  color: #1db954;
+  font-weight: 600;
+}
+
+.educator-dashboard-stats__down {
+  color: #e74c3c;
+  font-weight: 600;
+}
+
+/* Loading State */
+.educator-dashboard-stats__loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  color: #666;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f4f6;
+  border-top: 4px solid #3b82f6;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 16px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Analytics Summary */
+.educator-dashboard-stats__summary {
+  width: 100%;
+  margin-top: 24px;
+}
+
+.analytics-summary {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 24px;
+}
+
+.analytics-summary h3 {
+  margin: 0 0 20px 0;
+  color: #374151;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.analytics-summary__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.analytics-summary__item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+  background: #f8fafc;
+  border-radius: 8px;
+  border-left: 4px solid #3b82f6;
+}
+
+.analytics-summary__label {
+  font-size: 0.9rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.analytics-summary__value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+@media (max-width: 900px) {
+  .educator-dashboard-stats {
+    gap: 24px;
+  }
+
+  .educator-dashboard-stats__cards {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 14px;
+  }
+
+  .educator-dashboard-stats__card {
+    min-width: 180px;
+  }
+
+  .analytics-summary__grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .educator-dashboard-stats__cards {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .educator-dashboard-stats__card {
+    min-width: unset;
+    width: 100%;
+  }
+}
+
+/* Charts Section */
+.educator-dashboard-stats__charts-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.educator-dashboard-stats__chart-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 24px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.educator-dashboard-stats__chart-card:hover {
+  transform: translateY(-2px);
+  box-shadow: rgba(99, 99, 99, 0.3) 0px 4px 12px 0px;
+}
+
+.chart-card-header {
+  margin-bottom: 20px;
+}
+
+.chart-card-title {
+  margin: 0 0 8px 0;
+  color: #374151;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.chart-card-subtitle {
+  margin: 0 0 16px 0;
+  color: #6b7280;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.chart-header h4 {
+  margin: 0;
+  color: #374151;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.chart-controls {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.chart-filters {
+  display: flex;
+  gap: 8px;
+}
+
+.time-unit-selector {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.time-unit-label {
+  font-size: 0.9rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.time-unit-select {
+  padding: 6px 12px;
+  border: 2px solid #e5e7eb;
+  border-radius: 6px;
+  background: #fff;
+  color: #374151;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.time-unit-select:hover {
+  border-color: #3b82f6;
+}
+
+.time-unit-select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.chart-filter-btn {
+  padding: 8px 16px;
+  border: 2px solid #e5e7eb;
+  background: #fff;
+  color: #6b7280;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.chart-filter-btn:hover {
+  border-color: #3b82f6;
+  color: #3b82f6;
+}
+
+.chart-filter-btn.active {
+  background: #3b82f6;
+  border-color: #3b82f6;
+  color: #fff;
+}
+
+.chart-container {
+  height: 300px;
+  width: 100%;
+}
+
+.chart-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #666;
+}
+
+.chart-loading .loading-spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid #f3f4f6;
+  border-top: 3px solid #3b82f6;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 12px;
+}
+
+@media (max-width: 768px) {
+  .chart-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .chart-controls {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .chart-filters {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .time-unit-selector {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .educator-dashboard-stats__charts-section {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .chart-container {
+    height: 250px;
+  }
+}

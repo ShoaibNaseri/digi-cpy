@@ -1,0 +1,21 @@
+.timer {
+  background-color: #f8f9fa;
+  padding: 12px 24px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.timer__label {
+  font-size: 20px;
+  color: #666;
+}
+
+.timer__display {
+  font-size: 20px;
+  font-weight: 500;
+  color: #333;
+  font-family: monospace;
+}

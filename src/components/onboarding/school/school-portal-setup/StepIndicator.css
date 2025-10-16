@@ -1,0 +1,87 @@
+.step-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+  flex: 1;
+  font-family: 'Urbanist', sans-serif;
+}
+
+.step-indicator:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: calc(53% + 20.27px);
+  width: calc(100% - 80.54px);
+  height: 4px;
+  background-color: #D0D0D0 !important;
+  z-index: 1;
+}
+
+/* Step 1: Show half-filled progress bar */
+.step-indicator:first-child.step-indicator--active:not(:last-child)::after {
+  background: linear-gradient(90deg, #CE1081 0%, #8F2BB0 100%);
+  background-size: 50% 100%;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+/* Step 2: Show fully filled progress bar */
+.step-indicator:last-child.step-indicator--active:not(:last-child)::after,
+.step-indicator--completed:not(:last-child)::after {
+  background: linear-gradient(90deg, #CE1081 0%, #8F2BB0 100%);
+}
+
+.step-indicator__icon {
+  width: 40.54px;
+  height: 40.54px;
+  /* padding: 13px 12px; */
+  border-radius: 10.33px;
+  background-color: #f3f4f6;
+  border: 2px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9ca3af;
+  z-index: 2;
+  position: relative;
+  background-color: white;
+}
+
+.step-indicator--active .step-indicator__icon {
+  background: linear-gradient(180deg, #CE1081 0%, #8F2BB0 100%);
+  border-color: transparent;
+  color: white;
+}
+
+.step-indicator--completed .step-indicator__icon {
+  background: linear-gradient(180deg, #CE1081 0%, #8F2BB0 100%);
+  border-color: transparent;
+  color: white;
+}
+
+.step-indicator__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  text-align: center;
+  font-family: 'Urbanist', sans-serif;
+}
+
+.step-indicator__step {
+  font-size: 14px;
+  font-weight: 500;
+  color: #6b7280;
+  font-family: 'Urbanist', sans-serif;
+}
+
+.step-indicator__title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+  font-family: 'Urbanist', sans-serif;
+}
+
+

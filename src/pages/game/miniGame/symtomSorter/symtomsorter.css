@@ -1,0 +1,648 @@
+.symtomsorter-container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #01123a;
+  overflow-x: hidden;
+}
+.symtomsorter-header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%;
+  text-transform: uppercase;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.symtomsorter-header-timer,
+.symtomsorter-header-button,
+.symtomsorter-header-score {
+  font-size: clamp(20px, 3vw, 25px);
+  padding: 8px 15px;
+  border-radius: 30px;
+
+  font-family: 'game-font';
+  background-color: var(--game-font-background-color);
+  color: var(--game-font-color);
+  cursor: pointer;
+}
+.symtomsorter-header-button {
+  margin-left: 40px;
+}
+.symtomsorter-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5%;
+  gap: 20px;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.symtomsorter-body-left,
+.symtomsorter-body-right {
+  width: 100%;
+  min-height: 300px;
+  max-height: 500px;
+  flex: 1 1 300px;
+  border-radius: 30px;
+  border: 1px solid black;
+  box-shadow: 0 0 10px 0 rgba(55, 63, 225, 0.651);
+  text-align: center;
+  background-color: #1c74e823;
+  text-transform: uppercase;
+  overflow: hidden;
+  padding-bottom: 35px;
+  margin-bottom: 20px;
+}
+.symtomsorter-body-left-title,
+.symtomsorter-body-right-title {
+  padding-top: 20px;
+  font-size: clamp(16px, 3vw, 22px);
+  color: rgb(242, 244, 246);
+  font-family: Arial, sans-serif;
+}
+
+.symtomsorter-footer {
+  padding: 0px 5%;
+  align-items: center;
+  justify-content: center;
+}
+.symtomsorter-footer-question {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding-top: 20px;
+  text-transform: uppercase;
+  font-family: 'content-font-bold';
+}
+
+.symtomsorter-footer-question-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.symtomsorter-body-symptoms {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  height: calc(100% - 80px);
+  overflow-y: auto;
+}
+
+/* Add custom scrollbar styling for the symptoms container */
+.symtomsorter-body-symptoms::-webkit-scrollbar {
+  width: 10px;
+}
+
+.symtomsorter-body-symptoms::-webkit-scrollbar-track {
+  background: rgba(240, 240, 240, 0.3);
+}
+
+.symtomsorter-body-symptoms::-webkit-scrollbar-thumb {
+  background: #1c74e8;
+}
+
+.symtomsorter-body-symptoms::-webkit-scrollbar-thumb:hover {
+  background: #155cb9;
+}
+
+.symtomsorter-body-symptom-item {
+  color: #f0f0f0;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 10px 15px;
+  border-radius: 30px;
+  margin: 5px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.symtomsorter-symptom-item {
+  font-family: 'content-font-bold';
+  color: #141313;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 20px;
+  font-size: clamp(12px, 2.5vw, 15px);
+  font-weight: 600;
+  padding: 10px 15px;
+  border-radius: 30px;
+  margin: 8px;
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.1s, opacity 0.1s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.symtomsorter-footer-question .symtomsorter-symptom-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.symtomsorter-symptom-item span {
+  color: rgb(9, 9, 9);
+  padding: 10px 10px;
+}
+
+/* Style for the check icon */
+.check-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  width: 24px;
+  height: 24px;
+  background-color: white;
+  border-radius: 50%;
+  color: green;
+  font-size: 14px;
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+
+/* Container for the symptom text */
+.symptom-text {
+  flex: 1;
+}
+
+/* Animation for correct answers */
+
+/* Shake animation for wrong answers */
+.shake-animation {
+  animation: shake 0.5s forwards;
+}
+
+/* Pop-in animation */
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  70% {
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Shake animation */
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-5px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(5px);
+  }
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Enhance the appearance of symptoms in the body containers */
+.symtomsorter-body-symptoms .symtomsorter-symptom-item {
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.1)
+  );
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  height: 30px;
+}
+
+.symtomsorter-body-symptoms .symtomsorter-symptom-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.27);
+}
+
+/* Stylish starting message */
+.start-game-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 30px;
+}
+
+.start-game-text {
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background: linear-gradient(
+    90deg,
+    rgba(30, 87, 153, 0.7) 0%,
+    rgba(41, 137, 216, 0.7) 50%,
+    rgba(32, 124, 229, 0.7) 100%
+  );
+  padding: 15px 30px;
+  border-radius: 50px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  animation: blinkingText 1.5s infinite, floatEffect 3s ease-in-out infinite;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.start-game-text::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 100%
+  );
+  transform: rotate(30deg);
+  animation: shimmerEffect 3s infinite;
+}
+
+/* Blinking animation */
+@keyframes blinkingText {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Floating effect animation */
+@keyframes floatEffect {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Shimmer effect animation */
+@keyframes shimmerEffect {
+  0% {
+    transform: rotate(30deg) translateX(-100%);
+  }
+  100% {
+    transform: rotate(30deg) translateX(100%);
+  }
+}
+@media screen and (max-height: 1200px) {
+  .symtomsorter-body-left,
+  .symtomsorter-body-right {
+    width: 100%;
+    height: 500px;
+  }
+}
+
+/* Add these media queries at the end of the file */
+@media screen and (max-height: 920px) {
+  .symtomsorter-header {
+    padding: 15px 3%;
+  }
+  .symtomsorter-body {
+    padding: 10px 3%;
+  }
+
+  .symtomsorter-body-left,
+  .symtomsorter-body-right {
+    width: 100%;
+    max-height: 250px;
+  }
+
+  .start-game-text {
+    font-size: 20px;
+    padding: 10px 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .symtomsorter-footer-question .symtomsorter-symptom-item {
+    min-width: 120px;
+    margin: 5px;
+  }
+
+  .symtomsorter-body-symptoms .symtomsorter-symptom-item {
+    height: auto;
+    min-height: 30px;
+  }
+}
+
+/* Timer warning animation */
+.timer-warning {
+  background-color: #ff3333 !important; /* Red background */
+  color: white !important;
+  animation: blink-timer 0.5s infinite alternate;
+  box-shadow: 0 0 10px #ff3333;
+  transition: all 0.3s ease;
+}
+
+@keyframes blink-timer {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+/* Game End Modal Styles */
+.game-end-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s forwards;
+}
+
+.game-end-modal {
+  background: linear-gradient(135deg, #01123a 0%, #1e3a8a 100%);
+  border-radius: 20px;
+  padding: 30px;
+  width: 80%;
+  max-width: 500px;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(28, 116, 232, 0.5);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.game-end-modal-title {
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-family: 'game-font';
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.game-end-modal-score {
+  color: white;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 10px;
+  font-family: 'game-font';
+}
+
+.game-end-modal-score span {
+  color: #33ff57;
+  font-size: 28px;
+}
+
+.game-end-modal-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.game-end-modal-buttons .symtomsorter-header-button {
+  min-width: 150px;
+  margin: 10px;
+  padding: 15px 25px;
+  transition: all 0.3s ease;
+}
+
+.game-end-modal-buttons .symtomsorter-header-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (max-width: 600px) {
+  .game-end-modal {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .game-end-modal-title {
+    font-size: 24px;
+  }
+
+  .game-end-modal-score {
+    font-size: 20px;
+  }
+
+  .game-end-modal-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* Being dragged item styling */
+.touch-dragging-element {
+  font-family: 'content-font-bold';
+  color: #141313;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 20px;
+  min-width: 100px;
+  font-size: clamp(12px, 2.5vw, 15px);
+  font-weight: 600;
+  padding: 10px 15px;
+  border-radius: 30px;
+  margin: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  text-align: center;
+  animation: symtomsorter-float 0.3s forwards;
+}
+
+/* Float animation for dragged item */
+@keyframes symtomsorter-float {
+  from {
+    transform: scale(0.95);
+    opacity: 0.7;
+  }
+  to {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+}
+
+/* Make sure drop areas have a visual indicator during drag */
+.symtomsorter-body-left.drag-over,
+.symtomsorter-body-right.drag-over {
+  border: 2px dashed rgba(255, 255, 255, 0.5);
+  background-color: rgba(28, 116, 232, 0.2);
+  transition: all 0.3s ease;
+}
+
+/* Add touch-specific overrides for smaller screens */
+@media (max-width: 768px) {
+  .touch-dragging-element {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .symtomsorter-symptom-item {
+    -webkit-tap-highlight-color: rgba(
+      0,
+      0,
+      0,
+      0
+    ); /* Remove tap highlight on mobile */
+    user-select: none; /* Prevent text selection during touch */
+  }
+}
+
+/* Mobile hint styling */
+.mobile-hint {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 30px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 900;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  animation: fadeInOut 5s forwards;
+  pointer-events: none;
+  width: fit-content;
+  max-width: 90%;
+  text-align: center;
+}
+
+.mobile-hint svg {
+  font-size: 20px;
+  animation: pointAnimation 2s infinite;
+}
+
+/* Animation for the pointer icon */
+@keyframes pointAnimation {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px) translateX(5px);
+  }
+}
+
+/* Fade in and out animation for the hint */
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 20px);
+  }
+  15% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+  85% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, 20px);
+  }
+}
+
+/* Improve drag appearance */
+.symtomsorter-symptom-item {
+  /* ...existing styles... */
+  transition: transform 0.1s, box-shadow 0.1s, opacity 0.1s;
+}
+
+.symtomsorter-symptom-item:active,
+.symtomsorter-symptom-item[aria-grabbed='true'] {
+  cursor: grabbing;
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+/* Improve drag target appearance */
+.drag-over {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border: 3px dashed #ffca28 !important;
+  box-shadow: inset 0 0 30px rgba(255, 255, 0, 0.1);
+  transition: all 0.2s ease-in-out;
+}
+
+/* Dragged ghost element */
+.symtomsorter-symptom-item:active::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  border-radius: inherit;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+/* Enhanced touch dragging element */
+.touch-dragging-element {
+  padding: 10px 15px;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  transform-origin: center center;
+  animation: symtomsorter-pulse 1.5s infinite alternate;
+}
+
+@keyframes symtomsorter-pulse {
+  from {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  to {
+    transform: translate(-50%, -50%) scale(1.05);
+  }
+}

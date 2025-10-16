@@ -1,0 +1,581 @@
+.educator-lesson-page {
+  background-color: #f9f9f9;
+  padding: 2rem;
+  /* max-width: 1400px; */
+  margin: 0 auto;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Section Layout */
+.educator-lesson-page-section {
+  margin-bottom: 3rem;
+}
+
+.educator-lesson-page-section-header {
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #f3f4f6;
+  padding-bottom: 1rem;
+}
+
+.educator-lesson-page-section-header h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.2;
+}
+
+.educator-lesson-page-section-header p {
+  font-size: 0.9rem;
+  color: #171819;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Billing Grid - matches EducatorSchoolDetails */
+.educator-sdp-lesson__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.25rem;
+  transition: none;
+}
+
+.educator-sdp-lesson__field {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.educator-sdp-lesson__field::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #d60c7b 0%, #8b2db3 100%);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.educator-sdp-lesson__field:hover::before {
+  transform: scaleX(1);
+}
+
+.educator-sdp-lesson__field:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  border-color: #cbd5e1;
+}
+
+.educator-sdp-lesson__field-icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+.educator-sdp-lesson__field-icon svg {
+  width: 18px;
+  height: 18px;
+  stroke-width: 2.5;
+}
+
+.educator-sdp-lesson__field-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.educator-sdp-lesson__label {
+  font-size: 1rem;
+  color: #181818;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: relative;
+  margin: 0;
+}
+
+.educator-sdp-lesson__value {
+  font-size: 1.5rem;
+  color: #1e293b;
+  font-weight: 700;
+  line-height: 1.4;
+  position: relative;
+}
+/* Stats Overview */
+.educator-lesson-page-stats-overview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.educator-lesson-page-stat-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid #e5e7eb;
+}
+
+.educator-lesson-page-stat-icon {
+  flex-shrink: 0;
+}
+
+.educator-lesson-page-stat-content h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0;
+  line-height: 1;
+}
+
+.educator-lesson-page-stat-content p {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin: 0.25rem 0 0 0;
+  font-weight: 500;
+}
+
+/* Main Content Layout */
+.educator-lesson-page-content {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+/* Left Column - Main Content */
+.educator-lesson-page-left-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Lesson List - Matching ManageChildLesson exactly */
+.educator-lesson-page-lesson-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.educator-lesson-page-lesson-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.educator-lesson-page-lesson-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.educator-lesson-page-lesson-card.accessible {
+  background: white;
+}
+
+.educator-lesson-page-lesson-card.restricted {
+  background: #e5e7eb40;
+}
+
+/* Lesson Status */
+.educator-lesson-page-lesson-status {
+  flex-shrink: 0;
+}
+
+.educator-lesson-page-status-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.5rem;
+  background-color: #4b5563;
+}
+
+.educator-lesson-page-status-icon.accessible {
+  background: #4b5563;
+  color: #fff;
+}
+
+.educator-lesson-page-status-icon.restricted {
+  background: #e5e7eb;
+  color: #6b7280;
+}
+
+/* Lesson Content */
+.educator-lesson-page-lesson-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.educator-lesson-page-lesson-number {
+  font-size: 0.75rem;
+  color: #6b7280;
+  font-weight: 500;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.educator-lesson-page-premium-badge {
+  font-size: 0.6rem;
+  background: linear-gradient(90deg, #d60c7b 0%, #8b2db3 100%);
+  color: white;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.educator-lesson-page-lesson-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Lesson Actions */
+.educator-lesson-page-lesson-actions {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.educator-lesson-plan-button {
+  background: #cafd06;
+  color: black;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  width: 124px;
+  height: 33px;
+  transition: all 0.2s ease;
+}
+.educator-lesson-plan-button:hover {
+  background: #94e206;
+}
+.educator-lesson-page-access-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.educator-lesson-page-toggle-label {
+  font-size: 0.75rem;
+  color: #6b7280;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* Toggle Switch - Matching ManageChildLesson styles */
+.educator-lesson-page-toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+}
+
+.educator-lesson-page-toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.educator-lesson-page-toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 24px;
+}
+
+.educator-lesson-page-toggle-slider:before {
+  position: absolute;
+  content: '';
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .educator-lesson-page-toggle-slider {
+  background: linear-gradient(90deg, #d60c7b 0%, #8b2db3 100%);
+}
+
+input:focus + .educator-lesson-page-toggle-slider {
+  box-shadow: 0 0 1px #d60c7b;
+}
+
+input:checked + .educator-lesson-page-toggle-slider:before {
+  transform: translateX(20px);
+}
+
+/* Right Column - Sidebar */
+.educator-lesson-page-right-sidebar {
+  width: 320px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.educator-lesson-page-sidebar-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.educator-lesson-page-sidebar-card h3 {
+  margin: 0 0 1.5rem 0;
+  color: #98198e;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Lesson Overview Card */
+
+.educator-lesson-page-overview-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.educator-lesson-page-overview-circle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.educator-lesson-page-overview-text {
+  position: absolute;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #d60c7b;
+}
+
+.educator-lesson-page-overview-summary {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #d60c7b;
+  text-align: center;
+  margin: 0;
+}
+
+.educator-lesson-page-overview-description {
+  font-size: 0.8rem;
+  color: #9ca3af;
+  margin: 1rem 0 0 0;
+  text-align: center;
+  line-height: 1.4;
+}
+
+/* School Info Card */
+.educator-lesson-page-school-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.educator-lesson-page-school-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0 0 0.5rem 0;
+}
+
+.educator-lesson-page-school-description {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.educator-lesson-page-school-stats {
+  display: flex;
+  gap: 1rem;
+}
+
+.educator-lesson-page-stat-item {
+  flex: 1;
+  text-align: center;
+  padding: 0.75rem;
+  background: #f9fafb;
+  border-radius: 8px;
+  border: 1px solid #f3f4f6;
+}
+
+.educator-lesson-page-stat-number {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 0.25rem;
+}
+
+.educator-lesson-page-stat-label {
+  font-size: 0.75rem;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+}
+
+/* Header Section */
+.educator-lesson-page-header {
+  margin-bottom: 2rem;
+}
+
+.educator-lesson-page-header h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #000;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.2;
+}
+
+.educator-lesson-page-header p {
+  font-size: 1rem;
+  color: #1c1d20;
+  margin: 0;
+}
+
+/* Loading State */
+.educator-lessons-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem;
+  color: #666;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f4f6;
+  border-top: 4px solid #3b82f6;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .educator-lesson-page {
+    padding: 1rem;
+  }
+
+  .educator-lesson-page-stats-overview {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .educator-lesson-page-content {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .educator-lesson-page-right-sidebar {
+    width: 100%;
+  }
+
+  .educator-lesson-page-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .educator-lesson-page-lesson-card {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+    padding: 1.25rem;
+  }
+
+  .educator-lesson-page-lesson-content {
+    text-align: center;
+  }
+
+  .educator-lesson-page-lesson-actions {
+    justify-content: center;
+  }
+
+  .educator-lesson-page-access-toggle {
+    justify-content: center;
+  }
+
+  .educator-lesson-page-school-stats {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .educator-lesson-page-stat-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
+  }
+
+  .educator-lesson-page-lesson-title {
+    font-size: 1.125rem;
+  }
+
+  .educator-lesson-page-toggle-label {
+    font-size: 0.8rem;
+  }
+}

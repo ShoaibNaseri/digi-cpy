@@ -1,0 +1,571 @@
+.phone-call-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  font-family: 'content-font', system-ui, sans-serif;
+}
+
+.phone-device {
+  position: relative;
+  width: 350px;
+  height: 720px;
+  background: #1d1d1f;
+  border-radius: 45px;
+  padding: 8px;
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.4);
+  border: 2px solid #2c2c2e;
+}
+
+/* Volume Buttons (Left Side) */
+.phone-device::before {
+  content: '';
+  position: absolute;
+  left: -3px;
+  top: 150px;
+  width: 4px;
+  height: 30px;
+  background: #2c2c2e;
+  border-radius: 2px 0 0 2px;
+}
+
+.phone-device::after {
+  content: '';
+  position: absolute;
+  left: -3px;
+  top: 190px;
+  width: 4px;
+  height: 30px;
+  background: #2c2c2e;
+  border-radius: 2px 0 0 2px;
+}
+
+/* Mute Switch */
+.mute-switch {
+  position: absolute;
+  left: -3px;
+  top: 120px;
+  width: 4px;
+  height: 20px;
+  background: #2c2c2e;
+  border-radius: 2px 0 0 2px;
+}
+
+/* Lock Button (Right Side) */
+.lock-button {
+  position: absolute;
+  right: -3px;
+  top: 180px;
+  width: 4px;
+  height: 60px;
+  background: #2c2c2e;
+  border-radius: 0 2px 2px 0;
+}
+
+.phone-screen {
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  border-radius: 38px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Dynamic Island */
+.phone-screen::before {
+  content: '';
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 32px;
+  background: #000;
+  border-radius: 20px;
+  z-index: 1000;
+}
+
+.phone-home-button {
+  display: none; /* iPhone 14 Pro Max doesn't have home button */
+}
+
+/* Dialing Screen */
+.dialing-screen {
+  height: 100%;
+  background: linear-gradient(180deg, #eef0f1 0%, #c1c1c4 100%);
+  color: black;
+  display: flex;
+  flex-direction: column;
+  padding: 60px 30px 30px;
+}
+
+.phone-number-display {
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: 20px;
+}
+
+.calling-to-label {
+  font-size: 16px;
+  opacity: 0.8;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.contact-name {
+  font-size: 28px;
+  font-weight: 600;
+  margin: 15px 0;
+  font-family: 'content-font-bold', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.ready-to-call {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 10px 0;
+  font-weight: 400;
+  animation: pulse-text 2s infinite;
+}
+
+@keyframes pulse-text {
+  0%,
+  100% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+}
+
+.phone-number {
+  font-size: 20px;
+  opacity: 0.9;
+  margin: 8px 0;
+  font-weight: 400;
+}
+
+.typing-cursor {
+  font-weight: 400;
+  animation: blink 1s infinite;
+  margin-left: 2px;
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.dialing-pad {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.number-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 250px;
+}
+
+.number-button {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 2px solid rgba(8, 8, 8, 0.2);
+  background: rgba(255, 255, 255, 0.15);
+  color: rgb(7, 7, 7);
+  font-size: 24px;
+  font-weight: 300;
+  cursor: not-allowed;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(20px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.call-actions {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.call-button {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: none;
+  background: #34c759;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(52, 199, 89, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.call-button:hover {
+  background: #30d158;
+  transform: scale(1.05);
+}
+
+.call-button:active {
+  transform: scale(0.95);
+}
+
+.call-button-glow {
+  animation: glow 2s infinite;
+  box-shadow: 0 8px 25px rgba(52, 199, 89, 0.6), 0 0 20px rgba(52, 199, 89, 0.8) !important;
+}
+
+.call-button-disabled {
+  background: rgba(52, 199, 89, 0.3) !important;
+  cursor: not-allowed !important;
+  box-shadow: none !important;
+}
+
+.call-button-disabled:hover {
+  background: rgba(52, 199, 89, 0.3) !important;
+  transform: none !important;
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    box-shadow: 0 8px 25px rgba(52, 199, 89, 0.4),
+      0 0 15px rgba(52, 199, 89, 0.6);
+  }
+  50% {
+    box-shadow: 0 8px 35px rgba(52, 199, 89, 0.8), 0 0 25px rgba(52, 199, 89, 1);
+  }
+}
+
+/* Calling Screen */
+.calling-screen {
+  height: 100%;
+  background: linear-gradient(200deg, #38e43e 0%, #057e3d 100%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 30px 30px;
+}
+
+.contact-info {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-avatar {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 25px;
+  border: 4px solid rgba(8, 7, 7, 0.2);
+  background-color: #ffffff;
+  position: relative;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.contact-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.call-status {
+  font-size: 18px;
+  opacity: 0.8;
+  margin: 15px 0;
+  font-weight: 400;
+}
+
+.call-timer {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 15px 0;
+  font-family: 'content-font-bold', sans-serif;
+}
+
+/* Dialing Animation */
+.dialing-animation {
+  position: relative;
+  margin-top: 40px;
+}
+
+.pulse-ring {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.pulse-ring:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.pulse-ring:nth-child(3) {
+  animation-delay: 1s;
+}
+
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(2.5);
+    opacity: 0;
+  }
+}
+
+/* In-Call Screen */
+.in-call-screen {
+  height: 100%;
+  background: linear-gradient(180deg, #007aff 0%, #5856d6 100%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 60px 30px 80px;
+}
+
+.call-indicator {
+  margin-top: 40px;
+}
+
+.sound-waves {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.wave {
+  width: 6px;
+  height: 25px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 3px;
+  animation: wave 1.2s infinite ease-in-out;
+}
+
+.wave:nth-child(1) {
+  animation-delay: 0s;
+}
+.wave:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.wave:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.wave:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+@keyframes wave {
+  0%,
+  40%,
+  100% {
+    transform: scaleY(0.4);
+    opacity: 0.5;
+  }
+  20% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+.call-controls {
+  display: flex;
+  justify-content: center;
+}
+
+.end-call-button {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: none;
+  background: #ff3b30;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(255, 59, 48, 0.4);
+  transform: rotate(135deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.end-call-button:hover {
+  background: #ff453a;
+  transform: rotate(135deg) scale(1.05);
+}
+
+.end-call-button:active {
+  transform: rotate(135deg) scale(0.95);
+}
+
+.end-call-disabled {
+  background: rgba(255, 59, 48, 0.3) !important;
+  cursor: not-allowed !important;
+  box-shadow: 0 4px 15px rgba(255, 59, 48, 0.2) !important;
+}
+
+.end-call-disabled:hover {
+  background: rgba(255, 59, 48, 0.3) !important;
+  transform: rotate(135deg) !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .phone-device {
+    width: 300px;
+    height: 620px;
+    padding: 6px;
+  }
+
+  /* Adjust button positions for smaller phone */
+  .phone-device::before {
+    top: 130px;
+    height: 25px;
+  }
+
+  .phone-device::after {
+    top: 165px;
+    height: 25px;
+  }
+
+  .mute-switch {
+    top: 105px;
+    height: 18px;
+  }
+
+  .lock-button {
+    top: 155px;
+    height: 50px;
+  }
+
+  .phone-screen::before {
+    width: 100px;
+    height: 28px;
+    top: 10px;
+  }
+
+  .dialing-screen,
+  .calling-screen,
+  .in-call-screen {
+    padding: 50px 25px 25px;
+  }
+
+  .contact-name {
+    font-size: 24px;
+  }
+
+  .phone-number {
+    font-size: 18px;
+  }
+
+  .contact-avatar {
+    width: 120px;
+    height: 120px;
+  }
+
+  .number-grid {
+    width: 210px;
+  }
+
+  .number-button {
+    width: 60px;
+    height: 60px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .phone-device {
+    width: 280px;
+    height: 580px;
+    padding: 5px;
+  }
+
+  /* Adjust button positions for smallest screens */
+  .phone-device::before {
+    top: 120px;
+    height: 22px;
+  }
+
+  .phone-device::after {
+    top: 150px;
+    height: 22px;
+  }
+
+  .mute-switch {
+    top: 95px;
+    height: 16px;
+  }
+
+  .lock-button {
+    top: 140px;
+    height: 45px;
+  }
+
+  .phone-screen::before {
+    width: 90px;
+    height: 25px;
+    top: 8px;
+  }
+
+  .dialing-screen,
+  .calling-screen,
+  .in-call-screen {
+    padding: 45px 20px 20px;
+  }
+
+  .contact-name {
+    font-size: 22px;
+  }
+
+  .phone-number {
+    font-size: 16px;
+  }
+
+  .contact-avatar {
+    width: 100px;
+    height: 100px;
+  }
+
+  .call-button,
+  .end-call-button {
+    width: 70px;
+    height: 70px;
+    font-size: 24px;
+  }
+}

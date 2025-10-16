@@ -1,0 +1,35 @@
+/* Educator School Users - Modern Professional Design */
+.educator-school-users {
+  padding: 2rem;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.educator-school-users__title {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #000;
+  margin: 0 0 8px 0;
+}
+
+.educator-school-users__subtitle {
+  color: #242425;
+  font-size: 14px;
+  margin: 0 0 2rem 0;
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .educator-school-users {
+    padding: 1rem;
+  }
+
+  .educator-school-users__title {
+    font-size: 1.5rem;
+  }
+
+  .educator-school-users__subtitle {
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,237 @@
+.subscription-status-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #e5e7eb;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.subscription-status-card.success {
+  border-left-color: #10b981;
+  background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 100%);
+}
+
+.subscription-status-card.warning {
+  border-left-color: #f59e0b;
+  background: linear-gradient(135deg, #fffbeb 0%, #ffffff 100%);
+}
+
+.subscription-status-card.error {
+  border-left-color: #ef4444;
+  background: linear-gradient(135deg, #fef2f2 0%, #ffffff 100%);
+}
+
+.subscription-status-card.info {
+  border-left-color: #3b82f6;
+  background: linear-gradient(135deg, #eff6ff 0%, #ffffff 100%);
+}
+
+.subscription-status-card.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 120px;
+  border-left-color: #6b7280;
+}
+
+.status-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.status-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.success .status-icon {
+  background: rgba(16, 185, 129, 0.1);
+  color: #10b981;
+}
+
+.warning .status-icon {
+  background: rgba(245, 158, 11, 0.1);
+  color: #f59e0b;
+}
+
+.error .status-icon {
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+}
+
+.info .status-icon {
+  background: rgba(59, 130, 246, 0.1);
+  color: #3b82f6;
+}
+
+.status-icon svg {
+  font-size: 24px;
+}
+
+.status-content {
+  flex: 1;
+}
+
+.status-content h3 {
+  margin: 0 0 8px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.status-content p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.status-details {
+  background: rgba(0, 0, 0, 0.02);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.detail-item:last-child {
+  border-bottom: none;
+}
+
+.detail-item span:first-child {
+  font-weight: 500;
+  color: #374151;
+}
+
+.detail-item span:last-child {
+  color: #6b7280;
+  font-weight: 600;
+}
+
+.subscription-action-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.subscription-action-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.subscription-action-btn.success {
+  background: #10b981;
+  color: white;
+}
+
+.subscription-action-btn.success:hover:not(:disabled) {
+  background: #059669;
+  transform: translateY(-1px);
+}
+
+.subscription-action-btn.warning {
+  background: #f59e0b;
+  color: white;
+}
+
+.subscription-action-btn.warning:hover:not(:disabled) {
+  background: #d97706;
+  transform: translateY(-1px);
+}
+
+.subscription-action-btn.error {
+  background: #ef4444;
+  color: white;
+}
+
+.subscription-action-btn.error:hover:not(:disabled) {
+  background: #dc2626;
+  transform: translateY(-1px);
+}
+
+.subscription-action-btn.info {
+  background: #3b82f6;
+  color: white;
+}
+
+.subscription-action-btn.info:hover:not(:disabled) {
+  background: #2563eb;
+  transform: translateY(-1px);
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #e5e7eb;
+  border-top: 4px solid #3b82f6;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 12px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .subscription-status-card {
+    padding: 16px;
+  }
+
+  .status-header {
+    gap: 12px;
+  }
+
+  .status-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .status-icon svg {
+    font-size: 20px;
+  }
+
+  .status-content h3 {
+    font-size: 16px;
+  }
+
+  .status-content p {
+    font-size: 13px;
+  }
+
+  .subscription-action-btn {
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+}

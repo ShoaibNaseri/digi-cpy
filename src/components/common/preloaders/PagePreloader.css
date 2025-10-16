@@ -1,0 +1,20 @@
+.page-preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.page-preloader-text {
+  display: inline-block;
+  padding: 40px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}

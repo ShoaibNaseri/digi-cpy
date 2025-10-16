@@ -1,0 +1,235 @@
+.schools-user-table-wrapper {
+  background: #e5e7eb;
+  border-radius: 24px;
+  padding: 20px;
+  margin: 0 24px;
+  font-family: 'Urbanist', sans-serif;
+}
+.schools-user-table-row {
+  background-color: #fff;
+  border-bottom: 1px solid #141415;
+}
+@media (max-width: 768px) {
+  .schools-user-table-wrapper {
+    margin: 0 16px;
+    padding: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .schools-user-table-wrapper {
+    margin: 0 12px;
+    padding: 12px;
+  }
+}
+
+.schools-user-table {
+  width: 100%;
+  overflow-x: auto;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.schools-user-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  table-layout: auto;
+  min-width: 900px;
+}
+.schools-user-table thead {
+  background-color: #4b5563;
+}
+
+.schools-user-table th {
+  background-color: #4b5563;
+  font-weight: 600;
+  white-space: nowrap;
+  color: white;
+  font-size: 14px;
+  padding: 16px 12px;
+  text-align: left;
+  border-bottom: none;
+  font-family: 'Urbanist', sans-serif;
+}
+
+.schools-user-table td {
+  padding: 16px 12px;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+  white-space: nowrap;
+  color: #111827;
+  font-size: 14px;
+  font-family: 'Urbanist', sans-serif;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+}
+
+.schools-user-table td:first-child,
+.schools-user-table td:nth-child(2) {
+  white-space: nowrap;
+}
+
+.schools-user-table td:nth-child(3) {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.schools-user-table tr:hover {
+  background-color: #f9fafb;
+}
+
+.schools-user-cell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.schools-user-icon {
+  width: 32px;
+  height: 32px;
+  background-color: #e5e7eb;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.schools-user-status-badge {
+  display: inline-flex;
+
+  padding: 6px 12px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  font-family: 'Urbanist', sans-serif;
+  white-space: nowrap;
+  min-width: 70px;
+  text-align: center;
+}
+
+.schools-user-status-badge.accepted {
+  background-color: #dcfce7;
+  color: #166534;
+  border: 1px solid #bbf7d0;
+}
+
+.schools-user-status-badge.pending {
+  background-color: #f3f4f6;
+  color: #6b7280;
+  border: 1px solid #e5e7eb;
+}
+
+.schools-user-status-badge.invited {
+  background-color: #fef3c7;
+  color: #92400e;
+  border: 1px solid #fde68a;
+}
+
+.schools-user-status-badge.deleted {
+  background-color: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+}
+
+.schools-user-actions-cell {
+  display: flex;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.schools-user-action-button {
+  padding: 4px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+}
+
+.schools-user-action-button:hover {
+  background-color: #f1f5f9;
+}
+
+.schools-user-action-button.edit {
+  color: #282929;
+  font-size: 1.3rem;
+}
+
+.schools-user-action-button.delete {
+  color: #252627;
+  font-size: 1.3rem;
+}
+
+.schools-user-cursor-pointer-header {
+  cursor: pointer;
+}
+
+.schools-user-table-pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+  padding: 0;
+  border-top: none;
+}
+
+.schools-user-table-pagination-info {
+  background: linear-gradient(90deg, #cc1183 0%, #902bb0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: 'Urbanist', sans-serif;
+}
+
+.schools-user-table-pagination-controls {
+  display: flex;
+  gap: 8px;
+}
+
+.schools-user-table-pagination-button {
+  padding: 8px 12px;
+  border: 1px solid #e5e7eb;
+  background-color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: #292b2f;
+  font-size: 1.3rem;
+  font-weight: 500;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Urbanist', sans-serif;
+}
+
+.schools-user-table-pagination-button:hover:not(:disabled) {
+  background-color: #f9fafb;
+  border-color: #d1d5db;
+  color: #374151;
+}
+
+.schools-user-table-pagination-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: #f9fafb;
+  border-color: #e5e7eb;
+  color: #9ca3af;
+}

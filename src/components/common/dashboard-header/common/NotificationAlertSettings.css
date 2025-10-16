@@ -1,0 +1,208 @@
+/* Notification Alert Settings Styles */
+.notification-alert-settings {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  max-width: 400px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.notification-alert-settings__header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.notification-alert-settings__icon {
+  color: #3b82f6;
+  font-size: 1.25rem;
+}
+
+.notification-alert-settings__header h3 {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.notification-alert-settings__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.notification-alert-settings__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.notification-alert-settings__label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex: 1;
+}
+
+.notification-alert-settings__label span:first-child {
+  font-weight: 500;
+  color: #374151;
+  font-size: 0.875rem;
+}
+
+.notification-alert-settings__status {
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.status-active {
+  color: #10b981;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.status-inactive {
+  color: #6b7280;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.notification-alert-settings__value {
+  font-size: 0.75rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.notification-alert-settings__toggle {
+  width: 48px;
+  height: 24px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  position: relative;
+}
+
+.notification-alert-settings__toggle.active {
+  background: #10b981;
+  color: white;
+}
+
+.notification-alert-settings__toggle.inactive {
+  background: #d1d5db;
+  color: #6b7280;
+}
+
+.notification-alert-settings__toggle:hover {
+  transform: scale(1.05);
+}
+
+.notification-alert-settings__slider {
+  width: 120px;
+  height: 6px;
+  border-radius: 3px;
+  background: #e5e7eb;
+  outline: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
+.notification-alert-settings__slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #3b82f6;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.notification-alert-settings__slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #3b82f6;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.notification-alert-settings__slider:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.notification-alert-settings__test-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.notification-alert-settings__test-btn:hover:not(:disabled) {
+  background: #2563eb;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.notification-alert-settings__test-btn:disabled {
+  background: #d1d5db;
+  color: #9ca3af;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.notification-alert-settings__info {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #f3f4f6;
+}
+
+.notification-alert-settings__info p {
+  margin: 0;
+  font-size: 0.75rem;
+  color: #6b7280;
+  line-height: 1.4;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .notification-alert-settings {
+    padding: 1rem;
+    max-width: 100%;
+  }
+  
+  .notification-alert-settings__item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  
+  .notification-alert-settings__slider {
+    width: 100%;
+  }
+}

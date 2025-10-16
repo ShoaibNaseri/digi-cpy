@@ -1,0 +1,16 @@
+.educator-dashboard-school-info {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 12px;
+  box-sizing: border-box;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 24px;
+  margin-bottom: 16px;
+}
+
+@media (max-width: 600px) {
+  .educator-dashboard-school-info {
+    padding: 14px;
+  }
+}

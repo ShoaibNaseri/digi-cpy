@@ -1,0 +1,36 @@
+.study-guide__header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 34px;
+}
+
+.study-guide__header-text {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.study-guide__header-title {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.study-guide__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  .study-guide__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .study-guide__grid {
+    grid-template-columns: 1fr;
+  }
+}

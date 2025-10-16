@@ -1,0 +1,403 @@
+/* Modal Overlay */
+.class-access-code-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+  font-family: 'urbanist', sans-serif;
+}
+
+/* Modal Container */
+.class-access-code-modal-container {
+  background-color: #ffffff;
+  border-radius: 16px;
+  width: 38.188rem;
+  max-width: 95vw;
+  max-height: 95vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  font-family: 'urbanist', sans-serif;
+  scrollbar-width: none;
+  scrollbar-color: #4B5563 #ffffff;
+  -ms-overflow-style: none;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  color: #333333;
+  position: relative;
+}
+
+/* Modal Header */
+.class-access-code-modal-header {
+  padding: 32px 32px 24px 32px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'urbanist', sans-serif;
+  position: relative;
+}
+
+.class-access-code-modal-close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #666666;
+  padding: 8px;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.class-access-code-modal-close-button:hover {
+  background-color: #f5f5f5;
+  color: #333333;
+}
+
+.class-access-code-modal-close-button svg {
+  width: 20px;
+  height: 20px;
+}
+
+.class-access-code-modal-icon-container {
+  margin-bottom: 20px;
+}
+
+.class-access-code-modal-icon {
+  background-color: #f8f9fa;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  border: 2px solid #e9ecef;
+}
+
+.class-access-code-modal-icon svg {
+  width: 28px;
+  height: 28px;
+  color: #6c757d;
+}
+
+.class-access-code-modal-title {
+  margin: 0 0 12px 0;
+  font-size: 24px;
+  font-weight: 700;
+  font-weight: 600;
+  color: #212529;
+  line-height: 1.2;
+  font-family: 'urbanist', sans-serif;
+}
+
+.class-access-code-modal-subtitle {
+  margin: 0;
+  font-size: 18px;
+  color: #666666;
+  font-weight: 600;
+  line-height: 1.5;
+  font-family: 'urbanist', sans-serif;
+}
+
+/* Access Code Display Section */
+.class-access-code-modal-code-section {
+  background-color: #f8f9fa;
+  margin: 0 32px 24px 32px;
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid #e9ecef;
+  font-family: 'urbanist', sans-serif;
+}
+.class-access-code-modal-actions{
+  display: flex;
+  align-items: center;  
+  justify-content: center;
+  font-family: 'urbanist', sans-serif;
+}
+
+.class-access-code-modal-code-display {
+  font-size: 32px;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  letter-spacing: 1px;
+  align-items: center;
+  text-align: center;
+  height: 10.938rem;
+  margin: 0 32px 24px 32px;
+  font-family: 'urbanist', sans-serif;
+  color: #495057;
+  background-color: #FAFBFC;
+  padding: 16px;
+  border-radius: 12px;
+  /* border: 1px solid #dee2e6; */
+}
+
+.class-access-code-modal-code-actions {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  font-family: 'urbanist', sans-serif;
+}
+
+/* .class-access-code-modal-copy-btn,
+.class-access-code-modal-generate-btn {
+  flex: 1;
+  padding: 8px 16px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  gap: 8px;
+} */
+
+.class-access-code-modal-copy-btn {
+  background-color: #495057;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #4B5563;
+  font-family: 'urbanist', sans-serif;
+  font-size: 1rem;
+  color: #ffffff;
+  padding: 10px 16px;
+  height: 35px;
+  width: 9rem;
+  font-weight: 600;
+  margin: 10px;
+  border-radius: 4px;
+  color: #ffffff;
+}
+
+.class-access-code-modal-copy-btn:hover {
+  background-color: #343a40;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(73, 80, 87, 0.3);
+}
+
+.class-access-code-modal-generate-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'urbanist', sans-serif;
+  background-color: #4B5563;
+  font-size: 1rem;
+  color: #ffffff;
+  padding: 8px;
+  height: 35px;
+  width: 9rem;
+  font-weight: 600;
+  margin: 10px;
+  border-radius: 4px;
+
+}
+
+.class-access-code-modal-generate-btn:hover {
+  background-color: #343a40;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(73, 80, 87, 0.3);
+}
+
+/* Instructions Section */
+.class-access-code-modal-instructions-section {
+  background-color: #FAFBFC;
+  margin: 0 32px 24px 32px;
+  padding: 8px;
+  border-radius: 12px;
+  /* border: 1px solid #e9ecef; */
+}
+
+
+.class-access-code-modal-instructions-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0 0 1.5rem;
+  margin-bottom: 20px;
+}
+.class-access-code-modal-highlight{
+  color: #000000;
+  font-weight: 600;
+}
+
+.class-access-code-modal-instructions-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #212529;
+}
+
+.class-access-code-modal-info-icon {
+  background-color: #4B5563;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+
+.class-access-code-modal-instructions-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.class-access-code-modal-instruction-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 16px;
+  font-size: 16px;
+  color: #495057;
+  line-height: 1.5;
+}
+
+.class-access-code-modal-instruction-number {
+  background-color: #f8f9fa;
+  color: #000000 !important;
+  font-weight: 700;
+  font-size: 14px;
+  min-width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 16px;
+  flex-shrink: 0;
+  border: 1px solid #dee2e6;
+}
+
+/* Footer */
+.class-access-code-modal-footer {
+  padding: 0 32px 32px 32px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  background-color: #FFFFFF;
+}
+
+.class-access-code-modal-close-btn,
+.class-access-code-modal-download-btn {
+  display: flex;
+  align-items: center;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  gap: 8px;
+}
+
+.class-access-code-modal-close-btn {
+  background-color: #e9ecef;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #495057;
+  width: 258px;
+  height: 50px;
+}
+
+.class-access-code-modal-close-btn:hover {
+  background-color: #dee2e6;
+  transform: translateY(-1px);
+}
+
+.class-access-code-modal-download-btn {
+  background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+  color: #ffffff;
+  width: 258px;
+  height: 50px;
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  font-size: 16px;
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+  gap: 8px;
+}
+
+.class-access-code-modal-download-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(139, 92, 246, 0.4);
+}
+
+.class-access-code-modal-download-btn svg {
+  color: white;
+  flex-shrink: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .class-access-code-modal-container {
+    width: 95vw;
+    margin: 20px;
+  }
+  
+  .class-access-code-modal-header,
+  .class-access-code-modal-code-section,
+  .class-access-code-modal-instructions-section,
+  .class-access-code-modal-footer {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 20px;
+  }
+  
+  .class-access-code-modal-title {
+    font-size: 24px;
+  }
+  
+  .class-access-code-modal-code-display {
+    font-size: 28px;
+  }
+  
+  .class-access-code-modal-code-actions {
+    flex-direction: column;
+  }
+  
+  .class-access-code-modal-footer {
+    flex-direction: column;
+  }
+}
+
+.class-access-code-modal-key-icon {
+  background-color: #ffffff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  border: 1px solid #000000;
+  margin-bottom: 16px;
+}
+
+.class-access-code-modal-key-icon svg {
+  width: 24px;
+  height: 24px;
+  color: #000000;
+}

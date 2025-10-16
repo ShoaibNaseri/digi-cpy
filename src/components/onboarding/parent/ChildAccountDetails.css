@@ -1,0 +1,108 @@
+.child-account-details-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.child-account-details-content {
+  background-color: white;
+  border-radius: 8px;
+  padding: 40px;
+  width: 100%;
+  max-width: 700px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.child-account-details-title {
+  margin: 0;
+  font-size: 24px;
+  color: #111;
+  text-align: center;
+  font-weight: 600;
+}
+
+.child-account-details-subtitle {
+  margin-top: 8px;
+  margin-bottom: 24px;
+  color: #666;
+  text-align: center;
+  font-size: 14px;
+}
+
+.child-account-details-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-weight: 500;
+  font-size: 14px;
+  color: #333;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 16px;
+  border: 1px solid #9ca3af;
+  background-color: #f3f4f6;
+  color: #4b5563;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.form-group select {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 100%;
+  padding: 16px;
+  border: 1px solid #9ca3af;
+  background-color: #f3f4f6;
+  color: #4b5563;
+  border-radius: 8px;
+}
+
+.form-group input::placeholder {
+  color: #999;
+}
+
+.birth-date-selects {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 32px;
+  align-items: center;
+}
+
+.cancel-button {
+  padding: 12px 24px;
+  background: none;
+  border: none;
+  color: #666;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.continue-button {
+  padding: 12px 24px;
+  background-color: #111;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+}

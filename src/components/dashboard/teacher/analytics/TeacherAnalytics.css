@@ -1,0 +1,319 @@
+.teacher-analytics-dashboard,
+.teacher-analytics-dashboard * {
+  box-sizing: border-box;
+}
+
+.teacher-analytics-dashboard {
+  background-color: #f8fafc;
+  min-height: 100vh;
+  color: black;
+  padding: 1.5rem;
+  font-family: 'Urbanist', sans-serif;
+}
+.teacher-analytics-dashboard-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+.teacher-analytics-header {
+  margin-bottom: 0;
+}
+
+.teacher-analytics-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0;
+  text-align: left;
+  align-self: flex-start;
+}
+
+.teacher-analytics-subtitle {
+  margin-top: 4px;
+  margin-bottom: 0;
+  font-size: 16px;
+}
+
+.teacher-analytics-filters {
+  display: flex;
+  gap: 12px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.teacher-analytics-filter-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.teacher-analytics-filter-select {
+  background-color: black;
+  color: #fff;
+  border: none;
+  padding: 12px 16px 12px 24px;
+  border-radius: 10px;
+  font-size: 16px;
+  min-width: 150px;
+  cursor: pointer;
+  width: 210px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+}
+
+.teacher-analytics-filter-chevron {
+  color: #fff;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+
+.teacher-analytics-filter-chevron.rotated {
+  transform: rotate(180deg);
+}
+
+/* Dropdown menu styling */
+.teacher-analytics-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  margin-top: 4px;
+  overflow: hidden;
+}
+
+.teacher-analytics-dropdown-item {
+  padding: 12px 16px;
+  color: black;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.teacher-analytics-dropdown-item:last-child {
+  border-bottom: none;
+}
+
+.teacher-analytics-dropdown-item:hover {
+  background: linear-gradient(90deg, #d60c7b 0%, #8b2db3 100%);
+  color: white;
+}
+
+.teacher-analytics-dropdown-item.active {
+  background: linear-gradient(90deg, #d60c7b 0%, #8b2db3 100%);
+  color: white;
+}
+
+.teacher-analytics-section-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+.teacher-analytics-performance-section {
+  margin-bottom: 3%;
+}
+.teacher-analytics-incidents-section {
+  background-color: white;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.teacher-analytics-lesson-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+@media (max-width: 1200px) {
+  .teacher-analytics-lesson-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .teacher-analytics-lesson-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .teacher-analytics-lesson-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.teacher-analytics-lesson-card {
+  background-color: #2d3748;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 160px;
+  height: 180px;
+  box-sizing: border-box;
+}
+
+.teacher-analytics-lesson-title {
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #e2e8f0;
+}
+
+.teacher-analytics-completion-rate {
+  font-size: 28px;
+  font-weight: 600;
+  margin: 0;
+  margin-bottom: 4px;
+  color: white;
+}
+
+.teacher-analytics-completion-label {
+  color: #94a3b8;
+  font-size: 14px;
+  margin: 0;
+}
+
+.teacher-analytics-no-incidents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fafbfc;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.teacher-analytics-no-data-icon {
+  margin-bottom: 16px;
+  opacity: 0.7;
+}
+
+.teacher-analytics-no-data-text {
+  color: #94a3b8;
+  margin: 0;
+}
+
+.teacher-analytics-mission-stats {
+  margin-top: 10px;
+  font-size: 0.9em;
+  color: #666;
+}
+
+.teacher-analytics-mission-stats p {
+  margin: 5px 0;
+}
+
+.teacher-analytics-view-btn {
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 12px;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.teacher-analytics-view-btn:hover {
+  background-color: #357abd;
+}
+
+.teacher-analytics-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.teacher-analytics-modal {
+  background-color: #111827;
+  padding: 24px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.teacher-analytics-modal h3 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 20px;
+  color: #fff;
+}
+
+.teacher-analytics-modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: #fff;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.teacher-analytics-modal-close:hover {
+  color: #333;
+}
+
+.teacher-analytics-modal-content {
+  margin-top: 16px;
+}
+
+.teacher-analytics-modal-content p {
+  margin: 8px 0;
+  line-height: 1.5;
+}
+
+.teacher-analytics-modal-content strong {
+  color: #fff;
+  margin-right: 8px;
+}
+
+.teacher-analytics-lesson-card p {
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-height: 1.5;
+  max-height: 3em;
+}

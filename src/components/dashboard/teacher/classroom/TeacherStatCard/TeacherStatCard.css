@@ -1,0 +1,123 @@
+/* ==========================================================================
+   TeacherStatCard - Core Structure
+   ========================================================================== */
+
+.teacher-classroom__stat-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  width: 253px;
+  width: 80%;
+  height: 162px;
+  min-width: 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  border: 1px solid #f1f5f9;
+  border-bottom: 4px solid black;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.teacher-classroom__stat-icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  margin-bottom: 6px;
+  align-self: flex-start;
+}
+
+.teacher-classroom__stat-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #64748b;
+  /* margin: 0 0 16px 0; */
+  white-space: nowrap;
+  font-family: 'Urbanist', sans-serif;
+}
+
+.teacher-classroom__stat-value {
+  font-size: 32px;
+  font-weight: 700;
+  margin-top: -0.825rem !important;
+  font-family: 'Urbanist', sans-serif;
+  line-height: 1.2;
+  /* margin-top: auto; */
+}
+
+/* Individual card color variations with black bottom borders */
+.teacher-classroom__stat-card:nth-child(1) {
+  border-bottom-color: #000000; /* Black for Active Students */
+}
+
+.teacher-classroom__stat-card:nth-child(1) .teacher-classroom__stat-value {
+  color: #7b34bf;
+}
+
+.teacher-classroom__stat-card:nth-child(1) .teacher-classroom__stat-icon {
+  color: #0454ac;
+}
+
+.teacher-classroom__stat-card:nth-child(2) {
+  border-bottom-color: #000000; /* Black for Active Classes */
+}
+
+.teacher-classroom__stat-card:nth-child(2) .teacher-classroom__stat-value {
+  color: #0454ac;
+}
+
+.teacher-classroom__stat-card:nth-child(2) .teacher-classroom__stat-icon {
+  color: #3b82f6;
+}
+
+.teacher-classroom__stat-card:nth-child(3) {
+  border-bottom-color: #000000; /* Black for Quizzes */
+}
+
+.teacher-classroom__stat-card:nth-child(3) .teacher-classroom__stat-value {
+  color: #06b6d4;
+}
+
+.teacher-classroom__stat-card:nth-child(3) .teacher-classroom__stat-icon {
+  color: #06b6d4;
+}
+
+.teacher-classroom__stat-card:nth-child(4) {
+  border-bottom-color: #000000; /* Black for Average Score */
+}
+
+.teacher-classroom__stat-card:nth-child(4) .teacher-classroom__stat-value {
+  color: #ec4899;
+}
+
+.teacher-classroom__stat-card:nth-child(4) .teacher-classroom__stat-icon {
+  color: #ef0067;
+}
+
+/* ==========================================================================
+   Responsive Adjustments
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .teacher-classroom__stat-card {
+    min-width: calc(50% - 0.75rem);
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .teacher-classroom__stat-card {
+    min-width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .teacher-classroom__stat-value {
+    font-size: 28px;
+  }
+
+  .teacher-classroom__stat-title {
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,430 @@
+/* Teacher Help Center FAQ Styles */
+.teacher-helpcenter-faq {
+  background-color: #ffffff;
+  border: 1px solid none !important;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: none !important;
+}
+
+.teacher-helpcenter-faq-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.teacher-helpcenter-faq-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  color: #000000;
+}
+
+.teacher-helpcenter-faq-controls {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.teacher-helpcenter-faq-search {
+  display: flex;
+  align-items: center;
+}
+
+.teacher-helpcenter-faq-search-wrapper {
+  position: relative;
+  color: #4B5563;
+  display: flex;
+  align-items: center;
+  width: 300px;
+}
+
+.teacher-helpcenter-faq-search-icon {
+  position: absolute;
+  left: 12px;
+  z-index: 10;
+  pointer-events: none;
+  color: #9ca3af;
+}
+
+.teacher-helpcenter-faq-search-input {
+  padding: 0 1rem 0 44px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 100%;
+  /* height: 50px; */
+  background-color: #ffffff;
+  color: #4B5563;
+}
+
+.teacher-helpcenter-faq-search-input::placeholder {
+  color: #9ca3af;
+}
+
+.teacher-helpcenter-faq-search-input:focus {
+  outline: none;
+  border-color: #7B34BF;
+  box-shadow: 0 0 0 3px rgba(123, 52, 191, 0.1);
+}
+
+/* Student Help Center Dropdown Styles */
+.student-helpcenter-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.student-helpcenter-dropdown-btn {
+  background-color: #7B34BF;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 13px 16px 13px 17px;
+  width: 200px;
+  height: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.student-helpcenter-dropdown-btn:hover {
+  background-color: #7c3aed;
+}
+
+.dropdown-arrow {
+  transition: transform 0.3s ease;
+}
+
+.dropdown-arrow.rotate {
+  transform: rotate(180deg);
+}
+
+.student-helpcenter-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  margin-top: 4px;
+  overflow: hidden;
+}
+
+.student-helpcenter-dropdown-option {
+  padding: 12px 16px;
+  font-size: 14px;
+  color: #374151;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.student-helpcenter-dropdown-option:last-child {
+  border-bottom: none;
+}
+
+.student-helpcenter-dropdown-option:hover {
+  background-color: #f3f4f6;
+  color: #7B34BF;
+}
+
+.teacher-helpcenter-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.teacher-helpcenter-faq-item {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.teacher-helpcenter-faq-item.active {
+  background-color: #f8fafc;
+}
+
+.teacher-helpcenter-faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 1rem;
+  background-color: #4B5563;
+  transition: background-color 0.2s ease;
+  gap: 1rem;
+}
+
+.teacher-helpcenter-faq-question h4 {
+  font-size: 1.125rem;
+  margin: 0;
+  font-weight: 700;
+  flex: 1;
+  color: #ffffff;
+}
+
+.teacher-helpcenter-faq-question:hover {
+  background-color: #6B7280;
+}
+
+.teacher-helpcenter-faq-question-content {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #fff;
+}
+
+.teacher-helpcenter-faq-number {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  color: #ffffff;
+  min-width: 24px;
+  transition: color 0.2s ease;
+}
+
+.teacher-helpcenter-faq-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.25rem;
+  transition: color 0.2s ease;
+}
+
+.teacher-helpcenter-faq-toggle:hover {
+  color: #E5E7EB;
+}
+
+.teacher-helpcenter-faq-answer {
+  padding: 1rem;
+  background-color: #f8fafc;
+  border-top: 1px solid #e5e7eb;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #4B5563;
+  line-height: 1.5;
+}
+
+.teacher-helpcenter-faq-answer p {
+  margin: 0;
+}
+
+.teacher-helpcenter-faq-more {
+  text-align: center;
+}
+
+.teacher-helpcenter-faq-more-btn {
+  background: linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  width: 243px;
+  height: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.teacher-helpcenter-faq-more-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+}
+
+/* Show More/Less Button States */
+.teacher-helpcenter-faq-more-btn.showing-less {
+  background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);
+}
+
+.teacher-helpcenter-faq-more-btn.showing-less:hover {
+  background: linear-gradient(135deg, #4b5563 0%, #374151 100%);
+  box-shadow: 0 4px 12px rgba(75, 85, 99, 0.3);
+}
+
+/* Category Filters */
+.faq__categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.faq__category-btn {
+  background-color: #f3f4f6;
+  color: #374151;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.faq__category-btn:hover {
+  background-color: #e5e7eb;
+  border-color: #9ca3af;
+}
+
+.faq__category-btn.active {
+  background-color: #7B34BF;
+  color: #ffffff;
+  border-color: #7B34BF;
+}
+
+/* Clear button for search */
+.clear-button {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+.clear-button:hover {
+  background-color: #f5f5f5;
+  color: #666;
+}
+
+/* No results message */
+.faq__no-results {
+  text-align: center;
+  padding: 2rem;
+  color: #6b7280;
+  font-size: 1rem;
+}
+
+/* Legacy styles for backward compatibility */
+.faq {
+  text-align: left;
+  margin-top: 32px;
+}
+
+.faq__title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.faq__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.faq__item {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+
+.faq__button {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+.faq__item button:focus-visible,
+button:focus {
+  outline: transparent !important;
+}
+
+.faq__text {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+}
+
+.faq__icon {
+  display: flex;
+  align-items: center;
+}
+
+.faq__img {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+}
+
+.faq__img.rotate {
+  transform: rotate(180deg);
+}
+
+.faq__answer {
+  padding: 0 16px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  color: #666;
+  font-size: 14px;
+}
+
+.faq__item.active .faq__answer {
+  max-height: 200px;
+  padding: 0 16px 16px;
+}
+
+.faq__search {
+  margin-bottom: 20px;
+}
+
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  width: 16px;
+  height: 16px;
+  color: #999;
+}
+
+.faq__search-input {
+  width: 100%;
+  padding: 12px 16px 12px 36px;
+  background-color: #f5f5f5;
+  color: #1f2937;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+.faq__search-input:focus {
+  outline: none;
+  border-color: #0056b3;
+}

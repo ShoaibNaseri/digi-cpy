@@ -1,0 +1,264 @@
+/* Country Regions Dropdown Styles */
+.country-regions-dropdown {
+  width: 100%;
+}
+
+/* Input group needs relative positioning for dropdown menus */
+.country-regions-dropdown .input-group {
+  position: relative;
+  overflow: visible;
+}
+
+/* Ensure the dropdown container doesn't clip the menu */
+.country-regions-dropdown .educator-account-setup-form-group {
+  overflow: visible;
+}
+
+/* Dropdown Select Styling - matches input styling */
+.country-dropdown-select,
+.region-dropdown-select {
+  position: relative;
+  flex: 1 1 auto;
+  width: 1%;
+  min-width: 0;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  border: 1px solid #d1d5db;
+  border-radius: 0 12px 12px 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.2s ease;
+}
+
+.country-dropdown-select:hover,
+.region-dropdown-select:hover {
+  border-color: #9ca3af;
+}
+
+.country-dropdown-select:focus,
+.region-dropdown-select:focus {
+  /* border-color: #8c2ddc; */
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(140, 45, 220, 0.1);
+}
+
+/* Dropdown Value */
+.country-dropdown-value,
+.region-dropdown-value {
+  flex: 1;
+  color: #212529;
+}
+
+.country-dropdown-value:empty::before,
+.region-dropdown-value:empty::before {
+  content: attr(data-placeholder);
+  color: #8f9aa4;
+}
+
+/* Chevron Icon */
+.country-dropdown-chevron,
+.region-dropdown-chevron {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+  margin-left: 8px;
+}
+
+.country-dropdown-chevron.open,
+.region-dropdown-chevron.open {
+  transform: rotate(180deg);
+}
+
+/* Dropdown Menu */
+.country-dropdown-menu,
+.region-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+  max-height: 200px;
+  overflow-y: auto;
+  margin-top: 4px;
+}
+
+/* Region search container */
+.region-search-container {
+  padding: 8px;
+  border-bottom: 1px solid #f3f4f6;
+  background: #f8fafc;
+  border-radius: 12px 12px 0 0;
+}
+
+/* Region search input wrapper */
+.region-search-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Region search icon */
+.region-search-icon {
+  position: absolute;
+  left: 12px;
+  color: #8f9aa4;
+  font-size: 14px;
+  z-index: 1;
+}
+
+/* Region search input */
+.region-search-input {
+  width: 100%;
+  padding: 8px 12px 8px 36px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: #212529;
+  background: #fff;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.region-search-input:focus {
+  border-color: #8c2ddc;
+  box-shadow: 0 0 0 2px rgba(140, 45, 220, 0.1);
+}
+
+.region-search-input::placeholder {
+  color: #8f9aa4;
+}
+
+/* Dropdown Items */
+.country-dropdown-item,
+.region-dropdown-item {
+  padding: 0.15rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  border-bottom: 1px solid #f3f4f6;
+  color: #212529;
+  font-size: 1rem;
+  font-weight: 400;
+  background-color: #fff;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Country flag icon in input */
+.country-flag-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Country flag icon in dropdown items */
+.country-flag-icon-small {
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Dropdown item text */
+.dropdown-item-text {
+  flex: 1;
+  color: inherit;
+}
+
+/* Dropdown item checkmark */
+.dropdown-item-check {
+  width: 16px;
+  height: 16px;
+  color: #8c2ddc;
+  flex-shrink: 0;
+  margin-left: 8px;
+  animation: checkmark-appear 0.2s ease-in-out;
+}
+
+@keyframes checkmark-appear {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.country-dropdown-item:last-child,
+.region-dropdown-item:last-child {
+  border-bottom: none;
+}
+
+.country-dropdown-item:hover,
+.region-dropdown-item:hover {
+  background-color: #f8fafc;
+}
+
+.country-dropdown-item.selected,
+.region-dropdown-item.selected {
+  background-color: #f0f4ff;
+  color: #8c2ddc;
+  font-weight: 500;
+}
+
+/* First region item (selected region when no search) - no extra border needed */
+
+/* Current selection indicator */
+.region-dropdown-item.current-selection {
+  position: relative;
+}
+
+/* Focus states for accessibility */
+.country-dropdown-item:focus,
+.region-dropdown-item:focus {
+  outline: 2px solid #8c2ddc;
+  outline-offset: -2px;
+}
+
+/* Input group focus state */
+.country-regions-dropdown .input-group:focus-within {
+  border: 0.5px solid transparent;
+  border-radius: 12px !important;
+  background: linear-gradient(#ffffff, #ffffff) padding-box,
+    linear-gradient(180deg, #8c2ddc 0%, #cb41eb 100%) border-box;
+  box-shadow: none;
+}
+
+/* Ensure proper border radius for input group */
+.country-regions-dropdown .input-group > .input-group-text {
+  border-radius: 12px 0 0 12px;
+}
+
+.country-regions-dropdown .input-group > .country-dropdown-select,
+.country-regions-dropdown .input-group > .region-dropdown-select {
+  border-radius: 0 12px 12px 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .country-dropdown-menu,
+  .region-dropdown-menu {
+    max-height: 150px;
+  }
+
+  .country-dropdown-item,
+  .region-dropdown-item {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+  }
+}

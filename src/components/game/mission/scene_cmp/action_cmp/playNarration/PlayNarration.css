@@ -1,0 +1,88 @@
+.play-narration {
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.narration-content {
+  text-align: center;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.narration-loading,
+.narration-playing,
+.narration-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.narration-loading p,
+.narration-playing p,
+.narration-error p {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid #ffffff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Playing Indicator */
+.playing-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sound-wave {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.bar {
+  width: 4px;
+  height: 20px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  animation: soundWave 1.5s ease-in-out infinite;
+}
+
+.bar:nth-child(1) { animation-delay: 0s; }
+.bar:nth-child(2) { animation-delay: 0.1s; }
+.bar:nth-child(3) { animation-delay: 0.2s; }
+.bar:nth-child(4) { animation-delay: 0.3s; }
+.bar:nth-child(5) { animation-delay: 0.4s; }
+
+@keyframes soundWave {
+  0%, 100% { height: 20px; opacity: 0.4; }
+  50% { height: 40px; opacity: 1; }
+}
+
+/* Error State */
+.narration-error p {
+  color: #ff6b6b;
+  font-weight: 600;
+}

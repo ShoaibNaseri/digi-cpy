@@ -1,0 +1,417 @@
+.register {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.register__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.register__header {
+  padding: 16px 32px;
+  display: flex;
+  align-items: center;
+}
+
+.register__logo {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.register__graduation-cap {
+  margin-right: 8px;
+}
+
+.register__form-container {
+  flex: 1;
+  min-width: 500px;
+  margin: 0 auto;
+  padding: 33px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.register__title {
+  font-size: 32px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.register__subtitle {
+  color: #6c757d;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.register__error {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 12px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+.register__role-selection {
+  margin-bottom: 24px;
+}
+
+.register__role-selection p {
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+
+.register__role-option {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid #8F9AA4 !important;
+  width: 259px;
+  height: 32px;
+  padding: 17.828px 12px 15.922px 12px;
+  
+}
+
+.register__role-option:hover {
+  border: 1px solid #111827;
+}
+
+.register__role-option--selected {
+  border: 1px solid #111827;
+}
+
+.register__role-icon {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.register__form-group label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding-bottom: 5px;
+  padding-top: 10px;
+  color: #495057;
+  display: block; /* Ensure it takes full width */
+}
+
+.register__form-group input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  color: #000000;
+  background-color: #ffffff;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  transition: border-color 0.15s ease-in-out;
+}
+
+.register__input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.register__password-container input {
+  width: 100%;
+  padding-right: 40px;
+}
+
+.register__show-password {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #6c757d;
+  cursor: pointer;
+  padding: 0;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease;
+}
+
+.register__show-password:hover {
+  color: #111827;
+}
+
+.register__show-password:focus {
+  outline: none;
+}
+
+.register__form-group input:focus {
+  border-color: #007bff;
+  outline: 0;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+.register__terms {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 16px 0;
+  text-align: center;
+  min-height: 40px;
+}
+
+.register__terms input {
+  margin: 3px;
+}
+
+.register__terms label {
+  margin-top: -1px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.register__terms a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.register__terms a:hover {
+  text-decoration: underline;
+}
+
+.register__checkbox-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.register__checkbox-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  min-height: 24px;
+  margin-bottom: 8px;
+}
+
+.register__checkbox-item input[type='checkbox'] {
+  min-width: 16px;
+  min-height: 16px;
+  margin: 3px;
+  cursor: pointer;
+}
+
+.register__checkbox-item label {
+  font-size: 0.9rem;
+  line-height: 22px;
+  color: #333;
+  cursor: pointer;
+  padding-top: 1px;
+}
+
+.register__checkbox-item .register__gradient {
+  background: linear-gradient(90deg, #D60C7B 0%, #8B2DB3 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+  margin-left: 2px;
+}
+
+.register__checkbox-item a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.register__checkbox-item a:hover {
+  text-decoration: underline;
+}
+
+.register__button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  background-color: #111827;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.register__button:hover {
+  background-color: #0d1224;
+}
+
+.register__login-link {
+  text-align: center;
+  margin-top: 24px;
+}
+
+.register__login-link a {
+  color: #171818;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.register__login-link a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .register__form-container {
+    min-width: 100%;
+    box-shadow: none;
+    padding: 0;
+    text-align: center;
+  }
+
+  .register {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    height: auto;
+    margin-top: 90px;
+  }
+}
+
+.other-login-options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.other-login-options::before,
+.other-login-options::after {
+  content: '';
+  flex: 1;
+  margin: 0 10px;
+}
+
+.other-login-options-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* .other-login-options-icons-button {
+  flex: 1;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #090909;
+  width: 100px;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 0 10px;
+}
+ */
+
+/* --- New UI overrides to match Login page styling --- */
+/* Use segmented control for role selection */
+.register__role-options--segmented {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  max-width: 520px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 6px;
+  margin: 0 auto 12px;
+}
+
+.register__role-options {
+  gap: 8px;
+}
+
+.register__role-option {
+  padding: 10px 12px;
+  border: none;
+  border-radius: 10px;
+  background: transparent;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+}
+
+.register__role-option--selected {
+  background: #F4ECFF;
+}
+
+.register__role-option svg {
+  width: 21.25px;
+  height: 21.25px;
+  color: #8F9AA4;
+}
+
+.register__login-link a {
+  /* defer to .register-link in Login.css for gradient text */
+  text-decoration: none;
+}
+
+/* Hide native radio, style container like segmented button */
+.register__role-radio {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.register__role-option {
+  position: relative;
+}
+
+/* Custom circular indicator to the right inside option */
+.register__role-option::after {
+  content: '';
+  width: 18px;
+  height: 18px;
+  border: 2px solid #E2E8F0;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: auto;
+}
+
+/* Space items: icon, label, then indicator at end */
+.register__role-option span { margin: 0 8px; }
+
+.register__role-options { column-gap: 12px; }
+.register__role-option { padding-right: 16px; }
+.register__role-option--selected::after {
+  border-color: #8C2DDC;
+  background: radial-gradient(circle at center, #8C2DDC 50%, transparent 51%);
+}
+
+/* Typography and gradient for role labels */
+.register__role-option span {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #8F9AA4;
+}
+
+.register__role-option--selected span {
+  background: linear-gradient(90deg, #D60C7B 0%, #8B2DB3 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.register__role-option--selected svg {
+  color: #8B2DB3;
+  width: 24px;
+  height: 24px;
+}

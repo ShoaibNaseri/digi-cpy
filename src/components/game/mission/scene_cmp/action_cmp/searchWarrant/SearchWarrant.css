@@ -1,0 +1,98 @@
+.search-warrant-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(50, 55, 205, 0.262);
+}
+
+.search-warrant-img-container {
+  position: relative;
+  width: 100%;
+  max-width: 70vh;
+  height: auto;
+  border-radius: 12px;
+  overflow: hidden;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.search-warrant-img-container:hover {
+  transform: scale(1.02);
+}
+
+.search-warrant-container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.close-icon-container {
+  position: absolute;
+  top: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  z-index: 10;
+  transition: all 0.2s ease;
+}
+
+.close-icon-container:hover {
+  background: rgba(0, 0, 0, 0.9);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.close-icon {
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+@media (max-width: 768px) {
+  .search-warrant-img-container {
+    max-width: 280px;
+  }
+
+  .close-icon-container {
+    width: 35px;
+    height: 35px;
+    top: 10px;
+    right: 10px;
+  }
+
+  .close-icon {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-warrant-img-container {
+    max-width: 240px;
+  }
+
+  .close-icon-container {
+    width: 30px;
+    height: 30px;
+    top: 8px;
+    right: 8px;
+  }
+
+  .close-icon {
+    font-size: 12px;
+  }
+}

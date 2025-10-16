@@ -1,0 +1,41 @@
+.prev-step-button {
+  padding: 12px 24px;
+  background-color: #E5E7EB;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  color: #4B5563;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 120px;
+  font-family: 'Urbanist', sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.prev-step-button__icon {
+  color: #4B5563;
+}
+
+.prev-step-button:hover {
+  background-color: #f9fafb;
+  border-color: #9ca3af;
+  color: #374151;
+}
+
+.prev-step-button:hover .prev-step-button__icon {
+  color: #374151;
+}
+
+.prev-step-button:disabled {
+  background-color: #f3f4f6;
+  border-color: #e5e7eb;
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.prev-step-button:disabled .prev-step-button__icon {
+  color: #9ca3af;
+}

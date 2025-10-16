@@ -1,0 +1,358 @@
+/* ==========================================================================
+   AddStudentModal - Core Structure
+   ========================================================================== */
+
+/* Modal Overlay */
+.add-student-modal__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal Container */
+.add-student-modal__container {
+  width: min(38.188rem, calc(100vw - 2rem));
+  /* height: min(41rem, calc(100vh - 2rem)); */
+  flex-shrink: 0;
+  background: #FFF;
+  border-radius: 0.5rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+/* Modal Content */
+.add-student-modal__content {
+  padding: 0 2rem 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-height: min(32.5rem, calc(100vh - 10rem));
+  overflow-y: auto;
+  scrollbar-width: none;
+  scrollbar-color: #CBD5E1 #FFFFFF;
+}
+
+.add-student-modal__content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.add-student-modal__content::-webkit-scrollbar-track {
+  background: #FFFFFF;
+}
+
+.add-student-modal__content::-webkit-scrollbar-thumb {
+  background-color: #475569;
+  border-radius: 4px;
+}
+
+/* Larger screens: expand to avoid internal scrolling */
+@media (min-height: 900px) {
+  .add-student-modal__container {
+    height: auto;
+  }
+  .add-student-modal__content {
+    max-height: none;
+    overflow-y: visible;
+  }
+}
+
+/* ==========================================================================
+   Modal Header
+   ========================================================================== */
+
+.add-student-modal__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+  padding: 1.25rem 1.5rem 0 1.5rem;
+}
+
+.add-student-modal__title {
+  color: #111827;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.add-student-modal__close-btn {
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #111827;
+  font-size: 1.125rem;
+  cursor: pointer;
+  margin-bottom: 3rem;
+  padding: 0.5rem;
+  line-height: 1;
+  border-radius: 0.25rem;
+  transition: background-color 0.2s ease;
+}
+
+.add-student-modal__close-btn:hover {
+  color: #7C3AED;
+  background-color: #F3F4F6;
+}
+
+/* ==========================================================================
+   Student Entry Sections
+   ========================================================================== */
+
+.add-student-modal__student-entry {
+  width: 100%;
+  animation: fadeIn 0.3s ease-out;
+  position: relative;
+}
+
+.add-student-modal__entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.add-student-modal__entry-title {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #475569;
+}
+
+.add-student-modal__divider {
+  height: 1px;
+  background-color: #E5E7EB;
+  margin: 0.75rem 0 0.25rem 0;
+}
+
+/* ==========================================================================
+   Form Elements
+   ========================================================================== */
+
+/* Form Group */
+.add-student-modal__form-group {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.add-student-modal__field-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.add-student-modal__form-label {
+  display: block;
+  color: #666;
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+
+.add-student-modal__required {
+  color: #ef4444;
+  margin-left: 2px;
+}
+
+/* Inputs */
+.add-student-modal__form-input {
+  width: 100%;
+  height: 3.5rem;
+  padding: 0 0.75rem 0 2.75rem;
+  background-color: #F8FAFC;
+  color: #0F172A;
+  border: 1px solid #E5E7EB;
+  border-radius: 0.75rem;
+  font-size: 0.875rem;
+  box-sizing: border-box;
+}
+
+.add-student-modal__form-input::placeholder {
+  color: #94A3B8;
+}
+
+/* .add-student-modal__form-input:focus {
+  outline: none;
+  border: 1px solid transparent;
+  border-image: linear-gradient(135deg, #EC4899, #7C3AED) 1;
+} */
+
+/* Neutralize browser default invalid/red borders */
+.add-student-modal__form-input:invalid,
+.add-student-modal__form-input:focus:invalid {
+  border: 1px solid #E5E7EB !important;
+  border-image: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.add-student-modal__form-input--error {
+  border: 1px solid #E5E7EB !important;
+  border-image: none !important;
+}
+
+.add-student-modal__error-message {
+  color: #ef4444;
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+/* Input icons (filled #8F9AA4) */
+input[id^='student-first-name-'],
+input[id^='student-last-name-'] {
+  background-image: url('../../../../../../assets/icons/frame.svg');
+  background-repeat: no-repeat;
+  background-position: 0.875rem center;
+  background-size: 24px 24px;
+}
+
+input[id^='student-email-'] {
+  background-image: url('../../../../../../assets/icons/sms.svg');
+  background-repeat: no-repeat;
+  background-position: 0.875rem center;
+  background-size: 24px 24px;
+}
+
+input[id^='student-id-'] {
+  background-image: url('../../../../../../assets/icons/frame.svg');
+  background-repeat: no-repeat;
+  background-position: 0.875rem center;
+  background-size: 24px 24px;
+}
+
+/* ==========================================================================
+   Buttons & Controls
+   ========================================================================== */
+
+/* Add Field Button */
+.add-student-modal__add-field-btn {
+  background: none;
+  border: none;
+  color: #7B34BF;
+  font-size: 0.875rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 0;
+  align-self: center;
+  margin-top: 0.25rem;
+}
+
+.add-student-modal__add-field-btn:hover {
+  text-decoration: underline;
+}
+
+.add-student-modal__add-field-btn:disabled {
+  color: #9CA3AF;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.add-student-modal__add-field-btn:disabled:hover {
+  text-decoration: none;
+}
+
+.add-student-modal__add-field-btn:disabled .add-student-modal__add-icon {
+  color: #9CA3AF;
+}
+
+.add-student-modal__add-icon {
+  font-size: 16px;
+  color: #7B34BF;
+  line-height: 1;
+}
+
+/* Remove Field Button */
+.add-student-modal__remove-field-btn {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: #ffffff;
+  border: 2px solid #ffffff;
+  color: #000;
+  font-size: 28px;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20%;
+  z-index: 10;
+  transition: all 0.2s ease;
+}
+
+
+/* Make student entry relative positioned for absolute positioning of remove button */
+.add-student-modal__student-entry {
+  position: relative;
+}
+
+/* Action Buttons */
+.add-student-modal__actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.add-student-modal__button {
+  padding: 0.75rem 0;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  flex: 1;
+  text-align: center;
+  border: none;
+}
+
+.add-student-modal__button--cancel {
+  background-color: #E5E7EB;
+  color: #111827;
+}
+
+.add-student-modal__button--cancel:hover {
+  background-color: #D1D5DB;
+}
+
+.add-student-modal__button--submit {
+  background: linear-gradient(90deg, #EC4899 0%, #7C3AED 100%);
+  color: #ffffff;
+}
+
+.add-student-modal__button--submit:hover {
+  filter: brightness(0.98);
+}
+
+/* ==========================================================================
+   Animations
+   ========================================================================== */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

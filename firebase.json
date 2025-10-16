@@ -1,0 +1,148 @@
+{
+  "hosting": {
+    "public": "dist",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ],
+    "headers": [
+      {
+        "source": "**/*.js",
+        "headers": [
+          {
+            "key": "Content-Type",
+            "value": "application/javascript"
+          },
+          {
+            "key": "Content-Encoding",
+            "value": "identity"
+          },
+          {
+            "key": "Cache-Control",
+            "value": "public,max-age=3600"
+          }
+        ]
+      },
+      {
+        "source": "**/*.data",
+        "headers": [
+          {
+            "key": "Content-Type",
+            "value": "application/octet-stream"
+          },
+          {
+            "key": "Content-Encoding",
+            "value": "identity"
+          },
+          {
+            "key": "Cache-Control",
+            "value": "public,max-age=3600"
+          }
+        ]
+      },
+      {
+        "source": "**/*.wasm",
+        "headers": [
+          {
+            "key": "Content-Type",
+            "value": "application/wasm"
+          },
+          {
+            "key": "Content-Encoding",
+            "value": "identity"
+          },
+          {
+            "key": "Cache-Control",
+            "value": "public,max-age=3600"
+          }
+        ]
+      },
+      {
+        "source": "**/*.js.br",
+        "headers": [
+          {
+            "key": "Content-Type",
+            "value": "application/javascript"
+          },
+          {
+            "key": "Content-Encoding",
+            "value": "br"
+          },
+          {
+            "key": "Cache-Control",
+            "value": "public,max-age=3600"
+          }
+        ]
+      },
+      {
+        "source": "**/*.data.br",
+        "headers": [
+          {
+            "key": "Content-Type",
+            "value": "application/octet-stream"
+          },
+          {
+            "key": "Content-Encoding",
+            "value": "br"
+          },
+          {
+            "key": "Cache-Control",
+            "value": "public,max-age=3600"
+          }
+        ]
+      },
+      {
+        "source": "**/*.wasm.br",
+        "headers": [
+          {
+            "key": "Content-Type",
+            "value": "application/wasm"
+          },
+          {
+            "key": "Content-Encoding",
+            "value": "br"
+          },
+          {
+            "key": "Cache-Control",
+            "value": "public,max-age=3600"
+          }
+        ]
+      }
+    ]
+  },
+  "functions": [
+    {
+      "source": "functions",
+      "codebase": "default",
+      "ignore": [
+        "node_modules",
+        ".git",
+        "firebase-debug.log",
+        "firebase-debug.*.log",
+        "*.local"
+      ]
+    }
+  ],
+  "emulators": {
+    "functions": {
+      "port": 5001
+    },
+    "ui": {
+      "enabled": true
+    },
+    "singleProjectMode": true,
+    "hosting": {
+      "port": 5000
+    }
+  },
+  "storage": {
+    "rules": "storage.rules"
+  }
+}

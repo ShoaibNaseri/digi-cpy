@@ -1,0 +1,118 @@
+.paparazzi-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  pointer-events: none;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Camera flash effect - full screen background flash */
+.camera-flash {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  opacity: 0;
+  transition: none;
+  z-index: 999;
+  pointer-events: none;
+}
+
+.camera-flash.active {
+  opacity: 1;
+  transition: none;
+}
+
+/* Paparazzi images container */
+.paparazzi-images {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 3rem;
+  padding: 0 2rem;
+  z-index: 1000;
+}
+
+/* Individual paparazzi images - made bigger */
+.paparazzi-img {
+  width: 300px;
+  height: auto;
+  transform: translateY(120%);
+  transition: transform 1s cubic-bezier(0.34, 1.56, 0.64, 1);
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.4));
+  position: relative;
+  z-index: 1001;
+}
+
+.paparazzi-img.slide-up {
+  transform: translateY(0);
+}
+
+/* Stagger the animations slightly for more dynamic effect */
+.paparazzi-left {
+  transition-delay: 0s;
+}
+
+.paparazzi-center {
+  transition-delay: 0.1s;
+  width: 340px; /* Slightly larger for emphasis */
+}
+
+.paparazzi-right {
+  transition-delay: 0.2s;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .paparazzi-images {
+    gap: 2rem;
+  }
+
+  .paparazzi-img {
+    width: 250px;
+  }
+
+  .paparazzi-center {
+    width: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .paparazzi-images {
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .paparazzi-img {
+    width: 180px;
+  }
+
+  .paparazzi-center {
+    width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .paparazzi-images {
+    gap: 1rem;
+    padding: 0 0.5rem;
+  }
+
+  .paparazzi-img {
+    width: 120px;
+  }
+
+  .paparazzi-center {
+    width: 140px;
+  }
+}

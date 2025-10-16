@@ -1,0 +1,210 @@
+.cbi {
+  display: flex;
+  flex-direction: column;
+  /* padding: 24px 27px; */
+  background-color: #ffffff;
+  border-radius: 8px;
+  gap: 30px;
+  border: none;
+}
+
+.cbi__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cbi__edit-button {
+  border: none;
+  color: #374151;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.cbi__edit-button:hover {
+  background-color: #fff;
+}
+
+.cbi__title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.cbi__content {
+  display: flex;
+}
+
+.cbi__photo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.cbi__photo img {
+  width: 96px;
+  height: 96px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.cbi__photo button {
+  color: #4b5563;
+  font-size: 14px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.cbi__fields {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+.cbi__form {
+  width: 100%;
+}
+
+.cbi__form input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #4b5563;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #1f2937;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.cbi__form input:disabled {
+  background-color: #f3f4f6;
+  cursor: not-allowed;
+}
+
+.cbi__form label {
+  font-size: 14px;
+  color: #1f2937;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.cbi__names {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+}
+
+.cbi__names-input {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.cbi__form > div {
+  display: flex;
+  gap: 24px;
+  width: 100%;
+}
+
+.cbi__form input[type='date']::-webkit-calendar-picker-indicator {
+  filter: invert(37%) sepia(16%) saturate(463%) hue-rotate(182deg)
+    brightness(95%) contrast(92%);
+  cursor: pointer;
+}
+
+.cbi__field {
+  width: 100%;
+}
+
+.cbi__select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #4b5563;
+  border-radius: 6px;
+  font-size: 16px;
+  color: black;
+  background-color: #fff;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%236b7280'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 24px 24px;
+}
+
+.cbi__select:focus {
+  outline: none;
+}
+
+.cbi__select:disabled {
+  background-color: #f3f4f6;
+  cursor: not-allowed;
+}
+
+.cbi__email-field {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.cbi__email-field input {
+  flex: 1;
+}
+
+.cbi__email-update-button {
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: 1.5rem;
+}
+
+.cbi__email-update-button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+.cbi__email-update-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.profile__actions {
+  display: flex;
+  gap: 16px;
+  justify-content: flex-end;
+}
+
+.profile__actions-cancel {
+  background-color: #fff;
+  border: 1px solid #1f2937;
+  color: #1f2937;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.profile__actions-save {
+  border: 1px solid #374151;
+  background-color: #374151;
+  color: #fff;
+  padding: 10px 24px;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  border-radius: 8px;
+}

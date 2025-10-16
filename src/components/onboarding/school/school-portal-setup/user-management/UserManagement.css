@@ -1,0 +1,16 @@
+.user-management {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: 100%;
+  min-height: 100vh;
+  font-family: 'Urbanist', sans-serif;
+}
+
+.user-management-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+  font-family: 'Urbanist', sans-serif;
+}

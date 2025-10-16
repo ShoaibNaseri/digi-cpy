@@ -1,0 +1,795 @@
+.puzzle-drop-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  font-family: 'game-font', system-ui;
+}
+
+.puzzle-drop-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--game-font-color);
+  font-family: 'game-font', system-ui;
+  font-size: 18px;
+  gap: 20px;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid #fff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.puzzles-display {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.puzzle-wrapper {
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.puzzle-wrapper:hover {
+  filter: brightness(1.1);
+  transform: scale(1.05) translateY(-10px);
+}
+
+.puzzle-wrapper.clicked {
+  pointer-events: none;
+  z-index: 5;
+}
+
+.puzzle-image {
+  width: 350px;
+  height: 350px;
+  object-fit: contain;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+  /* background: rgba(255, 255, 255, 0.1); */
+  /* backdrop-filter: blur(10px); */
+  /* border: 2px solid rgba(255, 255, 255, 0.2); */
+  animation: fillFromTop 1.5s ease-out forwards;
+  clip-path: inset(100% 0 0 0);
+}
+
+/* Puzzledrop price tag styling */
+.puzzledrop-price-tag {
+  position: absolute;
+  bottom: -40px;
+  left: 70%;
+  transform: translateX(-50%);
+  z-index: 20;
+  pointer-events: none; /* Don't interfere with puzzle clicking */
+  transform-origin: center center;
+  isolation: isolate; /* Create new stacking context */
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.puzzledrop-price-tag img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+/* Separate price tag positioning during exit animation */
+.puzzledrop-price-tag-exit {
+  position: absolute;
+  z-index: 25;
+  pointer-events: none;
+  transform: translateX(-50%);
+}
+
+.puzzledrop-price-tag-exit.puzzle-position-0 {
+  bottom: calc(50vh - 175px + 30px);
+  left: calc(50vw - 200px);
+}
+
+.puzzledrop-price-tag-exit.puzzle-position-1 {
+  bottom: calc(50vh - 175px + 30px);
+  left: 50vw;
+}
+
+.puzzledrop-price-tag-exit.puzzle-position-2 {
+  bottom: calc(50vh - 175px + 30px);
+  left: calc(50vw + 200px);
+}
+
+@keyframes fillFromTop {
+  0% {
+    clip-path: inset(100% 0 0 0);
+    opacity: 0.7;
+  }
+  100% {
+    clip-path: inset(0% 0 0 0);
+    opacity: 1;
+  }
+}
+
+/* Confetti Explosion Effects with Large Particles */
+.confetti-explosion {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+}
+
+.confetti-piece {
+  position: absolute;
+  animation: puzzle-explosion 2.5s ease-out forwards;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Large Confetti Pieces - Enhanced size for better visual impact */
+.confetti-1 {
+  width: 35px;
+  height: 25px;
+  background: linear-gradient(45deg, #ff6b6b, #ff8e53);
+  --start-x: -50px;
+  --start-y: -40px;
+  --end-x: -160px;
+  --end-y: -120px;
+  animation-delay: 0s;
+}
+
+.confetti-2 {
+  width: 28px;
+  height: 38px;
+  background: linear-gradient(135deg, #4ecdc4, #45b7b8);
+  --start-x: 55px;
+  --start-y: -35px;
+  --end-x: 165px;
+  --end-y: -105px;
+  animation-delay: 0.05s;
+}
+
+.confetti-3 {
+  width: 32px;
+  height: 22px;
+  background: linear-gradient(90deg, #ffa726, #ffcc02);
+  --start-x: -35px;
+  --start-y: 25px;
+  --end-x: -105px;
+  --end-y: 75px;
+  animation-delay: 0.1s;
+}
+
+.confetti-4 {
+  width: 25px;
+  height: 35px;
+  background: linear-gradient(180deg, #a29bfe, #6c5ce7);
+  --start-x: 60px;
+  --start-y: 40px;
+  --end-x: 180px;
+  --end-y: 120px;
+  animation-delay: 0.15s;
+}
+
+.confetti-5 {
+  width: 40px;
+  height: 20px;
+  background: linear-gradient(45deg, #fd79a8, #e84393);
+  --start-x: -60px;
+  --start-y: -10px;
+  --end-x: -180px;
+  --end-y: -30px;
+  animation-delay: 0.2s;
+}
+
+.confetti-6 {
+  width: 30px;
+  height: 36px;
+  background: linear-gradient(225deg, #00b894, #00cec9);
+  --start-x: 45px;
+  --start-y: -50px;
+  --end-x: 135px;
+  --end-y: -150px;
+  animation-delay: 0.25s;
+}
+
+.confetti-7 {
+  width: 35px;
+  height: 28px;
+  background: linear-gradient(270deg, #e17055, #d63031);
+  --start-x: -45px;
+  --start-y: 35px;
+  --end-x: -135px;
+  --end-y: 105px;
+  animation-delay: 0.3s;
+}
+
+.confetti-8 {
+  width: 22px;
+  height: 40px;
+  background: linear-gradient(315deg, #74b9ff, #0984e3);
+  --start-x: 50px;
+  --start-y: 20px;
+  --end-x: 150px;
+  --end-y: 60px;
+  animation-delay: 0.35s;
+}
+
+.confetti-9 {
+  width: 38px;
+  height: 22px;
+  background: linear-gradient(0deg, #fdcb6e, #e84393);
+  --start-x: -25px;
+  --start-y: -45px;
+  --end-x: -75px;
+  --end-y: -135px;
+  animation-delay: 0.4s;
+}
+
+.confetti-10 {
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(60deg, #55a3ff, #003d82);
+  --start-x: 40px;
+  --start-y: -30px;
+  --end-x: 120px;
+  --end-y: -90px;
+  animation-delay: 0.45s;
+}
+
+.confetti-11 {
+  width: 42px;
+  height: 25px;
+  background: linear-gradient(120deg, #00b894, #00cec9);
+  --start-x: -40px;
+  --start-y: 20px;
+  --end-x: -120px;
+  --end-y: 60px;
+  animation-delay: 0.5s;
+}
+
+.confetti-12 {
+  width: 25px;
+  height: 30px;
+  background: linear-gradient(240deg, #ffeaa7, #fdcb6e);
+  --start-x: 35px;
+  --start-y: 45px;
+  --end-x: 105px;
+  --end-y: 135px;
+  animation-delay: 0.55s;
+}
+
+.confetti-13 {
+  width: 35px;
+  height: 28px;
+  background: linear-gradient(300deg, #fd79a8, #fdcb6e);
+  --start-x: -55px;
+  --start-y: -20px;
+  --end-x: -165px;
+  --end-y: -60px;
+  animation-delay: 0.6s;
+}
+
+.confetti-14 {
+  width: 28px;
+  height: 38px;
+  background: linear-gradient(30deg, #a29bfe, #74b9ff);
+  --start-x: 65px;
+  --start-y: -45px;
+  --end-x: 195px;
+  --end-y: -135px;
+  animation-delay: 0.65s;
+}
+
+.confetti-15 {
+  width: 40px;
+  height: 22px;
+  background: linear-gradient(150deg, #ff7675, #e17055);
+  --start-x: -30px;
+  --start-y: 50px;
+  --end-x: -90px;
+  --end-y: 150px;
+  animation-delay: 0.7s;
+}
+
+.confetti-16 {
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(210deg, #00b894, #55a3ff);
+  --start-x: 30px;
+  --start-y: 30px;
+  --end-x: 90px;
+  --end-y: 90px;
+  animation-delay: 0.75s;
+}
+
+.confetti-17 {
+  width: 45px;
+  height: 18px;
+  background: linear-gradient(75deg, #ff6b9d, #c44569);
+  --start-x: -70px;
+  --start-y: -35px;
+  --end-x: -210px;
+  --end-y: -105px;
+  animation-delay: 0.8s;
+}
+
+.confetti-18 {
+  width: 26px;
+  height: 42px;
+  background: linear-gradient(165deg, #3742fa, #2f3542);
+  --start-x: 70px;
+  --start-y: 15px;
+  --end-x: 210px;
+  --end-y: 45px;
+  animation-delay: 0.85s;
+}
+
+.confetti-19 {
+  width: 38px;
+  height: 26px;
+  background: linear-gradient(255deg, #7bed9f, #2ed573);
+  --start-x: -20px;
+  --start-y: -55px;
+  --end-x: -60px;
+  --end-y: -165px;
+  animation-delay: 0.9s;
+}
+
+.confetti-20 {
+  width: 30px;
+  height: 35px;
+  background: linear-gradient(345deg, #ffa502, #ff6348);
+  --start-x: 25px;
+  --start-y: 55px;
+  --end-x: 75px;
+  --end-y: 165px;
+  animation-delay: 0.95s;
+}
+
+@keyframes puzzle-explosion {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+  20% {
+    opacity: 0.95;
+    transform: translate(var(--start-x), var(--start-y)) scale(1.2)
+      rotate(180deg);
+  }
+  40% {
+    opacity: 0.85;
+    transform: translate(calc(var(--start-x) * 1.5), calc(var(--start-y) * 1.5))
+      scale(1) rotate(360deg);
+  }
+  70% {
+    opacity: 0.6;
+    transform: translate(var(--end-x), var(--end-y)) scale(0.8) rotate(540deg);
+  }
+  90% {
+    opacity: 0.3;
+    transform: translate(calc(var(--end-x) * 1.2), calc(var(--end-y) * 1.2))
+      scale(0.5) rotate(720deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(calc(var(--end-x) * 1.4), calc(var(--end-y) * 1.4))
+      scale(0.2) rotate(900deg);
+  }
+}
+
+/* Sparkle Effects */
+.sparkle-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.sparkle {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: radial-gradient(circle, #fff 0%, transparent 70%);
+  border-radius: 50%;
+  animation: magical-sparkle 2s ease-in-out infinite;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+}
+
+.sparkle-1 {
+  top: 10%;
+  left: 20%;
+  animation-delay: 0s;
+}
+.sparkle-2 {
+  top: 80%;
+  left: 15%;
+  animation-delay: 0.2s;
+}
+.sparkle-3 {
+  top: 15%;
+  right: 25%;
+  animation-delay: 0.4s;
+}
+.sparkle-4 {
+  bottom: 20%;
+  right: 20%;
+  animation-delay: 0.6s;
+}
+.sparkle-5 {
+  top: 50%;
+  left: 10%;
+  animation-delay: 0.8s;
+}
+.sparkle-6 {
+  top: 30%;
+  right: 15%;
+  animation-delay: 1s;
+}
+.sparkle-7 {
+  bottom: 15%;
+  left: 30%;
+  animation-delay: 1.2s;
+}
+.sparkle-8 {
+  top: 70%;
+  right: 30%;
+  animation-delay: 1.4s;
+}
+.sparkle-9 {
+  top: 25%;
+  left: 50%;
+  animation-delay: 1.6s;
+}
+.sparkle-10 {
+  bottom: 30%;
+  left: 60%;
+  animation-delay: 1.8s;
+}
+.sparkle-11 {
+  top: 60%;
+  right: 10%;
+  animation-delay: 2s;
+}
+.sparkle-12 {
+  bottom: 50%;
+  right: 50%;
+  animation-delay: 2.2s;
+}
+.sparkle-13 {
+  top: 40%;
+  left: 80%;
+  animation-delay: 2.4s;
+}
+.sparkle-14 {
+  bottom: 60%;
+  left: 40%;
+  animation-delay: 2.6s;
+}
+.sparkle-15 {
+  top: 85%;
+  right: 40%;
+  animation-delay: 2.8s;
+}
+
+@keyframes magical-sparkle {
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(0) rotate(0deg);
+  }
+  25% {
+    opacity: 1;
+    transform: scale(1.2) rotate(90deg);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1) rotate(180deg);
+  }
+  75% {
+    opacity: 1;
+    transform: scale(1.5) rotate(270deg);
+  }
+}
+
+/* Responsive Design for iPads and Tablets in Landscape Mode */
+
+/* iPad Pro 12.9" (1366x1024) landscape */
+@media (max-width: 1366px) and (min-width: 1200px) {
+  .puzzle-drop-container {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .puzzles-display {
+    gap: 80px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .puzzle-image {
+    width: 280px;
+    height: 280px;
+  }
+
+  .puzzledrop-price-tag img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .puzzledrop-price-tag {
+    bottom: -50px;
+    left: 70%;
+  }
+
+  .confetti-explosion {
+    width: 280px;
+    height: 280px;
+  }
+
+  /* Centered exit price tag positioning for iPad Pro 12.9" */
+  .puzzledrop-price-tag-exit.puzzle-position-0 {
+    bottom: calc(50vh - 140px - 50px);
+    left: calc(50vw - 240px);
+  }
+
+  .puzzledrop-price-tag-exit.puzzle-position-1 {
+    bottom: calc(50vh - 140px - 50px);
+    left: 50vw;
+  }
+
+  .puzzledrop-price-tag-exit.puzzle-position-2 {
+    bottom: calc(50vh - 140px - 50px);
+    left: calc(50vw + 240px);
+  }
+}
+
+/* iPad Pro 11" (1194x834) and similar tablets landscape */
+@media (max-width: 1199px) and (min-width: 1025px) {
+  .puzzle-drop-container {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .puzzles-display {
+    gap: 60px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .puzzle-image {
+    width: 240px;
+    height: 240px;
+  }
+
+  .puzzledrop-price-tag img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .puzzledrop-price-tag {
+    bottom: -40px;
+    left: 70%;
+  }
+
+  .confetti-explosion {
+    width: 240px;
+    height: 240px;
+  }
+
+  /* Centered exit price tag positioning for iPad Pro 11" */
+  .puzzledrop-price-tag-exit.puzzle-position-0 {
+    bottom: calc(50vh - 120px - 40px);
+    left: calc(50vw - 180px);
+  }
+
+  .puzzledrop-price-tag-exit.puzzle-position-1 {
+    bottom: calc(50vh - 120px - 40px);
+    left: 50vw;
+  }
+
+  .puzzledrop-price-tag-exit.puzzle-position-2 {
+    bottom: calc(50vh - 120px - 40px);
+    left: calc(50vw + 180px);
+  }
+}
+
+/* iPad Mini and standard iPad (1024x768) landscape */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .puzzle-drop-container {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .puzzles-display {
+    gap: 50px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .puzzle-image {
+    width: 200px;
+    height: 200px;
+  }
+
+  .puzzledrop-price-tag img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .puzzledrop-price-tag {
+    bottom: -35px;
+    left: 70%;
+  }
+
+  .confetti-explosion {
+    width: 200px;
+    height: 200px;
+  }
+
+  /* Centered exit price tag positioning for iPad Mini/standard */
+  .puzzledrop-price-tag-exit.puzzle-position-0 {
+    bottom: calc(50vh - 100px - 35px);
+    left: calc(50vw - 150px);
+  }
+
+  .puzzledrop-price-tag-exit.puzzle-position-1 {
+    bottom: calc(50vh - 100px - 35px);
+    left: 50vw;
+  }
+
+  .puzzledrop-price-tag-exit.puzzle-position-2 {
+    bottom: calc(50vh - 100px - 35px);
+    left: calc(50vw + 150px);
+  }
+}
+
+/* Smaller tablets and large phones landscape */
+@media (max-width: 768px) and (min-width: 481px) {
+  .puzzle-drop-container {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .puzzles-display {
+    gap: 30px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .puzzle-image {
+    width: 160px;
+    height: 160px;
+  }
+
+  .puzzledrop-price-tag img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .puzzledrop-price-tag {
+    bottom: -25px;
+    left: 70%;
+  }
+
+  .confetti-explosion {
+    width: 160px;
+    height: 160px;
+  }
+
+  /* Centered exit price tag positioning for smaller tablets */
+  .puzzledrop-price-tag-exit.puzzle-position-0 {
+    bottom: calc(50vh - 80px - 25px);
+    left: calc(50vw - 95px);
+  }
+
+  .puzzledrop-price-tag-exit.puzzle-position-1 {
+    bottom: calc(50vh - 80px - 25px);
+    left: 50vw;
+  }
+
+  .puzzledrop-price-tag-exit.puzzle-position-2 {
+    bottom: calc(50vh - 80px - 25px);
+    left: calc(50vw + 95px);
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+  .puzzle-drop-container {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .puzzles-display {
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .puzzle-image {
+    width: 150px;
+    height: 150px;
+  }
+
+  .puzzledrop-price-tag img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .puzzledrop-price-tag {
+    bottom: -20px;
+    left: 70%;
+  }
+
+  .confetti-explosion {
+    width: 150px;
+    height: 150px;
+  }
+
+  .confetti-piece {
+    transform: scale(0.8);
+  }
+
+  /* Centered exit price tag positioning for mobile (column layout) */
+  .puzzledrop-price-tag-exit.puzzle-position-0 {
+    bottom: calc(50vh + 80px);
+    left: 50vw;
+  }
+
+  .puzzledrop-price-tag-exit.puzzle-position-1 {
+    bottom: calc(50vh - 20px);
+    left: 50vw;
+  }
+
+  .puzzledrop-price-tag-exit.puzzle-position-2 {
+    bottom: calc(50vh - 120px);
+    left: 50vw;
+  }
+}

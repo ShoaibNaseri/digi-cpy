@@ -1,0 +1,481 @@
+.tshirt-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(135deg, #74b9ff 0%, #0984e3 50%, #6c5ce7 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  font-family: 'game-font', system-ui;
+}
+
+.tshirt-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--game-font-color);
+  font-family: 'game-font', system-ui;
+  font-size: 18px;
+  gap: 20px;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid #fff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.tshirts-display {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 100px;
+}
+
+.tshirt-wrapper {
+  position: relative;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  z-index: 10;
+}
+
+.tshirt-wrapper.left {
+  align-self: center;
+}
+
+.tshirt-wrapper.center {
+  align-self: center;
+}
+
+.tshirt-wrapper.right {
+  align-self: center;
+}
+
+.tshirt-wrapper:hover {
+  filter: brightness(1.1);
+  transform: scale(1.05) translateY(-5px);
+}
+
+.tshirt-wrapper.center:hover {
+  transform: scale(1.2) translateY(-5px);
+}
+
+.tshirt-wrapper.clicked {
+  pointer-events: none;
+  z-index: 5;
+}
+
+.tshirt-image {
+  width: 350px;
+  height: 350px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+}
+
+/* Tshirt price tag styling */
+.tshirt-price-tag {
+  position: absolute;
+  bottom: -40px;
+  left: 30%;
+  transform: translateX(-50%);
+  z-index: 20;
+  pointer-events: none; /* Don't interfere with tshirt clicking */
+  transform-origin: center center;
+  isolation: isolate; /* Create new stacking context */
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+/* Force price tag to ignore parent transforms when clicked */
+.tshirt-wrapper.clicked .tshirt-price-tag {
+  transform: translateZ(0) !important;
+  contain: layout style paint !important;
+  isolation: isolate !important;
+}
+
+/* Separate price tag positioning during exit animation */
+.tshirt-price-tag-exit {
+  position: absolute;
+  z-index: 25;
+  pointer-events: none;
+  transform: translateX(-50%);
+}
+
+.tshirt-price-tag-exit.left {
+  bottom: calc(50vh - 175px - 10px);
+  left: calc(100px + 175px);
+}
+
+.tshirt-price-tag-exit.center {
+  bottom: calc(50vh - 175px - 10px);
+  left: 50vw;
+}
+
+.tshirt-price-tag-exit.right {
+  bottom: calc(50vh - 175px - 10px);
+  left: calc(100vw - 100px - 175px);
+}
+
+/* Tshirt price tag remains stable during exit animations */
+
+.tshirt-price-tag img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.tshirt-exit {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Container for exit animation that doesn't affect price tag positioning */
+.tshirt-exit-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Spark Explosion Effects */
+.spark-explosion {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.spark-piece {
+  position: absolute;
+  animation: spark-explosion 2s ease-out forwards;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+/* Spark Pieces with Bright Colors */
+.spark-1 {
+  width: 12px;
+  height: 12px;
+  background: radial-gradient(circle, #ff6b6b, #ff8e53);
+  --start-x: -40px;
+  --start-y: -30px;
+  --end-x: -120px;
+  --end-y: -90px;
+  animation-delay: 0s;
+}
+
+.spark-2 {
+  width: 10px;
+  height: 10px;
+  background: radial-gradient(circle, #4ecdc4, #45b7b8);
+  --start-x: 45px;
+  --start-y: -25px;
+  --end-x: 135px;
+  --end-y: -75px;
+  animation-delay: 0.05s;
+}
+
+.spark-3 {
+  width: 14px;
+  height: 14px;
+  background: radial-gradient(circle, #ffa726, #ffcc02);
+  --start-x: -30px;
+  --start-y: 20px;
+  --end-x: -90px;
+  --end-y: 60px;
+  animation-delay: 0.1s;
+}
+
+.spark-4 {
+  width: 8px;
+  height: 8px;
+  background: radial-gradient(circle, #a29bfe, #6c5ce7);
+  --start-x: 50px;
+  --start-y: 35px;
+  --end-x: 150px;
+  --end-y: 105px;
+  animation-delay: 0.15s;
+}
+
+.spark-5 {
+  width: 16px;
+  height: 16px;
+  background: radial-gradient(circle, #fd79a8, #e84393);
+  --start-x: -50px;
+  --start-y: -10px;
+  --end-x: -150px;
+  --end-y: -30px;
+  animation-delay: 0.2s;
+}
+
+.spark-6 {
+  width: 11px;
+  height: 11px;
+  background: radial-gradient(circle, #00b894, #00cec9);
+  --start-x: 35px;
+  --start-y: -40px;
+  --end-x: 105px;
+  --end-y: -120px;
+  animation-delay: 0.25s;
+}
+
+.spark-7 {
+  width: 13px;
+  height: 13px;
+  background: radial-gradient(circle, #e17055, #d63031);
+  --start-x: -35px;
+  --start-y: 30px;
+  --end-x: -105px;
+  --end-y: 90px;
+  animation-delay: 0.3s;
+}
+
+.spark-8 {
+  width: 9px;
+  height: 9px;
+  background: radial-gradient(circle, #74b9ff, #0984e3);
+  --start-x: 40px;
+  --start-y: 15px;
+  --end-x: 120px;
+  --end-y: 45px;
+  animation-delay: 0.35s;
+}
+
+.spark-9 {
+  width: 15px;
+  height: 15px;
+  background: radial-gradient(circle, #fdcb6e, #e84393);
+  --start-x: -20px;
+  --start-y: -35px;
+  --end-x: -60px;
+  --end-y: -105px;
+  animation-delay: 0.4s;
+}
+
+.spark-10 {
+  width: 12px;
+  height: 12px;
+  background: radial-gradient(circle, #55a3ff, #003d82);
+  --start-x: 30px;
+  --start-y: -20px;
+  --end-x: 90px;
+  --end-y: -60px;
+  animation-delay: 0.45s;
+}
+
+.spark-11 {
+  width: 17px;
+  height: 17px;
+  background: radial-gradient(circle, #00b894, #00cec9);
+  --start-x: -25px;
+  --start-y: 40px;
+  --end-x: -75px;
+  --end-y: 120px;
+  animation-delay: 0.5s;
+}
+
+.spark-12 {
+  width: 10px;
+  height: 10px;
+  background: radial-gradient(circle, #ffeaa7, #fdcb6e);
+  --start-x: 25px;
+  --start-y: 25px;
+  --end-x: 75px;
+  --end-y: 75px;
+  animation-delay: 0.55s;
+}
+
+.spark-13 {
+  width: 14px;
+  height: 14px;
+  background: radial-gradient(circle, #fd79a8, #fdcb6e);
+  --start-x: -45px;
+  --start-y: -15px;
+  --end-x: -135px;
+  --end-y: -45px;
+  animation-delay: 0.6s;
+}
+
+.spark-14 {
+  width: 11px;
+  height: 11px;
+  background: radial-gradient(circle, #a29bfe, #74b9ff);
+  --start-x: 55px;
+  --start-y: -35px;
+  --end-x: 165px;
+  --end-y: -105px;
+  animation-delay: 0.65s;
+}
+
+.spark-15 {
+  width: 18px;
+  height: 18px;
+  background: radial-gradient(circle, #ff7675, #e17055);
+  --start-x: -15px;
+  --start-y: 45px;
+  --end-x: -45px;
+  --end-y: 135px;
+  animation-delay: 0.7s;
+}
+
+.spark-16 {
+  width: 13px;
+  height: 13px;
+  background: radial-gradient(circle, #00b894, #55a3ff);
+  --start-x: 20px;
+  --start-y: 35px;
+  --end-x: 60px;
+  --end-y: 105px;
+  animation-delay: 0.75s;
+}
+
+@keyframes spark-explosion {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    opacity: 0.9;
+    transform: translate(var(--start-x), var(--start-y)) scale(1.5);
+  }
+  50% {
+    opacity: 0.7;
+    transform: translate(calc(var(--start-x) * 1.5), calc(var(--start-y) * 1.5))
+      scale(1.2);
+  }
+  75% {
+    opacity: 0.4;
+    transform: translate(var(--end-x), var(--end-y)) scale(0.8);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(calc(var(--end-x) * 1.2), calc(var(--end-y) * 1.2))
+      scale(0.3);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .tshirt-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .tshirts-display {
+    flex-direction: row;
+    gap: 40px;
+    /* padding: 0 20px; */
+  }
+
+  .tshirt-image {
+    width: 150px;
+    height: 150px;
+  }
+
+  .tshirt-price-tag img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .tshirt-exit {
+    width: 150px;
+    height: 150px;
+  }
+
+  .tshirt-wrapper.center {
+    transform: scale(1);
+  }
+
+  .tshirt-wrapper.center:hover {
+    transform: scale(1.05) translateY(-5px);
+  }
+
+  /* Responsive exit price tag positioning for mobile */
+  .tshirt-price-tag-exit.left {
+    bottom: calc(50vh + 40px);
+    left: 50vw;
+  }
+
+  .tshirt-price-tag-exit.center {
+    bottom: calc(50vh - 40px);
+    left: 50vw;
+  }
+
+  .tshirt-price-tag-exit.right {
+    bottom: calc(50vh - 120px);
+    left: 50vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .tshirts-display {
+    gap: 30px;
+  }
+
+  .tshirt-image {
+    width: 120px;
+    height: 120px;
+  }
+
+  .tshirt-price-tag img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .tshirt-price-tag {
+    bottom: -5px;
+  }
+
+  .tshirt-exit {
+    width: 120px;
+    height: 120px;
+  }
+
+  .spark-piece {
+    transform: scale(0.7);
+  }
+
+  /* Responsive exit price tag positioning for smaller mobile */
+  .tshirt-price-tag-exit.left {
+    bottom: calc(50vh + 60px);
+    left: 50vw;
+  }
+
+  .tshirt-price-tag-exit.center {
+    bottom: calc(50vh - 30px);
+    left: 50vw;
+  }
+
+  .tshirt-price-tag-exit.right {
+    bottom: calc(50vh - 120px);
+    left: 50vw;
+  }
+}

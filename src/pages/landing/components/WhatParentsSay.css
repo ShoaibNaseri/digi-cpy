@@ -1,0 +1,383 @@
+/* WhatParentsSay.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap');
+
+.digipalz-landing-reviews__section {
+  height: auto;
+  max-width: 100%;
+  width: 100%;
+  padding-top: 4rem;
+  padding-bottom: 60rem;
+  font-family: Arial, sans-serif;
+  background: white;
+  z-index: 33;
+  position: relative;
+  overflow: hidden;
+  margin-top: -6%;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 80px;
+  border-top-right-radius: 80px;
+  /* Animation optimization */
+  will-change: transform, opacity;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+.digipalz-landing-reviews__container {
+  max-width: 1600px;
+  width: 85%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  /* Animation optimization */
+  will-change: transform, opacity;
+}
+
+/* Header Styles */
+.digipalz-landing-reviews__header {
+  width: 521px;
+  align-self: stretch;
+  color: #000000;
+  font-family: 'Inter', sans-serif;
+  font-size: var(--lp-font-size-36);
+  font-weight: 900;
+  margin-bottom: 30px;
+  /* Animation optimization */
+  will-change: transform, opacity;
+}
+
+.digipalz-landing-reviews__title {
+  align-self: stretch;
+  color: #000000;
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+  font-size: var(--lp-font-size-36);
+  margin-bottom: 1rem;
+  /* Animation optimization */
+  will-change: transform, opacity;
+}
+
+.digipalz-landing-reviews__subtitle {
+  height: 46px;
+  width: 806px;
+  font-family: 'Inter', sans-serif;
+  font-size: var(--lp-font-size-20);
+  font-weight: 500;
+  line-height: 1.5;
+  color: #000000;
+  margin-top: -1%;
+  /* Animation optimization */
+  will-change: transform, opacity;
+}
+
+/* Reviews Container */
+.digipalz-landing-reviews__feedback-container {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  /* 3D perspective for card animations */
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  /* Animation optimization */
+  will-change: transform, opacity;
+}
+
+/* Card Styles */
+.digipalz-landing-reviews__card {
+  border-radius: 20px;
+  height: 466px;
+  width: 320px;
+  overflow: hidden;
+  flex: 1;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: left;
+  position: relative;
+  /* 3D Effects */
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  /* Animation optimization */
+  will-change: transform, opacity, filter;
+  transform-origin: center center;
+  cursor: pointer;
+  /* Enhanced shadows for depth */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15), 0 4px 10px rgba(0, 0, 0, 0.1),
+    inset 0 2px 4px rgba(255, 255, 255, 0.1);
+  /* Smooth transitions for focus effects */
+  transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+/* Enhanced card hover effects - let framer-motion handle transform */
+.digipalz-landing-reviews__card:hover {
+  /* Remove transform to let framer-motion handle it */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 10px 20px rgba(0, 0, 0, 0.2),
+    inset 0 3px 6px rgba(255, 255, 255, 0.2);
+}
+
+/* Content container */
+.digipalz-landing-reviews__card-content {
+  position: absolute;
+  top: 49px;
+  bottom: 49px;
+  left: 45px;
+  right: 45px;
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 70px);
+  /* Animation optimization */
+  will-change: transform, opacity;
+  transform-style: preserve-3d;
+  word-wrap: break-word;
+}
+
+/* Avatar Styles */
+.digipalz-landing-reviews__avatar-container {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Animation optimization */
+  will-change: transform, opacity;
+  transform-origin: center center;
+  /* Enhanced styling */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.digipalz-landing-reviews__avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Animation optimization */
+  will-change: transform;
+  transform-origin: center center;
+}
+
+/* Text Styles */
+.digipalz-landing-reviews__quote {
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-top: 9%;
+  /* Animation optimization */
+  will-change: transform, opacity;
+  /* Enhanced text shadow for readability */
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  word-wrap: break-word;
+}
+
+.digipalz-landing-reviews__name {
+  height: 19px;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  margin-top: auto;
+  margin-bottom: 15%;
+  /* Animation optimization */
+  will-change: transform, opacity;
+  /* Enhanced text shadow */
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* Button Styles */
+.digipalz-landing-reviews__cta-button {
+  background-color: #cafd06;
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  height: 39px;
+  justify-content: center;
+  padding: 5px 13px;
+  position: relative;
+  color: #000000;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  text-transform: uppercase;
+  /* Remove CSS transitions to let framer-motion handle them */
+  /* transition: background-color 0.3s ease; */
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  /* Animation optimization */
+  will-change: transform, opacity, box-shadow;
+  transform-origin: center center;
+  /* Enhanced default styling */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+/* Add a subtle shine effect to button */
+.digipalz-landing-reviews__cta-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    transparent 100%
+  );
+  transition: left 0.6s ease;
+}
+
+.digipalz-landing-reviews__cta-button:hover::before {
+  left: 100%;
+}
+
+/* Remove old hover state to let framer-motion handle it */
+/* .digipalz-landing-reviews__cta-button:hover {
+  background-color: #d8ff33;
+} */
+
+/* Add subtle gradient overlays to cards for enhanced depth */
+.digipalz-landing-reviews__card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    transparent 50%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+  opacity: 0.6;
+  pointer-events: none;
+  border-radius: 20px;
+  z-index: 1;
+}
+
+/* Ensure content stays above overlay */
+.digipalz-landing-reviews__card-content {
+  z-index: 2;
+}
+
+/* Responsive Layout */
+/* Wide screens (larger than 1440px) */
+@media (max-width: 1680px) and (min-width: 1441px) {
+  .digipalz-landing-reviews__feedback-container {
+    margin-right: -1%;
+    justify-content: space-between;
+  }
+
+  .digipalz-landing-reviews__card {
+    max-width: 440px;
+  }
+}
+@media (max-width: 1280px) and (min-width: 1025px) {
+  .digipalz-landing-reviews__container {
+    max-width: 90%;
+  }
+  .digipalz-landing-reviews__feedback-container {
+    margin-right: -1%;
+    justify-content: space-between;
+  }
+  .digipalz-landing-reviews__card {
+    max-width: 300px;
+    height: 500px;
+  }
+  .digipalz-landing-reviews__quote {
+    font-size: 13px;
+  }
+  .digipalz-landing-reviews__name {
+    font-size: 16px;
+  }
+}
+@media (max-width: 1024px) {
+  .digipalz-landing-reviews__section {
+    width: 100%;
+    /* min-height: auto; */
+    height: auto;
+  }
+  .digipalz-landing-reviews__feedback-container {
+    gap: 1%;
+  }
+  .digipalz-landing-reviews__card {
+    max-width: 600px;
+    width: 100%;
+    height: 550px;
+    justify-self: center;
+    margin-bottom: 10%;
+  }
+  .digipalz-landing-reviews__card-content {
+    top: 40px;
+    bottom: 40px;
+    left: 30px;
+    right: 30px;
+    width: calc(100% - 60px);
+    /* Animation optimization */
+    will-change: transform, opacity;
+    transform-style: preserve-3d;
+  }
+}
+
+/* Small tablets and large phones */
+@media (max-width: 768px) {
+  .digipalz-landing-reviews__section {
+    padding-top: 60px;
+    padding-bottom: 50px;
+  }
+
+  .digipalz-landing-reviews__container {
+    max-width: 90%;
+  }
+
+  .digipalz-landing-reviews__header {
+    width: 100%;
+  }
+
+  .digipalz-landing-reviews__title {
+    font-size: 36px;
+  }
+
+  .digipalz-landing-reviews__subtitle {
+    width: 100%;
+    height: auto;
+    font-size: 16px;
+    margin-top: 0;
+  }
+
+  .digipalz-landing-reviews__feedback-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .digipalz-landing-reviews__card {
+    width: 100%;
+    max-width: 100%;
+    height: 320px;
+  }
+
+  .digipalz-landing-reviews__card-content {
+    top: 40px;
+    bottom: 40px;
+    left: 30px;
+    right: 30px;
+    width: calc(100% - 60px);
+  }
+}
+
+/* Fix for specific 1024px breakpoint that was in original CSS */
+
+/* Preserve original design for 1440px viewport */

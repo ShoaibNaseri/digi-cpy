@@ -1,0 +1,136 @@
+.subscription-info {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 0;
+  width: 96% !important;
+  border-radius: 0;
+  margin: 0 !important;
+  background-color: transparent;
+}
+
+.subscription-info h1 {
+  color: #000;
+  text-align: center;
+  font-family: Urbanist;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.subscription-info__content {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  /* padding: 32px ; */
+  height:103px;
+  border-radius: 12px;
+  background-color: #E5E7EB !important;
+  position: relative;
+}
+
+.subscription-info__row {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 0;
+  position: relative;
+}
+
+@media screen and (max-width: 768px) {
+  .subscription-info__row {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .subscription-info__content {
+    padding: 24px;
+    height: auto;
+  }
+}
+
+.subscription-info__column {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  /* margin-left: 2rem; */
+  column-gap: 1rem;
+  text-align: center;
+  flex: 1;
+}
+
+.subscription-info__column:nth-child(1) {
+  margin-left: 1rem;
+}
+
+.subscription-info__column:nth-child(2) {
+  margin: 0 auto;
+}
+
+.subscription-info__column:nth-child(3) {
+  margin-right: 1rem;
+}
+
+/* Licensed Seats */
+.subscription-info__label--seats {
+  font-size: 14px;
+  font-weight: 700;
+  color: #111827;
+  text-transform: none;
+  letter-spacing: normal;
+  text-align: left;
+}
+
+.subscription-info__value--seats {
+  font-size: 16px;
+  font-weight: 500;
+  color: #6B7280;
+  padding: 12px;
+  background-color: transparent;
+  border-radius: 0;
+  border: none;
+  text-align: left;
+}
+
+/* Renewal Date */
+.subscription-info__label--renewal {
+  font-size: 14px;
+  font-weight: 700;
+  color: #111827;
+  text-transform: none;
+  letter-spacing: normal;
+  text-align: center;
+}
+
+.subscription-info__value--renewal {
+  font-size: 16px;
+  font-weight: 500;
+  color: #6B7280;
+  padding: 12px;
+  background-color: transparent;
+  border-radius: 0;
+  border: none;
+  text-align: center;
+}
+
+/* Activation Date */
+.subscription-info__label--activation {
+  font-size: 14px;
+  font-weight: 700;
+  color: #111827;
+  text-transform: none;
+  letter-spacing: normal;
+  text-align: right;
+}
+
+.subscription-info__value--activation {
+  font-size: 16px;
+  font-weight: 500;
+  color: #6B7280;
+  padding: 12px;
+  background-color: transparent;
+  border-radius: 0;
+  border: none;
+  text-align: right;
+}

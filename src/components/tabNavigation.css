@@ -1,0 +1,217 @@
+/* tabNavigation.css */
+/* Basic focus style */
+.tab-focus {
+  /* outline: 3px solid #60a5fa !important; */
+  outline-offset: 2px !important;
+  z-index: 9 !important;
+  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.5) !important;
+}
+
+/* For elements that need positioning */
+.tab-focus-positioned {
+  position: relative;
+}
+
+/* Skip navigation link for keyboard users */
+.skip-to-content {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+  z-index: 9999;
+  background: #111827;
+  color: white;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  font-weight: 500;
+  text-decoration: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.skip-to-content:focus {
+  left: 1rem;
+  top: 1rem;
+}
+
+/* Focus visible styles - ensure elements have visual indicators when focused */
+button:focus-visible,
+[role='button']:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+.teacher-planner__mission-tag:focus-visible,
+.dropdown-item:focus-visible,
+.sidebar-menu-item:focus-visible,
+[data-make-tabbable]:focus-visible,
+.digipalz-landing-footer__nav-link--clickable:focus-visible,
+.digipalz-landing-footer__legal-link--clickable:focus-visible,
+.digipalz-landing-footer__social-wrapper--clickable:focus-visible,
+.mission:focus-visible,
+.mission__container:focus-visible,
+.quiz-card:focus-visible,
+.conversation-sidebar__item:focus-visible,
+.faq__button:focus-visible,
+.teacher-helpcenter-resource-card:focus-visible,
+.teacher-helpcenter-faq-question:focus-visible {
+  outline: 3px solid #60a5fa !important;
+  outline-offset: 2px !important;
+  z-index: 9 !important;
+  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.5) !important;
+}
+
+/* Interactive element hover states */
+button:hover,
+[role='button']:hover,
+.teacher-planner__mission-tag:hover,
+.dropdown-item:hover,
+.sidebar-menu-item:hover,
+[data-make-tabbable]:hover,
+.mission:not(.mission--locked):hover,
+.quiz-card:not(.quiz-card--expired):hover,
+.conversation-sidebar__item:hover,
+.faq__button:hover,
+.teacher-helpcenter-resource-card:hover,
+.teacher-helpcenter-faq-question:hover {
+  cursor: pointer;
+}
+
+/* Special styles for keyboard navigation */
+.teacher-planner__mission-tag:focus-visible {
+  background-color: #4b5563;
+  transform: translateY(-1px);
+}
+
+.teacher-planner__dropdown-item:focus-visible {
+  background-color: #334155;
+}
+
+.teacher-planner__nav-btn:focus-visible {
+  background-color: #4b5563;
+}
+
+.teacher-planner__view-toggle-btn:focus-visible,
+.teacher-planner__schedule-btn:focus-visible {
+  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.5);
+}
+
+.teacher-planner__all-classes-btn:focus-visible {
+  background-color: #2563eb;
+}
+
+.teacher-planner__mission-item:focus-visible {
+  background-color: #475569;
+  transform: translateY(-1px);
+}
+
+/* Sidebar menu item focus styles */
+.sidebar-menu-item:focus-visible {
+  background-color: rgba(96, 165, 250, 0.1);
+  transform: translateX(3px);
+}
+
+/* Mission card focus styles */
+.mission:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.mission.mission--locked:focus-visible {
+  transform: none;
+  box-shadow: none;
+  opacity: 0.7;
+}
+
+.mission__container:focus-visible {
+  transform: scale(1.05);
+}
+
+/* Quiz card focus styles */
+.quiz-card:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.quiz-card.quiz-card--expired:focus-visible {
+  transform: none;
+  box-shadow: none;
+  opacity: 0.7;
+}
+
+/* Conversation sidebar item focus styles */
+.conversation-sidebar__item:focus-visible {
+  background-color: rgba(96, 165, 250, 0.15);
+  transform: translateX(2px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.conversation-sidebar__item.active:focus-visible {
+  background-color: rgba(96, 165, 250, 0.25);
+}
+
+/* FAQ button focus styles */
+.faq__button:focus-visible,
+.faq__button.tab-focus {
+  background-color: rgba(96, 165, 250, 0.1) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.5) !important;
+  outline: 3px solid #60a5fa !important;
+  outline-offset: 2px !important;
+  z-index: 9 !important;
+}
+
+/* Teacher Help Center resource card focus styles */
+.teacher-helpcenter-resource-card:focus-visible,
+.teacher-helpcenter-resource-card.tab-focus {
+  background-color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+  outline: 3px solid #60a5fa !important;
+  outline-offset: 2px !important;
+  z-index: 9 !important;
+}
+
+/* Teacher Help Center FAQ question focus styles */
+.teacher-helpcenter-faq-question:focus-visible {
+  background-color: #2e384f !important;
+  outline: 3px solid #60a5fa !important;
+  outline-offset: 2px !important;
+  z-index: 9 !important;
+}
+
+/* Ensure elements in modal dialogs can receive focus */
+.teacher-planner__mission-details-modal button:focus-visible,
+.teacher-planner__tips-popup button:focus-visible {
+  outline: 3px solid #60a5fa !important;
+  outline-offset: 2px !important;
+  z-index: 2;
+}
+
+/* Animation transition effects */
+/* button,
+[role='button'],
+a,
+.teacher-planner__mission-tag,
+.dropdown-item,
+.sidebar-menu-item,
+[data-make-tabbable],
+.mission,
+.mission__container,
+.quiz-card,
+.conversation-sidebar__item,
+.faq__button,
+.teacher-helpcenter-resource-card,
+.teacher-helpcenter-faq-question {
+  transition: outline-color 0.4s ease, outline-offset 0.4s ease,
+    background-color 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
+} */
+
+/* Toast notification specific overrides */
+.Toastify__toast {
+  position: relative;
+}
+
+.Toastify__toast .tab-focus,
+.Toastify__toast *:focus-visible {
+  outline: 3px solid #60a5fa !important;
+  outline-offset: 2px !important;
+  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.5) !important;
+}

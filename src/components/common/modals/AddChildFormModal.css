@@ -1,0 +1,392 @@
+/* Add Child Form Modal Styles - Matching Original Design */
+
+/* Modal Overlay */
+.add-child-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 20px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* Modal Container */
+.add-child-modal {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+  max-width: 480px;
+  width: 100%;
+  max-height: 85vh;
+  overflow-y: auto;
+  animation: modalSlideIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes modalSlideOut {
+  from {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-50px) scale(0.9);
+  }
+}
+
+.add-child-modal.closing {
+  animation: modalSlideOut 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Form Section */
+.add-child-form-section {
+  background-color: white;
+  border-radius: 16px;
+  border: none;
+  padding: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.add-child-form-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(140, 45, 220, 0.05),
+    transparent
+  );
+  animation: shimmer 2s ease-in-out 0.5s;
+}
+
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.add-child-form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.add-child-form-header h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0;
+}
+
+.add-child-close-form-btn {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background-color: #f3f4f6;
+  color: #6b7280;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: fadeInUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.1s both;
+}
+
+.add-child-close-form-btn:hover {
+  background-color: #e5e7eb;
+  color: #374151;
+  transform: scale(1.1) rotate(90deg);
+}
+
+/* Form Styles */
+.add-child-form {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  animation: fadeInUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.1s both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.add-child-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+  animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.2s both;
+}
+
+.add-child-form-group {
+  margin-bottom: 16px;
+  animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.3s both;
+}
+
+.add-child-form-group:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.add-child-form-group:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+/* Login-style form label */
+.add-child-form-group label {
+  font-weight: 600;
+  font-size: 1.125rem;
+  padding-bottom: 6px;
+  padding-top: 12px;
+  color: #666;
+  display: block;
+}
+
+/* Login-style input group */
+.add-child-form-group .input-group {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #fff;
+  border: 1px solid #e2e8f0;
+  box-shadow: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.add-child-form-group .input-group:focus-within {
+  border: 1.5px solid transparent;
+  border-radius: 12px !important;
+  background: linear-gradient(#ffffff, #ffffff) padding-box,
+    linear-gradient(180deg, #8c2ddc 0%, #cb41eb 100%) border-box;
+  box-shadow: none;
+}
+
+/* Login-style input group text (for icons) */
+.add-child-form-group .input-group-text {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #8f9aa4;
+  text-align: center;
+  white-space: nowrap;
+  background-color: #fff;
+  border: none;
+  border-right: none;
+  height: 100%;
+}
+
+/* Login-style form control */
+.add-child-form-group .form-control {
+  position: relative;
+  flex: 1 1 auto;
+  width: 1%;
+  min-width: 0;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: none;
+  appearance: none;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  height: auto;
+}
+
+.add-child-form-group .form-control:focus {
+  color: #212529;
+  background-color: #fff;
+  outline: none !important;
+  outline-offset: 0;
+}
+
+/* Login input icon styling */
+.login-input-icon {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+/* Date input specific styling */
+.add-child-form-group input[type='date'] {
+  color-scheme: light;
+  cursor: pointer;
+}
+
+.add-child-form-group input[type='date']::-webkit-calendar-picker-indicator {
+  filter: invert(0);
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.add-child-form-group
+  input[type='date']::-webkit-calendar-picker-indicator:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Form Actions */
+.add-child-form-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-top: 20px;
+  animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.6s both;
+}
+
+.add-child-cancel-btn,
+.add-child-submit-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.add-child-cancel-btn {
+  background-color: #f3f4f6;
+  color: #374151;
+  border: 1px solid #d1d5db;
+}
+
+.add-child-cancel-btn:hover:not(:disabled) {
+  background-color: #e5e7eb;
+  color: #1f2937;
+}
+
+.add-child-submit-btn {
+  background: linear-gradient(90deg, #ec4899 0%, #7c3aed 100%);
+  color: white;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  box-shadow: 0 6px 18px rgba(124, 58, 237, 0.05);
+}
+
+.add-child-submit-btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(124, 58, 237, 0.45);
+}
+
+.add-child-submit-btn:focus {
+  color: #fff;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.25);
+}
+
+.add-child-submit-btn:active {
+  color: #fff;
+  background-color: #0a58ca;
+  border-color: #0a53be;
+  transform: translateY(0);
+}
+
+.add-child-cancel-btn:disabled,
+.add-child-submit-btn:disabled {
+  color: #fff;
+  background-color: #6c757d;
+  border-color: #eee;
+  opacity: 0.65;
+  box-shadow: none;
+  transform: none;
+  cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .add-child-modal-overlay {
+    padding: 10px;
+  }
+
+  .add-child-modal {
+    max-width: 100%;
+    max-height: 95vh;
+  }
+
+  .add-child-form-section {
+    padding: 20px 16px;
+  }
+
+  .add-child-form-row {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .add-child-form-actions {
+    flex-direction: column;
+  }
+
+  .add-child-cancel-btn,
+  .add-child-submit-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .add-child-form-section {
+    padding: 16px;
+  }
+}

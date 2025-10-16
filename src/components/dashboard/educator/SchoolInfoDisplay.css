@@ -1,0 +1,65 @@
+/* SchoolInfoDisplay.css */
+.educator-dashboard-school-info__main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.educator-dashboard-school-info__school {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.educator-dashboard-school-info__year {
+  color: #888;
+  font-size: 1rem;
+  margin-top: 2px;
+}
+
+.educator-dashboard-school-info__edit {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #f5f6fa;
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  padding: 7px 14px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.educator-dashboard-school-info__edit:hover {
+  background: #e0e3eb;
+}
+
+.educator-dashboard-school-info__details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.educator-dashboard-school-info__label {
+  color: #888;
+  font-size: 0.95rem;
+}
+
+.educator-dashboard-school-info__value {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+@media (max-width: 600px) {
+  .educator-dashboard-school-info__main {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .educator-dashboard-school-info__details {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}

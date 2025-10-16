@@ -1,0 +1,660 @@
+/* Define the background animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes scaleDown {
+  from {
+    transform: scale(1.1);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* Make scene full screen */
+.scene-container {
+  position: relative;
+  width: 100%; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+  margin: 0; /* Remove default margins */
+  overflow: hidden;
+  background-color: #000; /* Dark background fallback */
+  justify-content: center;
+  align-items: center;
+  /* Background properties */
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  z-index: 100;
+}
+
+/* Background layer for cross-fade effect */
+.scene-bg-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+/* New fade-in animation for background */
+.fade-in-bg {
+  animation: fadeIn 3s ease forwards;
+  transform-origin: center center;
+  opacity: 0; /* Start with opacity 0 to ensure animation is visible */
+  will-change: opacity; /* Optimize for animation performance */
+  animation-fill-mode: forwards; /* Ensure final state is maintained */
+}
+
+.character-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.character {
+  position: absolute; /* Absolute positioning within the layer */
+  bottom: 0; /* Position characters right at the bottom */
+  /* Define consistent height for all character containers */
+  height: 60vh; /* All characters will have this container height */
+  /* Width will be determined by image aspect ratio within this height */
+  width: auto;
+  /* Max width can still be useful to prevent extremely wide aspect ratios */
+  max-width: 35%; /* Adjust as needed */
+  will-change: transform, opacity;
+  transform-origin: bottom center;
+  /* Enable pointer events if characters need to be clickable */
+  pointer-events: auto;
+  /* Set initial z-index low, framer-motion variant will increase for speaker */
+  z-index: 1;
+}
+
+.character img {
+  display: block;
+  /* Make image fill the container height */
+  height: 100%;
+  /* Auto width to maintain aspect ratio */
+  width: 80%;
+  /* Contain ensures the whole image fits within the height, letterboxing if necessary */
+  object-fit: contain;
+  object-position: bottom center; /* Align bottom of image with bottom of container */
+}
+
+/* Removed .character img.speaking class - style handled by variants */
+
+/* Character Positions - Adjust percentages for MORE space */
+/* The transform centers the container at the percentage mark */
+.character-left {
+  left: 21%; /* Position container's center 10% from left (further out) */
+  transform: translateX(-50%);
+  top: 23.5vh;
+}
+.character-center {
+  left: 60%;
+  top: 33.5vh;
+  transform: translateX(-50%);
+}
+
+.character-right {
+  /* Position container's center 10% from right (further out) */
+
+  right: 10%;
+
+  transform: translateX(50%);
+}
+
+/* Dialogue Box - Centered with Image Background & Speaker Image */
+.dialogue-box {
+  left: 15%;
+  padding: 1% 10%;
+  position: absolute;
+  bottom: 0; /* Position from bottom */
+  transform: translateX(-50%, -50%);
+  width: clamp(400px, 50%, 800px); /* Adjust width as needed */
+  min-height: 230px; /* Ensure minimum height */
+  aspect-ratio: 16 / 5; /* Optional: Maintain aspect ratio based on bg image */
+  max-width: 1200px; /* Ensure it doesn't exceed viewport width */
+  /* Use the background image passed from JS */
+  background-image: var(--dialog-bg-image);
+  background-size: cover; /* Or 'cover' depending on image */
+  background-repeat: no-repeat;
+  background-position: top;
+  overflow: hidden;
+  /* Remove old background/border/shadow */
+  /* background: linear-gradient(...); */
+  color: #f0f0f0;
+  border: none;
+  /* Padding needs to account for the speaker image */
+  z-index: 20; /* Ensure it's above all characters */
+  transform-origin: center center;
+  /* Use flexbox for internal layout */
+  display: flex;
+  align-items: flex-start; /* Align items top */
+}
+
+/* Remove Speaker-Specific Positioning Classes */
+/* .dialogue-box--left { ... } */
+/* .dialogue-box--center { ... } */ /* Already handled by base style */
+/* .dialogue-box--right { ... } */
+
+/* Remove Pointer Styles */
+/* .dialogue-box::after { ... } */
+/* .dialogue-box--pointing-left::after { ... } */
+/* .dialogue-box--pointing-right::after { ... } */
+
+/* Style for the speaker image container */
+.dialogue-speaker-image {
+  display: none;
+  position: absolute;
+  top: 15px; /* Adjust position from top */
+  left: 15px; /* Adjust position from left */
+  width: 80px; /* Fixed width for speaker image */
+  height: 80px; /* Fixed height */
+  border-radius: 50%; /* Make it circular */
+  overflow: hidden; /* Clip image to circle */
+  border: 3px solid rgba(255, 255, 255, 0.4); /* Optional border */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  z-index: 21; /* Above dialogue box background */
+}
+
+.dialogue-speaker-image img {
+  display: none;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cover the area */
+}
+
+/* Container for the text content */
+.dialogue-content {
+  flex-grow: 1; /* Take remaining space */
+  /* Padding/margin adjustments might be needed based on exact layout */
+  margin-top: 8%;
+  margin-left: 0%; /* Add small space next to absolute positioned image */
+}
+
+/* Speaker Name and Text Styles (Adjust margins/padding if needed) */
+.speaker-name {
+  align-items: start;
+  vertical-align: middle;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  /* justify-content: space-around; */
+  font-weight: 900;
+  margin-bottom: 8px; /* Adjust spacing */
+  font-size: 2.5em;
+  color: #f1f0eb;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+  /* Reset margin-left if needed */
+  margin-left: 0;
+  font-family: Arial, sans-serif;
+}
+.speaker-name .back-button-container {
+  z-index: 99999;
+  display: flex;
+  justify-content: space-between;
+  gap: 2.5rem;
+  align-items: center;
+  width: 20%;
+}
+.bck-btn {
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.nx-btn {
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.scenes-pause-btn {
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+}
+.scenes-pause-btn:hover {
+  transform: scale(1.3);
+}
+/* --- Responsive Styles --- */
+
+/* Medium screens and tablets (e.g., <= 992px) */
+@media (max-width: 992px) {
+  .character {
+    height: 55vh; /* Slightly smaller characters */
+    max-width: 40%; /* Allow slightly wider % if needed */
+  }
+
+  .dialogue-box {
+    max-width: 450px; /* Adjust max width for medium screens */
+    /* Clamp values might need adjustment, e.g., slightly smaller middle value */
+    width: clamp(350px, 70%, 450px);
+  }
+
+  .dialogue-box--left {
+    bottom: 4vh; /* Adjust specific bottom */
+  }
+  .dialogue-box--right {
+    bottom: 6vh; /* Keep default or adjust if needed */
+  }
+
+  .speaker-name {
+    font-size: 1.2em; /* Slightly smaller */
+  }
+  .dialogue-text {
+    font-size: 40px; /* Slightly smaller */
+  }
+
+  /* Adjust character positions to prevent overlap */
+  .character-left {
+    bottom: -10%; /* Bring closer to edge */
+    transform: translateX(0); /* Reset transform maybe? Or adjust percentage */
+    /* Or adjust left percentage further */
+    /* left: 15%; */
+  }
+  .character-center {
+    bottom: 1%;
+    left: 60%;
+    /* Center character might need less height reduction or overlap others */
+  }
+  .character-right {
+    right: 5%; /* Bring closer to edge */
+    transform: translateX(0); /* Reset transform maybe? */
+    /* Or adjust right percentage further */
+    /* right: 15%; */
+  }
+}
+
+/* Small screens and phones (e.g., <= 768px) */
+@media (max-width: 768px) {
+  .character {
+    height: 48vh; /* Significantly smaller characters */
+    max-width: 45%; /* Allow wider percentage on small screens */
+  }
+
+  /* Adjust character positions to prevent overlap */
+  .character-left {
+    left: 5%; /* Bring closer to edge */
+    transform: translateX(0); /* Reset transform maybe? Or adjust percentage */
+    /* Or adjust left percentage further */
+    /* left: 15%; */
+  }
+  .character-center {
+    left: 50%;
+    /* Center character might need less height reduction or overlap others */
+  }
+  .character-right {
+    right: 5%; /* Bring closer to edge */
+    transform: translateX(0); /* Reset transform maybe? */
+    /* Or adjust right percentage further */
+    /* right: 15%; */
+  }
+
+  .dialogue-box {
+    /* Adjust clamp for smaller screens */
+    width: clamp(280px, 90%, 400px);
+    bottom: 3vh; /* Place closer to bottom edge */
+    min-height: 120px; /* Reduce min-height */
+    padding: 15px 20px 15px 90px; /* Reduce padding, especially left */
+    aspect-ratio: initial; /* Remove fixed aspect ratio on small screens */
+    border-radius: 12px;
+  }
+
+  /* Adjust speaker-specific position */
+  .dialogue-box--left,
+  .dialogue-box--center,
+  .dialogue-box--right {
+    /* Reset specific overrides, use base .dialogue-box bottom */
+    bottom: 3vh;
+    /* Adjust horizontal positioning if needed */
+    left: 50%;
+    transform: translateX(-50%);
+    right: auto; /* Ensure right is not set */
+    /* On small screens, maybe always center the box regardless of speaker? */
+  }
+
+  .dialogue-speaker-image {
+    top: 10px; /* Adjust position */
+    left: 10px;
+    width: 65px; /* Smaller image */
+    height: 65px;
+    border-width: 2px;
+  }
+
+  .dialogue-content {
+    margin-left: 5px; /* Reduce margin */
+    margin-top: 5%; /* Adjust margin-top */
+  }
+
+  .speaker-name {
+    font-size: 1.1em; /* Smaller name */
+    margin-bottom: 5px;
+  }
+
+  .dialogue-text {
+    font-size: 0.95em; /* Smaller text */
+    line-height: 1.4; /* Adjust line height */
+  }
+}
+
+/* Very small screens (e.g., <= 480px) */
+@media (max-width: 480px) {
+  .character {
+    height: 40vh; /* Even smaller */
+    max-width: 55%; /* Allow even wider % */
+  }
+
+  /* Further adjust character positions if needed */
+  .character-left {
+    left: 0%;
+    transform: translateX(0);
+  }
+  .character-center {
+    left: 50%; /* Might overlap significantly */
+  }
+  .character-right {
+    right: 0%;
+    transform: translateX(0);
+  }
+
+  .dialogue-box {
+    width: 95%; /* Almost full width */
+    max-width: 95%; /* Override clamp max */
+    bottom: 2vh;
+    min-height: 100px;
+    padding: 10px 15px 10px 75px; /* Further reduce padding */
+    border-radius: 10px;
+  }
+
+  .dialogue-speaker-image {
+    top: 8px;
+    left: 8px;
+    width: 55px; /* Even smaller image */
+    height: 55px;
+  }
+
+  .speaker-name {
+    font-size: 1em;
+  }
+  .dialogue-text {
+    font-size: 0.9em;
+  }
+}
+
+/* --- Action Overlay --- */
+.action-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50; /* Ensure it's above dialogue and characters */
+  cursor: pointer; /* Indicate it's clickable to close */
+  /* Animation is handled by Framer Motion in the JSX */
+}
+
+/* Prevent clicks on the document itself from closing the overlay */
+.action-overlay > * {
+  cursor: default; /* Reset cursor for child elements */
+  pointer-events: auto; /* Allow interaction with document content if needed */
+}
+.dialogue-content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  font-family: 'game-font';
+  color: var(--game-font-color-background);
+  cursor: pointer;
+}
+
+/* Add styles for the loading component */
+.loading-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  color: #fff;
+  z-index: 999;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 1s ease-in-out infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-container p {
+  font-size: 18px;
+  font-family: Arial, sans-serif;
+}
+.dialogue-text {
+  font-size: 1.4rem;
+  line-height: 1.45; /* Slightly adjusted */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+  color: #f0f0f0;
+  /* Reset margin-left if needed */
+  margin-left: 0;
+  font-family: 'content-font-bold';
+  height: 105px;
+  overflow-y: auto;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.dialogue-text::-webkit-scrollbar {
+  width: 15px;
+}
+.dialogue-text::-webkit-scrollbar-track {
+  background: #747070;
+}
+.dialogue-text::-webkit-scrollbar-thumb {
+  background: #0c2c89;
+  height: 5px;
+}
+
+/* Narration dot indicator */
+.narration-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #3498db; /* Blue dot */
+  border-radius: 50%;
+  margin-right: 10px;
+  animation: blink 1s infinite;
+  position: relative;
+  top: -1px;
+}
+
+/* Continue prompt styling */
+.continue-prompt {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: #f4f8f5; /* Green color */
+  animation: fadeInOutContinueDialogue 2s infinite;
+  font-size: 0.9rem;
+}
+
+.continue-prompt span {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+}
+
+/* Blinking animation for the dot */
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Animation for the continue prompt */
+@keyframes fadeInOutContinueDialogue {
+  0%,
+  100% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Back button styles for navigation to previous dialogue */
+.bck-btn {
+  color: #f1f0eb;
+  /* vertical-align: middle; */
+  cursor: pointer;
+  background-color: none;
+  font-size: 0.9em;
+  transition: all 0.2s ease;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+.nx-btn {
+  color: #f1f0eb;
+  /* vertical-align: middle; */
+  cursor: pointer;
+  background-color: none;
+  font-size: 0.9em;
+  transition: all 0.2s ease;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.bck-btn:hover {
+  transform: scale(1.3);
+}
+.nx-btn:hover {
+  transform: scale(1.3);
+}
+/* .back-button:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-color: rgba(255, 255, 255, 0.7);
+  transform: scale(1.05);
+}
+
+.back-button:active {
+  transform: scale(0.95);
+}
+
+.back-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+} */
+
+/* Style for the back navigation prompt */
+.back-prompt {
+  display: inline-block;
+  margin-left: 10px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.85em;
+  font-style: italic;
+  animation: fadeInOutBackPrompt 2s infinite;
+}
+
+@keyframes fadeInOutBackPrompt {
+  0%,
+  100% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+/* Ensure back button is nicely positioned in mobile views */
+@media (max-width: 768px) {
+  .back-button {
+    width: 30px;
+    height: 30px;
+    font-size: 1em;
+    margin-right: 5px;
+  }
+
+  .back-prompt {
+    font-size: 0.7em;
+  }
+}
+
+@media (max-width: 480px) {
+  .back-button {
+    width: 25px;
+    height: 25px;
+    font-size: 0.8em;
+    margin-right: 3px;
+  }
+
+  .back-prompt {
+    display: none; /* Hide the prompt on very small screens to save space */
+  }
+}
+@media (max-height: 770px) {
+  .character-left {
+    left: 20%; /* Position container's center 10% from left (further out) */
+    transform: translateX(-50%);
+    top: 18.5vh;
+  }
+
+  .character-center {
+    left: 61%;
+    top: 22.5vh;
+    transform: translateX(-50%);
+  }
+}

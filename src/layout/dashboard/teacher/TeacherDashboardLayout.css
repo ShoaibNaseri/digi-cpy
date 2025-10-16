@@ -1,0 +1,50 @@
+.layout {
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  min-height: 100svh;
+  max-height: 100svh;
+  margin: auto;
+  overflow: auto;
+}
+
+.TeacherDashboard_main__container {
+  width: calc(100% - 256px);
+  max-width: calc(100% - 256px);
+  background-color: #ffffff;
+  margin-left: 256px;
+}
+
+/* Apply Urbanist font to all text elements in teacher dashboard */
+.TeacherDashboard_main__container * {
+  font-family: 'Urbanist', sans-serif;
+}
+
+/* Ensure all elements within the layout use Urbanist font */
+.layout * {
+  font-family: 'Urbanist', sans-serif;
+}
+
+/* Specific elements that might need font override */
+.layout h1,
+.layout h2,
+.layout h3,
+.layout h4,
+.layout h5,
+.layout h6,
+.layout p,
+.layout span,
+.layout div,
+.layout button,
+.layout input,
+.layout textarea,
+.layout label,
+.layout a {
+  font-family: 'Urbanist', sans-serif;
+}
+
+@media (min-width: 1024px) {
+  .TeacherDashboard_main__container {
+    overflow-y: auto;
+  }
+}

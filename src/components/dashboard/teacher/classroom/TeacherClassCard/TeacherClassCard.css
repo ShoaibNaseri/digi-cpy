@@ -1,0 +1,290 @@
+/* ==========================================================================
+   TeacherClassCard - Core Structure
+   ========================================================================== */
+.teacher-classroom__class-card,
+.teacher-classroom__class-card * {
+  box-sizing: border-box;
+}
+
+.teacher-classroom__class-card {
+  width: 49%; /* 2-card layout for desktop */
+  height: 460px;
+  flex-shrink: 0;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #f1f5f9;
+}
+
+.teacher-classroom__class-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.teacher-classroom__class-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  flex: 1;
+}
+
+.teacher-classroom__class-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, #d60c7b 0%, #8b2db3 100%);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.teacher-classroom__icon-background {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #ff6b9d 0%, #8b5cf6 100%);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.teacher-classroom__icon-pattern {
+  width: 20px;
+  height: 20px;
+  background-image: linear-gradient(
+      45deg,
+      transparent 40%,
+      white 40%,
+      white 60%,
+      transparent 60%
+    ),
+    linear-gradient(
+      -45deg,
+      transparent 40%,
+      white 40%,
+      white 60%,
+      transparent 60%
+    );
+  background-size: 6px 6px;
+  opacity: 0.8;
+}
+
+.teacher-classroom__class-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.teacher-classroom__class-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+  color: #1f2937;
+  font-family: 'Urbanist', sans-serif;
+}
+
+.teacher-classroom__next-class {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 0;
+  font-family: 'Urbanist', sans-serif;
+}
+
+.teacher-classroom__student-count {
+  background: #7b34bf;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Urbanist', sans-serif;
+  transition: all 0.2s ease;
+}
+
+.teacher-classroom__student-count:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(123, 52, 191, 0.3);
+}
+
+.teacher-classroom__dropdown-arrow {
+  font-size: 12px;
+  margin-left: 4px;
+}
+
+/* ==========================================================================
+   Class Actions
+   ========================================================================== */
+
+.teacher-classroom__class-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.teacher-classroom__action-button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #f8fafc;
+  color: #1f2937;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 12px 6px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: 'Urbanist', sans-serif;
+  text-align: left;
+  width: 100%;
+}
+
+.teacher-classroom__action-button:hover {
+  background-color: #f1f5f9;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.teacher-classroom__button-icon-container {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.teacher-classroom__button-icon-container--purple {
+  background: linear-gradient(135deg, #8b5cf6 0%, #a855f7 100%);
+}
+
+.teacher-classroom__button-icon-container--blue {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+}
+
+.teacher-classroom__button-icon-container--light-blue {
+  background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
+}
+
+.teacher-classroom__button-icon-container--pink {
+  background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);
+}
+
+.teacher-classroom__button-icon-container--red {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+}
+
+.teacher-classroom__button-icon {
+  color: black;
+  width: 16px;
+  height: 16px;
+}
+
+.teacher-classroom__profile-add-icon {
+  background-color: #7b34bf;
+  border-radius: 12px;
+  padding: 8px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.teacher-classroom__profile-remove-icon {
+  background-color: #0454ac;
+  border-radius: 12px;
+  padding: 8px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.teacher-classroom__profile-eye-icon {
+  background-color: #00c6ff;
+  border-radius: 12px;
+  padding: 8px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.teacher-classroom__profile-activity-icon {
+  background-color: #ef0067;
+  border-radius: 12px;
+  padding: 8px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.teacher-classroom__profile-trash-icon {
+  background-color: #dd9097;
+  border-radius: 12px;
+  padding: 8px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.teacher-classroom__profile-add-icon img,
+.teacher-classroom__profile-remove-icon img,
+.teacher-classroom__profile-eye-icon img,
+.teacher-classroom__profile-activity-icon img,
+.teacher-classroom__profile-trash-icon img {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) invert(1);
+}
+
+/* ==========================================================================
+   Responsive Adjustments
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .teacher-classroom__class-card {
+    width: 32.75rem;
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .teacher-classroom__class-card {
+    padding: 20px;
+  }
+
+  .teacher-classroom__class-card-header {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .teacher-classroom__student-count {
+    align-self: flex-start;
+  }
+}

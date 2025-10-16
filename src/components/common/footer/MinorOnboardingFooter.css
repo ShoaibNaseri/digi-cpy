@@ -1,0 +1,12 @@
+.minor-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 16px 0;
+  min-height: 64px;
+  text-align: center;
+  color: #666;
+  font-size: 14px;
+  border-top: 1px solid #eaeaea;
+}

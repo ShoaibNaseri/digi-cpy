@@ -1,0 +1,319 @@
+.image-sound-action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  background: transparent;
+  font-family: 'Arial', sans-serif;
+}
+
+.image-sound-container {
+  position: relative;
+  max-width: 100%;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  border-radius: 20px;
+}
+
+.image-wrapper {
+  position: relative;
+  max-width: 80%;
+  max-height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.action-image {
+  max-width: 80%;
+  max-height: 100vh;
+  object-fit: contain;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+}
+
+.action-image:hover {
+  transform: scale(1.02);
+}
+
+/* Voiceover indicator */
+.voiceover-indicator {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 25px;
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.voiceover-dots {
+  display: flex;
+  gap: 0.3rem;
+}
+
+.voiceover-dots .dot {
+  width: 8px;
+  height: 8px;
+  background: white;
+  border-radius: 50%;
+  animation: voiceoverPulse 1.4s ease-in-out infinite both;
+}
+
+.voiceover-dots .dot:nth-child(1) {
+  animation-delay: -0.32s;
+}
+
+.voiceover-dots .dot:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+.voiceover-dots .dot:nth-child(3) {
+  animation-delay: 0s;
+}
+
+@keyframes voiceoverPulse {
+  0%,
+  80%,
+  100% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Next button */
+.next-button {
+  z-index: 1;
+  padding: 1rem 2.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.next-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s;
+}
+
+.next-button:hover::before {
+  left: 100%;
+}
+
+.next-button:active {
+  transform: translateY(2px);
+}
+
+/* Progress indicator */
+.progress-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.progress-dots {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.progress-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #e0e0e0;
+  border: 2px solid #ccc;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.progress-dot.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-color: #667eea;
+  transform: scale(1.2);
+  box-shadow: 0 0 10px rgba(102, 126, 234, 0.4);
+}
+
+.progress-dot.completed {
+  background: #4caf50;
+  border-color: #4caf50;
+  transform: scale(1.1);
+}
+
+.progress-dot.completed::after {
+  content: '✓';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 8px;
+  font-weight: bold;
+}
+
+.progress-text {
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 500;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .image-sound-container {
+    max-width: 95vw;
+    max-height: 95vh;
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .image-wrapper {
+    max-height: 60vh;
+  }
+
+  .voiceover-indicator {
+    padding: 0.8rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  .next-button {
+    padding: 0.9rem 2rem;
+    font-size: 1rem;
+  }
+
+  .progress-dot {
+    width: 10px;
+    height: 10px;
+  }
+
+  .progress-text {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-sound-container {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .image-wrapper {
+    max-height: 50vh;
+  }
+
+  .voiceover-indicator {
+    padding: 0.6rem 1rem;
+    font-size: 0.8rem;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .next-button {
+    padding: 0.8rem 1.8rem;
+    font-size: 0.9rem;
+  }
+
+  .progress-dots {
+    gap: 0.3rem;
+  }
+
+  .progress-dot {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+/* Loading animation for images */
+@keyframes imageLoad {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.action-image {
+  animation: imageLoad 0.5s ease-out;
+}
+
+/* Accessibility improvements */
+.next-button:focus {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}
+
+.voiceover-indicator:focus-within {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .image-sound-container {
+    background: white;
+    border: 2px solid black;
+  }
+
+  .next-button {
+    background: #000;
+    color: white;
+  }
+
+  .voiceover-indicator {
+    background: #000;
+    color: white;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .action-image,
+  .next-button,
+  .voiceover-indicator,
+  .progress-dot {
+    transition: none;
+    animation: none;
+  }
+
+  .voiceover-dots .dot {
+    animation: none;
+  }
+}

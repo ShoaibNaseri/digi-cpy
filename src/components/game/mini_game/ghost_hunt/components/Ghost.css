@@ -1,0 +1,155 @@
+/* Ghost Component Styles - Framer Motion Optimized (No Rotation) */
+
+.ghost-game-ghost {
+  position: absolute;
+  width: 160px; /* 2x bigger */
+  height: 160px; /* 2x bigger */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  z-index: 5;
+  will-change: transform; /* Optimize for smooth animations */
+  background: transparent; /* Remove any background */
+  border: none; /* Remove any border */
+  transform-origin: center; /* Ensure smooth scaling */
+}
+
+/* Ghost Image with Beautiful Shadow Effects */
+.ghost-game-ghost-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: filter 0.2s ease-out;
+  will-change: transform, filter;
+  background: transparent;
+}
+
+/* Ghost Fallback (emoji) with Shadow Effects */
+.ghost-game-ghost-fallback {
+  font-size: 6rem; /* 2x bigger */
+  filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8))
+    drop-shadow(0 0 40px rgba(0, 150, 255, 0.6))
+    drop-shadow(0 0 60px rgba(100, 200, 255, 0.4));
+  transition: filter 0.2s ease-out;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  will-change: transform, filter;
+  background: transparent;
+}
+
+.ghost-game-ghost:hover .ghost-game-ghost-fallback {
+  filter: drop-shadow(0 0 30px rgba(255, 255, 255, 1))
+    drop-shadow(0 0 60px rgba(0, 150, 255, 0.8))
+    drop-shadow(0 0 90px rgba(100, 200, 255, 0.6));
+}
+
+/* Catch Effect */
+.ghost-game-catch-effect {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 10;
+}
+
+.ghost-game-points-popup {
+  color: #ffd700;
+  font-weight: bold;
+  font-size: 2.5rem; /* 2x bigger */
+  text-shadow: 0 0 15px rgba(255, 215, 0, 0.8), 0 0 30px rgba(255, 215, 0, 0.6),
+    0 0 45px rgba(255, 215, 0, 0.4);
+  display: block;
+  white-space: nowrap;
+  will-change: transform, opacity;
+}
+
+/* Flying trail effect - subtle and smooth */
+.ghost-game-ghost::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150%;
+  height: 150%;
+  background: radial-gradient(
+    circle,
+    rgba(0, 150, 255, 0.1) 0%,
+    transparent 70%
+  );
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: -1;
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+
+/* Responsive Design - Scale appropriately */
+@media (max-width: 1200px) {
+  .ghost-game-ghost {
+    width: 140px;
+    height: 140px;
+  }
+
+  .ghost-game-ghost-fallback {
+    font-size: 5rem;
+  }
+
+  .ghost-game-points-popup {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .ghost-game-ghost {
+    width: 120px;
+    height: 120px;
+  }
+
+  .ghost-game-ghost-fallback {
+    font-size: 4rem;
+  }
+
+  .ghost-game-points-popup {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .ghost-game-ghost {
+    width: 100px;
+    height: 100px;
+  }
+
+  .ghost-game-ghost-fallback {
+    font-size: 3rem;
+  }
+
+  .ghost-game-points-popup {
+    font-size: 1.2rem;
+  }
+}
+
+/* Framer Motion specific optimizations */
+.ghost-game-ghost * {
+  will-change: transform, opacity, filter;
+}
+
+/* Smooth transitions for all interactive elements */
+.ghost-game-ghost,
+.ghost-game-ghost-image,
+.ghost-game-ghost-fallback {
+  transition: filter 0.2s ease-out;
+}
+
+/* Performance optimizations */
+.ghost-game-ghost {
+  contain: layout style paint;
+  backface-visibility: hidden;
+  perspective: 1000px;
+}

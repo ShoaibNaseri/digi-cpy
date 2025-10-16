@@ -1,0 +1,486 @@
+/* ReceivePhoneCall Component Styles */
+.receive-phone-call-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  font-family: 'content-font', system-ui, sans-serif;
+}
+
+.phone-device {
+  position: relative;
+  width: 350px;
+  height: 720px;
+  background: #1d1d1f;
+  border-radius: 45px;
+  padding: 8px;
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.4);
+  border: 2px solid #2c2c2e;
+}
+
+/* Volume Buttons (Left Side) */
+.phone-device::before {
+  content: '';
+  position: absolute;
+  left: -3px;
+  top: 150px;
+  width: 4px;
+  height: 30px;
+  background: #2c2c2e;
+  border-radius: 2px 0 0 2px;
+}
+
+.phone-device::after {
+  content: '';
+  position: absolute;
+  left: -3px;
+  top: 190px;
+  width: 4px;
+  height: 30px;
+  background: #2c2c2e;
+  border-radius: 2px 0 0 2px;
+}
+
+/* Mute Switch */
+.mute-switch {
+  position: absolute;
+  left: -3px;
+  top: 120px;
+  width: 4px;
+  height: 20px;
+  background: #2c2c2e;
+  border-radius: 2px 0 0 2px;
+}
+
+/* Lock Button (Right Side) */
+.lock-button {
+  position: absolute;
+  right: -3px;
+  top: 180px;
+  width: 4px;
+  height: 60px;
+  background: #2c2c2e;
+  border-radius: 0 2px 2px 0;
+}
+
+.phone-screen {
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  border-radius: 38px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Dynamic Island */
+.phone-screen::before {
+  content: '';
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 32px;
+  background: #000;
+  border-radius: 20px;
+  z-index: 1000;
+}
+
+.phone-home-button {
+  display: none; /* iPhone 14 Pro Max doesn't have home button */
+}
+
+/* Incoming Call Screen */
+.incoming-call-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 60px 30px 60px;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  color: white;
+  text-align: center;
+}
+
+.incoming-call-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  justify-content: center;
+}
+
+.incoming-label {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.caller-avatar {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+}
+
+.caller-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.caller-name {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: white;
+  font-family: 'content-font-bold', sans-serif;
+}
+
+.incoming-animation {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-right: 40%;
+}
+
+.pulse-ring {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  animation: pulse-ring 2s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+}
+
+.pulse-ring:nth-child(2) {
+  animation-delay: 0.7s;
+}
+
+.pulse-ring:nth-child(3) {
+  animation-delay: 1.4s;
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.33);
+    opacity: 1;
+  }
+  80%,
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+/* Incoming Call Actions */
+.incoming-call-actions {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.answer-button,
+.decline-button {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.answer-button {
+  background: #4caf50;
+  color: white;
+  box-shadow: 0 4px 15px rgba(76, 175, 80, 0.4);
+}
+
+.answer-button-glow {
+  animation: answer-glow 2s ease-in-out infinite alternate;
+  box-shadow: 0 4px 20px rgba(76, 175, 80, 0.6);
+}
+
+@keyframes answer-glow {
+  0% {
+    box-shadow: 0 4px 20px rgba(76, 175, 80, 0.6);
+    transform: scale(1);
+  }
+  100% {
+    box-shadow: 0 8px 30px rgba(76, 175, 80, 0.8);
+    transform: scale(1.05);
+  }
+}
+
+.decline-button {
+  background: #f44336;
+  color: white;
+  box-shadow: 0 4px 15px rgba(244, 67, 54, 0.4);
+}
+
+.decline-button-disabled {
+  background: #666;
+  color: #999;
+  cursor: not-allowed;
+  box-shadow: none;
+  opacity: 0.5;
+}
+
+.answer-icon,
+.decline-icon {
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
+}
+
+.decline-icon {
+  transform: rotate(135deg);
+}
+
+/* Answered Call Screen */
+.answered-call-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 60px 30px 60px;
+  background: linear-gradient(135deg, #2a5298 0%, #1e3c72 100%);
+  color: white;
+  text-align: center;
+}
+
+.answered-call-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  justify-content: center;
+}
+
+.call-timer {
+  font-size: 18px;
+  font-weight: 300;
+  margin-bottom: 20px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.call-indicator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.sound-waves {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+}
+
+.wave {
+  width: 4px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 2px;
+  animation: wave-animation 1.5s ease-in-out infinite;
+}
+
+.wave:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.wave:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.wave:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.wave:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+@keyframes wave-animation {
+  0%,
+  100% {
+    height: 20px;
+    opacity: 0.4;
+  }
+  50% {
+    height: 35px;
+    opacity: 1;
+  }
+}
+
+/* Answered Call Controls */
+.answered-call-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.hangup-button {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  background: #f44336;
+  color: white;
+  box-shadow: 0 4px 15px rgba(244, 67, 54, 0.4);
+}
+
+.hangup-button:hover:not(:disabled) {
+  background: #d32f2f;
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(244, 67, 54, 0.6);
+}
+
+.hangup-disabled {
+  background: #666;
+  color: #999;
+  cursor: not-allowed;
+  box-shadow: none;
+  opacity: 0.5;
+}
+
+.hangup-icon {
+  transform: rotate(135deg);
+  transition: transform 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .phone-device {
+    width: 280px;
+    height: 576px;
+  }
+
+  .phone-device::before {
+    top: 120px;
+    height: 24px;
+  }
+
+  .phone-device::after {
+    top: 152px;
+    height: 24px;
+  }
+
+  .mute-switch {
+    top: 96px;
+    height: 16px;
+  }
+
+  .lock-button {
+    top: 144px;
+    height: 48px;
+  }
+
+  .phone-screen::before {
+    width: 96px;
+    height: 24px;
+  }
+
+  .incoming-call-screen,
+  .answered-call-screen {
+    padding: 40px 20px 40px;
+  }
+
+  .caller-name {
+    font-size: 24px;
+  }
+
+  .caller-avatar {
+    width: 100px;
+    height: 100px;
+  }
+
+  .answer-button,
+  .decline-button,
+  .hangup-button {
+    width: 60px;
+    height: 60px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .phone-device {
+    width: 240px;
+    height: 494px;
+  }
+
+  .phone-device::before {
+    top: 104px;
+    height: 20px;
+  }
+
+  .phone-device::after {
+    top: 130px;
+    height: 20px;
+  }
+
+  .mute-switch {
+    top: 84px;
+    height: 14px;
+  }
+
+  .lock-button {
+    top: 124px;
+    height: 40px;
+  }
+
+  .phone-screen::before {
+    width: 80px;
+    height: 20px;
+  }
+
+  .incoming-call-screen,
+  .answered-call-screen {
+    padding: 30px 15px 30px;
+  }
+
+  .caller-name {
+    font-size: 20px;
+  }
+
+  .caller-avatar {
+    width: 80px;
+    height: 80px;
+  }
+
+  .answer-button,
+  .decline-button,
+  .hangup-button {
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+  }
+}

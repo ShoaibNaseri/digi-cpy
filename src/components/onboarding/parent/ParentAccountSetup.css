@@ -1,0 +1,553 @@
+/* Parent Account Setup Page - Match Login Design */
+.parent-account-page {
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  background: linear-gradient(180deg, #8c2ddc 0%, #cb41eb 100%);
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.parent-account-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+/* Account Setup Form Section */
+.parent-account-form-section {
+  width: 100%;
+  max-width: 800px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.parent-account-form-card {
+  width: 100%;
+  max-width: 700px;
+  padding: 2rem;
+}
+
+/* Form Header */
+.parent-account-form-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.parent-account-brand-logo {
+  height: 60px;
+  width: auto;
+  margin: 0 auto 1.5rem auto;
+  display: block;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.1));
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.parent-account-brand-logo:hover {
+  transform: scale(1.05);
+}
+
+.parent-account-welcome-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 0.5rem 0;
+}
+
+.parent-account-welcome-subtitle {
+  font-size: 1rem;
+  color: #6b7280;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Step Indicator */
+.parent-account-step-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.parent-account-step-number {
+  background: var(--auth-background-color);
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(139, 92, 246, 0.3);
+}
+
+.parent-account-step-text {
+  font-size: 0.875rem;
+  color: #9ca3af;
+  font-weight: 500;
+}
+
+/* Error Banner */
+.parent-account-error-banner {
+  background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+  border: 1px solid #fecaca;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 6px rgba(239, 68, 68, 0.1);
+}
+
+.parent-account-error-content {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.parent-account-error-icon {
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.parent-account-error-text {
+  color: #dc2626;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* Form Styling */
+.parent-account-form {
+  width: 100%;
+}
+
+.parent-account-form input,
+.parent-account-form select {
+  width: 100%;
+}
+
+/* Two Column Layout */
+.parent-account-form-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.parent-account-form-group {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.parent-account-form-group.full-width {
+  flex: 1 1 100%;
+}
+
+.parent-account-form-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #666;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+/* Input Wrapper */
+.parent-account-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 0;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.parent-account-input-wrapper:focus-within {
+  border-color: #0b0b0c !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.parent-account-input-wrapper.parent-account-has-error {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.parent-account-input-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  color: #9ca3af;
+  font-size: 1.1rem;
+}
+
+.parent-account-form-input {
+  flex: 1;
+  border: none !important;
+  outline: none !important;
+  padding: 1rem 1rem 1rem 0;
+  font-size: 1rem;
+  background: transparent;
+  color: #1f2937;
+  font-weight: 400;
+  width: 100%;
+  box-shadow: none !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+}
+
+.parent-account-form-input::placeholder {
+  color: #9ca3af;
+  font-weight: 400;
+}
+
+.parent-account-form-input:focus,
+.parent-account-form-input:focus-visible,
+.parent-account-form-input:active {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background-color: #f3f4f6f7;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+}
+
+/* Remove any browser default focus styles */
+.parent-account-input-wrapper *:focus,
+.parent-account-input-wrapper *:focus-visible,
+.parent-account-input-wrapper *:active {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Error Message */
+.parent-account-error-message {
+  color: #ef4444;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
+/* Submit Button */
+.parent-account-submit-btn {
+  width: 100%;
+  background: linear-gradient(90deg, #ec4899 0%, #7c3aed 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+}
+
+.parent-account-submit-btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 25px rgba(139, 92, 246, 0.4);
+}
+
+.parent-account-submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Loading Spinner */
+.parent-account-loading-spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: parent-account-spin 1s ease-in-out infinite;
+}
+
+@keyframes parent-account-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Custom Dropdown Styles */
+.parent-account-dropdown-select {
+  flex: 1;
+  border: none !important;
+  outline: none !important;
+  padding: 1rem 1rem 1rem 0;
+  font-size: 1rem;
+  background: transparent;
+  color: #1f2937;
+  font-weight: 400;
+  width: 100%;
+  box-shadow: none !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.parent-account-dropdown-select:focus,
+.parent-account-dropdown-select:focus-visible,
+.parent-account-dropdown-select:active {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background-color: #f3f4f6f7;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+}
+
+.parent-account-dropdown-value {
+  flex: 1;
+  color: #1f2937;
+  font-weight: 400;
+}
+
+.parent-account-dropdown-value:empty::before {
+  content: attr(data-placeholder);
+  color: #9ca3af;
+  font-weight: 400;
+}
+
+.parent-account-dropdown-value::placeholder {
+  color: #9ca3af;
+  font-weight: 400;
+}
+
+.parent-account-dropdown-chevron {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+  margin-left: 8px;
+}
+
+.parent-account-dropdown-chevron.open {
+  transform: rotate(180deg);
+}
+
+.parent-account-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  z-index: 99999;
+  max-height: 200px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin-top: 4px;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  /* Hide scrollbars */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+.parent-account-dropdown-menu::-webkit-scrollbar {
+  display: none; /* WebKit browsers */
+}
+
+.parent-account-region-search-container {
+  padding: 8px;
+  border-bottom: 1px solid #f3f4f6;
+  background: #f8fafc;
+  border-radius: 12px 12px 0 0;
+  flex-shrink: 0;
+}
+
+.parent-account-region-list-container {
+  max-height: 250px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  /* Hide scrollbars */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+.parent-account-region-list-container::-webkit-scrollbar {
+  display: none; /* WebKit browsers */
+}
+
+.parent-account-region-search-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.parent-account-region-search-icon {
+  position: absolute;
+  left: 12px;
+  color: #8f9aa4;
+  font-size: 14px;
+  z-index: 1;
+}
+
+.parent-account-region-search-input {
+  width: 100%;
+  padding: 8px 12px 8px 36px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: #212529;
+  background: #fff;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.parent-account-region-search-input:focus {
+  border-color: #8b5cf6;
+  box-shadow: 0 0 0 2px rgba(139, 92, 246, 0.1);
+}
+
+.parent-account-region-search-input::placeholder {
+  color: #9ca3af;
+}
+
+.parent-account-dropdown-item {
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  border-bottom: 1px solid #f3f4f6;
+  color: #212529;
+  font-size: 14px;
+  font-weight: 400;
+  background-color: #fff;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.parent-account-dropdown-item:last-child {
+  border-bottom: none;
+}
+
+.parent-account-dropdown-item:hover {
+  background-color: #f8fafc;
+}
+
+.parent-account-dropdown-item.selected {
+  background-color: #f0f4ff;
+  color: #8b5cf6;
+  font-weight: 500;
+}
+
+.parent-account-dropdown-item.current-selection {
+  position: relative;
+}
+
+.parent-account-dropdown-item-text {
+  flex: 1;
+  color: inherit;
+}
+
+.parent-account-dropdown-item-check {
+  width: 16px;
+  height: 16px;
+  color: #8b5cf6;
+  flex-shrink: 0;
+  margin-left: 8px;
+  animation: parent-account-checkmark-appear 0.2s ease-in-out;
+}
+
+@keyframes parent-account-checkmark-appear {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Focus states for accessibility */
+.parent-account-dropdown-item:focus {
+  outline: 2px solid #8b5cf6;
+  outline-offset: -2px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .parent-account-dropdown-menu {
+    max-height: 150px;
+    /* Hide scrollbars on mobile */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+  }
+
+  .parent-account-dropdown-menu::-webkit-scrollbar {
+    display: none; /* WebKit browsers */
+  }
+
+  .parent-account-dropdown-item {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .parent-account-container {
+    padding: 1rem;
+  }
+
+  .parent-account-form-section {
+    padding: 1.5rem;
+  }
+
+  .parent-account-form-card {
+    padding: 1.5rem;
+    max-width: none;
+  }
+
+  .parent-account-form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .parent-account-form-group {
+    margin-bottom: 1.5rem;
+  }
+}

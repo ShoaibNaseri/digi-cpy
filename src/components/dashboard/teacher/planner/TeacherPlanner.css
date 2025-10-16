@@ -1,0 +1,1863 @@
+/* Main container */
+.teacher-planner__container,
+.teacher-planner__container * {
+  box-sizing: border-box;
+}
+
+.teacher-planner__container {
+  background-color: #f9f9f9; /* Changed from #111827 to light background */
+  min-height: 100vh;
+  width: 100%;
+  color: #111827; /* Changed from white to dark text for light background */
+}
+
+/* Icon styles */
+.teacher-planner__icon {
+  width: 16px;
+  height: 16px;
+}
+
+/* Calendar Grid - Original styles */
+.teacher-planner__calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.25rem; /* Reduced gap between calendar days */
+}
+
+.teacher-planner__weekday-header {
+  text-align: center;
+  padding: 0.75rem;
+  margin-bottom: 4px;
+  background-color: black !important;
+  border-radius: 0.5rem;
+  color: #fff; /* text-gray-400 */
+}
+
+.teacher-planner__calendar-day {
+  background-color: #334155; /* bg-slate-700 */
+  border-radius: 0.25rem;
+  padding: 0.3rem; /* Reduced padding to give more content space */
+  height: 7rem; /* Increased height for more content space */
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Style for empty date cells */
+.teacher-planner__monthly-day--empty {
+  padding: 0.5rem;
+  background-color: #fafbfc !important;
+}
+
+/* Style for days with content - apply #D7FD44 background */
+.teacher-planner__monthly-day--has-content {
+  background-color: transparent !important;
+}
+
+/* Updated day number styling to create a header that matches mission tag */
+.teacher-planner__day-number {
+  font-size: 1.2rem;
+  width: 100%;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 1rem;
+}
+
+.teacher-planner__class-name {
+  font-size: 0.7rem;
+  font-weight: 400;
+}
+
+/* Day number color for empty boxes */
+.teacher-planner__monthly-day--empty .teacher-planner__day-number,
+.teacher-planner__weekly-day--empty .teacher-planner__day-number {
+  color: #8f9aa4;
+}
+
+/* Mission info on the right */
+.teacher-planner__day-number .mission-header {
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+/* Add a container for mission tags to improve layout */
+.teacher-planner__mission-tags-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding-top: 0.2rem; /* Add some space after the date header */
+  overflow-y: auto;
+}
+
+/* Updated mission tag styling to match the image exactly - #D7FD44 background */
+.teacher-planner__mission-tag {
+  background-color: #edba13; /* Bright lime green background as shown in image */
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  font-size: 0.75rem;
+  margin-bottom: 0.35rem;
+  width: 100%;
+  text-align: left;
+  word-break: break-word;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+  color: #111827; /* Dark text for good contrast */
+  font-weight: 500;
+  position: relative;
+  min-height: 110px; /* Match the box height */
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+/* Mission info positioning - top right */
+/* Remove top-right mission info now that number is shown as value */
+.teacher-planner__mission-tag .mission-info {
+  display: none;
+}
+
+/* Large code number positioning - center left */
+.teacher-planner__mission-tag .mission-code {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+/* Mission title positioning - bottom left */
+.teacher-planner__mission-tag .mission-title {
+  /* position: absolute;
+  bottom: 0.5rem;
+  left: 0.5rem; */
+  font-size: 0.7rem;
+  font-weight: 500;
+
+  /* max-width: calc(100% - 1rem); */
+  word-wrap: break-word;
+}
+
+.teacher-planner__mission-tag:hover {
+  transform: translateY(-1px); /* Subtle lift effect */
+}
+
+.teacher-planner__mission-tag:active {
+  transform: translateY(0);
+}
+
+/* Mission Lists - Updated to handle single column */
+.teacher-planner__mission-lists {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+/* New style for single column display */
+.teacher-planner__mission-lists--single-column {
+  grid-template-columns: 1fr;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+}
+
+.teacher-planner__mission-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.teacher-planner__mission-item {
+  background-color: #334155; /* bg-slate-700 */
+  border-radius: 0.25rem;
+  padding: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer; /* Added to indicate it's clickable */
+  transition: transform 0.1s ease, background-color 0.2s ease;
+}
+
+.teacher-planner__mission-item:hover {
+  background-color: #475569; /* bg-slate-600 */
+  transform: translateY(-1px); /* Subtle lift effect */
+}
+
+.teacher-planner__mission-item:active {
+  transform: translateY(0);
+}
+
+.teacher-planner__assign-btn {
+  background-color: #2563eb; /* bg-blue-600 */
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+}
+
+.teacher-planner__assign-btn:hover {
+  background-color: #1d4ed8; /* bg-blue-700 */
+}
+
+.teacher-planner__mission-date {
+  color: #94a3b8; /* text-gray-400 */
+  font-size: 0.875rem;
+}
+
+/* New styles for separate buttons */
+.teacher-planner__quick-assign-btn,
+.teacher-planner__assign-mission-btn {
+  background-color: #2563eb; /* bg-blue-600 */
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.teacher-planner__quick-assign-btn:hover,
+.teacher-planner__assign-mission-btn:hover {
+  background-color: #1d4ed8; /* bg-blue-700 */
+}
+
+/* Style for empty mission message */
+.teacher-planner__mission-item--empty {
+  color: #94a3b8; /* text-gray-400 */
+  font-style: italic;
+}
+
+/* Animation for view transitions */
+.teacher-planner__monthly-view,
+.teacher-planner__weekly-view,
+.teacher-planner__biweekly-view {
+  animation: teacher-planner-fade-in 0.3s ease-in-out;
+}
+
+/* Responsive styles for different calendar views */
+@media (max-width: 768px) {
+  /* Monthly view responsive styles */
+  .teacher-planner__monthly-body {
+    gap: 0.15rem;
+  }
+
+  .teacher-planner__monthly-day {
+    height: 5rem;
+    padding: 0.25rem;
+  }
+
+  /* Weekly view responsive styles */
+  .teacher-planner__weekly-body {
+    gap: 0.25rem;
+  }
+
+  .teacher-planner__weekly-day {
+    height: 6rem;
+    padding: 0.3rem;
+  }
+
+  /* Bi-weekly view responsive styles */
+  .teacher-planner__biweekly-view {
+    gap: 0.5rem;
+  }
+
+  .teacher-planner__biweekly-section {
+    padding: 0.5rem;
+  }
+
+  /* Responsive header buttons */
+  .teacher-planner__header-buttons {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .teacher-planner__mission-tag {
+    font-size: 0.7rem;
+    padding: 0.25rem;
+  }
+}
+
+/* Animation for modals */
+@keyframes teacher-planner-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.teacher-planner__content {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.5rem;
+}
+
+/* Header styles */
+.teacher-planner__header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.teacher-planner__header-title h1 {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0;
+  text-align: left;
+  align-self: flex-start;
+  display: inline-block;
+}
+
+.teacher-planner__header-title p {
+  color: #8f9aa4;
+  margin-top: 4px;
+  margin-bottom: 0;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.teacher-planner__header-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Dropdown styles - Updated to better handle multiple dropdowns */
+.teacher-planner__dropdown-container {
+  position: relative;
+}
+
+.teacher-planner__all-classes-btn {
+  border: none;
+  background-color: black;
+  border-radius: 0.5rem;
+  width: 210px;
+  padding: 0.813rem 1rem;
+  font-size: 1.125rem;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px; /* Limit width of dropdown buttons */
+  outline: none;
+  color: white; /* White text for contrast */
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+/* .teacher-planner__all-classes-btn:hover {
+  background: linear-gradient(90deg, #B80A6A 0%, #7A1F8F 100%); /* Slightly darker gradient on hover */
+*/ .teacher-planner__dropdown-icon {
+  font-size: 1.5rem;
+  margin-left: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.teacher-planner__dropdown-icon--open {
+  color: #ffffff;
+}
+
+.teacher-planner__dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 0.25rem;
+  min-width: 200px; /* Wider menu to accommodate longer menu items */
+  background-color: white; /* White background */
+  border-radius: 0.25rem;
+  overflow: hidden;
+  z-index: 20; /* Higher z-index to ensure menu appears above other elements */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e5e7eb; /* Light border for better definition */
+}
+
+.teacher-planner__dropdown-item {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  white-space: normal; /* Allow text to wrap */
+  word-break: break-word; /* Break long words if needed */
+  color: #374151; /* Dark text for white background */
+  transition: all 0.2s ease;
+  border-bottom: 1px solid #f3f4f6; /* Light separator */
+}
+
+.teacher-planner__dropdown-item:last-child {
+  border-bottom: none; /* Remove border from last item */
+}
+
+.teacher-planner__dropdown-item:hover {
+  background: linear-gradient(
+    90deg,
+    #d30d7d 0%,
+    #912aaf 100%
+  ); /* Linear gradient on hover */
+  color: white; /* White text for contrast with gradient */
+}
+
+/* Adjustments for the 'All Menu' dropdown to handle longer text */
+@media (max-width: 1024px) {
+  .teacher-planner__header-buttons {
+    flex-wrap: wrap;
+  }
+
+  .teacher-planner__dropdown-container {
+    flex-basis: 48%; /* Make dropdowns take up about half the width on medium screens */
+  }
+
+  .teacher-planner__quick-assign-btn,
+  .teacher-planner__assign-mission-btn {
+    flex-basis: 48%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .teacher-planner__header-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .teacher-planner__dropdown-container,
+  .teacher-planner__quick-assign-btn,
+  .teacher-planner__assign-mission-btn {
+    width: 100%;
+  }
+
+  .teacher-planner__all-classes-btn {
+    max-width: 100%;
+  }
+
+  .teacher-planner__dropdown-menu {
+    width: 100%;
+  }
+}
+
+/* Calendar Controls - New Layout */
+.teacher-planner__calendar-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Month navigation with chevron counter design - LEFT SIDE */
+.teacher-planner__month-navigation {
+  display: flex;
+  align-items: center;
+}
+
+.teacher-planner__chevron-counter {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff !important;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  gap: 0.5rem;
+}
+
+.teacher-planner__month-display h2 {
+  font-size: 1rem;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  flex-wrap: nowrap;
+  width: 8.813rem;
+  height: 2.938rem;
+  padding: 1.125rem 0.563rem;
+}
+
+.teacher-planner__nav-btn {
+  border: 2px solid #e5e7eb;
+  background-color: #ffffff;
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  color: black;
+}
+
+.teacher-planner__nav-btn:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.teacher-planner__nav-btn svg {
+  color: #374151;
+  transition: color 0.2s ease;
+}
+
+.teacher-planner__nav-btn:hover svg {
+  color: #1f2937;
+}
+
+/* Schedule buttons - RIGHT SIDE with background container */
+.teacher-planner__scheduling-options {
+  background-color: #e5e7eb;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
+.teacher-planner__scheduling-buttons {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.teacher-planner__schedule-btn {
+  border: none;
+  background-color: transparent;
+  border-radius: 0.5rem;
+  display: flex;
+  height: 42px;
+  padding: 0.773rem 1.13rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease-in-out;
+  color: #374151;
+  font-weight: 600;
+  font-size: 1rem;
+  flex: 1;
+  white-space: nowrap;
+}
+
+/* Add right border to Weekly Schedule button */
+.teacher-planner__schedule-btn:first-child {
+  border-right: 1px solid #d1d5db;
+}
+
+/* Active state for schedule buttons */
+.teacher-planner__schedule-btn--active {
+  background: linear-gradient(90deg, #d30d7d 0%, #912aaf 100%);
+  color: white;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3);
+}
+
+.teacher-planner__schedule-btn:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.teacher-planner__schedule-btn--active:hover {
+  background: linear-gradient(90deg, #b80a6a 0%, #7a1f8f 100%);
+}
+
+/* Responsive design for mobile */
+@media (max-width: 1024px) {
+  .teacher-planner__calendar-controls {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .teacher-planner__month-navigation {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .teacher-planner__scheduling-options {
+    width: 100%;
+  }
+
+  .teacher-planner__scheduling-buttons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .teacher-planner__scheduling-buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .teacher-planner__schedule-btn {
+    width: 100%;
+  }
+
+  .teacher-planner__chevron-counter {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Calendar */
+.teacher-planner__calendar-container {
+  background-color: #ffffff; /* bg-slate-800 */
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.teacher-planner__month-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: whi;
+  margin-bottom: 1rem;
+}
+
+.teacher-planner__month-header h2 {
+  font-size: 1.125rem;
+}
+
+.teacher-planner__month-navigation {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.teacher-planner__nav-btn {
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 0.85rem;
+  border-radius: 0.25rem;
+  border: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.teacher-planner__nav-btn:hover {
+  background-color: #e5e7eb; /* bg-slate-700 */
+}
+
+.teacher-planner__chevron-left,
+.teacher-planner__chevron-right {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+/* Monthly View Styles */
+.teacher-planner__monthly-view {
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+.teacher-planner__mission-info {
+  position: absolute;
+  bottom: 10%;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+.teacher-planner__monthly-header {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.5rem;
+}
+
+.teacher-planner__monthly-body {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.5rem;
+}
+
+/* Updated monthly day styling for better content display */
+.teacher-planner__monthly-day {
+  background-color: #fafbfc; /* Default background for empty days */
+  border-radius: 0.5rem;
+  /* padding: 0.3rem; */
+  /* width: 11.5rem; */
+  max-width: 100%;
+  height: 7rem; /* Slightly taller to fit more content */
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e5e7eb;
+  align-items: stretch;
+  overflow-y: auto; /* Enable scrolling for overflow content */
+  position: relative; /* For positioning children */
+}
+
+/* Add custom scrollbar styling for better usability */
+.teacher-planner__monthly-day::-webkit-scrollbar {
+  width: 4px;
+}
+
+.teacher-planner__monthly-day::-webkit-scrollbar-track {
+  background: #334155;
+}
+
+.teacher-planner__monthly-day::-webkit-scrollbar-thumb {
+  background-color: #475569;
+  border-radius: 4px;
+}
+
+/* Hide scrollbar for monthly day */
+.teacher-planner__monthly-day::-webkit-scrollbar {
+  display: none;
+}
+
+.teacher-planner__monthly-day {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Weekly View Styles */
+.teacher-planner__weekly-view {
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.teacher-planner__weekly-header {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.5rem;
+}
+
+.teacher-planner__weekly-body {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+/* Updated weekly day styling for the fix */
+.teacher-planner__weekly-day {
+  background-color: transparent; /* Default background for empty days */
+  border-radius: 0.5rem; /* Match monthly shape */
+  /* padding: 0.3rem; */ /* Match monthly (minimal inner padding) */
+  height: 110px; /* Match monthly height */
+  border: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  overflow-y: auto;
+  position: relative; /* For positioning children */
+}
+
+/* Style for weekly days with content */
+.teacher-planner__weekly-day--has-content {
+  background-color: transparent !important; /* Match monthly content color */
+}
+
+/* Style for weekly days without content */
+.teacher-planner__weekly-day--empty {
+  background-color: #fafbfc !important; /* Match monthly empty color */
+}
+
+/* Add custom scrollbar styling for weekly view */
+.teacher-planner__weekly-day::-webkit-scrollbar {
+  width: 4px;
+}
+
+.teacher-planner__weekly-day::-webkit-scrollbar-track {
+  background: #334155;
+}
+
+.teacher-planner__weekly-day::-webkit-scrollbar-thumb {
+  background-color: #475569;
+  border-radius: 4px;
+}
+
+/* Hide scrollbar for weekly day */
+.teacher-planner__weekly-day::-webkit-scrollbar {
+  display: none;
+}
+
+.teacher-planner__weekly-day {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Bi-Weekly View Styles */
+.teacher-planner__biweekly-view {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.teacher-planner__biweekly-section {
+  /* border: 1px solid #334155; */
+  border-radius: 0.25rem;
+  padding: 0.75rem;
+}
+
+.teacher-planner__biweekly-section-header {
+  font-weight: 500;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #94a3b8;
+  /* border-bottom: 1px solid #334155; */
+  padding-bottom: 0.25rem;
+}
+
+/* Loading and error states */
+.teacher-planner__missions-loading {
+  padding: 2rem;
+  text-align: center;
+  color: #94a3b8;
+}
+
+.teacher-planner__mission-item--loading,
+.teacher-planner__deletion-loading {
+  color: #94a3b8;
+  font-style: italic;
+}
+
+.teacher-planner__error {
+  background-color: rgba(220, 38, 38, 0.2);
+  border: 1px solid #dc2626;
+  color: #fecaca;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.teacher-planner__retry-button {
+  background-color: #dc2626;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+}
+
+.teacher-planner__retry-button:hover {
+  background-color: #b91c1c;
+}
+
+/* Delete mission button */
+.teacher-planner__mission-delete-btn {
+  background-color: transparent;
+  color: #94a3b8;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  transition: all 0.2s ease;
+  z-index: 5;
+}
+
+.teacher-planner__mission-delete-btn:hover {
+  background-color: rgba(220, 38, 38, 0.2);
+  color: #fecaca;
+}
+
+.teacher-planner__mission-delete-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.teacher-planner__delete-icon {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+/* View Toggle Options - New section */
+.teacher-planner__view-toggle-options {
+  background-color: #e5e7eb; /* bg-slate-800 */
+  border-radius: 0.875rem;
+  padding: 0.5rem;
+  width: 21.625rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.teacher-planner__view-toggle-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.teacher-planner__view-toggle-btn {
+  border: none;
+  background-color: #e5e7eb; /* bg-slate-700 */
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  display: flex;
+  height: 40px;
+  padding: 13px 27px;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem; /* Add gap between icon and text */
+  transition: all 0.2s ease-in-out;
+  color: #4b5563;
+  font-weight: 500;
+  flex-grow: 0;
+  cursor: pointer;
+}
+
+.teacher-planner__view-toggle-btn svg {
+  flex-shrink: 0; /* Prevent icon from shrinking */
+}
+
+/* Active state for view toggle buttons */
+.teacher-planner__view-toggle-btn--active {
+  background-color: #7b34bf; /* bg-blue-600 */
+  background: linear-gradient(90deg, #d30d7d 0%, #912aaf 100%);
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.3);
+  color: #ffffff;
+}
+
+/* Responsive styles for the view toggle section */
+@media (max-width: 640px) {
+  .teacher-planner__view-toggle-buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .teacher-planner__view-toggle-btn {
+    width: 100%;
+  }
+}
+
+/* Animation for view transitions */
+.teacher-planner__calendar-container,
+.teacher-planner__mission-lists {
+  animation: teacher-planner-fade-in 0.3s ease-in-out;
+}
+
+/* Mission Details Modal Styles */
+.teacher-planner__mission-details-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  box-sizing: border-box;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+/* Animation for modal opening */
+.teacher-planner__mission-details-modal--open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.teacher-planner__modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  /* margin-top: 8px; */
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 10;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.teacher-planner__modal-header--centered {
+  justify-content: center;
+  /* margin-top: 8px; */
+}
+
+.teacher-planner__modal-header h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 0;
+  color: #333;
+}
+
+.teacher-planner__mission-info-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 18px 0px;
+  align-items: center;
+  margin-top: 1.125rem;
+  /* margin-left: 5px; */
+  border-bottom: 1px solid #eeeeee;
+  border-top: 1px solid #eeeeee;
+}
+
+.teacher-planner__mission-info-row .teacher-planner__mission-number,
+.teacher-planner__mission-info-row .teacher-planner__mission-name {
+  margin: 0;
+  line-height: 1.25;
+}
+
+.teacher-planner__close-modal-btn {
+  background: none;
+  border: none;
+  color: black;
+  font-size: 17.601px;
+  line-height: 1;
+  padding: 10px;
+  cursor: pointer;
+  padding: 0;
+  border-radius: 0.25rem;
+  transition: color 0.2s ease, background-color 0.2s ease;
+  width: 16.601px;
+  height: 17.601px;
+  display: inline-flex;
+  align-items: bottom;
+  justify-content: center;
+}
+
+.teacher-planner__close-modal-btn:hover {
+  color: #374151;
+  background-color: #f3f4f6;
+}
+
+.teacher-planner__close-modal-btn--floating {
+  position: absolute;
+  top: 2rem;
+  height: 24px;
+  width: 24px;
+  right: 2rem;
+}
+
+.teacher-planner__close-modal-icon {
+  width: 24px;
+  height: 24px;
+  color: #000;
+}
+
+.teacher-planner__modal-content {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  max-width: 650px;
+  width: 100%;
+  max-height: 535px;
+  height: 535px;
+  overflow-y: auto;
+  position: relative;
+  color: #333;
+  padding: 1.5rem;
+}
+
+/* View modal specific layout */
+.teacher-planner__modal-content--view {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+/* Edit (Reschedule) modal specific layout */
+.teacher-planner__modal-content--edit {
+  display: block;
+  background-color: white;
+}
+
+.teacher-planner__mission-type-header {
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  font-weight: 500;
+  font-size: 1.125rem;
+  margin-bottom: 1.5rem;
+  background-color: #f3f4f6;
+  color: #374151;
+  margin: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.teacher-planner__mission-number {
+  font-size: 1rem;
+  color: #6b7280;
+  margin: 0;
+  /* margin: 0 1.5rem 1.5rem 1.5rem; */
+}
+
+.teacher-planner__detail-section {
+  margin-bottom: 1.25rem;
+  margin: 0 1.5rem 1.25rem 1.5rem;
+}
+
+.teacher-planner__detail-section h3 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.25rem;
+  /* border-top: 1px solid #EEEEEE; */
+}
+.below-border {
+  border-top: 1px solid #eeeeee;
+  padding-top: 1rem;
+  font-size: 1.125rem !important;
+  font-weight: 500 !important;
+  color: black !important;
+  font-weight: 500px !important;
+}
+.teacher-planner__detail-section p {
+  font-size: 1rem;
+  margin: 0;
+  color: #111827;
+}
+
+.teacher-planner__edit-mission-btn {
+  background: linear-gradient(90deg, #d60c7b 0%, #8b2db3 100%);
+  color: white;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  width: calc(100% - 3rem);
+  cursor: pointer;
+  margin: 1rem 1.5rem 1.5rem 1.5rem;
+  transition: 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.teacher-planner__edit-mission-btn:hover {
+  background: linear-gradient(90deg, #b91c5b 0%, #7c1d9a 100%);
+}
+
+.teacher-planner__edit-mission-btn-icon {
+  display: inline-block;
+}
+
+/* Edit Mission Modal Styles - Layer Modal */
+.teacher-planner__edit-mission-modal-layer {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.95);
+  width: 450px;
+  background-color: #1e293b; /* bg-slate-800 */
+  color: white;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3),
+    0 10px 10px -5px rgba(0, 0, 0, 0.2);
+  z-index: 101;
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
+  overflow-y: auto;
+  max-height: 90vh;
+  border-radius: 0.5rem;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.teacher-planner__edit-mission-modal-layer .teacher-planner__modal-content {
+  background-color: white;
+  color: white;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: none;
+}
+
+/* Animation for edit modal opening */
+.teacher-planner__edit-mission-modal-layer--open {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Modified modal header for edit view */
+.teacher-planner__modal-header-content {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.teacher-planner__back-btn {
+  background: none;
+  border: none;
+  color: #94a3b8; /* text-gray-400 */
+  font-size: 1.25rem;
+  cursor: pointer;
+  padding: 0.25rem;
+  line-height: 1;
+  transition: color 0.2s ease;
+}
+
+.teacher-planner__back-btn:hover {
+  color: white;
+}
+
+/* Enhanced Form styling for edit modal */
+.teacher-planner__form-group {
+  position: relative;
+  margin-bottom: 1.5rem;
+  padding: 1.25rem;
+  background-color: #f9fafb;
+  color: black;
+  border-radius: 0.75rem;
+  border: 1px solid #475569;
+  transition: all 0.2s ease;
+}
+
+.teacher-planner__form-group:hover {
+  border-color: #64748b;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-1px);
+}
+
+.teacher-planner__form-group label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: black;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.teacher-planner__form-input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.875rem 1rem;
+  border: 2px solid #475569;
+  background-color: white;
+  color: black;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.teacher-planner__form-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  background-color: #1e293b;
+  color: white;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  transform: translateY(-1px);
+}
+
+.teacher-planner__form-input:hover {
+  border-color: #64748b;
+  background-color: #334155;
+}
+
+.teacher-planner__form-select {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  border: 2px solid #475569;
+  background-color: #1e293b;
+  color: #f1f5f9;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.teacher-planner__form-select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  background-color: #1e293b;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  transform: translateY(-1px);
+}
+
+.teacher-planner__form-select:hover {
+  border-color: #64748b;
+  background-color: #334155;
+}
+
+.teacher-planner__form-select option {
+  background-color: #1e293b;
+  color: #f1f5f9;
+  padding: 0.5rem;
+}
+
+/* Enhanced Form actions styling */
+.teacher-planner__form-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding: 1.5rem;
+  /* border-top: 1px solid #EEEEEE; */
+  background-color: white;
+  border-radius: 0.75rem;
+}
+
+.teacher-planner__delete-btn {
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.875rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  box-shadow: 0 2px 4px rgba(220, 38, 38, 0.2);
+}
+
+.teacher-planner__delete-btn:hover {
+  background: linear-gradient(135deg, #b91c1c 0%, #991b1b 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(220, 38, 38, 0.3);
+}
+
+.teacher-planner__save-btn {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.875rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  box-shadow: 0 2px 4px rgba(59, 130, 246, 0.2);
+}
+
+.teacher-planner__save-btn:hover {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(59, 130, 246, 0.3);
+}
+
+/* Responsive styling for edit modal layer */
+@media (max-width: 768px) {
+  .teacher-planner__edit-mission-modal-layer {
+    width: 90%;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 640px) {
+  .teacher-planner__edit-mission-modal-layer {
+    width: 95%;
+    max-width: none;
+  }
+
+  .teacher-planner__form-actions {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .teacher-planner__delete-btn,
+  .teacher-planner__save-btn {
+    width: 100%;
+  }
+}
+
+/* Darker overlay when modal is open */
+.teacher-planner__modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 90;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.teacher-planner__modal-overlay--open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Responsive styling for modal */
+@media (max-width: 768px) {
+  .teacher-planner__mission-details-modal {
+    padding: 0.5rem;
+  }
+
+  .teacher-planner__modal-content {
+    max-width: 100%;
+    max-height: 95vh;
+  }
+}
+
+@media (max-width: 640px) {
+  .teacher-planner__mission-details-modal {
+    padding: 0.25rem;
+  }
+
+  .teacher-planner__modal-content {
+    max-width: 100%;
+    max-height: 98vh;
+  }
+
+  .teacher-planner__modal-header {
+    padding: 1rem;
+  }
+
+  .teacher-planner__detail-row {
+    flex-direction: column;
+    align-items: flex-start;
+    /* gap: 0.25rem; */
+  }
+
+  .teacher-planner__mission-type-header,
+  .teacher-planner__mission-number,
+  .teacher-planner__detail-section {
+    margin-left: 1rem;
+    /* margin-right: 1rem; */
+  }
+
+  .teacher-planner__edit-mission-btn {
+    width: calc(100% - 2rem);
+    margin: 1rem;
+  }
+}
+
+/* Styles for the Mission Tips Popup */
+.teacher-planner__tips-popup {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 320px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  color: #333;
+  overflow: hidden;
+  animation: teacher-planner-slide-in 0.3s ease-out;
+}
+
+@keyframes teacher-planner-slide-in {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.teacher-planner__tips-popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.teacher-planner__tips-popup-header h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.teacher-planner__tips-popup-close {
+  background: none;
+  border: none;
+  font-size: 18px;
+  line-height: 1;
+  color: #6c757d;
+  cursor: pointer;
+  padding: 2px 6px;
+}
+
+.teacher-planner__tips-popup-close:hover {
+  color: #343a40;
+}
+
+.teacher-planner__tips-popup-content {
+  padding: 12px 16px;
+}
+
+.teacher-planner__tips-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.teacher-planner__tips-list li {
+  display: flex;
+  align-items: flex-start;
+  padding: 6px 0;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.teacher-planner__tips-popup-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border-top: 1px solid #e9ecef;
+  background-color: #f8f9fa;
+}
+
+.teacher-planner__tips-btn {
+  border: none;
+  background: none;
+  font-size: 13px;
+  padding: 6px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.teacher-planner__dont-show-btn {
+  color: #6c757d;
+}
+
+.teacher-planner__dont-show-btn:hover {
+  background-color: #e9ecef;
+}
+
+.teacher-planner__more-help-btn {
+  color: #2563eb;
+  font-weight: 500;
+}
+
+.teacher-planner__more-help-btn:hover {
+  background-color: rgba(37, 99, 235, 0.1);
+}
+
+/* Responsive styling for mobile devices */
+@media (max-width: 640px) {
+  .teacher-planner__tips-popup {
+    width: calc(100% - 40px);
+    max-width: 320px;
+  }
+}
+
+/* Missions List View - Updated to match image design */
+.teacher-planner__mission-lists {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.teacher-planner__mission-lists--single-column {
+  grid-template-columns: 1fr;
+}
+
+.teacher-planner__mission-section {
+  background-color: #ffffff; /* White background */
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #333; /* Dark text for better contrast */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.teacher-planner__mission-section h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #000;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.75rem;
+}
+
+/* Class grouping styles */
+.teacher-planner__mission-class-group {
+  margin-bottom: 2rem;
+  background-color: #f9fafb; /* Light gray background */
+  border-radius: 0.375rem;
+  overflow: hidden;
+}
+
+.teacher-planner__mission-class-group:last-child {
+  margin-bottom: 0;
+}
+
+.teacher-planner__mission-class-header {
+  display: flex;
+  width: 100%;
+  height: 3.938rem;
+  padding: 1.063rem 1.75rem;
+  border-radius: 10px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #4b5563; /* Light blue-gray header */
+  padding: 0.75rem 1rem;
+}
+
+.teacher-planner__mission-class-header h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+}
+
+.teacher-planner__mission-count {
+  font-size: 1rem;
+  padding: 0.2rem 1.5rem;
+  border-radius: 0.25rem;
+  background-color: #ffffff;
+  font-weight: 700;
+}
+
+/* Mission item styling */
+.teacher-planner__mission-items {
+  display: flex;
+  flex-direction: column;
+}
+
+.teacher-planner__mission-item {
+  background-color: #fff; /* White background */
+  padding: 0.75rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  position: relative;
+  border-bottom: 1px solid #f1f5f9; /* Light separator */
+  gap: 0.75rem; /* Add gap between icon, content, and button */
+}
+
+.teacher-planner__mission-item:last-child {
+  border-bottom: none;
+}
+
+.teacher-planner__mission-item:hover {
+  background-color: #f8fafc; /* Very light hover state */
+}
+
+/* Mission icon styles */
+.teacher-planner__mission-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 2.18rem;
+  height: 2.18rem;
+  background-color: #fce7f3;
+  border-radius: 0.25rem;
+  /* padding: 0.5rem; */
+}
+
+.teacher-planner__mission-icon-img {
+  display: flex;
+  align-items: center;
+  width: 1.125rem;
+  height: 1.125rem;
+  justify-content: center;
+  opacity: 0.8;
+}
+
+.mission-content {
+  flex: 1;
+  min-width: 0; /* Allow text to truncate */
+}
+
+.teacher-planner__mission-name {
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.teacher-planner__mission-name--view {
+  font-size: 1.125rem !important;
+  background: linear-gradient(90deg, rgb(214, 12, 123), rgb(139, 45, 179));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  font-weight: 400 !important;
+}
+.teacher-planner__mission-date {
+  font-size: 0.75rem;
+  color: #64748b; /* Medium gray text */
+}
+
+/* Action buttons */
+.teacher-planner__mission-action-btn {
+  border: none;
+  color: #2563eb; /* Blue text */
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.35rem 0.5rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  background: none;
+}
+
+.teacher-planner__reschedule-btn:hover {
+  background-color: rgba(37, 99, 235, 0.1); /* Light blue hover */
+}
+
+.teacher-planner__mission-delete-btn {
+  background-color: transparent;
+  color: #64748b; /* Medium gray */
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  border: none;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0;
+}
+
+.teacher-planner__mission-delete-btn:hover {
+  background-color: #fee2e2; /* Light red background */
+  color: #b91c1c; /* Darker red text */
+}
+
+.teacher-planner__mission-delete-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.teacher-planner__delete-icon {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+/* Empty state styling */
+.teacher-planner__mission-item--empty {
+  background-color: #f9fafb;
+  border: 1px dashed #cbd5e1;
+  color: #64748b;
+  font-style: italic;
+  justify-content: center;
+  cursor: default;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 0.375rem;
+}
+
+.teacher-planner__mission-item--empty:hover {
+  background-color: #f9fafb;
+}
+
+/* Loading state */
+.teacher-planner__missions-loading {
+  padding: 2rem;
+  text-align: center;
+  color: #64748b;
+}
+
+/* Styling for the Reschedule button */
+.teacher-planner__mission-action-btn {
+  border: none;
+  color: black; /* Blue text */
+  font-size: 1rem;
+  font-weight: 500;
+  height: 47.59px;
+  padding: 13px 19px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  background-color: #e5e7eb;
+}
+
+.teacher-planner__reschedule-btn {
+  margin-left: auto; /* Push to the right side */
+  background-color: #e5e7eb;
+  border: none;
+  color: #374151;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.2s ease;
+}
+
+.teacher-planner__reschedule-btn:hover {
+  background-color: #d1d5db;
+}
+
+.teacher-planner__FaCalendarAlt-btn {
+  margin-right: 2%;
+}
+
+/* Mission section header with title and add button */
+.teacher-planner__mission-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding: 0 1rem;
+}
+
+.teacher-planner__mission-section-header h2 {
+  margin: 0;
+  color: #1f2937;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* Add mission button - updated for header placement */
+.teacher-planner__add-mission-btn {
+  background: linear-gradient(
+    90deg,
+    #d30d7d 0%,
+    #912aaf 100%
+  ); /* Linear gradient background */
+  color: white;
+  border: none;
+  border-radius: 0.375rem;
+  padding: 0.6rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.teacher-planner__add-mission-btn:hover {
+  background: linear-gradient(
+    135deg,
+    #5a6fd8 0%,
+    #6a4190 100%
+  ); /* Darker gradient on hover */
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.teacher-planner__add-icon {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.teacher-planner__mission-number {
+  font-size: 1rem;
+  font-weight: 600;
+  /* margin-right: 1.5rem; */
+  color: #374151;
+}
+.teacher-planner__mission-number--view {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.teacher-planner__detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  margin-bottom: -1.1rem;
+  margin-top: 1.125rem;
+}
+
+.teacher-planner__detail-row h3 {
+  font-size: 0.875rem;
+  font-weight: 500;
+
+  color: #374151;
+  margin: 0;
+}
+
+.teacher-planner__detail-row p {
+  font-size: 1rem;
+  color: #111827;
+}

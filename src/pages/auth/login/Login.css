@@ -1,0 +1,989 @@
+/* Login Page Styling */
+.login-container {
+  position: relative;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(180deg, #8c2ddc 0%, #cb41eb 100%);
+  overflow: hidden;
+}
+.login-home-button {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  color: #000;
+  font-size: 1.75rem;
+  cursor: pointer;
+  background: linear-gradient(180deg, #8c2ddc 0%, #cb41eb 100%);
+  color: white;
+  border: none;
+  outline: none;
+  padding: 10px;
+  margin: 0;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  border-radius: 12px;
+  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.3));
+  z-index: 1000;
+}
+.login-home-button:hover {
+  scale: 1.1;
+  color: #e1e8f2;
+  text-decoration: none;
+}
+.form-check {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  min-height: 40px;
+}
+.form-check-input {
+  margin-left: 10px !important;
+  margin: 0 10px 0 0;
+  cursor: pointer;
+}
+
+.form-check-label {
+  display: inline-flex;
+  align-items: center;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Two-column layout */
+.login-layout {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100%;
+  border-radius: 0;
+}
+
+.login-left {
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1.5rem;
+  border: 1px solid #e5e7eb;
+  width: 50%;
+  max-width: 50%;
+  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  height: 100vh;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  position: relative;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.login-left::-webkit-scrollbar {
+  display: none;
+}
+
+/* Login form card styles */
+.login-card-wrapper {
+  min-width: 500px;
+  padding: 0;
+  background-color: #fff;
+}
+
+.login-card {
+  height: auto;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+.login-card-body {
+  /* padding: 3rem; */
+  padding: 6rem 0 3rem 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-brand {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.login-brand-logo {
+  height: 3.136rem;
+  width: 9.25rem;
+  cursor: pointer;
+}
+
+.login-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #000;
+  margin: 0.5rem 0 0.25rem 0;
+  text-align: center;
+}
+
+.login-subtitle {
+  color: #64748b;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Form styling */
+.auth-form {
+  flex: 1;
+}
+
+/* Replace inline style: left align form content */
+.auth-form.align-start {
+  text-align: start;
+}
+
+/* Use new class name for form label */
+.login-form-label {
+  font-weight: 600;
+  font-size: 1.125rem;
+  padding-bottom: 6px;
+  padding-top: 12px;
+  color: #666;
+  display: block;
+}
+
+.auth-form .input-group {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #fff;
+  border: 1px solid #e2e8f0;
+  box-shadow: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.auth-form .input-group:focus-within {
+  border: 1.5px solid transparent;
+  border-radius: 12px !important;
+  background: linear-gradient(#ffffff, #ffffff) padding-box,
+    linear-gradient(180deg, #8c2ddc 0%, #cb41eb 100%) border-box;
+  box-shadow: none;
+}
+
+/* Use existing class name */
+.auth-form .input-group-text {
+  display: flex;
+  align-items: center; /* Vertically center icon */
+  padding: 0.75rem 1rem; /* Existing padding */
+  font-size: 1rem; /* Slightly larger icon */
+  font-weight: 400;
+  line-height: 1.5;
+  color: #8f9aa4; /* Existing style */
+  text-align: center;
+  white-space: nowrap;
+  background-color: #fff; /* Match input background */
+  border: none; /* Remove individual border */
+  border-right: none; /* Keep if needed */
+  /* Radius is handled by parent */
+  height: 100%; /* Make span take full height */
+}
+
+.login-input-icon {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+.back-to-login {
+  position: absolute;
+  left: 24px;
+  bottom: 24px;
+  color: #000;
+  font-family: Urbanist, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  text-decoration: none;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  font-weight: 500;
+  transition: color 0.2s ease, scale 0.2s ease;
+}
+.back-to-login:hover {
+  scale: 1.1;
+  color: #8f9aa4;
+  text-decoration: none;
+}
+/* Remove separators between text/input/button */
+.auth-form .input-group > .login-form-control,
+.auth-form .input-group > .input-group-text {
+  border-radius: 0;
+}
+
+/* Ensure first and last elements get the group's radius */
+.auth-form .input-group > :not(:last-child) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.auth-form .input-group > :not(:first-child) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  margin-left: -1px; /* Overlap borders */
+}
+
+/* Style for invalid input - Adjust parent group border */
+
+/* Adjust parent focus-within when input is invalid */
+.auth-form .input-group:focus-within .login-form-control.login-is-invalid {
+  box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.25); /* Invalid focus shadow */
+  border-color: #dc3545 !important; /* Keep invalid border color on group */
+}
+
+/* Forgot password link */
+.forgot-password {
+  background: linear-gradient(90deg, #d60c7b 0%, #8b2db3 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.forgot-password:hover {
+  color: #0d6efd;
+  text-decoration: underline;
+}
+
+/* Login button */
+.login-submit-btn {
+  display: inline-block;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  background: linear-gradient(90deg, #ec4899 0%, #7c3aed 100%);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  letter-spacing: 0.3px;
+  width: 32.5rem;
+  height: 3.5rem;
+  margin-top: 1rem;
+  box-shadow: 0 6px 18px rgba(124, 58, 237, 0.35);
+}
+
+.login-submit-btn:hover {
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(124, 58, 237, 0.45);
+}
+
+.login-submit-btn:focus {
+  color: #fff;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.25);
+}
+
+.login-submit-btn:active {
+  color: #fff;
+  background-color: #0a58ca;
+  border-color: #0a53be;
+  transform: translateY(0); /* Match existing */
+}
+
+.login-submit-btn:disabled {
+  color: #fff;
+  background-color: #6c757d; /* Match existing */
+  border-color: #eee;
+  height: 3.438rem;
+  width: 32.5rem;
+  opacity: 0.65;
+  box-shadow: none; /* Match existing */
+  transform: none; /* Match existing */
+  cursor: not-allowed;
+}
+
+/* Footer */
+.login-footer {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  color: #6c757d;
+}
+
+.login-meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.dont-have-account {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.other-login-options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.other-login-options::before,
+.other-login-options::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #bcc1c4;
+  margin: 0 10px;
+}
+
+.other-login-options-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.other-login-options-icons-button {
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  margin: 0 16px; /* increased horizontal spacing */
+  display: inline-flex;
+  border: none !important;
+  box-shadow: none !important;
+  outline: none;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+.other-login-options-icons-button:hover,
+.other-login-options-icons-button:focus {
+  background: transparent;
+  border: none !important;
+  box-shadow: none !important;
+  outline: none;
+  scale: 1.1;
+}
+.login-card-body-icon {
+  justify-content: center;
+  align-items: center;
+  /* padding-top: 10px; */
+  /* padding-bottom: 10px; */
+}
+
+.register-link {
+  background: linear-gradient(90deg, #d60c7b 0%, #8b2db3 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  font-size: 1.125rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.register-link:hover {
+  text-decoration: underline;
+  color: #0a58ca;
+}
+
+/* Back to Login: fixed bottom-left across screens */
+.back-to-login {
+  position: absolute;
+  left: 24px;
+  bottom: 24px;
+  color: #8f9aa4;
+  font-family: Urbanist, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  text-decoration: none;
+  z-index: 10;
+}
+
+.back-to-login:hover {
+  /* text-decoration: underline; */
+  text-decoration: none;
+  color: #8f9aa4;
+}
+
+/* Inline style replacement for resend note */
+.login-resend-note {
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Image card styles */
+.image-card-wrapper {
+  width: 50%;
+  position: relative;
+}
+
+.image-card {
+  height: 100%;
+  background-image: url('../../../assets/hero-images/kids-hero.png');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: white;
+}
+
+.image-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+  z-index: 1;
+}
+
+.logo-container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 2;
+}
+
+.card-logo {
+  height: 60px;
+  width: auto;
+  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.3));
+}
+
+.image-card-content {
+  padding: 3rem;
+  position: relative;
+  z-index: 2;
+}
+
+.image-card-content h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.image-card-content p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+  max-width: 80%;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.image-card-stats {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-number {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Animation for cards */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.login-card-wrapper {
+  animation: fadeInLeft 0.6s ease forwards;
+  margin-top: 2rem;
+}
+
+.image-card-wrapper {
+  animation: fadeInRight 0.6s ease forwards;
+}
+
+/* Right side visuals */
+.login-right {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+/* gradient now applied to .login-container */
+
+.login-characters {
+  position: relative;
+  width: 100%;
+  max-width: 820px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 1;
+}
+
+.login-character {
+  height: 31.875rem;
+  width: auto;
+  object-fit: contain;
+  filter: none;
+}
+
+/* Make the middle character slightly shorter */
+.login-characters .tight-img:nth-child(1) {
+  height: 33rem;
+  width: 24.345rem;
+}
+
+.login-characters .tight-img:nth-child(2) {
+  height: 29.25rem;
+  width: 22.938rem;
+  z-index: -1;
+}
+.login-characters .tight-img:nth-child(3) {
+  width: 380px;
+  height: 670px;
+}
+.login-characters.tight {
+  gap: 0;
+}
+
+.login-character.tight-img {
+  margin: 0;
+  display: block;
+}
+
+/* Bring avatars even closer by slightly overlapping edges */
+.login-characters.tight .tight-img:not(:first-child) {
+  margin-left: -13rem;
+}
+
+.character-center {
+  transform: translateY(10px);
+}
+
+/* Alert Styling */
+.login-alert {
+  position: relative;
+  padding: 1rem 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.375rem; /* Match Bootstrap's default */
+}
+
+.login-alert-danger {
+  color: #842029;
+  background-color: #f8d7da;
+  border-color: #f5c2c7;
+}
+
+/* Use the new class name for form control */
+.login-form-control {
+  /* display: block; */ /* Not needed with flex */
+  position: relative; /* Needed for potential absolute positioning of feedback icons */
+  flex: 1 1 auto; /* Allow input to grow and shrink */
+  width: 1%; /* Prevent input from expanding parent prematurely */
+  min-width: 0; /* Allow shrinking below intrinsic width */
+  padding: 0.75rem 1rem; /* Match existing style */
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057; /* Darker text */
+  background-color: #fff; /* Change background to white */
+  background-clip: padding-box;
+  border: none; /* Remove individual border, handled by group */
+  appearance: none;
+  /* border-radius handled by parent rules now */
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  height: auto; /* Keep existing style */
+}
+
+.login-form-control:focus {
+  color: #212529;
+  background-color: #fff; /* Match existing style */
+  outline: none !important;
+  outline-offset: 0;
+}
+
+/* Style for invalid input */
+.login-form-control.login-is-invalid {
+  /* Group border will be red via focus-within */
+  /* border-color: #dc3545; */ /* Remove individual border color */
+  padding-right: calc(
+    3rem + 0.75rem
+  ); /* Increase padding for icon when invalid to make room for both icons */
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right calc(0.375em + 0.1875rem) center;
+  background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+}
+
+/* Adjust validation icon position when has password toggle */
+.login-form-control.login-is-invalid.has-password-toggle {
+  background-position: right calc(2.5rem + 0.1875rem) center;
+}
+
+/* Style for invalid feedback message */
+.login-invalid-feedback {
+  width: 100%;
+  margin-top: 0.25rem;
+  font-size: 0.875em;
+  color: #dc3545;
+}
+
+/* Update password toggle button class */
+.login-password-toggle-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex; /* Align icon inside */
+  align-items: center; /* Vertically center */
+  justify-content: center; /* Horizontally center */
+  background-color: transparent; /* Make background transparent */
+  border: none; /* Remove individual border */
+  padding: 0.75rem 0.75rem;
+  color: #6c757d;
+  cursor: pointer; /* Keep cursor */
+  z-index: 10; /* Ensure button stays above input content */
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out;
+  min-width: 44px;
+}
+
+.login-password-toggle-btn:hover,
+.login-password-toggle-btn:focus {
+  background-color: transparent;
+  color: #495057;
+  box-shadow: none;
+  outline: none;
+}
+
+/* Ensure the eye icon renders at 24px */
+.login-password-toggle-btn svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Add padding-right to password input when it has a toggle button */
+.login-form-control.has-password-toggle {
+  padding-right: 2.5rem; /* Make room for the eye icon */
+}
+
+/* Spinner Styles */
+.login-spinner {
+  display: inline-block;
+  width: 1em; /* Smaller size like spinner-border-sm */
+  height: 1em;
+  vertical-align: -0.125em;
+  border: 0.15em solid currentColor; /* Thinner border like -sm */
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: login-spinner-border 0.75s linear infinite;
+  margin-right: 0.5rem; /* Replicate me-2 */
+}
+
+@keyframes login-spinner-border {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Style for the container of password input to position the toggle button correctly */
+.password-input-container {
+  position: relative;
+  display: flex;
+  flex: 1;
+  width: 100%;
+}
+
+.form-group-captcha {
+  width: 100%;
+}
+
+.form-group-captcha > div {
+  width: 100% !important;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.form-group-captcha iframe {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 auto;
+}
+
+.login-form-group-captcha {
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  border: 0 !important;
+  margin-left: -1rem;
+  color: #8f9aa4;
+  font-size: 14px;
+}
+
+.login-form-group-captcha > div {
+  transform: scale(0.9);
+  transform-origin: center;
+  border: none !important;
+}
+
+.login-form-group-captcha iframe {
+  margin: 0 auto;
+  border: 0 !important;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN - Fixed 50/50 Split Across All Screen Sizes
+   ========================================================================== */
+
+/* For Larger Screens */
+@media (min-width: 1920px) {
+  .login-characters .tight-img:nth-child(1) {
+    height: 37.825rem;
+    width: 26.345rem;
+    margin-left: -2rem;
+  }
+
+  .login-characters .tight-img:nth-child(2) {
+    height: 33.25rem;
+    width: 26.938rem;
+    margin-right: -2rem;
+    z-index: -1;
+  }
+  .login-characters .tight-img:nth-child(3) {
+    width: 484px;
+    height: 772px;
+    margin-right: -3rem;
+  }
+}
+
+/* For Large Screens */
+@media (min-width: 1680px) {
+  .login-characters .tight-img:nth-child(1) {
+    height: 36.825rem;
+    width: 24.345rem;
+  }
+
+  .login-characters .tight-img:nth-child(2) {
+    height: 32.25rem;
+    width: 22.938rem;
+    z-index: -1;
+  }
+  .login-characters .tight-img:nth-child(3) {
+    width: 420px;
+    height: 740px;
+  }
+}
+/* Ensure 50/50 split is maintained on all screen sizes */
+@media screen and (max-width: 1440px) {
+  .login-left {
+    width: 50%;
+    max-width: 50%;
+  }
+
+  .image-card-wrapper {
+    width: 50%;
+    max-width: 50%;
+  }
+
+  /* Adjust form card sizing for smaller screens while maintaining layout */
+  .login-card-wrapper {
+    min-width: 400px;
+    max-width: 500px;
+  }
+
+  .login-card-body {
+    padding: 4rem 0 2rem 0;
+  }
+
+  .login-title {
+    font-size: 1.5rem;
+  }
+
+  .login-submit-btn {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Adjust content sizing for smaller screens */
+  .image-card-content {
+    padding: 2rem;
+  }
+
+  .image-card-content h2 {
+    font-size: 2rem;
+  }
+
+  .image-card-content p {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+
+  .image-card-stats {
+    gap: 1.5rem;
+  }
+
+  .stat-number {
+    font-size: 1.5rem;
+  }
+
+  .stat-label {
+    font-size: 0.8rem;
+  }
+}
+@media (min-width: 769px) and (max-width: 1365px) {
+  .login-left {
+    width: 50%;
+    max-width: 50%;
+  }
+  .login-right {
+    width: 50%;
+    max-width: 50%;
+  }
+  .login-characters .tight-img:nth-child(1) {
+    height: 28.825rem;
+    width: 20.345rem;
+    margin-left: -1rem;
+  }
+
+  .login-characters .tight-img:nth-child(2) {
+    height: 24.25rem;
+    width: 24.938rem;
+    z-index: -1;
+  }
+  .login-characters .tight-img:nth-child(3) {
+    width: 340px;
+    height: 568px;
+    margin-right: -2rem;
+  }
+}
+
+/* Extra small screens - maintain 50/50 but adjust content */
+@media screen and (max-width: 768px) {
+  /* Keep the 50/50 split but adjust content sizing */
+  .login-left {
+    width: 50%;
+    max-width: 50%;
+  }
+
+  .image-card-wrapper {
+    width: 50%;
+    max-width: 50%;
+  }
+
+  .login-card-wrapper {
+    min-width: 300px;
+    max-width: 350px;
+    padding: 1rem;
+  }
+
+  .login-card-body {
+    padding: 2rem 0 1rem 0;
+    /* margin-top: 8rem; */
+  }
+
+  .login-title {
+    font-size: 1.25rem;
+  }
+
+  .login-submit-btn {
+    width: 100%;
+    max-width: 100%;
+    height: 3rem;
+    font-size: 0.9rem;
+  }
+
+  .image-card-content {
+    padding: 1.5rem;
+  }
+
+  .image-card-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .image-card-content p {
+    font-size: 0.9rem;
+    max-width: 100%;
+  }
+
+  .image-card-stats {
+    gap: 1rem;
+  }
+
+  .stat-number {
+    font-size: 1.25rem;
+  }
+
+  .stat-label {
+    font-size: 0.7rem;
+  }
+
+  .logo-container {
+    top: 15px;
+    right: 15px;
+  }
+
+  .card-logo {
+    height: 40px;
+  }
+}

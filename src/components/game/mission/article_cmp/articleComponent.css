@@ -1,0 +1,359 @@
+.article-content-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.article-content-img {
+  width: 20%;
+  height: 100%;
+  justify-content: center;
+  align-items: top;
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+/* Animation states for profile image */
+.article-content-img.hidden {
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+.article-content-img.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+.final-content-block h1 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.article-content-img.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.2);
+  width: 400px;
+  height: 400px;
+  z-index: 100;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.article-content-img.animated-to-position {
+  position: relative;
+  top: auto;
+  left: auto;
+  transform: scale(1);
+  width: 50%;
+  height: 100%;
+  z-index: 1;
+  border-radius: 10px;
+  box-shadow: none;
+}
+
+.article-content-img img {
+  width: 70%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.article-content-text {
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: left;
+}
+.article-content-text p {
+  font-size: 1.3rem;
+  line-height: 1.5;
+}
+/* Text animation states */
+.final-text-area.text-hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
+}
+
+.final-text-area.text-fade-in {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.6s ease-out;
+}
+
+/* Stagger animation for text paragraphs */
+.final-text-area.text-fade-in p {
+  animation: textSlideIn 0.8s ease-out forwards;
+  opacity: 0;
+  transform: translateX(-20px);
+}
+
+.final-text-area.text-fade-in p:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.final-text-area.text-fade-in p:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.final-text-area.text-fade-in p:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.final-text-area.text-fade-in p:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.final-text-area.text-fade-in p:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.final-text-area.text-fade-in p:nth-child(n + 6) {
+  animation-delay: 0.6s;
+}
+
+@keyframes textSlideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.article-news-container {
+  position: absolute;
+  top: 1%;
+  left: -10%;
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+}
+.article-news-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+@media (max-width: 1024px) {
+  .article-content-text {
+    font-size: 10px;
+    min-height: 150px;
+    max-height: 150px;
+  }
+  .article-news-container {
+    width: 200px;
+    height: 200px;
+    left: -5%;
+  }
+
+  /* Adjust centered animation for smaller screens */
+  .article-content-img.centered {
+    width: 250px;
+    height: 250px;
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+
+  /* Ensure text animations work on mobile */
+  .final-text-area.text-fade-in p {
+    animation-duration: 0.6s;
+  }
+}
+/* Enhanced scroll indicator styles */
+.scroll-indicator {
+  top: 100%;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px 15px;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  transition: all 0.8s ease;
+}
+
+.scroll-indicator:hover {
+  transform: translateX(-50%) scale(1.05);
+}
+
+.scroll-arrow {
+  font-size: 30px;
+  height: 24px;
+  animation: pulseAndBounce 2s infinite;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  color: #0a49ea;
+}
+
+.scroll-text {
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 3px;
+  opacity: 0.9;
+  color: #e9eaf1ec;
+  letter-spacing: 0.5px;
+  animation: pulseAndBounce 2s infinite;
+}
+
+/* Multiple animations combined */
+@keyframes pulseAndBounce {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.9;
+  }
+
+  20% {
+    transform: translateY(0) scale(1.2);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translateY(-8px) scale(1);
+    opacity: 0.9;
+  }
+
+  60% {
+    transform: translateY(0) scale(1);
+    opacity: 0.8;
+  }
+
+  80% {
+    transform: translateY(-4px) scale(1);
+    opacity: 0.9;
+  }
+}
+
+/* Add a pulsing glow effect to attract attention */
+.scroll-indicator::after {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  border-radius: 22px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  opacity: 0;
+  animation: glowPulse 3s infinite;
+  pointer-events: none;
+}
+
+@keyframes glowPulse {
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.5;
+    transform: scale(1.03);
+  }
+}
+
+/* Scroll Down Indicator Styles */
+.scroll-down-indicator {
+  position: absolute;
+  bottom: -22%;
+  left: 60%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff; /* Adjust color to match your theme */
+  font-size: 1rem;
+  font-weight: bold;
+  animation: blink-animation 1.5s infinite;
+  z-index: 10;
+  pointer-events: none; /* Allows clicks to pass through to content below */
+}
+
+.scroll-down-indicator .arrow-down {
+  font-size: 1.5rem;
+  margin-top: 5px;
+}
+
+@keyframes blink-animation {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Make sure the text area has proper styling for scrolling */
+
+/* Section progress indicator */
+.section-progress {
+  margin-top: 10px;
+  padding: 5px 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  animation: fadeInUp 0.3s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Enhanced paragraph animations for sequential display */
+.final-text-area p {
+  animation: lineSlideIn 0.6s ease-out forwards;
+  opacity: 0;
+  transform: translateX(-15px);
+  margin-bottom: 8px;
+}
+
+@keyframes lineSlideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Typing cursor animation */
+.final-cursor {
+  color: #0a49ea;
+  font-weight: bold;
+  animation: blink 1s infinite;
+  margin-left: 2px;
+}
+
+.final-cursor.hidden {
+  display: none;
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 1024px) {
+  .section-progress {
+    font-size: 11px;
+    padding: 4px 8px;
+  }
+}

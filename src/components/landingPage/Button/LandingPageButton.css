@@ -1,0 +1,42 @@
+/* Call-to-action button */
+.digipalz-landing-hero__cta-button {
+  background-color: #cafd06;
+  color: #000000;
+  border-radius: 23.64px;
+  align-self: flex-start;
+  /* display: flex;
+  align-items: center;
+  justify-content: space-between; */
+  gap: 11.82px;
+  padding: 0.91rem 4.36rem;
+  position: relative;
+  font-family: 'Neue Haas Grotesk Display Pro', 'Inter', sans-serif;
+  font-size: 18.91px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: normal;
+  width: fit-content;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  text-transform: uppercase;
+  margin-top: 6%;
+
+  /* margin-left: -13%; */
+  border: none;
+  /* Animation optimization */
+  will-change: transform, opacity;
+  transform-origin: center;
+  /* Enhanced shadow for depth */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  animation: scaleIn 0.5s ease-out 1.1s both;
+}
+
+/* Button hover and active states */
+.digipalz-landing-hero__cta-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.digipalz-landing-hero__cta-button:active {
+  transform: scale(0.95);
+}

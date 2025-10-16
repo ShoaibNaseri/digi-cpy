@@ -1,0 +1,674 @@
+/* Educator School Details - Modern Professional Design */
+.educator-sdp-school-details {
+  padding: 2rem;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+/* School Details Section */
+.educator-sdp-school-details__section {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border-radius: 24px;
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.educator-sdp-school-details__section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  /* background: linear-gradient(90deg, #667eea, #764ba2, #f093fb); */
+  border-radius: 24px 24px 0 0;
+}
+
+.educator-sdp-school-details__section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+.educator-sdp-school-details__section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+  position: relative;
+}
+
+.educator-sdp-school-details__section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+
+  border-radius: 2px;
+}
+
+.educator-sdp-school-details__edit-btn {
+  background: linear-gradient(90deg, #d60c7b 0%, #8b2db3 100%);
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.educator-sdp-school-details__edit-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s;
+}
+
+.educator-sdp-school-details__edit-btn:hover::before {
+  left: 100%;
+}
+
+.educator-sdp-school-details__edit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(102, 126, 234, 0.4);
+}
+
+.educator-sdp-school-details__edit-btn.editing {
+  background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);
+  box-shadow: 0 8px 20px rgba(107, 114, 128, 0.3);
+}
+
+.educator-sdp-school-details__edit-btn:disabled {
+  background: #e5e7eb;
+  color: #9ca3af;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+.educator-sdp-school-details__edit-form {
+  margin-bottom: 2rem;
+  transition: none;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.educator-sdp-school-details__edit-actions {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.educator-sdp-school-details__save-btn {
+  background: linear-gradient(90deg, #d60c7b 0%, #8b2db3 100%);
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.educator-sdp-school-details__save-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s;
+}
+
+.educator-sdp-school-details__save-btn:hover::before {
+  left: 100%;
+}
+
+.educator-sdp-school-details__save-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(16, 185, 129, 0.4);
+}
+
+.educator-sdp-school-details__save-btn:disabled {
+  background: #e5e7eb;
+  color: #9ca3af;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+.educator-sdp-school-details__cancel-btn {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  color: #64748b;
+  border: 1px solid #cbd5e1;
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  min-width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.educator-sdp-school-details__cancel-btn:hover {
+  background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%);
+  color: #475569;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.educator-sdp-school-details__cancel-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.educator-sdp-school-details__cancel-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+/* School Details Grid */
+.educator-sdp-school-details__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  transition: none;
+}
+
+.educator-sdp-school-details__grid--view {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.educator-sdp-school-details__field {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.educator-sdp-school-details__field::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #d60c7b 0%, #8b2db3 100%);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.educator-sdp-school-details__field:hover::before {
+  transform: scaleX(1);
+}
+
+.educator-sdp-school-details__field:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  border-color: #cbd5e1;
+}
+
+.educator-sdp-school-details__field-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  gap: 12px;
+}
+
+.educator-sdp-school-details__field-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  /* background: linear-gradient(135deg, #667eea, #764ba2); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+.educator-sdp-school-details__field-icon svg {
+  width: 18px;
+  height: 18px;
+  stroke-width: 2.5;
+}
+
+.educator-sdp-school-details__field-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.educator-sdp-school-details__label {
+  font-size: 12px;
+  color: #64748b;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: relative;
+  margin: 0;
+}
+
+.educator-sdp-school-details__value {
+  font-size: 14px;
+  color: #1e293b;
+  font-weight: 500;
+  line-height: 1.4;
+  position: relative;
+}
+
+.educator-sdp-school-details__value a {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.educator-sdp-school-details__value a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  transition: width 0.3s ease;
+}
+
+.educator-sdp-school-details__value a:hover::after {
+  width: 100%;
+}
+
+.educator-sdp-school-details__value a:hover {
+  color: #764ba2;
+}
+
+/* Contact Cards Section */
+.educator-sdp-school-details__contacts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.25rem;
+  transition: none;
+}
+
+.educator-sdp-school-details__contacts--view {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.educator-sdp-school-details__contact-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border-radius: 12px;
+  padding: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+  will-change: transform;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.2rem;
+}
+
+.educator-sdp-school-details__contact-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  border-radius: 20px 20px 0 0;
+}
+
+.educator-sdp-school-details__contact-card::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle,
+    rgba(102, 126, 234, 0.1) 0%,
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.educator-sdp-school-details__contact-card:hover::after {
+  opacity: 1;
+}
+
+.educator-sdp-school-details__contact-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+  border-color: rgba(102, 126, 234, 0.3);
+}
+
+.educator-sdp-school-details__contact-card.principal::before {
+  background: linear-gradient(90deg, #f093fb, #f5576c);
+}
+
+.educator-sdp-school-details__contact-card.principal::after {
+  background: radial-gradient(
+    circle,
+    rgba(240, 147, 251, 0.1) 0%,
+    transparent 70%
+  );
+}
+
+.educator-sdp-school-details__contact-card.vice-principal::before {
+  background: linear-gradient(90deg, #4facfe, #00f2fe);
+}
+
+.educator-sdp-school-details__contact-card.vice-principal::after {
+  background: radial-gradient(
+    circle,
+    rgba(79, 172, 254, 0.1) 0%,
+    transparent 70%
+  );
+}
+
+.educator-sdp-school-details__contact-card.it-admin::before {
+  background: linear-gradient(90deg, #43e97b, #38f9d7);
+}
+
+.educator-sdp-school-details__contact-card.it-admin::after {
+  background: radial-gradient(
+    circle,
+    rgba(67, 233, 123, 0.1) 0%,
+    transparent 70%
+  );
+}
+
+.educator-sdp-school-details__contact-card.education-dept::before {
+  background: linear-gradient(90deg, #fa709a, #fee140);
+}
+
+.educator-sdp-school-details__contact-card.education-dept::after {
+  background: radial-gradient(
+    circle,
+    rgba(250, 112, 154, 0.1) 0%,
+    transparent 70%
+  );
+}
+
+.educator-sdp-school-details__contact-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 2;
+  gap: 0.75rem;
+}
+
+.educator-sdp-school-details__contact-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #d60c7b, #8b2db3);
+  color: white;
+  box-shadow: 0 2px 8px rgba(214, 12, 123, 0.3);
+}
+
+.educator-sdp-school-details__contact-icon::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.05)
+  );
+  border-radius: 16px;
+}
+
+.educator-sdp-school-details__contact-icon svg {
+  width: 18px;
+  height: 18px;
+  stroke-width: 2.5;
+  position: relative;
+  z-index: 1;
+}
+
+.educator-sdp-school-details__contact-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.educator-sdp-school-details__contact-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.educator-sdp-school-details__contact-info {
+  margin-bottom: 0.5rem;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.educator-sdp-school-details__contact-label {
+  font-size: 11px;
+  color: #64748b;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0;
+  display: block;
+  position: relative;
+}
+
+.educator-sdp-school-details__contact-value {
+  font-size: 13px;
+  color: #1e293b;
+  font-weight: 500;
+  line-height: 1.4;
+  position: relative;
+}
+
+.educator-sdp-school-details__contact-input {
+  width: 100%;
+  padding: 16px 20px;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.8);
+  color: #1e293b;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  position: relative;
+  z-index: 2;
+}
+
+.educator-sdp-school-details__contact-input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+  background: white;
+}
+
+.educator-sdp-school-details__contact-input::placeholder {
+  color: #94a3b8;
+  font-weight: 400;
+}
+
+select.educator-sdp-school-details__contact-input {
+  padding-right: 3rem;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1.2rem;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* Loading and Error States */
+.educator-sdp-school-details__loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem;
+  color: #6b7280;
+  font-size: 16px;
+}
+
+.educator-sdp-school-details__error {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #dc2626;
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+.educator-sdp-school-details__no-data {
+  text-align: center;
+  padding: 4rem;
+  color: #6b7280;
+  font-size: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .educator-sdp-school-details__grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .educator-sdp-school-details__contacts {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .educator-sdp-school-details__title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .educator-sdp-school-details__container {
+    padding: 1rem;
+  }
+
+  .educator-sdp-school-details__section {
+    padding: 1.5rem;
+  }
+
+  .educator-sdp-school-details__section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .educator-sdp-school-details__edit-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .educator-sdp-school-details__contact-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .educator-sdp-school-details__contact-icon {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .educator-sdp-school-details__title {
+    font-size: 2rem;
+  }
+
+  .educator-sdp-school-details__subtitle {
+    font-size: 1rem;
+  }
+}

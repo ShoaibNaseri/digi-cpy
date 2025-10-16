@@ -1,0 +1,92 @@
+/* Google Fonts 導入 */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600;800;900&family=Roboto:wght@500;700&display=swap');
+
+.digipalz-landing-cta__background {
+  width: 100%;
+  height: auto;
+  background: linear-gradient(180deg, #7b35c0 0%, #f00068 100%),
+    linear-gradient(180deg, #00c6fb 0%, #005bea 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-top-left-radius: 80px;
+  border-top-right-radius: 80px;
+  padding-top: 4rem;
+  padding-bottom: 10rem;
+  position: relative; /* Added for z-index to work */
+  z-index: 60; /* Lower than testimonial section */
+  margin-top: -5%;
+}
+
+.digipalz-landing-cta__container {
+  max-width: 100%;
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+  padding: 0 0;
+}
+
+.digipalz-landing-cta__heading {
+  width: 100%;
+  text-align: center;
+  height: auto;
+  color: #cafd06;
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+  line-height: 52px;
+  font-size: var(--lp-font-size-36);
+}
+
+.digipalz-landing-cta__subheading {
+  height: auto;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-size: var(--lp-font-size-24);
+  font-weight: 500;
+}
+
+.digipalz-landing-cta__trial-text {
+  height: auto;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 1.2%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .digipalz-landing-cta__background {
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+  }
+  .digipalz-landing-cta__heading {
+    font-size: 2rem;
+  }
+
+  .digipalz-landing-cta__subheading {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .digipalz-landing-cta__background {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  .digipalz-landing-cta__heading {
+    font-size: 33px;
+  }
+
+  .digipalz-landing-cta__button {
+    padding: 10px 30px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .digipalz-landing-cta__background {
+    margin-top: -8%;
+    min-height: 50vh;
+  }
+}

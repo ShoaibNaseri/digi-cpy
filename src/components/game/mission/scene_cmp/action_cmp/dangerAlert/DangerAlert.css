@@ -1,0 +1,204 @@
+/* Overlay to center the alert */
+.danger-alert-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 9999;
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Container for the alert */
+.danger-alert-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Main danger alert */
+.danger-alert {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle, #ff0000, #cc0000);
+  border-radius: 50%;
+  box-shadow: 0 0 50px rgba(255, 0, 0, 0.8), 0 0 100px rgba(255, 0, 0, 0.6),
+    0 0 150px rgba(255, 0, 0, 0.4), inset 0 0 50px rgba(255, 255, 255, 0.2);
+  animation: pulse 1.5s ease-in-out infinite,
+    colorShifts 2s ease-in-out infinite, rotate 4s linear infinite;
+}
+
+/* Icon styling */
+.danger-icon {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 10px;
+  animation: iconPulse 1s ease-in-out infinite;
+}
+
+.danger-icon svg {
+  width: 100%;
+  height: 100%;
+  color: white;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
+}
+
+/* Danger text */
+.danger-text {
+  font-size: 36px;
+  font-weight: 900;
+  color: white;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+    0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.4);
+  letter-spacing: 4px;
+  animation: textFlash 0.5s ease-in-out infinite alternate;
+  margin: 0;
+}
+
+/* Pulse rings */
+.danger-pulse-ring {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 3px solid rgba(255, 0, 0, 0.8);
+  border-radius: 50%;
+  animation: pulseRing 3s ease-out infinite;
+}
+
+.danger-pulse-ring.delay-1 {
+  animation-delay: 1s;
+}
+
+.danger-pulse-ring.delay-2 {
+  animation-delay: 2s;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes colorShifts {
+  0%,
+  100% {
+    background: radial-gradient(circle, #ff0000, #cc0000);
+    box-shadow: 0 0 50px rgba(255, 0, 0, 0.8), 0 0 100px rgba(255, 0, 0, 0.6),
+      0 0 150px rgba(255, 0, 0, 0.4), inset 0 0 50px rgba(255, 255, 255, 0.2);
+  }
+  25% {
+    background: radial-gradient(circle, #ff3333, #ff0000);
+    box-shadow: 0 0 60px rgba(255, 0, 0, 0.9), 0 0 120px rgba(255, 0, 0, 0.7),
+      0 0 180px rgba(255, 0, 0, 0.5), inset 0 0 60px rgba(255, 255, 255, 0.3);
+  }
+  50% {
+    background: radial-gradient(circle, #ff6666, #ff0000);
+    box-shadow: 0 0 70px rgba(255, 0, 0, 1), 0 0 140px rgba(255, 0, 0, 0.8),
+      0 0 200px rgba(255, 0, 0, 0.6), inset 0 0 70px rgba(255, 255, 255, 0.4);
+  }
+  75% {
+    background: radial-gradient(circle, #ff3333, #cc0000);
+    box-shadow: 0 0 60px rgba(255, 0, 0, 0.9), 0 0 120px rgba(255, 0, 0, 0.7),
+      0 0 180px rgba(255, 0, 0, 0.5), inset 0 0 60px rgba(255, 255, 255, 0.3);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes iconPulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes textFlash {
+  from {
+    opacity: 0.8;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+      0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.4);
+  }
+  to {
+    opacity: 1;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 1),
+      0 0 40px rgba(255, 255, 255, 0.8), 0 0 60px rgba(255, 255, 255, 0.6);
+  }
+}
+
+@keyframes pulseRing {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .danger-alert {
+    width: 250px;
+    height: 250px;
+  }
+
+  .danger-icon {
+    width: 100px;
+    height: 100px;
+  }
+
+  .danger-text {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .danger-alert {
+    width: 200px;
+    height: 200px;
+  }
+
+  .danger-icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .danger-text {
+    font-size: 24px;
+  }
+}

@@ -1,0 +1,218 @@
+/* Modal Overlay */
+.class-access-code-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal Container */
+.class-access-code-modal-container {
+  background-color: #1c2433;
+  border-radius: 12px;
+  width: 450px;
+  max-width: 95%;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+}
+
+/* Modal Header */
+.class-access-code-modal-header {
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.class-access-code-modal-key-icon {
+  background-color: #2d3a4f;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.class-access-code-modal-key-icon svg {
+  width: 24px;
+  height: 24px;
+  color: #ffffff;
+}
+
+.class-access-code-modal-title {
+  margin: 0 0 8px 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.class-access-code-modal-subtitle {
+  margin: 0;
+  font-size: 14px;
+  color: #a1a7b3;
+}
+
+/* Code Display Section */
+.class-access-code-modal-code-display {
+  background-color: #2d3a4f;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.class-access-code-modal-code {
+  font-family: 'Courier New', monospace;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.class-access-code-modal-actions {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.class-access-code-modal-copy-btn,
+.class-access-code-modal-generate-btn {
+  flex: 1;
+  padding: 8px 12px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.class-access-code-modal-copy-btn {
+  background-color: #3d4c64;
+  color: #ffffff;
+}
+
+.class-access-code-modal-generate-btn {
+  background-color: #5c6c84;
+  color: #ffffff;
+}
+
+.class-access-code-modal-copy-btn:hover,
+.class-access-code-modal-generate-btn:hover {
+  opacity: 0.9;
+}
+
+.class-access-code-modal-copy-icon,
+.class-access-code-modal-generate-icon {
+  display: inline-flex;
+  margin-right: 8px;
+}
+
+.class-access-code-modal-copy-icon svg,
+.class-access-code-modal-generate-icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Instructions Section */
+.class-access-code-modal-instructions {
+  padding: 20px;
+}
+
+.class-access-code-modal-instructions-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.class-access-code-modal-info-icon {
+  display: inline-flex;
+  margin-right: 10px;
+}
+
+.class-access-code-modal-info-icon svg {
+  width: 20px;
+  height: 20px;
+  color: #a1a7b3;
+}
+
+.class-access-code-modal-instructions-title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.class-access-code-modal-steps {
+  margin: 0;
+  padding-left: 24px;
+}
+
+.class-access-code-modal-step {
+  margin-bottom: 8px;
+  color: #d1d5db;
+  font-size: 14px;
+}
+
+.class-access-code-modal-highlight {
+  color: #64b5f6;
+}
+
+/* Footer */
+.class-access-code-modal-footer {
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.class-access-code-modal-download-btn,
+.class-access-code-modal-close-btn {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.class-access-code-modal-download-btn {
+  background-color: transparent;
+  color: #64b5f6;
+}
+
+.class-access-code-modal-close-btn {
+  background-color: transparent;
+  color: #a1a7b3;
+}
+
+.class-access-code-modal-download-btn:hover,
+.class-access-code-modal-close-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.class-access-code-modal-download-icon,
+.class-access-code-modal-close-icon {
+  display: inline-flex;
+  margin-right: 8px;
+}
+
+.class-access-code-modal-download-icon svg,
+.class-access-code-modal-close-icon svg {
+  width: 16px;
+  height: 16px;
+}

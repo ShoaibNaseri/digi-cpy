@@ -1,0 +1,27 @@
+/* Loader Container */
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'content-font', system-ui, sans-serif;
+}
+
+/* Loader Spinner */
+.loader-spinner {
+  font-size: 3rem;
+  color: #4682b4; /* Blue color for spinner */
+}
+
+/* Loader Message */
+.loader-message {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}

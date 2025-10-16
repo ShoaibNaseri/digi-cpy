@@ -1,0 +1,10 @@
+.tr-container,
+.tr-container * {
+  box-sizing: border-box;
+}
+
+.tr-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}

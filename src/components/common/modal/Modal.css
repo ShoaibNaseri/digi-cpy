@@ -1,0 +1,100 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 15vh;
+  z-index: 1000;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+.modal__container {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  width: 90%;
+  max-width: 600px;
+  max-height: 90vh;
+  animation: slideIn 0.3s ease-out;
+}
+
+.modal__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 26px 24px;
+  border-bottom: 1px solid #374151;
+}
+
+.modal__title {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: black;
+}
+
+.modal__close-btn {
+  background: none;
+  border: none;
+  font-size: 25px;
+  cursor: pointer;
+  color: black;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+.modal__close-btn:hover,
+.modal__close-btn:focus {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  color: #ffffff;
+}
+
+.modal__content {
+  padding: 24px;
+}
+
+.modal__footer {
+  padding: 24px;
+  border-top: 1px solid #374151;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .modal__container {
+    width: 95%;
+  }
+}

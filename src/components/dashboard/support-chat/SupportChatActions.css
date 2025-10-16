@@ -1,0 +1,241 @@
+.support-chat__container-input {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 16px;
+  gap: 12px;
+  border-top: 1px solid #9ca3af;
+  background-color: white;
+  position: sticky;
+  bottom: 0;
+  flex-direction: column;
+  flex-shrink: 0;
+  z-index: 10;
+}
+
+.support-chat__container-input input {
+  width: 100%;
+  padding: 16px;
+  border: 1px solid #9ca3af;
+  background-color: #f3f4f6;
+  color: #4b5563;
+  border-radius: 8px;
+}
+
+.support-chat__action-buttons {
+  display: flex;
+  gap: 8px !important;
+}
+
+.support-chat__action-buttons button {
+  padding: 12px !important;
+  background-color: white !important;
+  border: none;
+  transition: background-color 0.3s;
+}
+.support-chat__action-buttons button:hover {
+  background-color: #f3f4f6 !important;
+  transform: scale(1.1);
+}
+
+.support-chat__action-buttons button.listening {
+  background-color: #ff4444 !important;
+  animation: pulse 1.5s infinite;
+}
+
+.support-chat__image-hint {
+  background-color: #f8f8f8;
+  padding: 8px 12px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  color: #555;
+  border-left: 3px solid #5b86e5;
+  animation: glow 2s infinite;
+}
+
+.support-chat__action-buttons button.highlight-button {
+  background-color: #e8f0fe;
+  border: 2px solid #5b86e5;
+  animation: glow 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(91, 134, 229, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 8px rgba(91, 134, 229, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(91, 134, 229, 0);
+  }
+}
+
+.support-chat__container-input button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  background-color: #374151;
+  font-size: 16px;
+  font-weight: 200;
+}
+
+/* Staged Images Styles */
+.support-chat__staged-images {
+  width: 100%;
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+
+.staged-images-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.staged-images-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-height: 120px;
+  overflow-y: auto;
+}
+
+.staged-image {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 2px solid #e5e7eb;
+  transition: border-color 0.2s;
+}
+
+.staged-image:hover {
+  border-color: #9ca3af;
+}
+
+.staged-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.remove-image-btn {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 50%;
+  background-color: #ef4444;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  line-height: 1;
+  transition: all 0.2s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.remove-image-btn:hover {
+  background-color: #dc2626;
+  transform: scale(1.1);
+}
+
+/* Input controls container */
+.support-chat__input-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 12px;
+}
+
+/* Incomplete Incident Notice */
+.support-chat__incomplete-incident-notice {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #fef3c7 0%, #fcd34d 100%);
+  border: 1px solid #f59e0b;
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #92400e;
+  box-shadow: 0 2px 4px rgba(245, 158, 11, 0.1);
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+/* Style for countdown timer */
+.support-chat__incomplete-incident-notice.pending-follow-up span {
+  font-weight: 500;
+}
+
+/* Add pulsing animation for countdown */
+.support-chat__incomplete-incident-notice.pending-follow-up {
+  animation: countdown-pulse 2s ease-in-out infinite;
+}
+
+@keyframes countdown-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 2px 4px rgba(245, 158, 11, 0.1);
+  }
+  50% {
+    transform: scale(1.01);
+    box-shadow: 0 4px 8px rgba(245, 158, 11, 0.2);
+  }
+}
+
+.support-chat__clear-incident-btn {
+  background: #10b981;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.support-chat__clear-incident-btn:hover {
+  background: #059669;
+  transform: scale(1.1);
+}

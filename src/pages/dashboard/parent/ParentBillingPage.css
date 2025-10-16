@@ -1,0 +1,634 @@
+.parent-billing-page {
+  padding: 2rem;
+  /* max-width: 1400px; */
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Header Styles */
+.parent-billing-page__header {
+  margin-bottom: 3rem;
+  text-align: left;
+}
+
+.parent-billing-page__header h1 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+}
+
+.parent-billing-page__header p {
+  font-size: 1rem;
+  color: #4b5563;
+  margin: 0;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* Main Content Layout */
+.parent-billing-page__left-column {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 69%;
+}
+
+.parent-billing-page__left-column > * {
+  width: 100%;
+}
+
+/* Left container specific card styles */
+.parent-billing-page__left-column .parent-billing-page__current-plan,
+.parent-billing-page__left-column .parent-billing-page__billing-history {
+  box-sizing: border-box;
+}
+.current-plan__outer-container {
+  border: 1px solid #e5e7eb;
+  background-color: #ffffff;
+  border-radius: 16px;
+  width: 100%;
+}
+/* Right Column - Separate Container */
+.parent-billing-page__right-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 29%;
+  margin-left: 2%;
+}
+
+.parent-billing-page__right-container > * {
+  width: 100%;
+}
+
+/* Right container specific card styles */
+.parent-billing-page__right-container .parent-billing-page__payment-method,
+.parent-billing-page__right-container .parent-billing-page__upgrade-options,
+.parent-billing-page__right-container .parent-billing-page__billing-summary {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Container wrapper to prevent overlap */
+.parent-billing-page__content-wrapper {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  width: 100%;
+}
+
+/* Current Plan Header - Outside Card */
+.current-plan__outer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  justify-self: center;
+  width: 95%;
+}
+
+.current-plan__outer-header h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.current-plan__status {
+  background: rgba(144, 213, 169, 0.388);
+  color: #166534;
+  padding: 0.375rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* Current Plan Card */
+.parent-billing-page__current-plan {
+  background: linear-gradient(135deg, #6366f1 0%, #9333ea 100%);
+  border-radius: 16px;
+  padding: 2rem;
+  color: white;
+  /* box-shadow: 0 10px 25px rgba(139, 92, 246, 0.3); */
+  height: 300px; /* Reduced height since content moved outside */
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  /* width: 95%; */
+}
+
+.current-plan__details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Current Plan Footer - Outside Card */
+.current-plan__outer-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  width: 95%;
+  justify-self: center;
+}
+
+.current-plan__next-billing {
+  color: #6b7280;
+  /* margin: 0; */
+  font-size: 0.875rem;
+  display: flex;
+  gap: 3px;
+  justify-content: center;
+  align-items: center;
+}
+.current-plan__next-billing-date {
+  font-weight: 500;
+  color: #000;
+}
+.current-plan__upgrade-btn {
+  background: #4f46e5;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.current-plan__upgrade-btn:hover {
+  background: #7c3aed;
+  transform: translateY(-1px);
+}
+
+.current-plan__title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.current-plan__name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.current-plan__price {
+  /* text-align: right; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price__amount {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+
+.price__period {
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+.current-plan__description {
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0 0 1.5rem 0;
+  font-size: 1rem;
+}
+
+.current-plan__features {
+  list-style: none;
+  padding: 0;
+  /* margin: 0 0 1.5rem 0; */
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* grid-template-rows: 1fr 1fr; */
+  /* gap: 0.75rem; */
+}
+
+.current-plan__features li {
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #fff;
+  margin: 0;
+  gap: 0.75rem;
+}
+
+.feature__check {
+  margin-right: 0.75rem;
+  font-weight: bold;
+  color: #22c55e;
+}
+
+/* Billing History */
+.parent-billing-page__billing-history {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  width: 100%;
+}
+
+.parent-billing-page__billing-history h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 1.5rem 0;
+}
+
+.billing-history__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.billing-history__item {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background: #f9fafb;
+  border-radius: 8px;
+  gap: 1rem;
+}
+
+.billing-history__icon {
+  font-size: 1.25rem;
+  color: #22c55e;
+}
+
+.billing-history__details {
+  flex: 1;
+}
+
+.billing-history__invoice {
+  font-weight: 500;
+  color: #111827;
+  font-size: 1rem;
+}
+
+.billing-history__date {
+  color: #4b5563;
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.billing-history__amount {
+  font-weight: 600;
+  color: #1f2937;
+  font-size: 0.875rem;
+}
+
+.billing-history__status {
+  background: #dcfce7;
+  color: #166534;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.billing-history__download {
+  background: none;
+  border: none;
+  color: #4f46e5;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: color 0.2s ease;
+}
+
+.billing-history__download:hover {
+  color: #374151;
+}
+
+/* Payment Method */
+.parent-billing-page__payment-method {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+}
+
+.payment-method__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.payment-method__header h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.payment-method__update {
+  background: none;
+  border: none;
+  color: #4f46e5;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.payment-method__update:hover {
+  color: #2563eb;
+}
+
+.payment-method__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.payment-method__card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: #f8fafc;
+  border-radius: 8px;
+}
+
+.card__icon {
+  font-size: 1.5rem;
+  color: #3b82f6;
+}
+
+.card__details {
+  flex: 1;
+}
+
+.card__number {
+  font-weight: 500;
+  color: #1f2937;
+  font-size: 1rem;
+}
+
+.card__expires {
+  color: #6b7280;
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.payment-method__info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.cardholder__name {
+  font-weight: 500;
+  color: #1f2937;
+  font-size: 0.875rem;
+}
+
+.cardholder__email {
+  color: #6b7280;
+  font-size: 0.75rem;
+}
+
+.payment-method__default {
+  background: #dcfce7;
+  color: #166534;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  align-self: flex-start;
+}
+
+/* Upgrade Options */
+.parent-billing-page__upgrade-options {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+}
+
+.parent-billing-page__upgrade-options h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0 0 1.5rem 0;
+}
+
+.upgrade-options__card {
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid #e2e8f0;
+}
+
+.upgrade-options__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.upgrade-options__header h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0;
+}
+
+.upgrade-options__recommended {
+  /* background: #8b5cf6; */
+  color: #6b21a8;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.upgrade-options__price {
+  margin-bottom: 1.5rem;
+}
+
+.upgrade-options__price .price__amount {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-right: 0.5rem;
+}
+
+.upgrade-options__price .price__period {
+  font-size: 1rem;
+  color: #6b7280;
+}
+
+.upgrade-options__features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+}
+
+.upgrade-options__features li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  font-size: 0.875rem;
+  color: #374151;
+}
+
+.upgrade-options__btn {
+  background: #9333ea;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.upgrade-options__btn:hover {
+  background: #7c3aed;
+  transform: translateY(-1px);
+}
+
+/* Billing Summary */
+.parent-billing-page__billing-summary {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+}
+
+.parent-billing-page__billing-summary h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0 0 1.5rem 0;
+}
+
+.billing-summary__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.billing-summary__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #f3f4f6;
+  font-size: 0.875rem;
+}
+
+.billing-summary__row:last-child {
+  border-bottom: none;
+}
+
+.billing-summary__row span:first-child {
+  color: #111827;
+  font-weight: 500;
+}
+
+.billing-summary__row span:last-child {
+  color: #111827;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.billing-summary__total {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #1f2937;
+  border-top: 2px solid #e5e7eb;
+  padding-top: 1rem;
+  margin-top: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .parent-billing-page__content {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .parent-billing-page {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .parent-billing-page {
+    padding: 1rem;
+  }
+
+  .parent-billing-page__header h1 {
+    font-size: 2rem;
+  }
+
+  .current-plan__price .price__amount {
+    font-size: 2rem;
+  }
+
+  .upgrade-options__price .price__amount {
+    font-size: 1.5rem;
+  }
+
+  .billing-history__item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .billing-history__details {
+    order: 1;
+  }
+
+  .billing-history__amount {
+    order: 2;
+  }
+
+  .billing-history__status {
+    order: 3;
+  }
+
+  .billing-history__download {
+    order: 4;
+    align-self: flex-end;
+  }
+}
+
+@media (max-width: 480px) {
+  .parent-billing-page {
+    padding: 0.75rem;
+  }
+
+  .parent-billing-page__header h1 {
+    font-size: 1.75rem;
+  }
+
+  .current-plan__upgrade-btn,
+  .upgrade-options__btn {
+    padding: 0.625rem 1.25rem;
+    font-size: 0.875rem;
+  }
+}

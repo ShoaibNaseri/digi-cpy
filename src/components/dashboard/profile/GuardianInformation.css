@@ -1,0 +1,60 @@
+.guardian {
+  background-color: #f3f4f6;
+  border-radius: 8px;
+  padding: 24px 27px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.guardian__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.guardian__edit-button {
+  border: none;
+  color: #374151;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.guardian__edit-button:hover {
+  background-color: #fff;
+}
+
+.guardian__title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.guardian__input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #4b5563;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #1f2937;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.guardian__input:disabled {
+  background-color: #f3f4f6;
+  cursor: not-allowed;
+}
+
+.guardian__group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}

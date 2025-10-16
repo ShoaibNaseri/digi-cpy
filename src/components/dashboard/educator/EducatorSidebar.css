@@ -1,0 +1,357 @@
+/* Educator Sidebar - Modern Professional Design */
+.educator-sidebar {
+  width: 280px;
+  height: 100vh;
+  background: #f8f9fa;
+  backdrop-filter: blur(20px);
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  left: 0;
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.2);
+  font-family: 'Ubuntu', sans-serif;
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  z-index: 1000;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border: 0.5px solid rgb(223, 218, 218);
+}
+
+.educator-sidebar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Apply Ubuntu font to all text elements in sidebar */
+.educator-sidebar * {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.educator-sidebar-header {
+  width: 100%;
+  padding: 1.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.educator-sidebar-header img {
+  width: 150px;
+  height: 51px;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.1));
+}
+
+.educator-sidebar-user-profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 1rem;
+  gap: 0.75rem;
+  background: rgba(255, 255, 255, 0.3);
+  margin: 0.5rem 0.75rem;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.educator-sidebar-user-profile:hover {
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.educator-sidebar-user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.educator-sidebar-user-info h2 {
+  text-align: center;
+  word-wrap: break-word;
+  width: 100%;
+  color: #000000;
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.educator-sidebar-user-status {
+  display: flex;
+  background: #cafd06;
+  color: black;
+  border-radius: 20px;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  width: fit-content;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.educator-sidebar-user-status p {
+  color: #0a0a0a;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.educator-crown-icon {
+  display: flex;
+  align-items: center;
+  position: relative;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.educator-sidebar-menu {
+  flex-grow: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  min-height: 0;
+  max-height: calc(100vh - 300px);
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.educator-sidebar-menu::-webkit-scrollbar {
+  display: none;
+}
+
+.educator-sidebar-section {
+  margin-bottom: 1.5rem;
+}
+
+.educator-sidebar-section-label {
+  font-size: 0.65rem;
+  color: #6b7280;
+  margin: 0 0 1rem 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+  padding: 0 0.5rem;
+}
+
+.educator-menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.875rem 1rem;
+  font-size: 0.95rem;
+  color: #0f0f0f;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 12px;
+  margin-bottom: 0.5rem;
+  width: 85%;
+  font-weight: 500;
+  position: relative;
+  overflow: hidden;
+}
+
+.educator-menu-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, #d60c7b 0%, #8b2db3 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 12px;
+}
+
+.educator-menu-item:hover::before,
+.educator-menu-item.active::before {
+  opacity: 0;
+}
+
+.educator-menu-item:hover,
+.educator-menu-item.active {
+  border-radius: 12px;
+  color: #000;
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+}
+
+.educator-menu-item:hover .educator-menu-icon,
+.educator-menu-item.active .educator-menu-icon {
+  color: #d60c7b;
+  transform: scale(1.1);
+}
+
+.educator-menu-icon {
+  margin-right: 1rem;
+  font-size: 1.25rem;
+  width: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.educator-menu-icon img {
+  width: 20px;
+  height: 20px;
+}
+
+.educator-menu-text {
+  font-size: 0.95rem;
+  width: 100%;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  z-index: 1;
+}
+
+.educator-menu-item.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.educator-menu-chevron {
+  margin-left: auto;
+  transition: all 0.3s ease;
+  color: #6b7280;
+  font-size: 0.75rem;
+  position: relative;
+  z-index: 1;
+}
+
+.educator-submenu {
+  margin-left: 2rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding-left: 1rem;
+  border-left: 2px solid rgba(214, 12, 123, 0.2);
+}
+
+.educator-submenu-item {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: #6b7280;
+  font-size: 0.875rem;
+  text-decoration: none;
+  border-radius: 8px;
+  margin-bottom: 0.25rem;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  position: relative;
+  overflow: hidden;
+}
+
+.educator-submenu-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, #d60c7b 0%, #8b2db3 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 8px;
+}
+
+.educator-submenu-item:hover::before,
+.educator-submenu-item.active::before {
+  opacity: 0.1;
+}
+
+.educator-submenu-item:hover {
+  background: rgba(255, 255, 255, 0.6);
+  color: #374151;
+  transform: translateX(4px);
+}
+
+.educator-submenu-item.active {
+  background: rgba(214, 12, 123, 0.1);
+  color: #d60c7b;
+  font-weight: 600;
+}
+
+.educator-sidebar-footer {
+  padding: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.educator-logout-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  padding: 0.875rem 1.5rem;
+  background: linear-gradient(90deg, #1f2937 0%, #374151 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/* .educator-logout-button:hover {
+  background: #000000;
+} */
+
+.educator-logout-button img {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.educator-logout-button span {
+  position: relative;
+  z-index: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .educator-sidebar {
+    width: 100%;
+    position: fixed;
+    z-index: 1001;
+  }
+
+  .educator-sidebar-user-profile {
+    margin: 0.5rem;
+    padding: 1.5rem 1rem;
+  }
+
+  .educator-sidebar-menu {
+    padding: 0.5rem;
+  }
+
+  .educator-sidebar-footer {
+    padding: 1rem;
+  }
+}

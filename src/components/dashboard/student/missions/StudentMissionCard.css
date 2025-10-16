@@ -1,0 +1,262 @@
+.mission-card-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 0.5rem;
+  /* height: 100%; */
+  height: 433px;
+  box-sizing: border-box;
+}
+
+.mission {
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px !important;
+  cursor: pointer;
+  /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5); */
+  transition: transform 0.2s, box-shadow 0.2s;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.mission:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.mission__container {
+  position: relative;
+  width: 100%;
+  height: 195px;
+  overflow: hidden;
+  background-color: #f3f4f6;
+  border-radius: 4px;
+}
+
+.mission__icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 4px;
+  transition: transform 0.3s ease;
+}
+.mission__icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.mission:hover .mission__icon {
+  transform: scale(1.03);
+}
+
+.mission--selected {
+  outline: 2px solid #1f2937;
+  border-radius: 12px;
+}
+
+.mission--locked .mission-card-wrapper {
+  opacity: 0.6;
+  filter: grayscale(0.3);
+}
+
+.mission__status-badge {
+  padding: 8px 9.668px 8px 9px;
+  border-radius: 3px;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  margin: 16px 12px 10px 4px;
+  align-self: start;
+  position: relative;
+  z-index: 2;
+  border-radius: 8px;
+}
+
+.mission__status-badge--completed {
+  background-color: #cafd06;
+  color: #000000;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+}
+
+.mission__status-badge--not-completed {
+  background-color: #d50d7c33;
+  color: #d60c7b;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.mission__status-badge--locked {
+  background-color: #e5e7eb;
+  color: #4b5563;
+  padding: 5px 9px 7px 10px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.mission__content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  min-height: 84px;
+  background-color: white;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  position: relative;
+  z-index: 2;
+  /* padding: 0 1rem 1rem 1rem; */
+  box-sizing: border-box;
+}
+
+.mission__title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  margin: 4px 0 8px 3px;
+}
+
+.mission__title {
+  text-align: left;
+  font-size: 24px;
+  padding: 0 0.2rem;
+  font-weight: 600;
+  color: #000000;
+  margin: 0;
+  line-height: 1.3;
+  box-sizing: border-box;
+}
+
+.mission__subtitle {
+  text-align: start;
+  font-size: 16px;
+  padding: 0 0.2rem;
+  font-weight: 400;
+  margin-bottom: 16px;
+  color: #000000bf;
+  margin: 8px 0 14px 0;
+  line-height: 1.4;
+  box-sizing: border-box;
+  text-wrap: wrap;
+  width: 95%;
+}
+
+.mission__button {
+  background: linear-gradient(90deg, #d60c7b 0%, #8b2db3 100%);
+  color: white;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  transition: background 0.2s;
+  box-sizing: border-box;
+}
+
+.mission__button:hover {
+  background: linear-gradient(90deg, #b80a6b 0%, #7a2599 100%);
+}
+
+.mission__button--locked {
+  background: #e5e7eb;
+  display: flex;
+  color: #4b5563;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  cursor: not-allowed;
+}
+
+.mission__button--locked:hover {
+  background: #e5e7eb;
+}
+
+.mission__button-lock-icon {
+  font-size: 18px;
+}
+
+.mission__button-play-icon {
+  font-size: 18px;
+  margin-right: 8px;
+}
+
+.mission__status-badge-lock-icon {
+  font-size: 12px;
+}
+
+.mission__status-badge-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+}
+
+.mission__status-badge-container .mission__status-badge--completed {
+  background-color: #cafd06;
+  color: #000000;
+}
+
+.mission__status-badge-progress-completed {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #000000;
+  background-color: #cafd06;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.mission__status-badge-progress-in-progress {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #000000;
+  background-color: #d50d7c33;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .mission__title {
+    font-size: 16px;
+  }
+
+  .mission__subtitle {
+    font-size: 13px;
+  }
+
+  .mission__container {
+    min-height: 160px;
+  }
+
+  .mission__icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .mission__content {
+    min-height: 72px;
+    padding: 12px;
+  }
+
+  .mission__button {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+}

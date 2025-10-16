@@ -1,0 +1,406 @@
+/* SnappyPalMap - Simplified with Image Background */
+
+.snappy-map-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+  font-family: 'Roboto', 'Arial', sans-serif;
+}
+
+.map-wrapper {
+  position: relative;
+  width: 95%;
+  max-width: 1200px;
+  height: 90%;
+  background: transparent;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.map-image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.map-image {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  border-radius: 8px;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+}
+
+/* Blue Mountain Indicator (Location Pin) */
+.blue-mountain-indicator {
+  position: absolute;
+  top: 35%;
+  left: calc(55% - 40px);
+  z-index: 10;
+}
+
+.location-pin {
+  position: relative;
+  z-index: 15;
+}
+
+.pin-circle {
+  width: 22px;
+  height: 22px;
+  background: #ea4335;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  margin: 0 auto;
+  position: relative;
+}
+
+.pin-circle::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.pin-stem {
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 12px solid #ea4335;
+  margin: -2px auto 0;
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.2));
+}
+
+/* Declan Container - Starts from center, moves to Blue Mountain */
+.declan-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 18;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.declan-container:hover .declan-tooltip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-10px) scale(1);
+}
+
+.declan-container:hover .declan-glow {
+  filter: blur(8px);
+  transform: scale(1.1);
+}
+
+.declan-container:hover .character-pin {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3), 0 0 0 4px rgba(255, 171, 0, 0.6),
+    0 0 40px rgba(255, 171, 0, 0.8), 0 0 60px rgba(255, 171, 0, 0.4);
+  animation: none; /* Stop the pulse animation on hover */
+}
+
+.character-pin {
+  width: 50px;
+  height: 50px;
+  background: #ffab00;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25), 0 0 0 2px rgba(255, 171, 0, 0.3),
+    0 0 20px rgba(255, 171, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease;
+  animation: pulseGlow 2s infinite ease-in-out;
+}
+
+@keyframes pulseGlow {
+  0%,
+  100% {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25), 0 0 0 2px rgba(255, 171, 0, 0.3),
+      0 0 20px rgba(255, 171, 0, 0.5);
+  }
+  50% {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25), 0 0 0 3px rgba(255, 171, 0, 0.5),
+      0 0 30px rgba(255, 171, 0, 0.7);
+  }
+}
+
+.declan-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.declan-tooltip {
+  position: absolute;
+  bottom: 65px;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px) scale(0.8);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 25;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.declan-tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid rgba(0, 0, 0, 0.8);
+}
+
+.declan-glow {
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  background: radial-gradient(circle, rgba(255, 171, 0, 0.4), transparent);
+  border-radius: 50%;
+  z-index: 1;
+  filter: blur(6px);
+  transition: all 0.3s ease;
+}
+
+/* Sparkle Effects */
+.map-sparkle {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: linear-gradient(45deg, #ffd700, #ff69b4);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 12;
+}
+
+.map-sparkle::before {
+  content: '✨';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 8px;
+  filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.8));
+}
+
+/* Map Title */
+.map-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #333;
+  z-index: 25;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  border: 1px solid #e0e0e0;
+}
+
+.map-title h2 {
+  margin: 0 0 8px 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1976d2;
+}
+
+.map-title p {
+  margin: 0;
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Responsive Design */
+
+/* Large Desktop */
+@media (min-width: 1440px) {
+  .character-pin {
+    width: 60px;
+    height: 60px;
+  }
+
+  .declan-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .pin-circle {
+    width: 26px;
+    height: 26px;
+  }
+
+  .pin-circle::after {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+/* Desktop */
+@media (max-width: 1439px) and (min-width: 1024px) {
+  .character-pin {
+    width: 55px;
+    height: 55px;
+  }
+
+  .declan-icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .pin-circle {
+    width: 24px;
+    height: 24px;
+  }
+
+  .pin-circle::after {
+    width: 9px;
+    height: 9px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 1023px) and (min-width: 768px) {
+  .snappy-map-container {
+    padding: 15px;
+  }
+
+  .map-wrapper {
+    width: 98%;
+    height: 95%;
+  }
+
+  .character-pin {
+    width: 45px;
+    height: 45px;
+  }
+
+  .declan-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .pin-circle {
+    width: 20px;
+    height: 20px;
+  }
+
+  .pin-circle::after {
+    width: 7px;
+    height: 7px;
+  }
+
+  .map-title h2 {
+    font-size: 1.3rem;
+  }
+
+  .map-title p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .snappy-map-container {
+    padding: 10px;
+  }
+
+  .map-wrapper {
+    width: 100%;
+    height: 98%;
+  }
+
+  .character-pin {
+    width: 40px;
+    height: 40px;
+  }
+
+  .declan-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .pin-circle {
+    width: 18px;
+    height: 18px;
+  }
+
+  .pin-circle::after {
+    width: 6px;
+    height: 6px;
+  }
+
+  .pin-stem {
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 10px solid #ea4335;
+  }
+
+  .map-title {
+    padding: 15px 20px;
+  }
+
+  .map-title h2 {
+    font-size: 1.2rem;
+  }
+
+  .map-title p {
+    font-size: 0.85rem;
+  }
+
+  .map-sparkle {
+    width: 10px;
+    height: 10px;
+  }
+
+  .map-sparkle::before {
+    font-size: 6px;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .map-sparkle,
+  .declan-glow {
+    animation: none !important;
+  }
+}
+
+/* Focus states */
+.declan-container:focus {
+  outline: 3px solid #1976d2;
+  outline-offset: 3px;
+  border-radius: 50%;
+}

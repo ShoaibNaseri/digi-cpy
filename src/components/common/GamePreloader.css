@@ -1,0 +1,84 @@
+/* Bottom-Left Loading Indicator with Centered Content */
+.loading-indicator {
+  position: fixed;
+  bottom: 10%;
+  left: 5%;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 8px;
+  width: auto;
+  z-index: 9999;
+  animation: fadeIn 0.3s ease-out;
+  font-family: 'Arial', sans-serif;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.loading-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px 16px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.loading-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid transparent;
+  border-top: 2px solid #ffffff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-text {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .loading-indicator {
+    bottom: 15px;
+    left: 15px;
+    padding: 10px 14px;
+  }
+
+  .loading-spinner {
+    width: 14px;
+    height: 14px;
+  }
+
+  .loading-text {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .loading-indicator {
+    bottom: 10px;
+    left: 10px;
+    padding: 8px 12px;
+  }
+}

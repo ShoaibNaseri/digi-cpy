@@ -1,0 +1,70 @@
+/* Accessibility.css - Enhanced for Chrome Screen Reader - Only active with screen reader */
+
+/* Screen reader only class - visually hidden but accessible to screen readers */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Screen reader announcer - specifically for Chrome Screen Reader compatibility */
+#screen-reader-announcer {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+  /* Extra properties to ensure Chrome Screen Reader detects changes */
+  z-index: -1000;
+  color: transparent;
+  background: transparent;
+}
+
+
+/* Aggressive removal of ALL image styling */
+img, 
+img:focus,
+img:hover,
+img:active,
+img[data-a11y-enhanced="true"],
+img[data-a11y-enhanced="true"]:focus,
+.accessible-image,
+.accessible-image:focus,
+.accessible-image:hover,
+.accessible-image:active,
+[data-screen-reader-active="true"] img,
+[data-screen-reader-active="true"] img:focus,
+[data-screen-reader-active="false"] img,
+[data-screen-reader-active="false"] img:focus {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  outline-width: 0 !important;
+  outline-style: none !important;
+  outline-color: transparent !important;
+  outline-offset: 0 !important;
+}
+
+/* Completely hide ALL tooltips regardless of state */
+.img-tooltip,
+.img-tooltip.sr-active,
+[data-screen-reader-active="true"] .img-tooltip,
+[data-screen-reader-active="false"] .img-tooltip {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+}

@@ -1,0 +1,108 @@
+/* SchoolInfoEditForm.css */
+.educator-dashboard-school-info__main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.educator-dashboard-school-info__year {
+  color: #888;
+  font-size: 1rem;
+  margin-top: 2px;
+}
+
+.educator-dashboard-school-info__details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.educator-dashboard-school-info__label {
+  color: #888;
+  font-size: 0.95rem;
+}
+
+.educator-dashboard-school-info__value {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.educator-dashboard-school-info__input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-top: 4px;
+  box-sizing: border-box;
+}
+
+.educator-dashboard-school-info__form-group {
+  margin-bottom: 8px;
+}
+
+.educator-dashboard-school-info__form-group label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.educator-dashboard-school-info__actions {
+  display: flex;
+  gap: 10px;
+}
+
+.educator-dashboard-school-info__action-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s, opacity 0.2s;
+}
+
+.educator-dashboard-school-info__action-btn.cancel {
+  background-color: #f1f1f1;
+  color: #333;
+}
+
+.educator-dashboard-school-info__action-btn.save {
+  background-color: #4a6cf7;
+  color: white;
+}
+
+.educator-dashboard-school-info__action-btn:hover {
+  opacity: 0.9;
+}
+
+.educator-dashboard-school-info__action-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+  .educator-dashboard-school-info__main {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .educator-dashboard-school-info__details {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .educator-dashboard-school-info__actions {
+    margin-top: 12px;
+    width: 100%;
+  }
+
+  .educator-dashboard-school-info__action-btn {
+    flex: 1;
+    justify-content: center;
+  }
+}

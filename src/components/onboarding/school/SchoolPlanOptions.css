@@ -1,0 +1,529 @@
+.school-plan-options-main {
+  max-width: 1600px;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 32px 0px;
+  overflow-x: hidden;
+  font-family: 'Urbanist', sans-serif;
+  background: linear-gradient(180deg, #8c2ddc 0%, #cb41eb 100%);
+  color: #fff;
+}
+x .school-plan-options-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+.school-plan-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+.school-plan-options-header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.school-plan-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.school-plan-subtitle {
+  color: white;
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+.school-plan-subtitle-year {
+  color: white;
+  font-size: 1rem;
+  text-decoration: underline;
+  line-height: 38.75px;
+  cursor: pointer;
+}
+.school-plan-cards-row {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.school-plan-card {
+  background: #fff;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 5px 15px 0px;
+  padding: 32px 28px 24px 28px;
+  min-width: 320px;
+  max-width: 370px;
+  flex: 1 1 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: box-shadow 0.2s, border-color 0.2s;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.school-plan-card.selected {
+  border-color: #1e293b;
+  box-shadow: 0 4px 20px rgba(21, 39, 63, 0.2);
+}
+
+.school-plan-card-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.school-plan-icon {
+  font-size: 27px;
+  color: #1e293b;
+  margin-right: 10px;
+}
+.basic-plan-icon {
+  color: #d40d7c;
+}
+.premium-plan-icon {
+  color: #66a009;
+}
+.school-plan-tier-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1e293b;
+  border-bottom: 2px solid #1e293b;
+}
+
+.school-plan-price {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  justify-content: center;
+  font-size: 35px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 2px;
+}
+
+.school-plan-period {
+  color: #424449;
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 2px;
+}
+
+.school-plan-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 28px 0;
+  width: 100%;
+}
+
+.school-plan-features li {
+  display: flex;
+  align-items: center;
+  /* margin-bottom: 5px; */
+  color: #222;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  word-wrap: break-word;
+}
+
+.school-plan-check-icon {
+  color: #07a539;
+  margin-right: 10px;
+  font-size: 1.2rem;
+  /* background-color: #07a539; */
+  padding: 4px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.school-plan-action {
+  width: 100%;
+  padding: 12px 0;
+  background: #111827;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: auto;
+  transition: background 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    background-size 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    background-position 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.school-plan-action:hover {
+  background: #0f172a;
+}
+
+.school-plan-action.selected-plan {
+  background: linear-gradient(90deg, #f00068 0%, #7b35c0 100%);
+  background-size: 200% 100%;
+  animation: gradient-move 3s ease-in-out infinite;
+}
+
+.school-plan-action.selected-plan::selection {
+  background: linear-gradient(90deg, #f00068 0%, #7b35c0 100%);
+  color: #fff;
+}
+
+@keyframes gradient-move {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.school-plan-volume-discount {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  margin-top: 32px;
+  padding: 32px 50px 32px 50px;
+  max-width: 770px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.school-plan-volume-discount h2 {
+  text-align: center;
+  font-size: 21px;
+  font-weight: 600;
+  color: #222;
+}
+
+.school-plan-volume-form {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+.school-plan-volume-input-wrapper-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.school-plan-volume-input-wrapper {
+  position: relative;
+  width: 80%;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+.school-plan-volume-input {
+  width: 100%;
+  padding: 14px 48px 14px 46px;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 12px;
+  font-size: 18px;
+  background: #fafbfc;
+  color: #222;
+  outline: none;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+.school-plan-volume-input:focus {
+  border-color: #1e293b;
+}
+
+.school-plan-volume-input-icon {
+  position: absolute;
+  left: 18px;
+  top: 56%;
+  transform: translateY(-50%);
+  color: #9ca3af;
+  font-size: 22px;
+  pointer-events: none;
+}
+
+.school-plan-volume-prices {
+  display: flex;
+  gap: 32px;
+  margin: 10px 0 0 0;
+  width: 100%;
+  justify-content: center;
+}
+
+.school-plan-volume-price-box {
+  background: #fafbfc;
+  border: 2px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 28px 32px 22px 32px;
+  min-width: 220px;
+  text-align: left;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.school-plan-volume-price-box.selected {
+  border-color: #1e293b;
+  box-shadow: 0 4px 20px rgba(21, 39, 63, 0.2);
+}
+
+.school-plan-volume-tier {
+  font-size: 18px;
+  color: #212121;
+  font-weight: 400;
+  /* margin-bottom: 8px; */
+}
+
+.school-plan-volume-amount {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 4px;
+  line-height: 54px;
+  word-wrap: break-word;
+}
+
+.school-plan-volume-period {
+  color: #6b7280;
+  font-size: 20px;
+}
+
+.school-plan-volume-note {
+  color: #6b7280;
+  font-size: 16px;
+  /* margin-top: 18px; */
+  /* margin-bottom: 0; */
+  text-align: center;
+  width: 100%;
+}
+.note-error {
+  color: red;
+}
+.school-plan-purchase-btn {
+  width: 60%;
+  max-width: 100%;
+  padding: 10px 0;
+  background: linear-gradient(90deg, #d60c7b 0%, #8b2db3 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 28px;
+  transition: background 0.2s;
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.4rem;
+}
+
+.school-plan-purchase-btn:hover {
+  background: #0f172a;
+}
+
+.school-plan-purchase-btn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+.educatorPayment-spinner {
+  width: 4.8px;
+  height: 4.8px;
+  animation: spinner-z355kx 1s infinite linear;
+  border-radius: 4.8px;
+  box-shadow: 12px 0px 0 0 #ececf4, 7.4px 9.4px 0 0 #ececf4,
+    -2.6px 11.6px 0 0 #ececf4, -10.8px 5.2px 0 0 #ececf4,
+    -10.8px -5.2px 0 0 #ececf4, -2.6px -11.6px 0 0 #ececf4,
+    7.4px -9.4px 0 0 #ececf4;
+}
+
+@keyframes spinner-z355kx {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.school-plan-volume-error {
+  color: #e11d48;
+  font-size: 16px;
+  margin-bottom: 0;
+}
+
+.school-plan-volume-total {
+  margin-top: 8px;
+  font-size: 1.1em;
+  font-weight: 600;
+  color: #2c3e50;
+  padding-top: 8px;
+  border-top: 1px solid #e0e0e0;
+}
+
+@media (max-width: 900px) {
+  .school-plan-cards-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+  .school-plan-card {
+    width: 100%;
+  }
+  .school-plan-volume-prices {
+    flex-direction: column;
+    gap: 18px;
+    align-items: center;
+    width: 100%;
+  }
+  .school-plan-volume-price-box {
+    min-width: 0;
+    width: 100%;
+    align-items: flex-start;
+    padding: 20px 12px 16px 12px;
+  }
+  .school-plan-volume-discount {
+    max-width: 100%;
+    padding: 20px 6px 16px 6px;
+  }
+}
+
+@media (max-width: 600px) {
+  .school-plan-options-main {
+    padding: 8px 0;
+  }
+  .school-plan-header h1 {
+    font-size: 22px;
+  }
+  .school-plan-header {
+    margin-bottom: 18px;
+  }
+  .school-plan-cards-row {
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .school-plan-card {
+    width: 100%;
+    box-shadow: none;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+  .school-plan-card-header {
+    margin-bottom: 10px;
+  }
+  .school-plan-icon {
+    font-size: 20px;
+    margin-right: 7px;
+  }
+  .school-plan-tier-title {
+    font-size: 16px;
+  }
+  .school-plan-price {
+    font-size: 22px;
+    margin-bottom: 1px;
+  }
+  .school-plan-period {
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+  .school-plan-features li {
+    font-size: 13px;
+    margin-bottom: 7px;
+  }
+  .school-plan-check-icon {
+    font-size: 14px;
+    margin-right: 7px;
+  }
+  .school-plan-action {
+    font-size: 15px;
+    padding: 10px 0;
+    border-radius: 8px;
+    margin-top: 10px;
+  }
+  .school-plan-volume-discount {
+    border: 1px solid #e5e7eb;
+    border-radius: 0;
+    max-width: 100%;
+    padding: 20px;
+    box-shadow: none;
+  }
+  .school-plan-volume-discount h2 {
+    text-align: center;
+  }
+  .school-plan-volume-form {
+    gap: 12px;
+  }
+  .school-plan-volume-label {
+    font-size: 14px;
+  }
+  .school-plan-volume-input-wrapper {
+    max-width: 100%;
+  }
+  .school-plan-volume-input {
+    font-size: 15px;
+    padding: 12px 40px 12px 10px;
+    border-radius: 10px;
+  }
+  .school-plan-volume-input-icon {
+    font-size: 18px;
+    right: 10px;
+  }
+  .school-plan-volume-prices {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+  .school-plan-volume-price-box {
+    min-width: 0;
+    width: 100%;
+    padding: 14px 6px 10px 6px;
+    border-radius: 10px;
+    box-shadow: none;
+  }
+  .school-plan-volume-tier {
+    font-size: 15px;
+  }
+  .school-plan-volume-amount {
+    font-size: 24px;
+  }
+  .school-plan-volume-period {
+    font-size: 14px;
+  }
+  .school-plan-volume-note {
+    font-size: 13px;
+    margin-top: 10px;
+  }
+  .school-plan-purchase-btn {
+    max-width: 220px;
+    font-size: 17px;
+    padding: 14px 0;
+    border-radius: 10px;
+    margin-top: 16px;
+  }
+}

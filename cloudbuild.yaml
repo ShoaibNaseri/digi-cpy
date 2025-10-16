@@ -1,0 +1,37 @@
+steps:
+  # Build the container image
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      [
+        'build',
+        '-t',
+        'gcr.io/${PROJECT_ID}/digipalz-app:${SHORT_SHA}',
+        '-t',
+        'gcr.io/${PROJECT_ID}/digipalz-app:latest',
+        '.'
+      ]
+
+  # Deploy to Cloud Run
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: gcloud
+    args:
+      - 'run'
+      - 'deploy'
+      - 'digipalz-app'
+      - '--image'
+      - 'gcr.io/${PROJECT_ID}/digipalz-app:${SHORT_SHA}'
+      - '--region'
+      - '${_REGION}'
+      - '--platform'
+      - 'managed'
+      - '--allow-unauthenticated'
+
+images:
+  - 'gcr.io/${PROJECT_ID}/digipalz-app:${SHORT_SHA}'
+  - 'gcr.io/${PROJECT_ID}/digipalz-app:latest'
+
+substitutions:
+  _REGION: us-central1
+
+options:
+  logging: CLOUD_LOGGING_ONLY

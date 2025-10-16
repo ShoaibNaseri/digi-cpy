@@ -1,0 +1,508 @@
+/* TeacherProfile.css */
+.teacher-profile-container,
+.teacher-profile-container * {
+  box-sizing: border-box;
+}
+
+.teacher-profile-container {
+  margin: 0 auto;
+  padding: 1.5rem;
+  color: black;
+  font-family: 'Urbanist', sans-serif;
+  background-color: #f8fafc;
+}
+
+.teacher-profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.teacher-profile-header-content {
+  flex: 1;
+}
+
+.teacher-profile-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0;
+  text-align: left;
+  align-self: flex-start;
+  color: #0f172a;
+}
+
+.teacher-profile-subtitle {
+  color: #6b7280;
+  margin-top: 4px;
+  margin-bottom: 0;
+  font-size: 14px;
+}
+
+.teacher-profile-edit-btn {
+  background: linear-gradient(90deg, #d60c7b 0%, #8b2db3 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.06);
+}
+
+.teacher-profile-edit-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(16, 24, 40, 0.12);
+}
+
+.edit-icon {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1);
+}
+
+.teacher-profile-section {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
+}
+
+.teacher-profile-section-title {
+  font-family: Urbanist;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  margin: 0;
+  margin-bottom: 16px;
+  color: #0f172a;
+}
+
+/* Profile row for header and edit button */
+.teacher-profile-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.teacher-profile-row .teacher-profile-section-title {
+  margin-bottom: 0;
+}
+
+.teacher-profile-avatar-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.teacher-profile-avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #2c3547;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+}
+
+.teacher-profile-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.teacher-profile-avatar-loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 12px;
+  border-radius: 50%;
+}
+
+.teacher-profile-change-photo-btn {
+  background-color: #2c3547;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.teacher-profile-change-photo-btn:hover {
+  background-color: #3a4257;
+}
+
+.teacher-profile-change-photo-btn.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.teacher-profile-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 8px;
+  row-gap: 0px;
+}
+
+/* School Information section - 2x3 grid layout */
+.teacher-profile-section:has(.teacher-profile-form-grid:only-child)
+  .teacher-profile-form-grid,
+.teacher-profile-section:has(.teacher-profile-form-grid:first-child:last-child)
+  .teacher-profile-form-grid {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+}
+
+/* Alternative approach for browsers that don't support :has() */
+.teacher-profile-section.school-info-section .teacher-profile-form-grid {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+}
+
+.teacher-profile-form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.teacher-profile-form-group.wide {
+  grid-column: span 2;
+}
+
+.teacher-profile-label {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 6px;
+}
+
+/* Input wrapper for icons */
+.teacher-profile-input-wrapper {
+  position: relative;
+  display: flex;
+  z-index: 1000;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 14px;
+  width: 24px;
+  height: 24px;
+  z-index: 1000;
+  opacity: 0.6;
+  color: #6b7280;
+}
+
+.teacher-profile-input-wrapper svg {
+  position: absolute;
+  left: 14px;
+  width: 24px;
+  height: 24px;
+  z-index: 1000;
+  opacity: 0.6;
+  color: #6b7280;
+}
+
+.teacher-profile-input {
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  color: #111827;
+  padding: 12px 14px 12px 46px;
+  font-size: 14px;
+  width: 100%;
+}
+
+.teacher-profile-input:focus {
+  outline: none;
+  border-color: #7c3aed;
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.15);
+}
+
+.teacher-profile-input.error {
+  border: 1px solid #d32f2f;
+}
+
+.teacher-profile-error-message {
+  color: #d32f2f;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.teacher-profile-select-wrapper {
+  position: relative;
+}
+
+.teacher-profile-select-wrapper::after {
+  content: '▾';
+  font-size: 12px;
+  color: #6b7280;
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+/* Custom dropdown styling is now handled in CustomDropdown.css */
+
+/* Style for read-only display fields */
+.teacher-profile-display-field {
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  color: #111827;
+  padding: 12px 14px;
+  font-size: 14px;
+}
+
+.teacher-profile-display-field.enabled {
+  background-color: #eef2ff;
+  border-color: #7c3aed;
+}
+
+/* Display field with icon */
+.teacher-profile-display-field-with-icon {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.display-icon {
+  width: 24px;
+  height: 24px;
+  opacity: 0.6;
+}
+
+.teacher-profile-display-field-with-icon svg {
+  width: 24px;
+  height: 24px;
+  opacity: 0.6;
+  color: #6b7280;
+}
+
+.teacher-profile-account-settings {
+  display: flex;
+  flex-direction: column;
+  /* gap: 0; */
+}
+
+/* Account Settings grid layout - Language and Time Zone in one row */
+.teacher-profile-account-settings
+  .teacher-profile-form-group:not(.notification-group) {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 0;
+  column-gap: 8px;
+}
+
+.teacher-profile-account-settings
+  .teacher-profile-form-group:not(.notification-group)
+  .teacher-profile-form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+}
+
+/* .teacher-profile-account-settings
+  .teacher-profile-form-group:not(.notification-group)
+  .teacher-profile-label {
+  margin-bottom: 6px;
+} */
+
+.notification-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px 0;
+  grid-column: 1 / -1;
+  gap: 16px;
+}
+
+.teacher-profile-toggle {
+  position: relative;
+  display: inline-block;
+}
+
+.teacher-profile-toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 52px;
+  height: 28px;
+}
+
+.teacher-profile-toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.teacher-profile-toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #e5e7eb;
+  transition: 0.3s;
+  border-radius: 34px;
+  border: 2px solid #e5e7eb;
+}
+
+.teacher-profile-toggle-slider:before {
+  position: absolute;
+  content: '';
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 2px;
+  background-color: white;
+  transition: 0.3s;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Enhanced toggle states for better visibility */
+.teacher-profile-toggle-switch input:checked + .teacher-profile-toggle-slider {
+  background: linear-gradient(90deg, #d60c7b 0%, #8b2db3 100%);
+  border-color: transparent;
+  box-shadow: 0 0 0 2px rgba(214, 12, 123, 0.2);
+}
+
+.teacher-profile-toggle-switch
+  input:checked
+  + .teacher-profile-toggle-slider:before {
+  transform: translateX(24px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Add a subtle glow effect when enabled */
+.teacher-profile-toggle-switch input:checked + .teacher-profile-toggle-slider {
+  animation: toggleGlow 0.3s ease-in-out;
+}
+
+@keyframes toggleGlow {
+  0% {
+    box-shadow: 0 0 0 2px rgba(214, 12, 123, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 0 4px rgba(214, 12, 123, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 0 2px rgba(214, 12, 123, 0.2);
+  }
+}
+
+/* Disabled state styling */
+.teacher-profile-toggle-switch input:disabled + .teacher-profile-toggle-slider {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.teacher-profile-toggle-switch
+  input:disabled
+  + .teacher-profile-toggle-slider:before {
+  opacity: 0.8;
+}
+
+.teacher-profile-toggle-switch
+  input:disabled:checked
+  + .teacher-profile-toggle-slider {
+  background: linear-gradient(90deg, #d60c7b 0%, #8b2db3 100%);
+  opacity: 0.8;
+}
+
+input:focus + .teacher-profile-toggle-slider {
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.15);
+}
+
+.teacher-profile-toggle-switch:hover .teacher-profile-toggle-slider {
+  border-color: #7c3aed;
+}
+
+input:checked + .teacher-profile-toggle-slider:hover {
+  background: linear-gradient(90deg, #c50b6b 0%, #7a2aa3 100%);
+  box-shadow: 0 0 0 2px rgba(214, 12, 123, 0.3);
+}
+
+.teacher-profile-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.teacher-profile-cancel-btn {
+  background-color: transparent;
+  color: #111827;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 10px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.teacher-profile-cancel-btn:hover {
+  background-color: #f9fafb;
+}
+
+.teacher-profile-save-btn {
+  background-color: #7c3aed;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.teacher-profile-save-btn:hover {
+  background-color: #6d28d9;
+}
+
+.teacher-profile-save-status {
+  margin-top: 10px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.teacher-profile-save-status.success {
+  background-color: rgba(76, 175, 80, 0.2);
+  color: #4caf50;
+}
+
+.teacher-profile-save-status.error {
+  background-color: rgba(211, 47, 47, 0.2);
+  color: #d32f2f;
+}
+
+.teacher-profile-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  color: #6b7280;
+  font-size: 16px;
+}

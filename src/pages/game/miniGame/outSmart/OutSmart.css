@@ -1,0 +1,343 @@
+.out-smart__container {
+  position: relative;
+  max-width: 100%; /* optional, to limit image size */
+  margin: auto;
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+}
+.out-smart__background {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+.hotspot {
+  position: absolute;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hotspot-text {
+  height: 30px;
+  width: 30px;
+
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.3s ease;
+}
+
+.hotspot-text:hover {
+  transform: scale(1.1);
+}
+
+@keyframes waveGlow {
+  0%,
+  100% {
+    box-shadow: 0 0 8px #10b12d, 0 0 16px #10b12d,
+      inset 0 0 8px rgba(16, 177, 45, 0.3);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 12px #10b12d, 0 0 20px #10b12d,
+      inset 0 0 10px rgba(16, 177, 45, 0.4);
+    transform: scale(1.05);
+  }
+}
+
+/* Remove all the individual hotspot color variations */
+
+/* Position in percentages so it scales */
+.oven {
+  top: 58%; /* distance from top of image */
+  left: 15%; /* distance from left of image */
+  width: 19%; /* width relative to image */
+  height: 25%; /* height relative to image */
+  /* transform: rotate(-15deg); */
+}
+
+.game_console {
+  top: 30%;
+  left: 78%;
+  width: 10%;
+  height: 12%;
+}
+.kitchen-speaker {
+  top: 45%;
+  left: 75%;
+  width: 10%;
+  height: 20%;
+}
+.kitchen-mobile {
+  bottom: 8%; /* distance from top of image */
+  left: 30%; /* distance from left of image */
+  width: 22%; /* width relative to image */
+  height: 10%; /* height relative to image */
+  transform: rotate(-10deg);
+}
+
+@media (max-width: 1024px) {
+  .oven {
+    top: 58%;
+    left: 14%;
+    width: 20%;
+    height: 25%;
+  }
+  .game_console {
+    top: 30%;
+    left: 79%;
+    width: 8%;
+    height: 10%;
+  }
+  .kitchen-speaker {
+    top: 45%;
+    left: 75%;
+    width: 10%;
+    height: 18%;
+  }
+  .kitchen-mobile {
+    bottom: 10%; /* distance from top of image */
+    left: 30%; /* distance from left of image */
+    width: 22%; /* width relative to image */
+    height: 8%; /* height relative to image */
+    transform: rotate(-10deg);
+  }
+}
+
+/* Question Modal Styles */
+.question-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.question-modal {
+  background: transparent;
+  border-radius: 16px;
+  padding: 24px;
+  max-width: 100%;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.question-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.question-header h3 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.close-btn:hover {
+  background-color: #f5f5f5;
+  color: #666;
+}
+
+.question-content {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.question-text-container {
+  width: 200px;
+  height: 200px;
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 50%;
+  background-color: #a536ef;
+}
+
+.question-text {
+  width: 100%;
+  font-size: 24px;
+  color: white;
+  margin: 0;
+  line-height: 1.3;
+  font-weight: 700;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.answers-container {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.out-samrt-asnwer-btn {
+  padding: 46px 20px;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  background: rgb(231, 238, 7);
+  color: #333;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+}
+
+.out-samrt-asnwer-btn:hover {
+  border-color: #007bff;
+  background-color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.15);
+}
+
+.out-samrt-asnwer-btn.correct:hover {
+  box-shadow: 0 4px 12px rgba(40, 167, 69, 0.15);
+}
+
+.out-samrt-asnwer-btn.incorrect:hover {
+  box-shadow: 0 4px 12px rgba(220, 53, 69, 0.15);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .question-modal {
+    padding: 20px;
+    margin: 20px;
+  }
+
+  .question-header h3 {
+    font-size: 20px;
+  }
+
+  .question-text {
+    font-size: 16px;
+  }
+
+  .out-samrt-asnwer-btn {
+    padding: 14px 16px;
+    font-size: 15px;
+  }
+}
+
+/* Loading and Voice Overlay Styles */
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.loading-spinner {
+  color: white;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.voice-playing-overlay {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: rgba(165, 54, 239, 0.9);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  z-index: 1500;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Disabled hotspot state */
+.hotspot.disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.hotspot.disabled::after {
+  content: '⏸️';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}

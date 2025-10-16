@@ -1,0 +1,290 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600;900&family=Switzer:wght@400;500&display=swap');
+
+/* Main section styling */
+.digipalz-landing-faq__section {
+  width: 100%;
+  height: auto;
+  padding-top: 4rem;
+  padding-bottom: 10rem;
+  background-color: #000000;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative; /* Added for z-index to work */
+  z-index: 33; /* Lower than testimonial section */
+  margin-top: -10%;
+  border-top-left-radius: 80px;
+  border-top-right-radius: 80px;
+  /* Animation optimization */
+  will-change: transform, opacity;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+.digipalz-landing-faq__container {
+  max-width: 100%;
+  width: 60%;
+  position: relative; /* To ensure content stays above */
+  z-index: 11; /* Higher than section but lower than testimonial */
+  /* Animation optimization */
+  will-change: transform, opacity;
+}
+
+/* FAQ header styling */
+.digipalz-landing-faq__header {
+  text-align: center;
+  margin-bottom: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* This will center children horizontally */
+  /* Animation optimization */
+  will-change: transform, opacity;
+}
+
+.digipalz-landing-faq__title {
+  height: auto;
+  width: auto;
+  color: #cafd06;
+  font-family: 'Inter', sans-serif;
+  font-size: var(--lp-font-size-36);
+  font-weight: 900;
+  line-height: 40px;
+  text-align: center;
+  /* Animation optimization */
+  will-change: transform, opacity;
+}
+
+.digipalz-landing-faq__subtitle {
+  height: auto;
+  max-width: 588px;
+  width: 100%;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-size: var(--lp-font-size-24);
+  font-weight: 500;
+  line-height: 24px;
+  text-align: center;
+  /* Animation optimization */
+  will-change: transform, opacity;
+}
+
+/* FAQ items styling */
+.digipalz-landing-faq__items {
+  max-width: 100%;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-left: auto;
+  margin-right: auto;
+  /* Animation optimization */
+  will-change: transform, opacity;
+}
+
+.digipalz-landing-faq__item {
+  width: 100%;
+  height: auto;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  /* Remove CSS transitions to let framer-motion handle them */
+  /* transition: all 0.3s ease; */
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  /* Animation optimization */
+  will-change: transform, opacity, box-shadow;
+  transform-origin: center center;
+  cursor: pointer;
+}
+
+.digipalz-landing-faq__item--open {
+  box-shadow: 0 4px 20px rgba(204, 255, 0, 0.15);
+  height: auto;
+}
+
+.digipalz-landing-faq__item-header {
+  height: 16px;
+  color: #6c748f;
+  font-family: 'Switzer', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  cursor: pointer;
+  position: relative;
+  /* Animation optimization */
+  will-change: transform, opacity, background-color;
+  border-radius: 8px;
+}
+
+.digipalz-landing-faq__item-question {
+  color: #000;
+  font-size: 1rem;
+  font-weight: normal;
+  font-family: 'Inter', sans-serif;
+  line-height: 22px;
+  font-weight: 500;
+  /* Animation optimization */
+  will-change: transform, opacity;
+}
+
+.digipalz-landing-faq__item-toggle {
+  background: none;
+  border: none;
+  color: #6c748f;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  /* Animation optimization */
+  will-change: transform, opacity;
+  transform-origin: center center;
+}
+
+.digipalz-landing-faq__item-icon-open,
+.digipalz-landing-faq__item-icon-close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.digipalz-landing-faq__item-content {
+  max-width: 100%;
+  width: 90%;
+  padding: 0px 20px 24px 20px;
+  align-items: start;
+  overflow: hidden;
+  /* Animation optimization */
+  will-change: transform, opacity;
+  transform-origin: top center;
+}
+
+.digipalz-landing-faq__item-answer {
+  max-width: 100%;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  color: #6d758f;
+  font-family: 'Switzer', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  margin: 0;
+  /* Animation optimization */
+  will-change: transform, opacity;
+}
+
+/* Show more/less button styling */
+.digipalz-landing-faq__show-more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 24px;
+  flex-wrap: wrap;
+  /* Animation optimization */
+  will-change: transform, opacity;
+}
+
+.digipalz-landing-faq__show-more-button,
+.digipalz-landing-faq__show-less-button {
+  background-color: transparent;
+  border: 2px solid #ccff00;
+  color: #ccff00;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 12px 24px;
+  border-radius: 30px;
+  cursor: pointer;
+  /* Remove CSS transitions to let framer-motion handle them */
+  /* transition: all 0.3s ease; */
+  /* Animation optimization */
+  will-change: transform, opacity, background-color, color;
+  transform-origin: center center;
+  font-family: 'Inter', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Show less button specific styling */
+.digipalz-landing-faq__show-less-button {
+  border-color: rgba(204, 255, 0, 0.6);
+  color: rgba(204, 255, 0, 0.8);
+  font-size: 0.9rem;
+  padding: 10px 20px;
+}
+
+/* Remove old hover states to let framer-motion handle them */
+/* .digipalz-landing-faq__show-more-button:hover {
+  background-color: #ccff00;
+  color: #000000;
+} */
+
+/* Enhanced focus states for accessibility */
+.digipalz-landing-faq__item-header:focus-visible,
+.digipalz-landing-faq__show-more-button:focus-visible,
+.digipalz-landing-faq__show-less-button:focus-visible {
+  outline: 2px solid #ccff00;
+  outline-offset: 2px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .digipalz-landing-faq__section {
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+  }
+
+  .digipalz-landing-faq__title {
+    font-size: 2rem;
+  }
+
+  .digipalz-landing-faq__subtitle {
+    font-size: 0.9rem;
+  }
+
+  .digipalz-landing-faq__show-more-button,
+  .digipalz-landing-faq__show-less-button {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+
+  .digipalz-landing-faq__show-more {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .digipalz-landing-faq__container {
+    max-width: 100%;
+    width: 90%;
+    position: relative; /* To ensure content stays above */
+    z-index: 11; /* Higher than section but lower than testimonial */
+    /* Animation optimization */
+    will-change: transform, opacity;
+  }
+  .digipalz-landing-faq__title {
+    font-size: 1.8rem;
+  }
+
+  .digipalz-landing-faq__show-more-button,
+  .digipalz-landing-faq__show-less-button {
+    font-size: 0.8rem;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .digipalz-landing-faq__section {
+    margin-top: -8%;
+  }
+}

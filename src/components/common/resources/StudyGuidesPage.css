@@ -1,0 +1,292 @@
+/* Teacher Resources Page - Main Container */
+.tr-container,
+.tr-container * {
+  box-sizing: border-box;
+}
+
+.tr-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  color: #333333;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  min-height: 100vh;
+}
+
+/* Header Section */
+.tr-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.tr-title-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.tr-title {
+  color: #000;
+  font-family: Urbanist;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  margin: 0;
+}
+
+.tr-subtitle {
+  font-size: 1rem;
+  color: #000;
+  font-weight: 400;
+  margin: 0;
+}
+
+.tr-header-icons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.tr-icon {
+  width: 60px !important;
+  height: 60px !important;
+  cursor: pointer;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 20px 50px 0 rgba(191, 21, 108, 0.05);
+  color: #000;
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 8px;
+}
+
+.tr-icon:hover {
+  color: #333333;
+  background-color: #e5e7eb;
+}
+
+/* Grid Layout for Resource Cards */
+.tr-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 100%;
+}
+
+/* Resource Card Styling */
+.tr-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 10px;
+  width: 100%;
+  height: 25.938rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tr-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Card Header with Colored Background */
+.tr-card-header {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: start;
+  border-radius: 4px;
+  width: 100%;
+  height: 158px;
+  color: white;
+}
+
+.tr-card-header.cyberbullying {
+  background-color: #7b34bf;
+}
+
+.tr-card-header.ip-digital {
+  background-color: #0454ac;
+}
+
+.tr-card-header.passwords {
+  background-color: #dd9097;
+}
+
+.tr-card-header.info-identity {
+  background-color: #ef0067;
+}
+
+.tr-card-header.phishing {
+  background-color: #007bff;
+}
+
+.tr-card-header.scam {
+  background-color: #28a745;
+}
+
+.tr-card-header.malware {
+  background-color: #dc3545;
+}
+
+.tr-card-header.catfishing {
+  background-color: #6c757d;
+}
+
+.tr-card-header.grooming {
+  background-color: #17a2b8;
+}
+
+.tr-card-header.social-engineering {
+  background-color: #ffc107;
+}
+
+.tr-card-header.extortion {
+  background-color: #0a434c;
+}
+
+.tr-card-header.ai {
+  background-color: #92509e;
+}
+.tr-card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+}
+
+.tr-card-details {
+  font-size: 1rem;
+
+  opacity: 0.9;
+  margin: 0;
+}
+
+/* Card Content Area */
+.tr-card-content {
+  padding: 1rem 1rem 0rem 1rem;
+}
+
+.tr-card-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(0, 0, 0, 0.75);
+  margin: 0 0 1rem 0;
+}
+
+/* Action Buttons Container */
+.tr-action-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.tr-action-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 0rem;
+  border: none;
+  border-radius: 8px;
+  font-family: Urbanist;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+  width: 146px;
+  height: 75px;
+  min-width: 100px;
+}
+
+.tr-action-btn.lesson-plan {
+  background-color: #eff6ff;
+  color: #0454accc;
+}
+
+.tr-action-btn.lesson-plan:hover {
+  background-color: #bfdbfe;
+}
+
+.tr-action-btn.class-discussion {
+  background: rgba(213, 12, 124, 0.1);
+  width: 147px;
+  height: 75px;
+
+  color: #be185d;
+}
+
+.tr-action-btn.class-discussion:hover {
+  background-color: #fbcfe8;
+}
+
+.tr-action-btn.worksheets {
+  background-color: #cafd06;
+  color: #000000;
+}
+
+.tr-action-btn.worksheets:hover {
+  background-color: #b0cc07;
+}
+
+.tr-action-btn-icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Feedback Button - Horizontal Layout */
+.tr-feedback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: #000;
+  background-color: #e5e7eb;
+  border: none;
+  width: 100%;
+  height: 50px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.tr-feedback:hover {
+  color: #333333;
+  background-color: #d1d5db;
+  transform: translateY(-1px);
+}
+
+.tr-feedback-icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .tr-grid {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}

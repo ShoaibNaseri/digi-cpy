@@ -1,0 +1,12 @@
+.admin-dashboard-layout {
+  display: flex;
+}
+
+.admin-dashboard-layout section {
+  width: 100%;
+}
+
+.admin-dashboard-main {
+  flex: 1;
+  padding: 24px;
+}

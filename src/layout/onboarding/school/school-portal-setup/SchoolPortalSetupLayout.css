@@ -1,0 +1,67 @@
+.portal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 16px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.portal-header__logo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.portal-header__logo img {
+  width: 30px;
+  height: 24px;
+}
+
+.portal-header__logo h1 {
+  font-size: 20px;
+  font-weight: 400;
+  color: #000;
+}
+
+.portal-header__actions-button {
+  background-color: #e5e7eb;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000;
+  line-height: 24px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+}
+
+/* Add black background to container */
+.portal-main {
+  min-height: 100svh;
+  max-height: 100svh;
+  /* padding: 32px 16px; */
+  /* max-width: 1200px; */
+  margin: 0 auto;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  background-color: #fff !important;
+}
+
+/* Add white background to the layout container */
+.portal-main {
+  background-color: #fff !important;
+  position: relative;
+  z-index: 1;
+}
+
+/* Ensure the layout wrapper has white background */
+.SchoolPortalSetupLayout {
+  background-color: #fff;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.portal-header__logo-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}

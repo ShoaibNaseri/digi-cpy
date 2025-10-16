@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600;900&family=Anton&display=swap');
+
+.digipalz-landing-teaching__background {
+  height: auto;
+  padding-top: 4%;
+  min-width: 100%;
+  z-index: 40;
+  position: relative;
+  padding-bottom: 5.5rem;
+  padding-top: 1rem;
+  /* Added position property to create stacking context */
+}
+.digipalz-landing-teaching__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/* Teaching section main container */
+.digipalz-landing-teaching__section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0;
+  margin-top: -13%;
+}
+
+/* Section title styling */
+.digipalz-landing-teaching__title-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 251px;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  margin-bottom: 2.5rem;
+}
+
+.digipalz-landing-teaching__main-title {
+  font-size: var(--lp-font-size-36);
+  color: white;
+  margin-bottom: 1.5rem;
+  line-height: 52px;
+  font-family: 'Inter', sans-serif;
+  width: 893px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 900; /* Changed from Inter-Black to Inter with 900 weight */
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  text-align: center;
+  color: var(--lp-color-neon);
+  width: 900px;
+}
+
+/* Section text styling */
+.digipalz-landing-teaching__description {
+  font-size: var(--lp-font-size-24);
+  font-weight: 500;
+  color: white;
+  margin-bottom: 2rem;
+  max-width: 900px;
+  line-height: 1.5;
+  width: 100%;
+}
+
+/* Centered text modifier */
+.digipalz-landing-teaching__description--centered {
+  height: 90px;
+  width: 90%;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500; /* Changed from Inter-SemiBold to Inter with 600 weight */
+  font-size: var(--lp-font-size-24);
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+/* Text highlight styling */
+.digipalz-landing-teaching__highlight {
+  color: #cafd06;
+  font-weight: bold;
+}
+
+/* Container for the 3-step process */
+.digipalz-landing-teaching__steps-container {
+  margin-top: 1.5rem;
+  margin-left: 1rem;
+  display: flex;
+  justify-content: space-between; /* Changed to space-between for better spacing control */
+  max-width: 1600px;
+  width: 90%; /* Control the overall width */
+  position: relative; /* For absolute positioning of arrows */
+}
+
+/* Individual step box */
+.digipalz-landing-teaching__step {
+  background-color: #ffffff;
+  border-bottom-style: solid;
+  border-bottom-width: 5px;
+  border-color: #000000;
+  border-radius: 20px;
+  height: 416px;
+  width: 100%; /* Set to specific width to allow for spacing */
+  max-width: 380px; /* Maintain max width constraint */
+  flex: 0 0 auto; /* Prevent flex growth and shrinkage */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  transform-origin: center;
+  cursor: pointer;
+  /* Enhanced shadow for depth */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Enhanced hover effect for step containers */
+.digipalz-landing-teaching__step:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15), 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Arrow container styling */
+.digipalz-landing-teaching__arrow-container {
+  position: relative;
+  width: 6.5%; /* Set width to create the spacing */
+  height: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+}
+
+.digipalz-landing-teaching__arrow-image-2 {
+  position: absolute;
+  width: 16rem;
+  height: auto;
+  top: 0%;
+  left: 0rem;
+  margin-top: -1rem;
+  margin-left: -5.5rem;
+  transform: translateY(-50%);
+  z-index: 10;
+  transform-origin: center;
+  /* Prevent clicking */
+  pointer-events: none;
+  cursor: default;
+}
+/* Arrow image styling */
+.digipalz-landing-teaching__arrow-image {
+  position: absolute;
+  width: 16rem;
+  height: auto;
+  top: 0%;
+  left: 0rem;
+  margin-top: -1rem;
+  margin-left: -5.5rem;
+  transform: translateY(-50%);
+  z-index: 10;
+  transform-origin: center;
+  /* Prevent clicking */
+  pointer-events: none;
+  cursor: default;
+}
+
+/* Step number badge */
+.digipalz-landing-teaching__step-number {
+  height: 103px;
+  width: 103px;
+  border-radius: 50%;
+  font-size: 59px;
+  font-weight: 600;
+  font-family: 'Anton', sans-serif; /* Changed from Anton-Regular to Anton */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -3rem;
+  margin-bottom: 1rem;
+  z-index: 2; /* Ensure it's above other elements */
+  transform-origin: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  cursor: pointer;
+}
+
+/* Simple hover effect for step numbers */
+.digipalz-landing-teaching__step-number:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Step badge color variants */
+.digipalz-landing-teaching__step-number--orange {
+  background: linear-gradient(145deg, #f9a826 0%, #e09419 100%);
+}
+
+.digipalz-landing-teaching__step-number--blue {
+  background: linear-gradient(145deg, #319df8 0%, #2889e0 100%);
+}
+
+.digipalz-landing-teaching__step-number--purple {
+  background: linear-gradient(145deg, #7b35c0 0%, #6a2fa8 100%);
+}
+
+/* Step title styling */
+.digipalz-landing-teaching__step-title {
+  height: 24px;
+  width: 239px;
+  font-size: 24px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 900; /* Changed from Inter-Black to Inter with 900 weight */
+  color: #0b0b0b;
+  margin-top: -1%;
+}
+
+/* Step icon container */
+.digipalz-landing-teaching__icon-container {
+  width: 145px;
+  height: 145px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+/* Step icon styling */
+.digipalz-landing-teaching__step-icon {
+  max-width: 100%;
+  max-height: 100%;
+  transform-origin: center;
+  cursor: pointer;
+}
+
+/* Step description text */
+.digipalz-landing-teaching__step-text {
+  height: 94px;
+  width: 300px;
+  color: #070707;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500; /* Changed from Inter-SemiBold to Inter with 600 weight */
+  font-size: 16px;
+  word-wrap: break-word;
+  line-height: 19.2px;
+}
+
+/* ===== RESPONSIVE STYLES ===== */
+@media (max-width: 1680px) and (min-width: 1440px) {
+  .digipalz-landing-teaching__background {
+    min-width: 100%;
+  }
+  .digipalz-landing-teaching__steps-container {
+    margin-top: 1.5rem;
+    margin-left: 1rem;
+    display: flex;
+    justify-content: space-between; /* Changed to space-between for better spacing control */
+    width: 90%; /* Control the overall width */
+    position: relative; /* For absolute positioning of arrows */
+  }
+}
+@media (max-width: 1440px) and (min-width: 1365px) {
+  .digipalz-landing-teaching__background {
+    min-width: 100%;
+  }
+  .digipalz-landing-teaching__steps-container {
+    margin-top: 1.5rem;
+
+    display: flex;
+    justify-content: space-between; /* Changed to space-between for better spacing control */
+    width: 90%; /* Control the overall width */
+    position: relative; /* For absolute positioning of arrows */
+  }
+}
+
+@media (max-width: 1364px) and (min-width: 1280px) {
+  .digipalz-landing-teaching__background {
+    min-width: 100%;
+  }
+  .digipalz-landing-teaching__steps-container {
+    margin-top: 1.5rem;
+
+    display: flex;
+    justify-content: space-between; /* Changed to space-between for better spacing control */
+    width: 90%; /* Control the overall width */
+    position: relative; /* For absolute positioning of arrows */
+  }
+  .digipalz-landing-teaching__step {
+    max-width: 340px;
+  }
+}
+
+@media (max-width: 1280px) and (min-width: 1025px) {
+  .digipalz-landing-teaching__background {
+    min-width: 100%;
+  }
+  .digipalz-landing-teaching__steps-container {
+    margin-top: 5%;
+    margin-left: 0;
+    display: flex;
+    justify-content: space-between; /* Changed to space-between for better spacing control */
+    max-width: 100px;
+    width: 90%; /* Control the overall width */
+    position: relative; /* For absolute positioning of arrows */
+  }
+  .digipalz-landing-teaching__step {
+    max-width: 300px;
+  }
+  .digipalz-landing-teaching__step-text {
+    width: 250px;
+  }
+}
+@media (max-width: 1024px) {
+  .digipalz-landing-teaching__background {
+    min-width: 100%;
+  }
+  .digipalz-landing-teaching__steps-container {
+    display: grid;
+    grid-template-columns: repeat(2, 360px); /* shrink to content width */
+    gap: 5rem;
+    justify-content: center; /* center the whole grid */
+    width: 90%;
+    margin: 5% auto 0 auto; /* auto left/right centers the container */
+    will-change: transform, opacity;
+  }
+  .digipalz-landing-teaching__arrow-container {
+    display: none;
+  }
+  .digipalz-landing-teaching__step {
+    max-width: 440px;
+  }
+}
+@media (max-width: 834px) and (min-width: 768px) {
+  .digipalz-landing-teaching__background {
+    min-width: 100%;
+  }
+  .digipalz-landing-teaching__steps-container {
+    display: grid;
+    grid-template-columns: repeat(1, 390px); /* shrink to content width */
+    gap: 5rem;
+    justify-content: center; /* center the whole grid */
+    width: 90%;
+    margin: 5% auto 0 auto; /* auto left/right centers the container */
+    will-change: transform, opacity;
+  }
+  .digipalz-landing-teaching__arrow-container {
+    display: none;
+  }
+  .digipalz-landing-teaching__description--centered {
+    width: 700px;
+    height: auto;
+  }
+}
+@media (max-width: 540px) {
+  .digipalz-landing-teaching__section {
+    min-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .digipalz-landing-teaching__description--centered {
+    width: 55%;
+    margin-bottom: 7rem;
+  }
+  .digipalz-landing-teaching__steps-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 5rem;
+  }
+}
+
+@media (max-width: 767px) and (min-width: 541px) {
+  .digipalz-landing-teaching__section {
+    min-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .digipalz-landing-teaching__description--centered {
+    width: 60%;
+    margin-bottom: 0rem;
+  }
+  .digipalz-landing-teaching__steps-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 0rem;
+  }
+}
+
+/* Large screen optimization for arrows above 1900px */
+@media (min-width: 1800px) {
+  .digipalz-landing-teaching__arrow-image,
+  .digipalz-landing-teaching__arrow-image-2 {
+    width: 24rem; /* Increased from 16rem to 24rem for larger screens */
+    margin-left: -8rem; /* Adjusted margin to maintain centering */
+  }
+}

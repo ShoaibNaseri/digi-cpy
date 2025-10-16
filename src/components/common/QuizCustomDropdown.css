@@ -1,0 +1,120 @@
+.quiz-custom-dropdown {
+  position: relative;
+  width: 210px;
+  min-width: 140px;
+}
+
+.quiz-custom-dropdown-header {
+  background-color: #000;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 13px 16px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 48px;
+}
+
+.quiz-custom-dropdown-header:hover:not(.disabled) {
+  background-color: #333;
+  border-color: transparent;
+}
+
+.quiz-custom-dropdown-header.open {
+  background-color: #333;
+  border-color: transparent;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.2);
+}
+
+.quiz-custom-dropdown-header.disabled {
+  background: #f5f5f5;
+  cursor: not-allowed;
+  opacity: 0.6;
+  color: #666;
+}
+
+.quiz-custom-dropdown-value {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #ffffff;
+  flex: 1;
+}
+
+.quiz-custom-dropdown-arrow {
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 8px;
+  transition: transform 0.2s ease;
+}
+
+.quiz-custom-dropdown-menu {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  margin-top: 4px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  max-height: 200px;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.quiz-custom-dropdown-option {
+  color: #111827;
+  font-size: 1.125rem;
+  font-weight: 500;
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.quiz-custom-dropdown-option:last-child {
+  border-bottom: none;
+}
+
+.quiz-custom-dropdown-option:hover {
+  background: linear-gradient(90deg, #d60c7b 0%, #8b2db3 100%);
+  color: white;
+}
+
+.quiz-custom-dropdown-option.selected {
+  background: linear-gradient(90deg, #d60c7b 0%, #8b2db3 100%);
+  color: white;
+}
+
+.quiz-custom-dropdown-option.selected:hover {
+  background: linear-gradient(90deg, #d60c7b 0%, #8b2db3 100%);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .quiz-custom-dropdown {
+    width: 100%;
+    min-width: auto;
+  }
+
+  .quiz-custom-dropdown-header {
+    padding: 10px 12px;
+    min-height: 44px;
+  }
+
+  .quiz-custom-dropdown-option {
+    padding: 10px 12px;
+  }
+}

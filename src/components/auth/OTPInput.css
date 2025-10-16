@@ -1,0 +1,33 @@
+.otp-inputs {
+  display: grid;
+  grid-template-columns: repeat(6, 48px);
+  gap: 30px;
+  margin: 12px 0 16px;
+  justify-content: center;
+}
+
+.otp-input {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 0.2rem 0;
+  border: 1px solid #EEE;
+  width: 70px;
+  border-radius: 12px;
+  height: 70px;
+}
+
+
+/* Focus state: replace outline with gradient border */
+.otp-input:focus,
+.otp-input:focus-visible {
+  outline: none;
+  box-shadow: none;
+  border: 2px solid transparent;
+  background:
+    linear-gradient(#fff, #fff) padding-box,
+    linear-gradient(90deg, #D60C7B 0%, #8B2DB3 100%) border-box;
+}
+
+
+

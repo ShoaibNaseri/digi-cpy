@@ -1,0 +1,233 @@
+.add-user-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  font-family: 'Urbanist', sans-serif;
+}
+
+.add-user-modal__content {
+  background-color: white;
+  border-radius: 12px;
+  padding: 32px;
+  width: 90%;
+  max-width: 480px;
+  max-height: 80vh;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  position: relative;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.add-user-modal__close-button {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #000;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+}
+
+.add-user-modal__close-button:hover {
+  background-color: #f3f4f6;
+}
+
+.add-user-modal__header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+
+
+.add-user-modal__title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.add-user-modal__form-group {
+  margin-bottom: 24px;
+}
+
+.add-user-modal__label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 8px;
+}
+
+.add-user-modal__role-dropdown {
+  position: relative;
+}
+
+.add-user-modal__role-input {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 12px 16px 12px 48px;
+  border: 2px solid #8B5CF6;
+  border-radius: 8px;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 16px;
+  color: #111827;
+}
+
+.add-user-modal__role-input:hover {
+  border-color: #7C3AED;
+}
+
+.add-user-modal__role-input .add-user-modal__input-icon {
+  position: absolute;
+  left: 16px;
+  color: #6B7280;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.add-user-modal__dropdown-arrow {
+  color: #6B7280;
+  margin-left: auto;
+  transition: transform 0.2s ease;
+}
+
+.add-user-modal__role-options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: white;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  margin-top: 4px;
+}
+
+.add-user-modal__role-option {
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  border-bottom: 1px solid #F3F4F6;
+}
+
+.add-user-modal__role-option:last-child {
+  border-bottom: none;
+}
+
+.add-user-modal__role-option:hover {
+  background-color: #F9FAFB;
+}
+
+.add-user-modal__role-option.selected {
+  background-color: #F3F4F6;
+  color: #8B5CF6;
+  font-weight: 500;
+}
+
+.add-user-modal__input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.add-user-modal__input-wrapper .add-user-modal__input-icon {
+  position: absolute;
+  left: 16px;
+  color: #6B7280;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.add-user-modal__input {
+  width: 100%;
+  padding: 12px 16px 12px 48px;
+  border: 2px solid #E5E7EB;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #111827;
+  background-color: white;
+  transition: border-color 0.2s ease;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.add-user-modal__input:focus {
+  outline: none;
+  border-color: #3B82F6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.add-user-modal__input--error {
+  border-color: #EF4444;
+}
+
+.add-user-modal__input::placeholder {
+  color: #9CA3AF;
+}
+
+.add-user-modal__error-message {
+  color: #EF4444;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.add-user-modal__footer {
+  display: flex;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.add-user-modal__button {
+  flex: 1;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: 'Urbanist', sans-serif;
+}
+
+.add-user-modal__button--cancel {
+  background-color: #F3F4F6;
+  color: #374151;
+}
+
+.add-user-modal__button--cancel:hover {
+  background-color: #E5E7EB;
+}
+
+.add-user-modal__button--submit {
+  background: linear-gradient(90deg, #EC4899 0%, #8B5CF6 100%);
+  color: white;
+}
+
+.add-user-modal__button--submit:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(236, 72, 153, 0.3);
+}
+
+.add-user-modal__button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}

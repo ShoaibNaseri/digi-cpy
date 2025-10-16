@@ -1,0 +1,22 @@
+.assignments__header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 34px;
+}
+
+.assignments__header p {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.assignments__header h1 {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.assignments__list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}

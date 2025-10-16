@@ -1,0 +1,263 @@
+.cyber-definition-container {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  perspective: 1500px;
+}
+
+.cyber-definition-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cyber-definition-content-item {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.book-cover {
+  width: 75%;
+  height: auto;
+  object-fit: contain;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  transform-origin: center left;
+  /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); */
+  transform-style: preserve-3d;
+  position: relative;
+  max-height: 85vh;
+  display: block;
+  margin: 0 auto;
+}
+
+.book-cover:hover {
+  transform: rotateY(-15deg) scale(1.05);
+  /* box-shadow: 10px 15px 25px rgba(0, 0, 0, 0.3); */
+}
+
+.book-cover::after {
+  content: 'Open the Book';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 12px 24px;
+  border-radius: 15px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #4a2d0c;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  text-align: center;
+}
+
+.book-cover:hover::after {
+  opacity: 1;
+  animation: bounce 0.8s infinite alternate;
+}
+
+.book-page {
+  width: 75%;
+  height: auto;
+  object-fit: contain;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transform-origin: center left;
+  transition: transform 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
+  max-height: 85vh;
+  display: block;
+  margin: 0 auto;
+}
+
+.book-page:hover {
+  transform: scale(1.03);
+}
+
+.book-page::after {
+  content: 'Next';
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  background-color: rgba(255, 182, 193, 0.8);
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #4a2d0c;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  text-align: center;
+}
+
+.book-page:hover::after {
+  opacity: 1;
+  animation: pulse 1s infinite;
+}
+
+.page-turn-enter {
+  transform: rotateY(0deg);
+  opacity: 0;
+}
+
+.page-turn-enter-active {
+  transform: rotateY(0deg);
+  opacity: 1;
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.page-turn-exit {
+  transform: rotateY(0deg);
+  opacity: 1;
+}
+
+.page-turn-exit-active {
+  transform: rotateY(-180deg);
+  opacity: 0;
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.book-open {
+  animation: openBook 1.5s forwards;
+}
+
+@keyframes openBook {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(-180deg);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.4s forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.page-container {
+  position: relative;
+  transform-style: preserve-3d;
+  perspective: 1500px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-flip {
+  animation: flipPage 1s forwards;
+}
+
+@keyframes flipPage {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(-180deg);
+  }
+}
+
+.cyber-definition-next-button {
+  position: absolute;
+  bottom: 8%;
+  align-self: center;
+  background: linear-gradient(45deg, #ff6b6b, #ffa726);
+  border: none;
+  padding: 15px 30px;
+  border-radius: 25px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 38px 50px rgba(255, 107, 107, 0.3);
+  transition: all 0.3s ease;
+  opacity: 0;
+  animation: slideInFade 0.5s forwards;
+  z-index: 100000;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.cyber-definition-next-button:hover {
+  transform: translateY(-3px);
+  scale: 1.1;
+  box-shadow: 0 12px 25px rgba(255, 107, 107, 0.4);
+  background: linear-gradient(45deg, #ff5252, #ff9800);
+}
+
+.cyber-definition-next-button:active {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 15px rgba(255, 107, 107, 0.3);
+}
+
+.cyber-definition-next-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: 0 4px 10px rgba(255, 107, 107, 0.2);
+}
+
+@keyframes slideInFade {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

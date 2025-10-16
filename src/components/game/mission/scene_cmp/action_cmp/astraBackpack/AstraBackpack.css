@@ -1,0 +1,350 @@
+.astra-backpack-action-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  /* Beautiful blue gradient background - kids friendly */
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 50%, #667eea 100%);
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 50%, #667eea 100%);
+  /* Add some floating bubbles effect */
+  overflow: hidden;
+}
+
+/* Floating bubbles background effect */
+.astra-backpack-action-container::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.1) 2px,
+    transparent 2px
+  );
+  background-size: 50px 50px;
+  animation: astra-backpack-float 20s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes astra-backpack-float {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-100px) rotate(360deg);
+  }
+}
+
+.astra-backpack-action-content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+/* Backpack styling */
+.astra-backpack-image {
+  max-width: 250px;
+  cursor: pointer;
+  transition: 0.3s;
+  z-index: 1;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.2));
+}
+
+.astra-backpack-image:hover {
+  transform: scale(1.8);
+  max-width: 350px;
+  filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.3));
+}
+
+/* Animation for the backpack */
+.astra-backpack-animate-bounce {
+  animation: astra-backpack-bounce 2s infinite;
+}
+
+/* Fade out animation for backpack */
+.astra-backpack-fade-out {
+  animation: astra-backpack-fadeOut 0.5s forwards;
+}
+
+@keyframes astra-backpack-fadeOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+}
+
+@keyframes astra-backpack-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+/* Items container */
+.astra-backpack-item-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 40px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  perspective: 800px;
+}
+
+/* Item images */
+.astra-backpack-item-image {
+  max-width: 250px;
+  cursor: pointer;
+  transition: 0.3s;
+  position: relative;
+  opacity: 0;
+  transform-origin: bottom center;
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.15));
+}
+
+.astra-backpack-item-image:hover {
+  transform: scale(1.1);
+  max-width: 470px;
+  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.25));
+}
+
+.astra-backpack-from-backpack {
+  animation-fill-mode: forwards;
+}
+
+.astra-backpack-paper-pos {
+  animation: astra-backpack-popOutPaper 0.8s ease-out forwards;
+  animation-delay: 0s;
+}
+
+.astra-backpack-chat-pos {
+  max-width: 350px;
+  animation: astra-backpack-popOutChat 0.8s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+.astra-backpack-food-pos {
+  animation: astra-backpack-popOutFood 0.8s ease-out forwards;
+  animation-delay: 0.4s;
+}
+
+@keyframes astra-backpack-popOutPaper {
+  0% {
+    opacity: 0;
+    transform: translateY(80px) scale(0.3) rotate(-10deg);
+  }
+  40% {
+    opacity: 0.8;
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-30px) scale(0.8) rotate(5deg);
+  }
+  80% {
+    transform: translateY(-10px) scale(0.9) rotate(0deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1) rotate(0deg);
+  }
+}
+
+@keyframes astra-backpack-popOutChat {
+  0% {
+    opacity: 0;
+    transform: translateY(80px) scale(0.3) rotate(10deg);
+  }
+  40% {
+    opacity: 0.8;
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-30px) scale(0.8) rotate(-5deg);
+  }
+  80% {
+    transform: translateY(-15px) scale(0.9) rotate(0deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1) rotate(0deg);
+  }
+}
+
+@keyframes astra-backpack-popOutFood {
+  0% {
+    opacity: 0;
+    transform: translateY(80px) scale(0.3) rotate(-5deg);
+  }
+  40% {
+    opacity: 0.8;
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-25px) scale(0.8) rotate(8deg);
+  }
+  80% {
+    transform: translateY(-10px) scale(0.9) rotate(0deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1) rotate(0deg);
+  }
+}
+
+.astra-backpack-paper-animate {
+  animation: astra-backpack-fadeInScale 0.5s forwards;
+}
+
+.astra-backpack-chat-animate {
+  animation: astra-backpack-slideInFromLeft 0.5s forwards;
+  animation-delay: 0.2s;
+  opacity: 0;
+}
+
+.astra-backpack-food-animate {
+  animation: astra-backpack-slideInFromRight 0.5s forwards;
+  animation-delay: 0.4s;
+  opacity: 0;
+}
+
+@keyframes astra-backpack-fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes astra-backpack-slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes astra-backpack-slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.astra-backpack-emerge-from-backpack {
+  animation: astra-backpack-emergeFromCenter 0.8s forwards;
+  transform-origin: center;
+  opacity: 0;
+}
+
+.astra-backpack-paper-direction {
+  animation-delay: 0.1s;
+}
+
+.astra-backpack-chat-direction {
+  animation-delay: 0.3s;
+}
+
+.astra-backpack-food-direction {
+  animation-delay: 0.5s;
+}
+
+@keyframes astra-backpack-emergeFromCenter {
+  0% {
+    opacity: 0;
+    transform: scale(0.2) translate(0, 0);
+  }
+  30% {
+    opacity: 1;
+    transform: scale(0.6) translate(0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* item postions */
+.astra-backpack-paper-direction {
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+}
+
+.astra-backpack-chat-direction {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.astra-backpack-food-direction {
+  top: 50%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+}
+
+/* Chat selected state - when chat is clicked and other items are hidden */
+.astra-backpack-chat-selected {
+  max-width: 400px !important;
+  transform: scale(1.2) !important;
+  animation: astra-backpack-chatSelected 0.5s ease-out forwards !important;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.2) !important;
+  z-index: 10;
+  filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.3));
+}
+
+@keyframes astra-backpack-chatSelected {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+}
+
+/* Kids-friendly loading indicator enhancement */
+.astra-backpack-action-loading-indicator {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.astra-backpack-action-loading-spinner {
+  border-top-color: #4facfe;
+  border-left-color: #00f2fe;
+  border-right-color: #667eea;
+}

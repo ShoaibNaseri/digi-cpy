@@ -1,0 +1,470 @@
+/* Student Registration Styles */
+.student-registration {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+  color: #333;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  box-sizing: border-box;
+}
+
+.student-registration *,
+.student-registration *::before,
+.student-registration *::after {
+  box-sizing: border-box;
+}
+
+.student-registration__loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  color: white;
+  font-size: 1.2rem;
+}
+
+/* Header Section */
+.student-registration__header {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: white;
+}
+
+.student-registration__header img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1rem;
+  border-radius: 50%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.student-registration__title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.student-registration__class-info {
+  margin-bottom: 1rem;
+}
+
+.student-registration__class-badge {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 25px;
+  padding: 0.75rem 1.5rem;
+  gap: 0.75rem;
+}
+
+.student-registration__class-icon {
+  font-size: 1.5rem;
+  color: #ffd700;
+}
+
+.student-registration__class-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.student-registration__class-name {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.student-registration__class-grade {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.student-registration__description {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin: 0;
+}
+
+/* Form Section */
+.student-registration__form {
+  background: white;
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 2rem;
+  box-sizing: border-box;
+}
+
+.student-registration__form-section {
+  margin-bottom: 2rem;
+}
+
+.student-registration__form-section:last-of-type {
+  margin-bottom: 1rem;
+}
+
+.student-registration__form-section h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.student-registration__form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.student-registration__form-group {
+  /* margin-bottom: 1.5rem; */
+  width: 100%;
+}
+
+.student-registration__form-group label {
+  display: block;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.student-registration__input-wrapper {
+  position: relative;
+}
+
+.student-registration__input-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9ca3af;
+  font-size: 1.2rem;
+}
+
+.student-registration__input-wrapper input {
+  padding-left: 1.5rem;
+  color: #374151;
+  background-color: #ffffff;
+}
+
+.student-registration__form-group input {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  background-color: #ffffff;
+  color: #374151;
+  box-sizing: border-box;
+}
+
+.student-registration__form-group input:focus {
+  outline: none;
+  border-color: #667eea;
+  background-color: white;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.student-registration__form-group input.error {
+  border-color: #ef4444;
+  background-color: #fef2f2;
+}
+
+.student-registration__form-group input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background-color: #f3f4f6;
+}
+
+.student-registration__form-group input::placeholder {
+  color: #9ca3af;
+  opacity: 1;
+}
+
+.student-registration__input-wrapper input::placeholder {
+  color: #9ca3af;
+  opacity: 1;
+}
+
+/* Password Input */
+.student-registration__password-wrapper {
+  position: relative;
+}
+
+.student-registration__password-wrapper input {
+  color: #374151;
+  background-color: #ffffff;
+  box-sizing: border-box;
+}
+
+.student-registration__password-toggle {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #9ca3af;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: color 0.2s ease;
+}
+
+.student-registration__password-toggle:hover {
+  color: #667eea;
+}
+
+/* Checkbox */
+.student-registration__checkbox-group {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.student-registration__checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #374151;
+}
+
+.student-registration__checkbox-label input[type='checkbox'] {
+  opacity: 0;
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+.student-registration__checkmark {
+  width: 20px;
+  height: 20px;
+  background-color: #f3f4f6;
+  border: 2px solid #d1d5db;
+  border-radius: 4px;
+  position: relative;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.student-registration__checkbox-label
+  input[type='checkbox']:checked
+  + .student-registration__checkmark {
+  background-color: #667eea;
+  border-color: #667eea;
+}
+
+.student-registration__checkbox-label
+  input[type='checkbox']:checked
+  + .student-registration__checkmark::after {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  width: 6px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.student-registration__checkbox-label
+  input[type='checkbox'].error
+  + .student-registration__checkmark {
+  border-color: #ef4444;
+}
+
+.student-registration__checkbox-label a {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.student-registration__checkbox-label a:hover {
+  text-decoration: underline;
+}
+
+/* Error Messages */
+.student-registration__error {
+  color: #dc3545;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  display: block;
+  font-weight: 500;
+}
+
+.student-registration__info {
+  color: #6c757d;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  display: block;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.student-registration__success {
+  color: #28a745;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  display: block;
+  font-weight: 500;
+}
+
+/* Submit Button */
+.student-registration__submit-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  margin-bottom: 1.5rem;
+}
+
+.student-registration__submit-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(102, 126, 234, 0.4);
+}
+
+.student-registration__submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2);
+}
+
+/* Footer */
+.student-registration__footer {
+  text-align: center;
+  padding-top: 1rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.student-registration__footer p {
+  color: #6b7280;
+  margin: 0;
+}
+
+.student-registration__link-btn {
+  background: none;
+  border: none;
+  color: #667eea;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.student-registration__link-btn:hover {
+  color: #5a6fd8;
+  text-decoration: underline;
+}
+
+/* Security Footer */
+.student-registration__security-footer {
+  text-align: center;
+  color: white;
+  opacity: 0.9;
+}
+
+.student-registration__security-footer p {
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.student-registration__security-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.student-registration__security-icons img {
+  width: 32px;
+  height: 32px;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+.student-registration__security-icons img:hover {
+  opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .student-registration {
+    padding: 1rem 0.5rem;
+  }
+
+  .student-registration__title {
+    font-size: 2rem;
+  }
+
+  .student-registration__form {
+    padding: 2rem 1.5rem;
+    margin: 0 0.5rem 2rem;
+  }
+
+  .student-registration__form-row {
+    gap: 1rem;
+  }
+
+  .student-registration__class-badge {
+    padding: 0.5rem 1rem;
+    gap: 0.5rem;
+  }
+
+  .student-registration__class-name {
+    font-size: 1rem;
+  }
+
+  .student-registration__class-grade {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .student-registration__header img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .student-registration__title {
+    font-size: 1.75rem;
+  }
+
+  .student-registration__form {
+    padding: 1.5rem 1rem;
+  }
+
+  .student-registration__form-section h3 {
+    font-size: 1.1rem;
+  }
+}
+
+.student-registration__error-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.student-registration__error-message {
+  color: white;
+}

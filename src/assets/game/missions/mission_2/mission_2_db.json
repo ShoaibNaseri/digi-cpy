@@ -1,0 +1,1726 @@
+    {
+        "id": 2,
+        "title": "IP Addresses & Digital Footprints",
+        "background_image_src": "assets/game/missions/mission_one/bg_imgs/mission_one_bg.webp",
+        "dialogue_bg_image_src": "assets/game/missions/mission_one/bg_imgs/dialogue_bg.webp",
+        "intro_scene": {
+            "background": "digipalz_headquarter.webp",
+            "next_scene": "article",
+            "characters": {
+                "milo": {
+                    "name": "Milo",
+                    "image": "milo.png",
+                    "canAnimate": true,
+                    "position": "center"
+                },
+                "luna": {
+                    "name": "Luna",
+                    "image": "luna.png",
+                    "canAnimate": true,
+                    "position": "center"
+                },
+                "robotoro": {
+                    "name": "Robotoro",
+                    "image": "robotoro.png",
+                    "canAnimate": false,
+                    "position": "left"
+                }
+            },
+            "dialogues": [
+                {
+                    "sequence": 1,
+                    "speaker": "robotoro",
+                    "text": "Welcome back, Digipalz! As we know from our last mission, a menacing bully has been targeting students at Red Valley Elementary School and has made some serious violations to the school's anti-bullying policies.",
+                    "narration": "game/missions/mission_2/narrations/Robotoro_1056.mp3"
+                },
+                {
+                    "sequence": 2,
+                    "speaker": "luna",
+                    "text": "We're far from done, Robotoro. We still don't know who the bully is.",
+                    "narration": "game/missions/mission_2/narrations/Luna_1104.mp3"
+                },
+                {
+                    "sequence": 3,
+                    "speaker": "robotoro",
+                    "text": "That's right, Luna. Which is why I am sending you and Milo on Mission #2: IP Addresses and Digital Footprints. By the end of this, you should be able to identify who the bully is.",
+                    "narration": "game/missions/mission_2/narrations/Robotoro_1065.mp3"
+                },
+                {
+                    "sequence": 4,
+                    "speaker": "milo",
+                    "text": "Cool. What are our Mission Tasks?",
+                    "narration": "game/missions/mission_2/narrations/Milo_1129.mp3"
+                },
+                {
+                    "sequence": 5,
+                    "speaker": "robotoro",
+                    "text": "I thought you'd never ask, but first, let's start with our news article. Remember, these articles are to help you understand why the mission is important.",
+                    "narration": "game/missions/mission_2/narrations/Robotoro_1066.mp3"
+                }
+            ]
+        },
+        "article": {
+            "next_scene": "mission_brief",
+            "content": [
+                {
+                    "title": "What You Do Online Stays Online:\n A Visit from Trooper Andrew",
+                    "content": "Students at Harbor Beach schools in Michigan recently got a visit from someone who knows a lot about staying safe online — Trooper Andrew from the Michigan State Police. He spoke to students at the school in late January about something called a digital footprint. A digital footprint is the trail of things you leave behind when you use the internet — like messages, photos, videos, or posts. Even if you delete something, it can sometimes still be found later.\n\nTrooper Andrew reminded everyone that many kids start using the internet at a young age. That means your digital footprint begins early. Every time you post something, comment on a video, or send a picture, it becomes part of your online history. He also explained that when people grow up and start applying for jobs or to colleges, companies might search their names online. What people find about you online could greatly affect your future - whether it’s getting the job you want, being accepted into college, pursuing medical or law school, or even earning a sports scholarship. The best way to stay safe is simple: think before you post. Ask yourself, “Is this something I would be proud to share?”\n\nSome students were surprised to learn that even apps like Snapchat — where things are supposed to disappear — don’t really erase everything. Trooper Andrew shared that data can be saved or retrieved, even if it seems like it’s gone. But he didn’t come to scare anyone. His goal was to help students learn how to use the internet wisely. “The internet isn’t bad,” he said — it just takes smart choices to use it in a way that keeps you safe and helps you look good to others later on."
+                }
+            ],
+            "profile_image": "police_badge.png"
+        },
+        "mission_brief": [
+            {
+                "title": "Mission Brief",
+                "description": "Trooper Andrew was right. What you do online does leave a trail. It's called a digital footprint and it can last a lifetime. Like he said, even deleted things can be found again, especially by people who know how to do it. Some day, in the future, adults might look you up online. What they find could very well affect your future - whether you get that job you want, or get into the college you want to go to, or into Med School, Law school, or even get a sports scholarship. What is the best way for you to stay safe? Think before you post. Ask yourself, is this something I would be proud to share?",
+                "narration": "game/missions/mission_2/narrations/Robotoro_1271.mp3",
+                "duration": 36
+            },
+            {
+                "title": "Mission Brief",
+                "description": "Your mission awaits you. We still haven’t caught the bully behind Red Valley Elementary School’s chatroom. Time is ticking, Digipal. Your mission is to work with Luna and Milo to get to the bottom of it.",
+                "narration": "game/missions/mission_2/narrations/Robotoro_1232.mp3",
+                "duration": 11,
+                "next_scene": "mission_tasks"
+            }
+        ],
+        "mission_tasks": {
+            "title": "Mission Tasks",
+            "next_scene": "scenes",
+            "important_info": "Your mission tasks.  Read them carefully.   This is what you will be quizzed on.",
+            "tasks": [
+                {
+                    "id": 1,
+                    "title": "Task 1",
+                    "description": "Define IP addresses and devices that have an IP address.",
+                    "narration": "game/missions/mission_2/narrations/task_1.mp3"
+                },
+                {
+                    "id": 2,
+                    "title": "Task 2",
+                    "description": "Explain what a digital footprint is and how they are made.",
+                    "narration": "game/missions/mission_2/narrations/task_2.mp3"
+                },
+                {
+                    "id": 3,
+                    "title": "Task 3",
+                    "description": " Explain the difference between an active and passive footprint.",
+                    "narration": "game/missions/mission_2/narrations/task_3.mp3"
+                },
+                {
+                    "id": 4,
+                    "title": "Task 4",
+                    "description": " Explain what a ‘cookie’ is and how they are used.",
+                    "narration": "game/missions/mission_2/narrations/task_4.mp3"
+                },
+                {
+                    "id": 5,
+                    "title": "Task 5",
+                    "description": "Understand why your digital footprint can impact your future.",
+                    "narration": "game/missions/mission_2/narrations/task_5.mp3"
+                }
+            ]
+        },
+        "scenes": [
+            {
+                "id": "1",
+                "background": "digipalz_headquarter.webp",
+                "characters": {
+                    "robotoro": {
+                        "name": "Robotoro",
+                        "image": "robotoro.png",
+                        "canAnimate": false,
+                        "position": "left"
+                    },
+                    "milo": {
+                        "name": "Milo",
+                        "image": "milo.png",
+                        "position": "center",
+                        "canAnimate": true
+                    },
+                    "luna": {
+                        "name": "Luna",
+                        "image": "luna.png",
+                        "position": "center",
+                        "canAnimate": true
+                    }
+                },
+                "dialogues": [
+                    {
+                        "sequence": 1,
+                        "speaker": "robotoro",
+                        "text": "We are still working on tracking down the bully who is targeting Katie and a few others. I've been tracing their footprints this morning. Mr. Pasternack, the tech teacher, will meet you in the media room at Red Valley Elementary School later this morning.",
+                        "narration": "game/missions/mission_2/narrations/Robotoro_1059.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 2,
+                        "speaker": "milo",
+                        "text": "OK, great. But can you please explain to me about my footprints, Robotoro?",
+                        "narration": "game/missions/mission_2/narrations/Milo_1122.mp3",
+                        "animation": "slideInLeft",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 3,
+                        "speaker": "luna",
+                        "text": "Not your stinky footprints, Milo! They're Digital Footprints.",
+                        "narration": "game/missions/mission_2/narrations/Luna_755.mp3",
+                        "animation": "slideInRight",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 4,
+                        "speaker": "robotoro",
+                        "text": "I’d be happy to explain what Digital Footprints are. What you do online is not private. Everywhere you go, you leave a trail of where you’ve been. This is called a digital footprint. Your digital footprint is used to track you in many different ways. It’s a trail of data that is formed with any online activity.",
+                        "narration": "game/missions/mission_2/narrations/Robotoro_1067.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 5,
+                        "speaker": "robotoro",
+                        "text": "Here, I made a short video to help explain it.",
+                        "narration": "game/missions/mission_2/narrations/Robotoro_1017.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": true,
+                        "action": {
+                            "type": "footprint_video",
+                            "videoId": "TI1zZVNLvkk",
+                            "duration": 80000
+                        }
+                    },
+                    {
+                        "sequence": 6,
+                        "speaker": "luna",
+                        "text": "Oh, I get it. Surfing the web is sort of like walking in sand. Each time you step, you leave a footprint of where you’ve been.",
+                        "narration": "game/missions/mission_2/narrations/Luna_758.mp3",
+                        "animation": "slideInLeft",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 7,
+                        "speaker": "robotoro",
+                        "text": "Not only that, but there are 2 different kinds of digital footprints, active and passive. Active footprints are things that you intentionally do online, such as signing into your account, signing up for a newsletter, adding your name onto a list or posting a comment.",
+                        "narration": "game/missions/mission_2/narrations/Robotoro_705.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 8,
+                        "speaker": "robotoro",
+                        "text": "Luna, I see you recently posted a book review on Victor the Vampire Bat. You just left an active digital footprint.",
+                        "narration": "game/missions/mission_2/narrations/Robotoro_1029.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": true,
+                        "action": {
+                            "type": "luna_post"
+                        }
+                    },
+                    {
+                        "sequence": 9,
+                        "speaker": "robotoro",
+                        "text": "And Milo, I see you posted a comment for a pizzeria you went to. You spelt cheese wrong, by the way. Anyhow, you also left an active digital footprint.",
+                        "narration": "game/missions/mission_2/narrations/Robotoro_709.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": true,
+                        "action": {
+                            "type": "milo_post"
+                        }
+                    },
+                    {
+                        "sequence": 10,
+                        "speaker": "luna",
+                        "text": "I had no idea it could happen so easily. I’ve been leaving footprints all over the place. Now I know why I’m seeing so many ads for books about bats.",
+                        "narration": "game/missions/mission_2/narrations/Luna_1225.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": true,
+                        "action": {
+                            "type": "post_book"
+                        }
+                    },
+                    {
+                        "sequence": 11,
+                        "speaker": "robotoro",
+                        "text": "Exactly. If you were an adult, your digital profile would be worth thousands of dollars to advertisers. Once they see you looking at something on a website, they send you ads for the same thing, hoping you eventually will buy it.",
+                        "narration": "game/missions/mission_2/narrations/Robotoro_1069.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 12,
+                        "speaker": "luna",
+                        "text": "I was also looking at stuffed plush toys for anxiety. I thought it would be nice to get a stuffed cuddly toy for Katie to help with her anxiety. Now I’m getting all sorts of ads for stuffed animals!",
+                        "narration": "game/missions/mission_2/narrations/Luna_1191.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": true,
+                        "action": {
+                            "type": "plush_toy"
+                        }
+                    },
+                    {
+                        "sequence": 13,
+                        "speaker": "milo",
+                        "text": "Yeah, it’s happening to me too! I was looking at toy dinosaurs to add to my collection, now I'm getting ads for dinosaur puzzles.",
+                        "narration": "game/missions/mission_2/narrations/Milo_734.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": true,
+                        "action": {
+                            "type": "puzzle_drop"
+                        }
+                    },
+                    {
+                        "sequence": 14,
+                        "speaker": "milo",
+                        "text": "And dinosaur T-shirts.",
+                        "narration": "game/missions/mission_2/narrations/Milo_741.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": true,
+                        "action": {
+                            "type": "tshirt"
+                        }
+                    },
+                    {
+                        "sequence": 15,
+                        "speaker": "milo",
+                        "text": "And everything with dinosaurs on it! I couldn’t figure out why.",
+                        "narration": "game/missions/mission_2/narrations/Milo_742.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 16,
+                        "speaker": "luna",
+                        "text": "Well now we know why. Companies know what we are interested in, and now they are trying to get us to buy more things. I don’t even have a credit card.",
+                        "narration": "game/missions/mission_2/narrations/Luna_1108.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": "17",
+                        "speaker": "robotoro",
+                        "text": "No, Luna, you don’t have a credit card. But your parents do! They do the same thing with your parents. When your mom looks at a purse online, the next day, other companies might start sending her ads for purses because they bought her digital data profile.",
+                        "narration": "game/missions/mission_2/narrations/Robotoro_1070.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": "18",
+                        "speaker": "milo",
+                        "text": "Wow, that’s kind of sneaky isn’t it?",
+                        "narration": "game/missions/mission_2/narrations/Milo_743.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": "19",
+                        "speaker": "robotoro",
+                        "text": "Well, sort of. But they’re not forcing you to buy it, just tempting you and hoping it works. Just don’t click on anything! And now, Digipalz, you see why your digital data footprint is so valuable to companies.",
+                        "narration": "game/missions/mission_2/narrations/Robotoro_718.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": "20",
+                        "speaker": "milo",
+                        "text": "Robotoro, you said there were 2 kinds of Digital Footprints. What’s the other kind of footprint?",
+                        "narration": "game/missions/mission_2/narrations/Milo_745.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": "21",
+                        "speaker": "robotoro",
+                        "text": "It’s called a passive footprint. Your passive footprint is much more subtle, you are often not even aware that you are leaving these footprints. It happens when you are surfing the internet and you go on a site and it collects cookies. Sometimes it will even ask you to accept cookies. As a general rule, you should not accept cookies.",
+                        "narration": "game/missions/mission_2/narrations/Robotoro_719.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": "22",
+                        "speaker": "milo",
+                        "text": "I’ll accept cookies any time, especially chocolate chip cookies.",
+                        "narration": "game/missions/mission_2/narrations/Milo_751.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": "23",
+                        "speaker": "luna",
+                        "text": "No, Milo, you don’t eat the cookies! They plant them on your computer.",
+                        "narration": "game/missions/mission_2/narrations/Luna_769.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": "24",
+                        "speaker": "robotoro",
+                        "text": "I sure wish they had chocolate chips, I would eat those too.",
+                        "narration": "game/missions/mission_2/narrations/Robotoro_1071.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": "25",
+                        "speaker": "robotoro",
+                        "text": "Milo and Luna, this is serious. When you accept cookies on a website, you're giving it permission to watch what you do online. That might not sound like a big deal — but over time, those websites can figure out your age, where you live, your hobbies, and even your email address… all without asking you directly. It’s like letting someone peek through your window every day to learn your habits — what you watch, what you search, even what games you play. Would you let a stranger do that in real life? No way. So don’t click \"Accept\" without thinking. Always ask: Do I really want to share this information?",
+                        "narration": "game/missions/mission_2/narrations/Robotoro_1075.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": "26",
+                        "speaker": "luna",
+                        "text": "Wow, that’s really scary. They know so much about me without me telling them anything?",
+                        "narration": "game/missions/mission_2/narrations/Luna_771.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": "27",
+                        "speaker": "robotoro",
+                        "text": "Yes. It’s important that you know this. When you put something on the internet, it’s there forever. And I mean forever! You cannot erase your digital footprints.",
+                        "narration": "game/missions/mission_2/narrations/Robotoro_724.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": "28",
+                        "speaker": "milo",
+                        "text": "So it’s not like ocean waves flowing over your footprints in the sand and washing them away.",
+                        "narration": "game/missions/mission_2/narrations/Milo_752.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": "29",
+                        "speaker": "luna",
+                        "text": "No Milo, it’s more like walking on wet cement. It dries and your footprint is there forever.",
+                        "narration": "game/missions/mission_2/narrations/Luna_773.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": "30",
+                        "speaker": "robotoro",
+                        "text": "That’s correct Milo & Luna. Digital footprints are there forever. Before you head off to meet Mr. Pasternack, how about we play a game I made? Hopefully you remember from our last mission what you are supposed to do when you get a message from a bully!",
+                        "narration": "game/missions/mission_2/narrations/Robotoro_1079.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": true,
+                        "action": {
+                            "type": "game_pacman"
+                        }
+                    },
+                    {
+                        "sequence": "31",
+                        "speaker": "robotoro",
+                        "text": "I’m glad to see most of you remembered to stop, screenshot, block and report. Well done Digipalz!",
+                        "narration": "game/missions/mission_2/narrations/Robotoro_1213.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": "32",
+                        "speaker": "robotoro",
+                        "text": "Now get going you two, Mr. Pasternack is waiting.",
+                        "narration": "game/missions/mission_2/narrations/Robotoro_1210.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    }
+                ]
+            },
+            {
+                "id": "2",
+                "background": "computerLab.jpg",
+                "characters": {
+                    "mr_pasternak": {
+                        "name": "Mr. Pasternak",
+                        "image": "pasternak.png",
+                        "canAnimate": true,
+                        "position": "center"
+                    },
+                    "agent_phoebe": {
+                        "name": "Agent Phoebe",
+                        "image": "agent_phoebe.png",
+                        "position": "left",
+                        "canAnimate": false
+                    },
+                    "milo": {
+                        "name": "Milo",
+                        "image": "milo.png",
+                        "position": "center",
+                        "canAnimate": true
+                    },
+                    "luna": {
+                        "name": "Luna",
+                        "image": "luna.png",
+                        "position": "center",
+                        "canAnimate": true
+                    }
+                },
+                "dialogues": [
+                    {
+                        "sequence": 1,
+                        "speaker": "mr_pasternak",
+                        "text": "Good afternoon, Digipalz! This kind woman here is from Chatroom Technologies. She's here to help us try to track down the cyberbully who’s sending mean and threatening messages to Katie.",
+                        "narration": "game/missions/mission_2/narrations/Pasternak_1035.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 2,
+                        "speaker": "agent_phoebe",
+                        "text": "Hi, I'm Agent Phoebe, I'm with the Incident Response Team. You said you have a possible bully situation? Thanks for raising the alarm.",
+                        "narration": "game/missions/mission_2/narrations/Phoebe_1130.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 3,
+                        "speaker": "milo",
+                        "text": "Hi, thank you for coming by on such short notice.",
+                        "narration": "game/missions/mission_2/narrations/Milo_375.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 4,
+                        "speaker": "agent_phoebe",
+                        "text": "I am here to help. Mr. Pasternak filled me in on the details. It sounds serious. My role is to help identify the user who is guilty of making bullying comments online.",
+                        "narration": "game/missions/mission_2/narrations/Phoebe_1131.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 5,
+                        "speaker": "luna",
+                        "text": "Unfortunately, this user has been targeting the students and, recently, school staff. Earlier today, we uncovered multiple violations of our school policy. We need your help tracking this student down, but all we have is their username, Hockey_291. That's not much to go off of, is it?",
+                        "narration": "game/missions/mission_2/narrations/Luna_457.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 6,
+                        "speaker": "agent_phoebe",
+                        "text": "It might seem like we've got almost nothing to work with, but the good news is, no one is really that ‘anonymous’ online. They just think they are.",
+                        "narration": "game/missions/mission_2/narrations/Phoebe_357.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 7,
+                        "speaker": "milo",
+                        "text": "When people think they’re anonymous online, they believe they can get away with just about anything.",
+                        "narration": "game/missions/mission_2/narrations/Milo_376.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 8,
+                        "speaker": "agent_phoebe",
+                        "text": "Exactly. Somebody might say something about you online that they are too afraid to say to your face. They think the premise of online anonymity is a free pass to target and threaten people!",
+                        "narration": "game/missions/mission_2/narrations/Phoebe_358.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 9,
+                        "speaker": "milo",
+                        "text": "So, you're saying we can track this bully down, even if all we have is their username?",
+                        "narration": "game/missions/mission_2/narrations/Milo_1036.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 10,
+                        "speaker": "agent_phoebe",
+                        "text": "Well, in a sense. We have tools at our disposal to help us.",
+                        "narration": "game/missions/mission_2/narrations/Phoebe_359.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 11,
+                        "speaker": "luna",
+                        "text": "What can you tell us about this user, 'Hockey_291'?",
+                        "narration": "game/missions/mission_2/narrations/Luna_458.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 12,
+                        "speaker": "agent_phoebe",
+                        "text": "Let's see... our first line of defense is the IP address. Every IP address is unique. Just like your phone number or home address. All devices connected to the internet have an IP address, like a computer, a cell phone, a tablet and more! It can tell us a lot about a user’s location.",
+                        "narration": "game/missions/mission_2/narrations/Phoebe_361.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 13,
+                        "speaker": "milo",
+                        "text": "How about a router, a smart TV, or a smart watch?",
+                        "narration": "game/missions/mission_2/narrations/Milo_384.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 14,
+                        "speaker": "agent_phoebe",
+                        "text": "Yes, almost all electronics that connect to the internet. Even a smart microwave or an oven!",
+                        "narration": "game/missions/mission_2/narrations/Phoebe_362.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 15,
+                        "speaker": "luna",
+                        "text": "And a baby monitor, a doorbell camera, and a smart speaker!",
+                        "narration": "game/missions/mission_2/narrations/Luna_664.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 16,
+                        "speaker": "milo",
+                        "text": "And a toaster too?",
+                        "narration": "game/missions/mission_2/narrations/Milo_385.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 17,
+                        "speaker": "agent_phoebe",
+                        "text": "No, Milo, a toaster is not connected to the internet, so it doesn’t need an IP address.",
+                        "narration": "game/missions/mission_2/narrations/Phoebe_1132.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 18,
+                        "speaker": "agent_phoebe",
+                        "text": "I’ve got a little game for you, Digipalz! Let’s see how many things you can identify that have IP addresses. Are you ready? Let’s go!",
+                        "narration": "game/missions/mission_2/narrations/Phoebe_366.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": true,
+                        "action": {
+                            "type": "ip_address_game"
+                        }
+                    },
+                    {
+                        "sequence": 19,
+                        "speaker": "agent_phoebe",
+                        "text": "That was fun! Most of you got them right, congratulations. But here’s the thing…. Every year, more and more objects are getting IP addresses to connect to the internet. Did you know, for example, that they even have smart swim goggles?",
+                        "narration": "game/missions/mission_2/narrations/Phoebe_367.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": true,
+                        "action": {
+                            "type": "swimming_goggles"
+                        }
+                    },
+                    {
+                        "sequence": 20,
+                        "speaker": "luna",
+                        "text": "Why would swim goggles need to be connected to the internet?",
+                        "narration": "game/missions/mission_2/narrations/Luna_466.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 21,
+                        "speaker": "agent_phoebe",
+                        "text": "So competitive swimmers can time themselves, track their distance and speed.",
+                        "narration": "game/missions/mission_2/narrations/Phoebe_368.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 22,
+                        "speaker": "milo",
+                        "text": "Wow. I want one of those!",
+                        "narration": "game/missions/mission_2/narrations/Milo_388.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 23,
+                        "speaker": "agent_phoebe",
+                        "text": "Here’s a short video that explains how IP addresses work.",
+                        "narration": "game/missions/mission_2/narrations/Phoebe_369.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": true,
+                        "action": {
+                            "type": "footprint_video",
+                            "videoId": "kFBe2jH8Pco",
+                            "duration": 82000
+                        }
+                    },
+                    {
+                        "sequence": 24,
+                        "speaker": "agent_phoebe",
+                        "text": "So you see, with IP Addresses, you are not anonymous. And because of that, we can track down bullies and criminals.",
+                        "narration": "game/missions/mission_2/narrations/Phoebe_370.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 25,
+                        "speaker": "agent_phoebe",
+                        "text": "From what I've been able to find, this is the IP address for 'Hockey_291'. We have to act quickly, before he’s on the move again.",
+                        "narration": "game/missions/mission_2/narrations/Phoebe_1133.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": true,
+                        "action": {
+                            "type": "ip_address_image"
+                        }
+                    },
+                    {
+                        "sequence": 26,
+                        "speaker": "milo",
+                        "text": "Woah! This is a great start, but we still don't have enough evidence, Luna! We need to call for backup. It’s time to involve the police.",
+                        "narration": "game/missions/mission_2/narrations/Milo_389.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    }
+                ]
+            },
+            {
+                "id": "3",
+                "background": "police_station.webp",
+                "characters": {
+                    "officer_emilio": {
+                        "name": "Officer Emilio",
+                        "image": "emilio.png",
+                        "canAnimate": false,
+                        "position": "left"
+                    },
+                    "milo": {
+                        "name": "Milo",
+                        "image": "milo.png",
+                        "position": "center",
+                        "canAnimate": true
+                    },
+                    "luna": {
+                        "name": "Luna",
+                        "image": "luna.png",
+                        "position": "center",
+                        "canAnimate": true
+                    }
+                },
+                "dialogues": [
+                    {
+                        "sequence": 1,
+                        "speaker": "officer_emilio",
+                        "text": "Sorry for keeping you waiting, Digipalz. I’ve been investigating the information that you sent me. You did the right thing by contacting me.",
+                        "narration": "game/missions/mission_2/narrations/Emilio_505.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 2,
+                        "speaker": "luna",
+                        "text": "No problem, Officer Emilio, we know how busy things are around here. Thanks for helping us. Was the IP address we gave you any help? We really need a break in this case!",
+                        "narration": "game/missions/mission_2/narrations/Luna_467.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 3,
+                        "speaker": "officer_emilio",
+                        "text": "As you know, we take threats like this very seriously. From what you've explained to me, time is of the essence.",
+                        "narration": "game/missions/mission_2/narrations/Emilio_506.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 4,
+                        "speaker": "luna",
+                        "text": "Yes it is! Katie’s really shaken up, and we need to find out who the user is before they share the photo they’re threatening to post.",
+                        "narration": "game/missions/mission_2/narrations/Luna_1261.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 5,
+                        "speaker": "officer_emilio",
+                        "text": "We have authorization to look up the IP address's general location. It says the user is located in the Blue Mountain area. That's as narrow as we can provide, I'm afraid. I hope it's enough to help you.",
+                        "narration": "game/missions/mission_2/narrations/Emilio_507.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 6,
+                        "speaker": "milo",
+                        "text": "Thank you, Officer Emilio. It's the best lead we've had all day! We’ll take this information back to Principal Finley. Maybe she has an idea of how we can use it to track down our culprit!",
+                        "narration": "game/missions/mission_2/narrations/Milo_390.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 7,
+                        "speaker": "officer_emilio",
+                        "text": "Wait Digipalz, before you run off, there’s something else I have to explain to you. Your bully may think that when they delete an email or their history or if they delete any photos, they are gone forever. Not so! We arrest many criminals this way!",
+                        "narration": "game/missions/mission_2/narrations/Emilio_774.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": true,
+                        "action": {
+                            "type": "search_warrant"
+                        }
+                    },
+                    {
+                        "sequence": 8,
+                        "speaker": "officer_emilio",
+                        "text": "When we suspect someone is guilty of a crime, we may get a search warrant to take their devices, computers, tablet, and cell phones to our forensics computer lab. Our computer technicians can see everything, and I mean everything, that the suspect thinks they have erased. Because nothing is really erased. That’s how many criminals are caught. Good luck catching your culprit, Digipalz.",
+                        "narration": "game/missions/mission_2/narrations/Emilio_775.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    }
+                ]
+            },
+            {
+                "id": "4",
+                "background": "principal_office.jpg",
+                "characters": {
+                    "principal_finley": {
+                        "name": "Principal Finley",
+                        "image": "principal_finley.png",
+                        "canAnimate": false,
+                        "position": "left"
+                    },
+                    "milo": {
+                        "name": "Milo",
+                        "image": "milo.png",
+                        "position": "center",
+                        "canAnimate": true
+                    },
+                    "luna": {
+                        "name": "Luna",
+                        "image": "luna.png",
+                        "position": "center",
+                        "canAnimate": true
+                    }
+                },
+                "dialogues": [
+                    {
+                        "sequence": 1,
+                        "speaker": "principal_finley",
+                        "text": "Good afternoon, Digipalz. Any news?",
+                        "narration": "game/missions/mission_2/narrations/Principal_508.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 2,
+                        "speaker": "luna",
+                        "text": "Officer Emilio was very helpful. He was able to narrow down the IP address of our bullying student to somewhere in the Blue Mountain area. That's pretty far from here, why would a student live all the way out there?",
+                        "narration": "game/missions/mission_2/narrations/Luna_469.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 3,
+                        "speaker": "principal_finley",
+                        "text": "Yes, Blue Mountain is a popular getaway for many families at our school. Whoever this student is, they must be spending spring break at Blue Mountain!",
+                        "narration": "game/missions/mission_2/narrations/Principal_1135.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 4,
+                        "speaker": "luna",
+                        "text": "That narrows our suspect list down, but now we have to find out which students are spending their spring break at Blue Mountain.",
+                        "narration": "game/missions/mission_2/narrations/Luna_470.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 5,
+                        "speaker": "principal_finley",
+                        "text": "I know someone who might know... let me call them.",
+                        "narration": "game/missions/mission_2/narrations/Principal_511.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": true,
+                        "action": {
+                            "type": "phone_call",
+                            "action_data": {
+                                "phoneNumber": "305-765-0228",
+                                "callerName": "Principal Finley",
+                                "callingTo": "Mr. Spivak",
+                                "callingToImage": "mr_spivak.png",
+                                "callerImage": "principal_finley.png",
+                                "callNarrations": [
+                                    "game/missions/mission_2/narrations/Spivak_1257.mp3",
+                                    "game/missions/mission_2/narrations/Principal_512.mp3",
+                                    "game/missions/mission_2/narrations/Spivak_1142.mp3",
+                                    "game/missions/mission_2/narrations/Principal_1273.mp3"
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "sequence": 6,
+                        "speaker": "principal_finley",
+                        "text": "Now, there is no guarantee our culprit is Mr. Delavoy, and I don't want to treat him as guilty until we can confirm it.",
+                        "narration": "game/missions/mission_2/narrations/Principal_1275.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 7,
+                        "speaker": "luna",
+                        "text": "Yes, I believe it’s innocent until proven guilty.",
+                        "narration": "game/missions/mission_2/narrations/Luna_471.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 8,
+                        "speaker": "principal_finley",
+                        "text": "That’s right, Luna. Sharing this student's name with you is sensitive, but as a school, we have a responsibility to uphold our Anti-Bullying Policy. Our Bullying Incident Response Protocol dictates that we must identify any student involved in serious breaches of our guidelines. If Declan is the one threatening to share sensitive photos of Katie... that warrants immediate action on our part.",
+                        "narration": "game/missions/mission_2/narrations/Principal_1136.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 9,
+                        "speaker": "luna",
+                        "text": "We need to protect students. And we need to especially support Katie, who has been very tormented by this.",
+                        "narration": "game/missions/mission_2/narrations/Luna_1906.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 10,
+                        "speaker": "principal_finley",
+                        "text": "Yes! Absolutely! Anyway Digipalz, you have a name, and I trust you will use discretion in your investigation. Find out if Declan is behind this. But be careful - make sure you have all the evidence you need before you make an accusation. We don’t want to blame an innocent student.",
+                        "narration": "game/missions/mission_2/narrations/Principal_1039.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 11,
+                        "speaker": "luna",
+                        "text": "Don’t worry, we won't let you down, Principal Finley. We’ll take this information back to headquarters and begin our analysis. Robotoro has been tracking their digital footprints.",
+                        "narration": "game/missions/mission_2/narrations/Luna_1112.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    }
+                ]
+            },
+            {
+                "id": "5",
+                "background": "digipalz_headquarter.webp",
+                "characters": {
+                    "robotoro": {
+                        "name": "Robotoro",
+                        "image": "robotoro.png",
+                        "canAnimate": false,
+                        "position": "left"
+                    },
+                    "milo": {
+                        "name": "Milo",
+                        "image": "milo.png",
+                        "position": "center",
+                        "canAnimate": true
+                    },
+                    "luna": {
+                        "name": "Luna",
+                        "image": "luna.png",
+                        "position": "center",
+                        "canAnimate": true
+                    }
+                },
+                "dialogues": [
+                    {
+                        "sequence": 1,
+                        "speaker": "robotoro",
+                        "text": "Hey guys, welcome back! Did you bring anything to eat? Do you know what robots eat for snacks?",
+                        "narration": "game/missions/mission_2/narrations/Robotoro_1090.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 2,
+                        "speaker": "milo",
+                        "text": "How would we know, Robotoro?",
+                        "narration": "game/missions/mission_2/narrations/Milo_408.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 3,
+                        "speaker": "robotoro",
+                        "text": "Microchips! Get it? MicroChips? Ha Ha Ha!",
+                        "narration": "game/missions/mission_2/narrations/Robotoro_1288.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 4,
+                        "speaker": "milo",
+                        "text": "Hey, Robotoro, can we focus? We came back because we need your help with something.",
+                        "narration": "game/missions/mission_2/narrations/Milo_400.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 5,
+                        "speaker": "robotoro",
+                        "text": "Fine. OK, I’ll change my mood. Reprogramming… programming… new sequence complete.",
+                        "narration": "game/missions/mission_2/narrations/Robotoro_555.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 6,
+                        "speaker": "luna",
+                        "text": "We don’t have time to waste, the bully might change locations, then we have to start all over again, tracking the IP addresses. And what’s even more frightening is that they’re planning to send out the pictures of Katie tomorrow.",
+                        "narration": "game/missions/mission_2/narrations/Luna_1115.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 7,
+                        "speaker": "luna",
+                        "text": "Principal Finley has entrusted us with the name of a student we believe may be behind the cyberbullying happening at Red Valley Elementary. Can you find me the social media accounts for Declan Delavoy?",
+                        "narration": "game/missions/mission_2/narrations/Luna_480.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 8,
+                        "speaker": "robotoro",
+                        "text": "Processing... processing. Done. All relevant social media profiles for a 'Declan Delavoy' found.",
+                        "narration": "game/missions/mission_2/narrations/Robotoro_566.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 9,
+                        "speaker": "milo",
+                        "text": "Put them up on the screen!",
+                        "narration": "game/missions/mission_2/narrations/Milo_410.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 10,
+                        "speaker": "robotoro",
+                        "text": "And what do we say?",
+                        "narration": "game/missions/mission_2/narrations/Robotoro_569.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 11,
+                        "speaker": "milo",
+                        "text": "Could you please put them up on the screen?",
+                        "narration": "game/missions/mission_2/narrations/Milo_416.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 12,
+                        "speaker": "robotoro",
+                        "text": "Ok, it’s on screen now.",
+                        "narration": "game/missions/mission_2/narrations/Robotoro_574.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": true,
+                        "action": {
+                            "type": "snappy_pal"
+                        }
+                    },
+                    {
+                        "sequence": 13,
+                        "speaker": "luna",
+                        "text": "Hmmm… What account has been recently active?",
+                        "narration": "game/missions/mission_2/narrations/Luna_481.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 14,
+                        "speaker": "robotoro",
+                        "text": "SnappyPals, he posted only 20 minutes ago.",
+                        "narration": "game/missions/mission_2/narrations/Robotoro_575.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 15,
+                        "speaker": "milo",
+                        "text": "SnappyPals of course! Bring it up! Oh, sorry, I mean please bring it up, Robotoro.",
+                        "narration": "game/missions/mission_2/narrations/Milo_417.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": true,
+                        "action": {
+                            "type": "snappy_pal_map"
+                        }
+                    },
+                    {
+                        "sequence": 19,
+                        "speaker": "milo",
+                        "text": "That looks like Blue Mountain to me. That confirms his location. Robotoro, can you please get Principal Finley on the line, we’ve got to let her know, ASAP.",
+                        "narration": "game/missions/mission_2/narrations/Milo_419.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 20,
+                        "speaker": "robotoro",
+                        "text": "Ok. Processing now.",
+                        "narration": "game/missions/mission_2/narrations/Robotoro_578.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": true,
+                        "action": {
+                            "type": "receive_phone_call",
+                            "action_data": {
+                                "callerName": "Principal Finley",
+                                "callerImage": "principal_finley.png",
+                                "callNarrations": [
+                                    "game/missions/mission_2/narrations/Milo_428.mp3",
+                                    "game/missions/mission_2/narrations/Luna_482.mp3",
+                                    "game/missions/mission_2/narrations/Principal_1137.mp3",
+                                    "game/missions/mission_2/narrations/Milo_1124.mp3",
+                                    "game/missions/mission_2/narrations/Principal_526.mp3",
+                                    "game/missions/mission_2/narrations/Luna_483.mp3"
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "sequence": 21,
+                        "speaker": "robotoro",
+                        "text": "OK, where are we going now?",
+                        "narration": "game/missions/mission_2/narrations/Robotoro_1093.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 22,
+                        "speaker": "milo",
+                        "text": "Robotoro, you have to wait right here until we get back.",
+                        "narration": "game/missions/mission_2/narrations/Milo_1128.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 23,
+                        "speaker": "robotoro",
+                        "text": "Okay, I see how it is, you visit, you get my help and then it's back out to save the world without me. Fine, I will sort the paper clips by colour until you return.",
+                        "narration": "game/missions/mission_2/narrations/Robotoro_1096.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 24,
+                        "speaker": "luna",
+                        "text": "Wait – Principal Finley is calling us.",
+                        "narration": "game/missions/mission_2/narrations/Luna_486.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": true,
+                        "action": {
+                            "type": "receive_phone_call",
+                            "action_data": {
+                                "callerName": "Principal Finley",
+                                "callerImage": "principal_finley.png",
+                                "callNarrations": [
+                                    "game/missions/mission_2/narrations/Luna_hi.mp3",
+                                    "game/missions/mission_2/narrations/Principal_528.mp3"
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "sequence": 25,
+                        "speaker": "milo",
+                        "text": "Let’s head out there now! Bye Robotoro! Behave yourself!",
+                        "narration": "game/missions/mission_2/narrations/Milo_432.mp3",
+                        "animation": "fadeOut",
+                        "hasAction": false
+                    }
+                ]
+            },
+            {
+                "id": "6",
+                "background": "blue_cabin.webp",
+                "characters": {
+                    "declan": {
+                        "name": "Declan",
+                        "image": "declan.png",
+                        "canAnimate": true,
+                        "position": "left"
+                    },
+                    "mrsDelavoy": {
+                        "name": "Mrs.Delavoy",
+                        "image": "mrs_delavoy.png",
+                        "position": "left",
+                        "canAnimate": true
+                    },
+                    "milo": {
+                        "name": "Milo",
+                        "image": "milo.png",
+                        "position": "center",
+                        "canAnimate": true
+                    },
+                    "luna": {
+                        "name": "Luna",
+                        "image": "luna.png",
+                        "position": "center",
+                        "canAnimate": true
+                    }
+                },
+                "dialogues": [
+                    {
+                        "sequence": 1,
+                        "hasOnlyAction": true,
+                        "action": {
+                            "type": "receive_phone_call",
+                            "action_data": {
+                                "callerName": "Principal Finley",
+                                "callerImage": "principal_finley.png",
+                                "callNarrations": [
+                                    "game/missions/mission_2/narrations/Principal_529.mp3",
+                                    "game/missions/mission_2/narrations/Milo_436.mp3"
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "sequence": 2,
+                        "hasOnlyNarration": true,
+                        "narration": "game/missions/mission_2/narrations/Declan_589.mp3",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 3,
+                        "speaker": "luna",
+                        "text": "Ummm, no, we’re not with Road Runner. Are you Declan?",
+                        "narration": "game/missions/mission_2/narrations/Luna_488.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 4,
+                        "speaker": "declan",
+                        "text": "i might be. Who wants to know?",
+                        "narration": "game/missions/mission_2/narrations/Declan_597.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 5,
+                        "speaker": "luna",
+                        "text": "My name is Luna and this is Milo. We’re here on behalf of Principal Finley. Your mom should be expecting us.",
+                        "narration": "game/missions/mission_2/narrations/Luna_490.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 6,
+                        "speaker": "declan",
+                        "text": "Digipalz, huh. What kind of name is that? Martian?",
+                        "narration": "game/missions/mission_2/narrations/Declan_599.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 7,
+                        "speaker": "mrsDelavoy",
+                        "text": "Declan, let them in, it’s freezing outside!",
+                        "narration": "game/missions/mission_2/narrations/Mrs.D._623.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 8,
+                        "speaker": "declan",
+                        "text": "Mom! It's weird when people just show up to other people's houses like this! Hey, did you guys eat my chicken nuggets?",
+                        "narration": "game/missions/mission_2/narrations/Declan_600.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 9,
+                        "speaker": "mrsDelavoy",
+                        "text": "Declan, please go back to your room – you can wait for your precious chicken nuggets there. Digipalz, please, come in.",
+                        "narration": "game/missions/mission_2/narrations/Mrs.D._626.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 10,
+                        "speaker": "milo",
+                        "text": "Thank you, Mrs. Delavoy.",
+                        "narration": "game/missions/mission_2/narrations/Milo_441.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    }
+                ]
+            },
+            {
+                "id": "7",
+                "background": "cabin_living_room.webp",
+                "characters": {
+                    "declan": {
+                        "name": "Declan",
+                        "image": "declan.png",
+                        "canAnimate": true,
+                        "position": "center"
+                    },
+                    "mrsDelavoy": {
+                        "name": "Mrs.Delavoy",
+                        "image": "mrs_delavoy.png",
+                        "position": "left",
+                        "canAnimate": false
+                    },
+                    "milo": {
+                        "name": "Milo",
+                        "image": "milo.png",
+                        "position": "center",
+                        "canAnimate": true
+                    },
+                    "luna": {
+                        "name": "Luna",
+                        "image": "luna.png",
+                        "position": "center",
+                        "canAnimate": true
+                    }
+                },
+                "dialogues": [
+                    {
+                        "sequence": 1,
+                        "speaker": "mrsDelavoy",
+                        "text": "My stomach has been in knots ever since Principal Finley called me. Declan's not a bad kid. I just can't see how he could be involved in this. Threatening to share pictures of a girl in her underwear? I raised him to be respectful, to treat others with dignity, to understand boundaries and to take responsibility for his actions. What he did is not just wrong, it’s harmful, it’s illegal, and it goes against everything I thought he understood.",
+                        "narration": "game/missions/mission_2/narrations/Mrs.D._1147.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 2,
+                        "speaker": "luna",
+                        "text": "We don't have enough information to say definitively if he's involved. But, if we’re being honest with you, everything we’ve uncovered in our investigation, by following the IP addresses, has led us here.",
+                        "narration": "game/missions/mission_2/narrations/Luna_492.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 3,
+                        "speaker": "mrsDelavoy",
+                        "text": "I see. And, what is that, exactly?",
+                        "narration": "game/missions/mission_2/narrations/Mrs.D._629.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 4,
+                        "speaker": "milo",
+                        "text": "Well, at the time these comments were posted, the perpetrator's IP address pointed us to this location. Declan is the only student we know of who is currently spending his spring break here at Blue Mountain.",
+                        "narration": "game/missions/mission_2/narrations/Milo_444.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 5,
+                        "speaker": "mrsDelavoy",
+                        "text": "But, you don't know for sure, right? There could be other students here!",
+                        "narration": "game/missions/mission_2/narrations/Mrs.D._632.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 6,
+                        "speaker": "luna",
+                        "text": "The only way to know for sure would be to look at one of his devices, like his phone or his laptop, and we’ll see if the IP address matches.",
+                        "narration": "game/missions/mission_2/narrations/Luna_493.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 7,
+                        "speaker": "mrsDelavoy",
+                        "text": "OK. But I’m hoping you have the wrong child!",
+                        "narration": "game/missions/mission_2/narrations/Mrs.D._1155.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 8,
+                        "speaker": "mrsDelavoy",
+                        "text": "Declan! Please come back down here right now!",
+                        "narration": "game/missions/mission_2/narrations/Mrs.D._1160.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 9,
+                        "speaker": "declan",
+                        "text": "Hey! Did the road runner bring my chicken nuggets yet? I’m starving!",
+                        "narration": "game/missions/mission_2/narrations/Declan_602.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 10,
+                        "speaker": "mrsDelavoy",
+                        "text": "Declan, take out your cell phone please.",
+                        "narration": "game/missions/mission_2/narrations/Mrs.D._636.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 11,
+                        "speaker": "declan",
+                        "text": "What, why do you want my cell phone?",
+                        "narration": "game/missions/mission_2/narrations/Declan_603.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 12,
+                        "speaker": "milo",
+                        "text": "Declan, we need to check if your phone matches the IP address of a user threatening to breach your school's online chatroom rules.",
+                        "narration": "game/missions/mission_2/narrations/Milo_446.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 13,
+                        "speaker": "declan",
+                        "text": "What? It's not me. You're not getting my phone, it’s private. Mom, don't let them do this!",
+                        "narration": "game/missions/mission_2/narrations/Declan_604.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 14,
+                        "speaker": "mrsDelavoy",
+                        "text": "This sounds serious, Declan. Just let them see your phone so they know it wasn't you!",
+                        "narration": "game/missions/mission_2/narrations/Mrs.D._637.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 15,
+                        "speaker": "declan",
+                        "text": "No! I didn't threaten to say anything bad, or threaten to post any photos!",
+                        "narration": "game/missions/mission_2/narrations/Declan_605.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 16,
+                        "speaker": "milo",
+                        "text": "Declan, I didn't mention anything about photos...",
+                        "narration": "game/missions/mission_2/narrations/Milo_447.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 17,
+                        "speaker": "declan",
+                        "text": "Wait... what? That's not fair!",
+                        "narration": "game/missions/mission_2/narrations/Declan_607.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 18,
+                        "speaker": "declan",
+                        "text": "I mean, I saw someone post about photos... But, it wasn't me. I don't have photos of Katie! I swear!",
+                        "narration": "game/missions/mission_2/narrations/Declan_608.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 19,
+                        "speaker": "luna",
+                        "text": "Who said anything about Katie?",
+                        "narration": "game/missions/mission_2/narrations/Luna_495.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 20,
+                        "speaker": "mrsDelavoy",
+                        "text": "Declan, I would much rather hear the truth from you. Hand over your phone, I’m not going to ask again.",
+                        "narration": "game/missions/mission_2/narrations/Mrs.D._1163.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 21,
+                        "speaker": "declan",
+                        "text": "Ok, here’s my cell. I think I hear the roadrunner coming. I’m going to go get my chicken nuggets now. See you later.",
+                        "narration": "game/missions/mission_2/narrations/Declan_1170.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 22,
+                        "speaker": "mrsDelavoy",
+                        "text": "Oh no! I don’t believe what I’m seeing. Declan, get back in here now! You do have inappropriate photos of a girl on your phone. Is this Katie? Declan, how could you do this?",
+                        "narration": "game/missions/mission_2/narrations/Mrs.D._1166.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 23,
+                        "speaker": "declan",
+                        "text": "I was just trying to be funny.",
+                        "narration": "game/missions/mission_2/narrations/Declan_611.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 24,
+                        "speaker": "mrsDelavoy",
+                        "text": "Declan, doing things like this online can have serious consequences. Did you know that the police had to get involved?",
+                        "narration": "game/missions/mission_2/narrations/Mrs.D._657.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 25,
+                        "speaker": "declan",
+                        "text": "I didn't mean for things to go this far.",
+                        "narration": "game/missions/mission_2/narrations/Declan_612.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 26,
+                        "speaker": "mrsDelavoy",
+                        "text": "You need to apologize to Katie. And immediately delete those photos you have of Katie!",
+                        "narration": "game/missions/mission_2/narrations/Mrs.D._1220.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 27,
+                        "speaker": "declan",
+                        "text": "Yes, I will. I'm embarrassed that I even had them to begin with. I promise I will get rid of everything.",
+                        "narration": "game/missions/mission_2/narrations/Declan_1216.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 28,
+                        "speaker": "luna",
+                        "text": "I think that’s a positive first step, Declan. Your actions really hurt Katie and her family.",
+                        "narration": "game/missions/mission_2/narrations/Luna_496.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 29,
+                        "speaker": "milo",
+                        "text": "Not to mention your classmates, your teacher and your principal. You owe more than one apology.",
+                        "narration": "game/missions/mission_2/narrations/Milo_450.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    }
+                ]
+            },
+            {
+                "id": "8",
+                "background": "digipalz_headquarter.webp",
+                "characters": {
+                    "robotoro": {
+                        "name": "Robotoro",
+                        "image": "robotoro.png",
+                        "position": "left",
+                        "canAnimate": false
+                    },
+                    "milo": {
+                        "name": "Milo",
+                        "image": "milo.png",
+                        "position": "center",
+                        "canAnimate": true
+                    },
+                    "luna": {
+                        "name": "Luna",
+                        "image": "luna.png",
+                        "position": "center",
+                        "canAnimate": true
+                    }
+                },
+                "dialogues": [
+                    {
+                        "sequence": 1,
+                        "speaker": "robotoro",
+                        "text": "Well, it’s about time you got back. It has been exactly 6 hours, 24 minutes, and 54 seconds since you left.",
+                        "narration": "game/missions/mission_2/narrations/Robotoro_1097.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 2,
+                        "speaker": "luna",
+                        "text": "Hello Robotoro, did we miss anything important while we were away?",
+                        "narration": "game/missions/mission_2/narrations/Luna_476.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 3,
+                        "speaker": "robotoro",
+                        "text": "Yes. I was very lonely here without you.",
+                        "narration": "game/missions/mission_2/narrations/Robotoro_545.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 4,
+                        "speaker": "milo",
+                        "text": "Come on, Robo! We are working on a very important case right now for Principal Finley.",
+                        "narration": "game/missions/mission_2/narrations/Milo_399.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 5,
+                        "speaker": "robotoro",
+                        "text": "I do not enjoy it when you are away from base for long periods of time.",
+                        "narration": "game/missions/mission_2/narrations/Robotoro_547.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 6,
+                        "speaker": "luna",
+                        "text": "Yes we know, we’re sorry, Robotoro.",
+                        "narration": "game/missions/mission_2/narrations/Luna_479.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 7,
+                        "speaker": "robotoro",
+                        "text": "Well, when you were away, I had time to make a new game for you. Here it is. You have to erase as many of the digital footprints as you can in one minute. You have to go quickly, some are bigger than others, some are faster than others. Ready, set GO!",
+                        "narration": "game/missions/mission_2/narrations/Robotoro_1099.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": true,
+                        "action": {
+                            "type": "erase_digital_footprint"
+                        }
+                    },
+                    {
+                        "sequence": 8,
+                        "speaker": "robotoro",
+                        "text": "Ha ha, I tricked you! You guys were all trying so hard to erase them, but no matter how hard you try, you cannot erase digital footprints!",
+                        "narration": "game/missions/mission_2/narrations/Robotoro_585.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 9,
+                        "speaker": "robotoro",
+                        "text": "Which brings me to my next point about Digital Footprints and how permanent they are. They will be there tomorrow, and the next day, and next week, and next month. They will be there next year, 5 years from now and 10 years from now. 20 years from now and even 40 years from now. Let’s take a minute and look into the future. I want you to think about something. What will you be doing in about 10 years from now?",
+                        "narration": "game/missions/mission_2/narrations/Robotoro_1100.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": true,
+                        "action": {
+                            "type": "apply_uni",
+                            "narrationLocation": "game/missions/mission_2/narrations/Robotoro_1172.mp3"
+                        }
+                    },
+                    {
+                        "sequence": 10,
+                        "speaker": "robotoro",
+                        "text": "Please watch this video and think about what your digital footprints will tell the world about you.",
+                        "narration": "game/missions/mission_2/narrations/Robotoro_1173.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": true,
+                        "action": {
+                            "type": "footprint_video",
+                            "videoId": "yDs19v83-fQ",
+                            "duration": 82000
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "9",
+                "background": "principal_office.jpg",
+                "characters": {
+                    "principal_finley": {
+                        "name": "Principal Finley",
+                        "image": "principal_finley.png",
+                        "position": "left",
+                        "canAnimate": false
+                    },
+                    "milo": {
+                        "name": "Milo",
+                        "image": "milo.png",
+                        "position": "center",
+                        "canAnimate": true
+                    },
+                    "luna": {
+                        "name": "Luna",
+                        "image": "luna.png",
+                        "position": "center",
+                        "canAnimate": true
+                    }
+                },
+                "dialogues": [
+                    {
+                        "sequence": 1,
+                        "speaker": "principal_finley",
+                        "text": "Digipalz, I want to thank you for the work you did in solving this important mission. Katie went through so much distress over this and we need to support her in every way we can. We also need to thank her for being brave enough to talk to us about this. That took a lot of courage on her part.",
+                        "narration": "game/missions/mission_2/narrations/Principal_1138.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 2,
+                        "speaker": "luna",
+                        "text": "With enough proof, the police could have confiscated Declan's phone and laptop, and through digital forensics, the truth would have come out one way or another.",
+                        "narration": "game/missions/mission_2/narrations/Luna_500.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 3,
+                        "speaker": "principal_finley",
+                        "text": "I'm glad it didn't come to that. Declan's apologized for his online comments, and to my relief, showed me proof that he'd deleted all copies of Katie’s photos.",
+                        "narration": "game/missions/mission_2/narrations/Principal_1139.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 4,
+                        "speaker": "milo",
+                        "text": "So, what's going to happen to him?",
+                        "narration": "game/missions/mission_2/narrations/Milo_1898.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 5,
+                        "speaker": "principal_finley",
+                        "text": "Needless to say, there will be disciplinary action because Declan violated our school policy. However, his honesty and apologies will factor into my decision. Good work, Digipalz.",
+                        "narration": "game/missions/mission_2/narrations/Principal_1141.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 6,
+                        "speaker": "luna",
+                        "text": "Anytime, Principal Finley. At least Declan now knows that what's done online doesn't always stay online, and online actions have real-world consequences.",
+                        "narration": "game/missions/mission_2/narrations/Luna_504.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    },
+                    {
+                        "sequence": 7,
+                        "speaker": "milo",
+                        "text": "You're not as anonymous as you think.",
+                        "narration": "game/missions/mission_2/narrations/Milo_455.mp3",
+                        "animation": "fadeIn",
+                        "hasAction": false
+                    }
+                ]
+            }
+        ]
+    }

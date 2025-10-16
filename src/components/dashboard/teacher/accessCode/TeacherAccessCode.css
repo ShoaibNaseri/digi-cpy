@@ -1,0 +1,693 @@
+/* Main Container */
+.teacher-access-code-management-container,
+.teacher-access-code-management-container * {
+  box-sizing: border-box;
+}
+
+.teacher-access-code-management-container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+  color: #000000;
+  padding: 2rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Header Section */
+.teacher-access-code-management-header {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.teacher-access-code-management-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0;
+  text-align: left;
+  align-self: flex-start;
+}
+
+.teacher-access-code-management-subtitle {
+  color: #4b5563;
+  margin-top: 4px;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.teacher-access-code-generate-button {
+  /* position: absolute; */
+  /* top: 0; */
+  /* right: 0; */
+  background-color: #1e40af;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.teacher-access-code-generate-button:hover {
+  background-color: #1e3a8a;
+}
+.teacher-access-code-active-info {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 0 0 1rem 0;
+  font-weight: 500;
+  font-family: 'urbanist', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #fafbfc;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+.teacher-access-code-generate-icon {
+  margin-right: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+}
+
+/* Section Styling */
+.teacher-access-code-section {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.teacher-access-code-section-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  color: #000000;
+}
+
+.teacher-access-code-expiry-note {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin: -1rem 0 1rem 0;
+}
+
+/* Form Elements */
+.teacher-access-code-form-container {
+  display: flex;
+  gap: 2rem;
+  align-items: space-between;
+}
+
+.teacher-access-code-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: stretch;
+  flex: 1;
+}
+
+.teacher-access-code-form-group {
+  flex: 1;
+}
+
+.teacher-access-code-form-label {
+  display: block;
+  font-size: 0.875rem;
+  color: #000000;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+
+.teacher-access-code-select-wrapper {
+  position: relative;
+}
+
+.teacher-access-code-select {
+  width: 32.75rem;
+  padding: 0.75rem;
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  appearance: none;
+  cursor: pointer;
+  padding-right: 2.5rem;
+}
+
+.teacher-access-code-select:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+.teacher-access-code-select-wrapper::after {
+  content: '▼';
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ffffff;
+  font-size: 0.75rem;
+  pointer-events: none;
+}
+
+.teacher-access-code-dropdown-wrapper {
+  width: 32.75rem;
+}
+
+.teacher-access-code-dropdown-wrapper .custom-dropdown-header {
+  background-color: #000000;
+}
+
+.teacher-access-code-dropdown-wrapper .custom-dropdown-value {
+  color: #ffffff;
+}
+
+.teacher-access-code-dropdown-wrapper .custom-dropdown-menu {
+  scrollbar-width: none; /* For Firefox */
+  scrollbar-color: #f1f1f1 #fff; /* For Firefox */
+  border-radius: 8px;
+  overflow: scroll;
+}
+
+/* For Chrome, Safari and Opera */
+.teacher-access-code-dropdown-wrapper .custom-dropdown-menu::-webkit-scrollbar {
+  width: 5px;
+}
+
+.teacher-access-code-dropdown-wrapper
+  .custom-dropdown-menu::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.teacher-access-code-dropdown-wrapper
+  .custom-dropdown-menu::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 2px;
+}
+
+.teacher-access-code-dropdown-wrapper
+  .custom-dropdown-menu::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.teacher-access-code-dropdown-wrapper .custom-dropdown-arrow {
+  color: #ffffff;
+}
+
+/* Code Display */
+.teacher-access-code-display {
+  border: 2px dashed #000000;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  background-color: #f9fafb;
+}
+
+.teacher-access-code-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.1em;
+  font-family: 'Courier New', monospace;
+}
+
+.teacher-access-code-expiry {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+/* Code List */
+.teacher-access-code-list {
+  margin-top: 1rem;
+}
+
+.teacher-access-code-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 0.5rem !important;
+  transition: all 0.2s ease;
+}
+
+.teacher-access-code-list-item:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.teacher-access-code-list-item-expired {
+  opacity: 0.7;
+  background-color: #f9fafb;
+}
+
+.teacher-access-code-list-info {
+  flex: 1;
+}
+
+.teacher-access-code-list-code {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #000000;
+
+  margin-bottom: 0.25rem;
+  font-family: 'Courier New', monospace;
+}
+
+.teacher-access-code-list-details {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.teacher-access-code-list-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.teacher-access-code-list-expiry {
+  font-size: 0.875rem;
+  color: #ec4899;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.teacher-access-code-expired-label {
+  font-size: 0.875rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+/* Action Buttons */
+.teacher-access-code-copy-btn,
+.teacher-access-code-delete-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0.85);
+}
+
+.teacher-access-code-copy-btn img,
+.teacher-access-code-delete-btn img {
+  width: 50%;
+  height: 50%;
+}
+
+.teacher-access-code-copy-btn:hover,
+.teacher-access-code-delete-btn:hover {
+  background-color: #2d3748;
+}
+
+/* Loading and Error States */
+.teacher-access-code-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  font-size: 1.1rem;
+  color: #6b7280;
+}
+
+.teacher-access-code-error {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #dc2626;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 4px rgba(220, 38, 38, 0.1);
+}
+
+.teacher-access-code-error button {
+  background: none;
+  border: none;
+  color: #dc2626;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.teacher-access-code-error button:hover {
+  background-color: #dc2626;
+  color: white;
+}
+
+/* No Classes State */
+.teacher-access-code-no-classes {
+  text-align: center;
+  padding: 2rem;
+  background-color: #f9fafb;
+  border-radius: 8px;
+  color: #6b7280;
+  margin-top: 1rem;
+}
+
+/* Empty States */
+.teacher-access-code-empty {
+  text-align: center;
+  padding: 2rem;
+  color: #6b7280;
+  background-color: #f9fafb;
+  border-radius: 8px;
+  font-style: italic;
+}
+
+/* Updated List Item Actions */
+.teacher-access-code-list-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Ensure all action buttons have consistent sizing */
+.teacher-access-code-copy-btn,
+.teacher-access-code-invalid-btn,
+.teacher-access-code-delete-btn {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Force all icons to same visual size */
+.teacher-access-code-copy-btn svg,
+.teacher-access-code-invalid-btn svg,
+.teacher-access-code-delete-btn svg {
+  width: 16px !important;
+  height: 16px !important;
+}
+
+.teacher-access-code-invalid-btn {
+  background: #fff3cd;
+  border: 1px solid #f39c12;
+  color: #f39c12;
+}
+
+.teacher-access-code-invalid-btn:hover {
+  background-color: #f39c12;
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(243, 156, 18, 0.3);
+}
+
+/* Generate Button */
+.teacher-access-code-generate-button {
+  background: linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%);
+  color: #ffffff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 32.75rem;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+}
+
+.teacher-access-code-generate-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(139, 92, 246, 0.4);
+}
+
+/* Button States */
+.teacher-access-code-generate-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background: #9ca3af;
+  box-shadow: none;
+}
+
+.teacher-access-code-generate-button:disabled:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+/* Enhanced Code Display */
+.teacher-access-code-display {
+  margin-top: -4.2rem;
+  padding: 5rem 0 5rem 0;
+  /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
+  background: none;
+  border-radius: 12px;
+  text-align: center;
+  width: 32.75rem;
+  height: 100%;
+  color: white;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.teacher-access-code-value {
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+  font-family: 'Courier New', monospace;
+}
+
+.teacher-access-code-expiry {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+/* Section Titles with Counts */
+.teacher-access-code-section-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: black;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+/* Improved List Items */
+.teacher-access-code-list-item {
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+  background-color: #fafbfc;
+  border: 1px solid black;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+.teacher-access-code-list-item:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transform: translateY(-1px);
+}
+
+.teacher-access-code-list-item-expired {
+  /* opacity: 0.7; */
+  border: none;
+  background-color: #8f9aa440;
+}
+
+.teacher-access-code-list-code {
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: 'Courier New', monospace;
+  color: black;
+  margin-bottom: 0.25rem;
+}
+
+.teacher-access-code-list-details {
+  color: black;
+  font-size: 0.9rem;
+}
+
+.teacher-access-code-list-expiry {
+  font-size: 1.125rem;
+  color: #d60c7b;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  margin-right: 0.5rem;
+}
+
+.teacher-access-code-expired-label {
+  font-size: 1rem;
+  color: #000000;
+  padding: 0.25rem 0.5rem;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  margin-right: 0.5rem;
+}
+
+/* Button Improvements */
+.teacher-access-code-copy-btn {
+  background: #d4edda;
+  border: 1px solid #28a745;
+  color: #28a745;
+}
+
+.teacher-access-code-copy-btn:hover {
+  background-color: #28a745;
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(40, 167, 69, 0.3);
+}
+
+.teacher-access-code-delete-btn {
+  background: #f8d7da;
+  border: 1px solid #dc3545;
+  color: #dc3545;
+}
+
+.teacher-access-code-delete-btn:hover {
+  background-color: #dc3545;
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(220, 53, 69, 0.3);
+}
+
+/* Copy Button */
+.teacher-access-code-copy-btn {
+  background-color: #4b5563;
+  color: #ffffff;
+  border: none;
+  border-radius: 26.563rem;
+  /* padding: 0.5rem 4rem; */
+  width: 8rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.teacher-access-code-copy-btn:hover {
+  background-color: #4b5563;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.teacher-access-code-copy-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Copied state styling */
+.teacher-access-code-copy-btn.copied {
+  background-color: #4b5563;
+  color: #ffffff;
+}
+
+.teacher-access-code-copy-btn.copied:hover {
+  background-color: #4b5563;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Delete Button */
+.teacher-access-code-delete-btn {
+  background-color: #dc3545;
+  color: #ffffff;
+  border: none;
+  border-radius: 26.563rem;
+  width: 8rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.teacher-access-code-delete-btn:hover {
+  background-color: #c82333;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(220, 53, 69, 0.3);
+}
+
+.teacher-access-code-delete-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .teacher-access-code-list-item {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .teacher-access-code-list-actions {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .teacher-access-code-value {
+    font-size: 1.5rem;
+  }
+
+  .teacher-access-code-management-header {
+    text-align: center;
+  }
+
+  .teacher-access-code-generate-button {
+    width: 100%;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .teacher-access-code-section {
+    padding: 1rem;
+  }
+
+  .teacher-access-code-list-actions {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: stretch;
+  }
+
+  .teacher-access-code-copy-btn,
+  .teacher-access-code-delete-btn {
+    justify-content: center;
+  }
+}

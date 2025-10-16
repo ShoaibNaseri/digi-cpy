@@ -1,0 +1,512 @@
+/* TeacherAssignments.css */
+
+/* ===== GLOBAL STYLES ===== */
+.teacher-assignment-container,
+.teacher-assignment-container * {
+  box-sizing: border-box;
+}
+
+.teacher-assignment-container {
+  min-height: 100vh;
+  background-color: #f8fafc;
+  color: #1e293b;
+}
+
+.teacher-assignment-content {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1rem;
+}
+
+/* ===== HEADER SECTION ===== */
+.teacher-assignment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.teacher-assignment-header-left {
+  flex: 1;
+}
+
+.teacher-assignment-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  text-align: left;
+  color: #1e293b;
+}
+
+.teacher-assignment-subtitle {
+  color: #64748b;
+  margin: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.teacher-assignment-create-btn {
+  background: linear-gradient(90deg, #d60c7b 0%, #8b2db3 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  width: 233px;
+  height: 50px;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 6px -1px rgba(139, 92, 246, 0.1);
+}
+
+.teacher-assignment-create-btn:hover {
+  background: linear-gradient(90deg, #d60c7b 0%, #6b2db3 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 8px -1px rgba(139, 92, 246, 0.2);
+}
+
+.teacher-assignment-btn-icon {
+  margin-right: 8px;
+}
+
+/* ===== FORM CONTAINER ===== */
+.teacher-assignment-form {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  border: 1px solid #e2e8f0;
+}
+
+.teacher-assignment-form-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  color: #1e293b;
+}
+
+/* Form layout elements */
+.teacher-assignment-form-group {
+  margin-bottom: 1.5rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.teacher-assignment-form-row {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.teacher-assignment-form-column {
+  flex: 1 1 0;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+/* Form input elements */
+.teacher-assignment-form-label {
+  display: block;
+  margin-bottom: 1.125rem;
+  font-weight: 600;
+  color: #666666;
+}
+
+/* Input wrapper for icons inside fields */
+.teacher-assignment-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.teacher-assignment-input-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  z-index: 10000;
+  pointer-events: none;
+}
+
+.teacher-assignment-form-input,
+.teacher-assignment-form-textarea {
+  width: 100%;
+  background-color: #ffffff;
+  color: #1e293b;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 2px solid #e2e8f0;
+  box-sizing: border-box;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.teacher-assignment-form-input:focus,
+.teacher-assignment-form-textarea:focus {
+  outline: none;
+  border-color: #e2e8f0;
+}
+
+.teacher-assignment-form-input::placeholder,
+.teacher-assignment-form-textarea::placeholder {
+  color: #9ca3af;
+}
+
+/* Add left padding for inputs with icons */
+.teacher-assignment-input-wrapper .teacher-assignment-form-input {
+  padding-left: 48px;
+}
+
+/* Custom select styling */
+.teacher-assignment-form-select {
+  width: 100%;
+  background-color: #ffffff;
+  color: #1e293b;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 2px solid #e2e8f0;
+  box-sizing: border-box;
+  appearance: none;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%238b5cf6%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 12px auto;
+  padding-right: 48px;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+/* Add left padding for select with icon */
+.teacher-assignment-input-wrapper .teacher-assignment-form-select {
+  padding-left: 48px;
+}
+
+.teacher-assignment-form-select:focus {
+  outline: none;
+  border-color: #e2e8f0;
+}
+
+/* Dropdown option hover styles */
+.teacher-assignment-form-select option:hover,
+.teacher-assignment-form-select option:focus {
+  background: linear-gradient(90deg, #d60c7b 0%, #8b2db3 100%);
+  color: #000000;
+}
+
+/* For better cross-browser support, we'll also style the select dropdown */
+.teacher-assignment-form-select:focus option:hover {
+  background: linear-gradient(90deg, #d60c7b 0%, #8b2db3 100%);
+  color: #000000;
+}
+
+.teacher-assignment-form-textarea {
+  height: 120px;
+  resize: vertical;
+  font-family: inherit;
+}
+
+/* Attachments area */
+.teacher-assignment-attachment-area {
+  border: 2px dashed #cbd5e1;
+  padding: 3rem 2rem;
+  border-radius: 8px;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  cursor: pointer;
+  position: relative;
+  background-color: #f8fafc;
+  transition: all 0.2s ease;
+}
+
+.teacher-assignment-attachment-area:hover {
+  border-color: #cbd5e1;
+  background-color: #f8fafc;
+}
+
+.teacher-assignment-file-input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.teacher-assignment-upload-icon {
+  margin-bottom: 1rem;
+  color: #64748b;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 48px;
+  height: 48px;
+}
+
+.teacher-assignment-attachment-text {
+  color: #64748b;
+  font-size: 14px;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Action Buttons */
+.teacher-assignment-form-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.teacher-assignment-preview-btn {
+  background: linear-gradient(90deg, #d60c7b 0%, #6b2db3 100%);
+  color: #ffffff;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  width: 263px;
+  height: 50px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 6px -1px rgba(139, 92, 246, 0.1);
+}
+
+.teacher-assignment-preview-btn:hover {
+  background: linear-gradient(90deg, #d60c7b 0%, #5b2db3 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 8px -1px rgba(139, 92, 246, 0.2);
+}
+
+.teacher-assignment-cancel-btn {
+  background-color: #8f9aa4;
+  color: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 152px;
+  height: 50px;
+  transition: all 0.2s ease;
+}
+
+.teacher-assignment-cancel-btn:hover {
+  background-color: #e2e8f0;
+  color: #475569;
+}
+
+/* ===== ASSIGNMENTS SECTION ===== */
+.teacher-assignment-list-row {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.teacher-assignment-list-column {
+  background-color: #ffffff;
+
+  border-radius: 12px;
+  flex: 1;
+  box-sizing: border-box;
+ 
+}
+
+.teacher-assignment-section-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #1e293b;
+  width: 100%;
+}
+
+.teacher-assignment-dropdowns {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.teacher-assignment-dropdowns .custom-dropdown {
+  width: 210px;
+}
+
+.teacher-assignment-dropdowns .custom-dropdown .custom-dropdown-header {
+  padding: 13px 16px;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.teacher-assignment-dropdowns .custom-dropdown .custom-dropdown-arrow {
+  color: #ffffff !important;
+  font-size: 1.25rem;
+}
+
+/* Assignment cards */
+.teacher-assignment-card {
+  background-color: #f8fafc;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #e2e8f0;
+}
+
+.teacher-assignment-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.teacher-assignment-card-title {
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.teacher-assignment-card-due {
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+.teacher-assignment-card-btn-container {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.teacher-assignment-card-btn {
+  background: linear-gradient(90deg, #d60c7b 0%, #6b2db3 100%);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 500;
+
+  transition: background-color 0.2s ease;
+}
+
+.teacher-assignment-card-btn:hover {
+  background: linear-gradient(90deg, #d60c7b 0%, #5b2db3 100%);
+}
+
+/* Empty state */
+.teacher-assignment-empty-state {
+  text-align: center;
+  padding: 3rem 0;
+  color: #64748b;
+  font-style: italic;
+  grid-column: 1 / -1;
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.teacher-assignment-empty-state p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+.teacher-assignment-empty-state p:first-child {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #475569;
+}
+
+/* Assignment Grid */
+.teacher-assignment-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 16px;
+  max-width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .teacher-assignment-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .teacher-assignment-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+/* ===== RESPONSIVE STYLES ===== */
+@media (max-width: 768px) {
+  .teacher-assignment-section-title {
+    width: 100%;
+  }
+  
+  .teacher-assignment-dropdowns {
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+  }
+  
+  .teacher-assignment-dropdowns .custom-dropdown {
+    width: 100%;
+  }
+  
+  .teacher-assignment-content {
+    padding: 1rem;
+  }
+
+  .teacher-assignment-header {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .teacher-assignment-list-row,
+  .teacher-assignment-form-row {
+    flex-direction: column;
+  }
+
+  .teacher-assignment-list-column {
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+
+  .teacher-assignment-form-actions {
+    flex-direction: column;
+  }
+
+  .teacher-assignment-preview-btn,
+  .teacher-assignment-cancel-btn {
+    width: 100%;
+  }
+}

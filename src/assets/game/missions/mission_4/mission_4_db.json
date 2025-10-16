@@ -1,0 +1,1036 @@
+{
+    "id": 4,
+    "title": "Personal & Private Information",
+    "background_image_src": "assets/game/missions/mission_one/bg_imgs/mission_one_bg.webp",
+    "dialogue_bg_image_src": "assets/game/missions/mission_one/bg_imgs/dialogue_bg.webp",
+    "intro_scene": {
+        "background": "digipalz_headquarter.webp",
+        "next_scene": "article",
+        "characters": {
+            "robotoro": {
+                "name": "Robotoro",
+                "image": "robotoro.png",
+                "canAnimate": false,
+                "position": "left"
+            }
+        },
+        "dialogues": [
+            {
+                "sequence": 1705,
+                "speaker": "robotoro",
+                "text": "Great job on the last mission, Digipalz! I’ve got a new case for you. We got a call from Declan's mom on our after-hours hotline. Mrs. Delavoy says his computer has been hacked, and he’s extremely upset about it. When his bus arrives at school this morning, Declan is going to come straight to the computer lab. Can one of you meet him there?",
+                "narration": "game/missions/mission_4/narrations/Robotoro_1705.mp3",
+                "animation": "fadeIn",
+                "hasAction": false
+            }
+        ]
+    },
+    "article": {
+        "next_scene": "aza-check",
+        "content": [
+            {
+                "title": "Liam’s Story",
+                "content": "Liam, 10, was bursting with excitement. His family was leaving for Spain the next day, and he already had his posting plan ready.\n“First I’m going to put a countdown on my account,” he told his parents at dinner. “Then a selfie at the airport. Then one when we land!”\n\nHis mom put down her fork. “Liam, we need to talk about something before you do that.”\nShe explained that when you take a photo, your phone doesn’t just save the picture you can see. It also saves a hidden set of details about that picture — like a secret note tucked inside it. This hidden information, called metadata, can include the date, time, camera settings, and sometimes the exact location where the picture was taken.\n\n“That location information is called a geotag,” his dad added. “It comes from your phone’s GPS chip - like the one cars use for directions.”\n\nLiam looked puzzled. “But I never type in my location when I post.”\n\n“You don’t have to,” his mom said. “Most phones add it automatically unless you turn it off. Even if you don’t see the location on the screen, it’s still inside the photo file. If someone downloads it, they can read that data and figure out exactly where you were.”\n\nThe FBI warns that posting geotagged pictures while you’re away can tell strangers your home is empty. Posting lots of pictures from the same places - like your school or park - can also reveal your daily routine, something safety experts call a pattern of life.\n\nAfter hearing that, Liam decided to make a few changes:\n- Turn off location services for his camera\n- Check his privacy settings so only friends could see his posts\n- Wait until he was home to share his vacation photos\n\nIn Spain, Liam still took hundreds of pictures - sunsets, soccer stadiums, and giant churros - but kept them offline until he got back.\n\nA week later, he posted his “Spain photo dump.” His friends loved it, and his parents were happy he’d stayed safe.\n\n“I didn’t know my pictures had secrets inside them,” Liam said. “Now I make sure they don’t tell more than I want.”"
+            }
+        ],
+        "profile_image": "baby_article.webp"
+    },
+    "azabuki_check": {
+        "character_name": "Azabuki",
+        "title": "Mr. Azabuki Check In",
+        "message": "Today, we’ll talk about how to tell the difference between private and safe-to-share information, how oversharing can lead to real dangers, and why asking permission before sharing someone’s photo helps protect people’s privacy and shows respect for others. By the end, you’ll feel confident knowing what’s okay to post online - and what’s best to keep private.",
+        "narration": "game/missions/mission_4/narrations/Azabuki_1728.mp3",
+        "next_scene": "mission_tasks"
+    },
+    "mission_tasks": {
+        "title": "Mission Tasks",
+        "next_scene": "scenes",
+        "important_info": "Your mission tasks.  Read them carefully.   This is what you will be quizzed on.",
+        "tasks": [
+            {
+                "id": 1,
+                "title": "Task 1",
+                "description": "Tell the difference between <strong>private information</strong> (you should not share) and <strong>safe-to-share information</strong>, and give examples of each.",
+                "narration": "game/missions/mission_4/narrations/task1.mp3"
+            },
+            {
+                "id": 2,
+                "title": "Task 2",
+                "description": "Explain why it’s important to <strong>protect private information</strong> and spot the dangers of sharing too much, using examples like <strong>identity theft</strong> and <strong>digital profiling</strong>.",
+                "narration": "game/missions/mission_4/narrations/task2.mp3"
+            },
+            {
+                "id": 3,
+                "title": "Task 3",
+                "description": "Explain what <strong>geotags</strong> are and how <strong>metadata</strong> (hidden information like latitude and longitude) in photos can <strong>show your location</strong>, and why that can affect your privacy.",
+                "narration": "game/missions/mission_4/narrations/task3.mp3"
+            },
+            {
+                "id": 4,
+                "title": "Task 4",
+                "description": "Explain why it’s important to <strong>ask permission before taking or sharing someone’s photo</strong>, and how doing this shows <strong>kindness</strong>, <strong>respect</strong>, and <strong>consent</strong>.",
+                "narration": "game/missions/mission_4/narrations/task4.mp3"
+            }
+        ]
+    },
+    "scenes": [
+        {
+            "id": "1",
+            "background": "computerLab.jpg",
+            "characters": {
+                "mr_pasternak": {
+                    "name": "Mr. Pasternak",
+                    "image": "pasternak.png",
+                    "canAnimate": true,
+                    "position": "left"
+                },
+                "declan": {
+                    "name": "Declan",
+                    "image": "declan.png",
+                    "position": "center",
+                    "canAnimate": true
+                },
+                "milo": {
+                    "name": "Milo",
+                    "image": "milo.png",
+                    "position": "center",
+                    "canAnimate": true
+                },
+                "astra": {
+                    "name": "Astra",
+                    "image": "astra.png",
+                    "position": "center",
+                    "canAnimate": true
+                },
+                "luna": {
+                    "name": "Luna",
+                    "image": "luna.png",
+                    "position": "center",
+                    "canAnimate": true
+                }
+            },
+            "dialogues": [
+                {
+                    "sequence": 1738,
+                    "speaker": "mr_pasternak",
+                    "text": "Well, good morning, Declan. What brings you to the Computer Lab so early this morning?",
+                    "narration": "game/missions/mission_4/narrations/Pasternak_1738.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1744,
+                    "speaker": "declan",
+                    "text": "Mr. Pasternack, my laptop has been hacked. I am so upset. I don’t know how it happened or how to fix it.",
+                    "narration": "game/missions/mission_4/narrations/Declan_1744.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1741,
+                    "speaker": "mr_pasternak",
+                    "text": "Oh, dear, that is very troubling indeed. I certainly hope you’ve called the Digipalz team to help you.",
+                    "narration": "game/missions/mission_4/narrations/Pasternak_1741.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1746,
+                    "speaker": "declan",
+                    "text": "My mom already called them. They are meeting me here this morning.",
+                    "narration": "game/missions/mission_4/narrations/Declan_1746.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1793,
+                    "speaker": "astra",
+                    "text": "Did I hear someone say Digipalz?",
+                    "narration": "game/missions/mission_4/narrations/Astra_1793.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1747,
+                    "speaker": "declan",
+                    "text": "Hey guys! I never thought I’d say this, but boy, am I ever glad to see you!",
+                    "narration": "game/missions/mission_4/narrations/Declan_1747.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1850,
+                    "speaker": "milo",
+                    "text": "Why, what’s up Declan?",
+                    "narration": "game/missions/mission_4/narrations/Milo_1850.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1748,
+                    "speaker": "declan",
+                    "text": "I think I’ve been hacked.",
+                    "narration": "game/missions/mission_4/narrations/Declan_1748.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1794,
+                    "speaker": "astra",
+                    "text": "Wait, don’t tell us any more yet. I’m going to call Robotoro.",
+                    "narration": "game/missions/mission_4/narrations/Astra_1794.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": true,
+                    "action": {
+                        "type": "receive_phone_call",
+                        "action_data": {
+                            "callerName": "Robotoro",
+                            "callerImage": "robotoro.png",
+                            "callNarrations": [
+                                "game/missions/mission_4/narrations/Robotoro_1706.mp3",
+                                "game/missions/mission_4/narrations/Astra_1795.mp3",
+                                "game/missions/mission_4/narrations/Declan_1749.mp3",
+                                "game/missions/mission_4/narrations/Milo_1851.mp3",
+                                "game/missions/mission_4/narrations/Declan_1750.mp3",
+                                "game/missions/mission_4/narrations/Robotoro_1709.mp3",
+                                "game/missions/mission_4/narrations/Astra_1796.mp3"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "sequence": 1751,
+                    "speaker": "declan",
+                    "text": "Who knows how much the hackers have seen and what harm they’ve done. I’m really worried about it, especially after what happened before with Sophie and the smart speaker.",
+                    "narration": "game/missions/mission_4/narrations/Declan_1751.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1852,
+                    "speaker": "milo",
+                    "text": "Fortunately, the messages so far are harmless, but you’re right, it’s serious that someone has hacked your account. We have to stop them immediately.",
+                    "narration": "game/missions/mission_4/narrations/Milo_1852.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1797,
+                    "speaker": "astra",
+                    "text": "Declan, do you have a strong password on your account?",
+                    "narration": "game/missions/mission_4/narrations/Astra_1797.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1752,
+                    "speaker": "declan",
+                    "text": "I think so, it’s Password123.",
+                    "narration": "game/missions/mission_4/narrations/Declan_1752.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": true,
+                    "action": {
+                        "type": "danger_alert"
+                    }
+                },
+                {
+                    "sequence": 1853,
+                    "speaker": "milo",
+                    "text": "Whoa! Declan! That’s your first mistake!! Never, ever tell anyone your password. That is private information that only you should know. Unless, of course, it is your parent.",
+                    "narration": "game/missions/mission_4/narrations/Milo_1853.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1798,
+                    "speaker": "astra",
+                    "text": "Secondly, remember what we learned last time we met? With such an easy password, it doesn’t take much effort for a hacker or even someone you know to break in.",
+                    "narration": "game/missions/mission_4/narrations/Astra_1798.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1872,
+                    "speaker": "luna",
+                    "text": "Declan, I’m going to need to work on your computer to see if there are any other breaches of Private Information.",
+                    "narration": "game/missions/mission_4/narrations/Luna_1872.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1902,
+                    "speaker": "astra",
+                    "text": "Looks like I just got a text from Robotoro.",
+                    "narration": "game/missions/mission_4/narrations/Astra_1902.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": true,
+                    "action": {
+                        "type": "phone_message",
+                        "action_data": {
+                            "callerName": "Robotoro",
+                            "callerImage": "robotoro.png",
+                            "message": "Hey Digipalz, return to HQ",
+                            "animation": "fadeIn"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "id": "2",
+            "background": "digipalz_headquarter.webp",
+            "characters": {
+                "robotoro": {
+                    "name": "Robotoro",
+                    "image": "robotoro.png",
+                    "canAnimate": true,
+                    "position": "center"
+                },
+                "mrsDelavoy": {
+                    "name": "Mrs. Delavoy",
+                    "image": "mrs_delavoy.png",
+                    "canAnimate": true,
+                    "position": "left"
+                },
+                "luna": {
+                    "name": "Luna",
+                    "image": "luna.png",
+                    "position": "center",
+                    "canAnimate": true
+                },
+                "astra": {
+                    "name": "Astra",
+                    "image": "astra.png",
+                    "position": "center",
+                    "canAnimate": true
+                },
+                "milo": {
+                    "name": "Milo",
+                    "image": "milo.png",
+                    "position": "center",
+                    "canAnimate": true
+                },
+                "declan": {
+                    "name": "Declan",
+                    "image": "declan.png",
+                    "position": "center",
+                    "canAnimate": true
+                },
+                "mr_pasternak": {
+                    "name": "Mr. Pasternak",
+                    "image": "pasternak.png",
+                    "canAnimate": true,
+                    "position": "left"
+                }
+            },
+            "dialogues": [
+                {
+                    "sequence": 1710,
+                    "speaker": "robotoro",
+                    "text": "Sorry, I was just eating some microchips. I’m sending you a Hologram right now. Can you see it?",
+                    "narration": "game/missions/mission_4/narrations/Robotoro_1710.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": true,
+                    "action": {
+                        "type": "image_popup",
+                        "action_data": {
+                            "image_url": "glass_house.png",
+                            "animation": "fadeIn"
+                        }
+                    }
+                },
+                {
+                    "sequence": 1801,
+                    "speaker": "astra",
+                    "text": "Woah, that’s so cool! How did you do that?",
+                    "narration": "game/missions/mission_4/narrations/Astra_1801.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1711,
+                    "speaker": "robotoro",
+                    "text": "I’m full of surprises. Declan, think about your house in Blue Mountain – what if it was all made out of glass? Would you like that?",
+                    "narration": "game/missions/mission_4/narrations/Robotoro_1711.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1754,
+                    "speaker": "declan",
+                    "text": "No way! There’d be no privacy, everyone could see what I was doing. What if I was in the bathtub? What if I was on the…",
+                    "narration": "game/missions/mission_4/narrations/Declan_1754.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1803,
+                    "speaker": "astra",
+                    "text": "Eew Declan, don’t be gross!",
+                    "narration": "game/missions/mission_4/narrations/Astra_1803.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1755,
+                    "speaker": "declan",
+                    "text": "What? I didn’t even say anything! Never mind. Nobody would want to live in a glass house. At least if I’m in a brick house, I can close the curtains for privacy.",
+                    "narration": "game/missions/mission_4/narrations/Declan_1755.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1712,
+                    "speaker": "robotoro",
+                    "text": "That’s right, Declan. Privacy is important.",
+                    "narration": "game/missions/mission_4/narrations/Robotoro_1712.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1874,
+                    "speaker": "luna",
+                    "text": "That’s a great example, Robotoro.",
+                    "narration": "game/missions/mission_4/narrations/Luna_1874.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1854,
+                    "speaker": "milo",
+                    "text": "Declan, you wouldn’t leave your front door wide open all day and night, would you?",
+                    "narration": "game/missions/mission_4/narrations/Milo_1854.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1756,
+                    "speaker": "declan",
+                    "text": "No, of course not. The bugs would come in Or racoons, maybe even bears!",
+                    "narration": "game/missions/mission_4/narrations/Declan_1756.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false,
+                    "action": {
+                        "type": "bugs_scream",
+                        "action_data": {
+                            "animation": "fadeIn"
+                        }
+                    }
+                },
+                {
+                    "sequence": 1805,
+                    "speaker": "astra",
+                    "text": "With digital devices, it’s the same idea. Without strong passwords, it’s like leaving the door wide open. Anyone can come in, including hackers and cyber-criminals.",
+                    "narration": "game/missions/mission_4/narrations/Astra_1805.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1855,
+                    "speaker": "milo",
+                    "text": "How are things coming along with Declan’s computer, Luna. Are you finding anything?",
+                    "narration": "game/missions/mission_4/narrations/Milo_1855.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false,
+                    "action": {
+                        "type": "cloude_computing",
+                        "action_data": {
+                            "animation": "fadeIn"
+                        }
+                    }
+                },
+                {
+                    "sequence": 1880,
+                    "speaker": "luna",
+                    "text": "It’s not good, I’m afraid. Declan, you have put a lot of your private information on the internet for the whole world to see. I can even see where your grandma lives!",
+                    "narration": "game/missions/mission_4/narrations/Luna_1880.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1757,
+                    "speaker": "declan",
+                    "text": "What do you mean? I thought I was being careful.",
+                    "narration": "game/missions/mission_4/narrations/Declan_1757.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1882,
+                    "speaker": "luna",
+                    "text": "Well, it’s about more than being careful. You have to be cautious about everything you post and every message you send. There are some things you should never put on the internet.",
+                    "narration": "game/missions/mission_4/narrations/Luna_1882.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1806,
+                    "speaker": "astra",
+                    "text": "Basically, it boils down to this, Declan. Don’t put anything on the internet that can identify you. That includes…",
+                    "narration": "game/missions/mission_4/narrations/Astra_1806.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1807,
+                    "speaker": "astra",
+                    "text": "Your full name.",
+                    "narration": "game/missions/mission_4/narrations/Astra_1807.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": true,
+                    "action": {
+                        "type": "image_popup",
+                        "action_data": {
+                            "image_url": "fullName.png",
+                            "animation": "zoomIn"
+                        }
+                    }
+                },
+                {
+                    "sequence": 1808,
+                    "speaker": "astra",
+                    "text": "Your address.",
+                    "narration": "game/missions/mission_4/narrations/Astra_1808.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": true,
+                    "action": {
+                        "type": "image_popup",
+                        "action_data": {
+                            "image_url": "address.png",
+                            "animation": "zoomIn"
+                        }
+                    }
+                },
+                {
+                    "sequence": 1809,
+                    "speaker": "astra",
+                    "text": "Or your school.",
+                    "narration": "game/missions/mission_4/narrations/Astra_1809.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": true,
+                    "action": {
+                        "type": "image_popup",
+                        "action_data": {
+                            "image_url": "school.png",
+                            "animation": "zoomIn"
+                        }
+                    }
+                },
+                {
+                    "sequence": 1810,
+                    "speaker": "astra",
+                    "text": "To be even safer, it’s even better to use a nickname online.",
+                    "narration": "game/missions/mission_4/narrations/Astra_1810.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1883,
+                    "speaker": "luna",
+                    "text": "Astra’s examples are the most obvious, but you have to go deeper than that. Cyber criminals like a challenge. Anything that has information that could identify you must be kept private. So don’t post a picture of your house, an airplane ticket, your passport, pictures of your school. They can use all of those things to identify you. Ok Declan, let me finish working on your computer.",
+                    "narration": "game/missions/mission_4/narrations/Luna_1883.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1856,
+                    "speaker": "milo",
+                    "text": "While we wait for Luna, there’s something else you should know. If you are on vacation, do not post pictures of yourself while you are away. Not only does it tell someone exactly where they can find you, it also tells criminals that your house is empty! Wait until you get home to post any travel photos.",
+                    "narration": "game/missions/mission_4/narrations/Milo_1856.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1713,
+                    "speaker": "robotoro",
+                    "text": "That’s a good point, Luna.",
+                    "narration": "game/missions/mission_4/narrations/Robotoro_1713.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": true,
+                    "action": {
+                        "type": "image_popup",
+                        "action_data": {
+                            "image_url": "f1.png",
+                            "animation": "fadeIn",
+                            "has_sound": true,
+                            "sound_url": "f1.wav",
+                            "sound_duration": 1000,
+                            "sound_volume": 1,
+                            "sound_play": "onAppear",
+                            "has_dismiss_effect": true,
+                            "dismiss_effect_type": "zoomOut"
+                        }
+                    }
+                },
+                {
+                    "sequence": 1813,
+                    "speaker": "astra",
+                    "text": "I recently saw on social media that the movie star Brad Pitt was in London, England, promoting his new race car movie set in the world of F1 racing. Guess what happened? His house was broken into, ransacked and several items were stolen. The last I heard, police in Los Angeles are still looking for three suspects.",
+                    "narration": "game/missions/mission_4/narrations/Astra_1813.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1885,
+                    "speaker": "luna",
+                    "text": "I hope nothing sentimental was taken, those items can never be replaced.",
+                    "narration": "game/missions/mission_4/narrations/Luna_1885.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1714,
+                    "speaker": "robotoro",
+                    "text": "Geo-tagging is when you add a location to an image, which shows people the exact coordinates of where the image was taken. When you post to social media and you add a location to your post, you are sharing very personal information that others can access. Especially if your account is public, details like your location should be kept private.",
+                    "narration": "game/missions/mission_4/narrations/Robotoro_1714.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1759,
+                    "speaker": "declan",
+                    "text": "I’m not sure I understand what a Geotag is.",
+                    "narration": "game/missions/mission_4/narrations/Declan_1759.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1715,
+                    "speaker": "robotoro",
+                    "text": "Geotags work because most phones, tablets, and cameras today have GPS - that stands for Global Positioning System. It’s the same technology that helps you find your way on a map. For example, if you open a map app on your phone, you might see a little blue dot showing exactly where you are. If you’re riding in a car or bus, that blue dot will move along the streets with you.",
+                    "narration": "game/missions/mission_4/narrations/Robotoro_1715.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1814,
+                    "speaker": "astra",
+                    "text": "When you take a photo, your device can save your exact location inside the picture’s metadata - that’s hidden information stored with the photo. If someone opens that photo and checks the metadata, they could see where it was taken on a map. This means if you take a picture at home and share it, someone could figure out your exact address from the geotag.",
+                    "narration": "game/missions/mission_4/narrations/Astra_1814.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false,
+                    "action": {
+                        "type": "geotag_revealing",
+                        "action_data": {
+                            "image_url": "f1.png",
+                            "animation": "fadeIn"
+                        }
+                    }
+                },
+                {
+                    "sequence": 1717,
+                    "speaker": "robotoro",
+                    "text": "Hey! I’ve got a great game for this. The zookeeper at the city zoo left the park in a hurry last night and forgot to lock the animal cages. Overnight, all the animals have escaped, and are running loose in the zoo. Using the latitude and longitude co-ordinates, your job is to put them back into their correct areas as quickly as you can. Go quickly, the animals are getting hungry and you don’t want to be their next meal!",
+                    "narration": "game/missions/mission_4/narrations/Robotoro_1717.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false,
+                    "action": {
+                        "type": "game_zoo_animals",
+                        "action_data": {
+                            "image_url": "f1.png",
+                            "animation": "fadeIn"
+                        }
+                    }
+                },
+                {
+                    "sequence": 1815,
+                    "speaker": "astra",
+                    "text": "That was fun! Looks like the vulture got you. Anyways, let’s get back to the problem with you being hacked, Declan. There are two issues here. Firstly, your password is not strong enough. Secondly, you are posting all sorts of private information that identifies you, such as your address, pictures of your house, your phone number, and your email address. None of which should have been posted, they’re all private.",
+                    "narration": "game/missions/mission_4/narrations/Astra_1815.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1718,
+                    "speaker": "robotoro",
+                    "text": "I think it’s time to take a break from posting so much online. If you want my advice, keep all your profiles private and share less. There’s beauty in reserving moments that are just meant for you. You don’t have to show everyone what you’re doing all the time. Try to make time for offline activities, like reading or spending time with your family.",
+                    "narration": "game/missions/mission_4/narrations/Robotoro_1718.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1760,
+                    "speaker": "declan",
+                    "text": "Well then what’s left to post?",
+                    "narration": "game/missions/mission_4/narrations/Declan_1760.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1822,
+                    "speaker": "astra",
+                    "text": "Good question, Declan. You can post safe-to-share information. That is information that cannot identify you. Let’s look at these examples, and you tell me which one is OK to post.",
+                    "narration": "game/missions/mission_4/narrations/Astra_1822.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": true,
+                    "action": {
+                        "type": "should_you_post"
+                    }
+                },
+                {
+                    "sequence": 1719,
+                    "speaker": "robotoro",
+                    "text": "I made a game that you can play, which helps teach you the difference between private information and safe-to-share information. The goal in the game is to help the frog get across the river. You have to decide if the information on the card you read is private or safe-to-share. If you are right, your frog jumps to the next object in the river. If you get it wrong… well, I won’t say what happens. By the way, have you ever eaten frog’s legs? I think you’ll like them. Apparently, they taste like chicken.",
+                    "narration": "game/missions/mission_4/narrations/Robotoro_1719.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1857,
+                    "speaker": "milo",
+                    "text": "Eww, Robotoro, what kind of games are you creating?",
+                    "narration": "game/missions/mission_4/narrations/Milo_1857.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1720,
+                    "speaker": "robotoro",
+                    "text": "Ha ha ha. Well, you’ll have to play it and see for yourself!",
+                    "narration": "game/missions/mission_4/narrations/Robotoro_1720.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false,
+                    "action": {
+                        "type": "leap_frog"
+                    }
+                },
+                {
+                    "sequence": 1817,
+                    "speaker": "astra",
+                    "text": "Well, Robotoro, you’ve certainly been busy today – designing houses and designing games!",
+                    "narration": "game/missions/mission_4/narrations/Astra_1817.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1721,
+                    "speaker": "robotoro",
+                    "text": "I have to keep busy when you’re away! You know how bored I get. I hope you’re coming back soon. I’m running out of things to do. Did you tell Declan about informed consent when you take pictures or post them online?",
+                    "narration": "game/missions/mission_4/narrations/Robotoro_1721.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1860,
+                    "speaker": "milo",
+                    "text": "That’s a great idea Robotoro! It’s such an important topic, I can’t believe we forgot.",
+                    "narration": "game/missions/mission_4/narrations/Milo_1860.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1831,
+                    "speaker": "astra",
+                    "text": "Although it seems straightforward, it can be quite complicated. The easiest way to explain informed consent is that, at the most basic level, a person has given permission for something and is aware of the possible consequences. For photos, informed consent means a person has been asked for permission to be photographed and knows where, how, and for what purpose the photographs will be used. If they say “No”, then you cannot take their picture.",
+                    "narration": "game/missions/mission_4/narrations/Astra_1831.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1861,
+                    "speaker": "milo",
+                    "text": "This concept is especially important for us kids. If you’re taking photos of, or with your friends, you may need a parent’s permission to post them online.",
+                    "narration": "game/missions/mission_4/narrations/Milo_1861.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1761,
+                    "speaker": "declan",
+                    "text": "What about paparazzi? The photographers who take pictures of movie stars without their consent. They even get paid by newspapers to sell their pictures.",
+                    "narration": "game/missions/mission_4/narrations/Declan_1761.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": true,
+                    "action": {
+                        "type": "paparazzi"
+                    }
+                },
+                {
+                    "sequence": 1832,
+                    "speaker": "astra",
+                    "text": "For the most part, paparazzi do not have permission to take photos of celebrities. This is especially problematic when the celebrities are with their children. Many paparazzi have been sued for taking pictures without informed consent. I have a Photography Book on Consent. Let me see if I brought it with me.",
+                    "narration": "game/missions/mission_4/narrations/Astra_1832.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": true,
+                    "action": {
+                        "type": "astra_backpack"
+                    }
+                },
+                {
+                    "sequence": 1862,
+                    "speaker": "milo",
+                    "text": "Astra, that backpack is bigger than you are and it’s so full it’s overflowing! How on earth do you lug that around with you all day.",
+                    "narration": "game/missions/mission_4/narrations/Milo_1862.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1835,
+                    "speaker": "astra",
+                    "text": "Hey, it’s not that bad! I love to read. But I probably should clean it out. Here’s a school play pamphlet from last year, my field trip slip from two months ago, and oops, there’s my math homework from last week. Oh, here’s the book I was looking for! I knew I’d find it. I’ll read it aloud in case Milo or Robotoro want to comment or elaborate on something.",
+                    "narration": "game/missions/mission_4/narrations/Astra_1835.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": true,
+                    "action": {
+                        "type": "book_page",
+                        "action_data": {
+                            "pages": [
+                                {
+                                    "image_url": "page1.png",
+                                    "animation": "fadeIn",
+                                    "hasSound": false
+                                },
+                                {
+                                    "image_url": "page2.png",
+                                    "animation": "fadeIn",
+                                    "hasSound": false
+                                },
+                                {
+                                    "image_url": "page3.png",
+                                    "animation": "fadeIn",
+                                    "hasSound": true,
+                                    "sounds": [
+                                        "Astra_1836.mp3"
+                                    ]
+                                },
+                                {
+                                    "image_url": "page4.png",
+                                    "animation": "fadeIn",
+                                    "hasSound": true,
+                                    "sounds": [
+                                        "Astra_1837.mp3",
+                                        "Robotoro_1722.mp3"
+                                    ]
+                                },
+                                {
+                                    "image_url": "page5.png",
+                                    "animation": "fadeIn",
+                                    "hasSound": true,
+                                    "sounds": [
+                                        "Astra_1838.mp3",
+                                        "Robotoro_1723.mp3"
+                                    ]
+                                },
+                                {
+                                    "image_url": "page6.png",
+                                    "animation": "fadeIn",
+                                    "hasSound": true,
+                                    "sounds": [
+                                        "Astra_1839.mp3",
+                                        "Robotoro_1724.mp3"
+                                    ]
+                                },
+                                {
+                                    "image_url": "page7.png",
+                                    "animation": "fadeIn",
+                                    "hasSound": true,
+                                    "sounds": [
+                                        "Astra_1840.mp3",
+                                        "Milo_1864.mp3"
+                                    ]
+                                },
+                                {
+                                    "image_url": "page8.png",
+                                    "animation": "fadeIn",
+                                    "hasSound": true,
+                                    "sounds": [
+                                        "Astra_1841.mp3",
+                                        "Milo_1865.mp3"
+                                    ]
+                                },
+                                {
+                                    "image_url": "page9.png",
+                                    "animation": "fadeIn",
+                                    "hasSound": true,
+                                    "sounds": [
+                                        "Astra_1842.mp3",
+                                        "Milo_1866.mp3"
+                                    ]
+                                },
+                                {
+                                    "image_url": "page10.png",
+                                    "animation": "fadeIn",
+                                    "hasSound": true,
+                                    "sounds": [
+                                        "Astra_1843.mp3"
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "sequence": 1764,
+                    "speaker": "declan",
+                    "text": "Yeah, can you imagine if I was in the background picking my no…",
+                    "narration": "game/missions/mission_4/narrations/Declan_1764.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1845,
+                    "speaker": "astra",
+                    "text": "Don’t say it, Declan, don’t say it! That’s rude!!",
+                    "narration": "game/missions/mission_4/narrations/Astra_1845.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1765,
+                    "speaker": "declan",
+                    "text": "I was going to say notebook. Picking my notebook.",
+                    "narration": "game/missions/mission_4/narrations/Declan_1765.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1847,
+                    "speaker": "astra",
+                    "text": "Really, Declan? Really?",
+                    "narration": "game/missions/mission_4/narrations/Astra_1847.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1766,
+                    "speaker": "declan",
+                    "text": "So when don’t you need to get informed consent? There must be times when you don’t need to ask.",
+                    "narration": "game/missions/mission_4/narrations/Declan_1766.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1867,
+                    "speaker": "milo",
+                    "text": "You don’t need to get consent for photos taken in public places, as long as they’re not in private, vulnerable, or sensitive situations - like bathrooms, change rooms, or doctor’s offices. But if someone in your picture can be recognized, it’s always better to ask. For anyone under 18, parents have the final say! If a parent asks you to take your picture down because their child is in it, you must respect their wishes and take it down. When in doubt, ask first.",
+                    "narration": "game/missions/mission_4/narrations/Milo_1867.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1726,
+                    "speaker": "robotoro",
+                    "text": "Let’s play a little game. Declan, your class went on a picnic yesterday. Let’s have a look at the pictures you took on your tablet. You can tell me if you need consent or not to post them. And we can see if there are any there that you shouldn’t have taken at all – we’ll delete those.",
+                    "narration": "game/missions/mission_4/narrations/Robotoro_1726.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false,
+                    "action": {
+                        "type": "need_consent"
+                    }
+                },
+                {
+                    "sequence": 1868,
+                    "speaker": "milo",
+                    "text": "Ok, I get it now. I guess we all have to be very careful what we post online, whether it’s text, pictures, or videos.",
+                    "narration": "game/missions/mission_4/narrations/Milo_1868.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1727,
+                    "speaker": "robotoro",
+                    "text": "And remember, once you post a picture or a video, even if you delete it, it’s on the internet forever. So don’t post pictures or videos unless you are sure that they are OK to post. Once you sort through your pictures and videos, just send a quick message to your friend and ask “Is it OK if I post the picture of you swinging on the tire at the picnic?”",
+                    "narration": "game/missions/mission_4/narrations/Robotoro_1727.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1784,
+                    "speaker": "mr_pasternak",
+                    "text": "Well, there certainly are a lot of things you have to think about before you post anything online. Declan, your mom just emailed me. A letter for you was delivered to your home early this morning. She put it in your backpack, but forgot to tell you. She said it’s from the school and it looks important.",
+                    "narration": "game/missions/mission_4/narrations/Pasternak_1784.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1767,
+                    "speaker": "declan",
+                    "text": "Why is the school sending me a letter? I’ve done nothing wrong!",
+                    "narration": "game/missions/mission_4/narrations/Declan_1767.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1786,
+                    "speaker": "mr_pasternak",
+                    "text": "I wouldn’t know, Declan. You’ll have to open it and see.",
+                    "narration": "game/missions/mission_4/narrations/Pasternak_1786.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": true,
+                    "action": {
+                        "type": "letter_popup"
+                    }
+                },
+                {
+                    "sequence": 1769,
+                    "speaker": "declan",
+                    "text": "What’s This? A bill from the library? What’s this for?",
+                    "narration": "game/missions/mission_4/narrations/Declan_1769.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1773,
+                    "speaker": "declan",
+                    "text": "Library Books Not Returned?",
+                    "narration": "game/missions/mission_4/narrations/Declan_1773.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": true,
+                    "action": {
+                        "type": "image_popup",
+                        "action_data": {
+                            "image_url": "declan_letter_open.png",
+                            "animation": "fadeIn",
+                            "has_sound": true,
+                            "sound_url": "Declan_1772.mp3",
+                            "sound_volume": 1,
+                            "sound_play": "onAppear"
+                        }
+                    }
+                },
+                {
+                    "sequence": 1776,
+                    "speaker": "declan",
+                    "text": "I never took these books out…. I’m not paying this. I swear, I’ve never even seen these books in my life. I’m calling my mom.",
+                    "narration": "game/missions/mission_4/narrations/Declan_1776.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": true,
+                    "action": {
+                        "type": "phone_call",
+                        "action_data": {
+                            "phoneNumber": "705-345-1111",
+                            "callerName": "Declan",
+                            "callingTo": "Mom",
+                            "callingToImage": "mrs_delavoy.png",
+                            "callerImage": "declan.png",
+                            "callNarrations": [
+                                "game/missions/mission_4/narrations/Mrs.D_1887.mp3",
+                                "game/missions/mission_4/narrations/Declan_1777.mp3",
+                                "game/missions/mission_4/narrations/Mrs.D_1891.mp3",
+                                "game/missions/mission_4/narrations/Declan_1778.mp3",
+                                "game/missions/mission_4/narrations/Mrs.D_1894.mp3",
+                                "game/missions/mission_4/narrations/Declan_1782.mp3"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "sequence": 1849,
+                    "speaker": "astra",
+                    "text": "Something is definitely not right. We are going to look into this as soon as we get back to headquarters. I’m wondering if it’s some sort of identity theft. We have to investigate this soon, before Declan starts getting other invoices for books, or things he did not buy. C’mon team, let's get back to headquarters.",
+                    "narration": "game/missions/mission_4/narrations/Astra_1849.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                },
+                {
+                    "sequence": 1791,
+                    "speaker": "mr_pasternak",
+                    "text": "Declan, you’d better get going to your next class, you’re going to be late. Goodbye Digipalz!",
+                    "narration": "game/missions/mission_4/narrations/Pasternak_1791.mp3",
+                    "animation": "fadeIn",
+                    "hasAction": false
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700;800;900&display=swap');
+
+@font-face {
+  font-family: 'game-font';
+  src: url('./assets/fonts/ab2.otf');
+}
+@font-face {
+  font-family: 'content-font';
+  src: url('./assets/fonts/content.ttf');
+}
+@font-face {
+  font-family: 'content-font-bold';
+  src: url('./assets/fonts/content-bold.ttf');
+}
+@font-face {
+  font-family: 'garet-font-heavy';
+  src: url('./assets/fonts/Garet-Heavy.ttf');
+}
+
+@font-face {
+  font-family: 'anton-font';
+  src: url('./assets/fonts/anton.ttf');
+}
+
+:root {
+  --game-font-color: rgb(7, 27, 119);
+  --game-font-background-color: #e9f2f2; /* Example color */
+
+  /* button sizes  */
+  --button-lg-size: 20px;
+  --button-md-size: 15px;
+  --button-sm-size: 10px;
+  font-family: 'Urbanist', system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+  color-scheme: light dark;
+  color: #1f2937;
+  background-color: #ffffff;
+
+  /* landing page */
+  /* colors */
+  --lp-black-color: #000000;
+  --lp-white-color: #ffffff;
+  --lp-nav-bg-color: #cafd06;
+  --lp-color-neon: #cafd06;
+
+  /* font sizes in rem */
+  --lp-font-size-64: 4rem; /* 64 / 16 */
+  --lp-font-size-36: 2.25rem; /* 36 / 16 */
+  --lp-font-size-28: 1.75rem; /* 28 / 16 */
+  --lp-font-size-24: 1.5rem; /* 24 / 16 */
+  --lp-font-size-20: 1.25rem; /* 20 / 16 */
+  --lp-font-size-18: 1.125rem; /* 18 / 16 */
+  --lp-font-size-16: 1rem; /* 16 / 16 */
+  --lp-font-size-14: 0.875rem; /* 14 / 16 */
+
+  /* font weights */
+  --lp-font-weight-bold: 700;
+  --lp-font-weight-medium: 500;
+  --lp-font-weight-regular: 400;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  margin: 0;
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+p {
+  margin: 0;
+}
+
+/* Global label styling */
+/* label {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 6px;
+} */
+
+/* ///////////////////////////////////////////////////////////////////////// */
+/* Global Dropdown Styling */
+.dropdown-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-select {
+  background-color: #7b34bf;
+  color: #fff;
+  border: none;
+  padding: 12px 16px 12px 24px;
+  border-radius: 10px;
+  font-size: 16px;
+  min-width: 150px;
+  cursor: pointer;
+  width: 210px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+}
+
+.dropdown-chevron {
+  color: #fff;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+
+.dropdown-chevron.rotated {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  margin-top: 4px;
+  overflow: hidden;
+}
+
+.dropdown-item {
+  padding: 12px 16px;
+  color: black;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.dropdown-item:last-child {
+  border-bottom: none;
+}
+
+.dropdown-item:hover {
+  background: linear-gradient(90deg, #d60c7b 0%, #8b2db3 100%);
+  color: white;
+}
+
+.dropdown-item.active {
+  background: linear-gradient(90deg, #d60c7b 0%, #8b2db3 100%);
+  color: white;
+}
+/* ///////////////////////////////////////////////////////////////////////// */
+
+/* button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+} */
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}

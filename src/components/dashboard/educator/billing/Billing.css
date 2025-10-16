@@ -1,0 +1,223 @@
+/* Educator Billing - Modern Professional Design */
+.educator-sdp-billing {
+  padding: 2rem;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.educator-sdp-billing__title {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #000;
+  margin: 0 0 8px 0;
+}
+
+.educator-sdp-billing__subtitle {
+  color: #131314;
+  font-size: 14px;
+  margin: 0 0 2rem 0;
+  font-weight: 400;
+}
+
+/* Billing Section */
+.educator-sdp-billing__section {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border-radius: 24px;
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Removed top border gradient */
+
+.educator-sdp-billing__section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.educator-sdp-billing__section-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0;
+}
+
+/* Buy More Seats Button */
+.educator-sdp-billing__edit-btn {
+  background: linear-gradient(90deg, #d60c7b 0%, #8b2db3 100%);
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(214, 12, 123, 0.3);
+}
+
+.educator-sdp-billing__edit-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.educator-sdp-billing__edit-btn:hover::before {
+  left: 100%;
+}
+
+.educator-sdp-billing__edit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(214, 12, 123, 0.4);
+}
+
+/* Billing Grid - matches EducatorSchoolDetails */
+.educator-sdp-billing__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.25rem;
+  transition: none;
+}
+
+.educator-sdp-billing__field {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.educator-sdp-billing__field::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #d60c7b 0%, #8b2db3 100%);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.educator-sdp-billing__field:hover::before {
+  transform: scaleX(1);
+}
+
+.educator-sdp-billing__field:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  border-color: #cbd5e1;
+}
+
+.educator-sdp-billing__field-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+.educator-sdp-billing__field-icon svg {
+  width: 18px;
+  height: 18px;
+  stroke-width: 2.5;
+}
+
+.educator-sdp-billing__field-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.educator-sdp-billing__label {
+  font-size: 12px;
+  color: #64748b;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: relative;
+  margin: 0;
+}
+
+.educator-sdp-billing__value {
+  font-size: 14px;
+  color: #1e293b;
+  font-weight: 500;
+  line-height: 1.4;
+  position: relative;
+}
+
+/* Loading and Error States */
+
+.error-message {
+  color: #dc2626;
+  background: #fee2e2;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid #fecaca;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .educator-sdp-billing {
+    padding: 1rem;
+  }
+
+  .educator-sdp-billing__title {
+    font-size: 1.5rem;
+  }
+
+  .educator-sdp-billing__subtitle {
+    font-size: 13px;
+  }
+
+  .educator-sdp-billing__section {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .educator-sdp-billing__grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .educator-sdp-billing__section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .educator-sdp-billing__edit-btn {
+    width: 100%;
+    text-align: center;
+  }
+}

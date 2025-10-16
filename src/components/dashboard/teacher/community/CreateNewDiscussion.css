@@ -1,0 +1,162 @@
+/* CreateNewDiscussion.css */
+/* Using 'cnd' prefix for all class names to avoid conflicts */
+
+.cnd-container {
+  background-color: #1a202c;
+  color: white;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    sans-serif;
+  padding: 2rem;
+  min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.cnd-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.cnd-back-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.25rem;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  margin-right: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cnd-back-icon {
+  font-size: 1.25rem;
+}
+
+.cnd-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.cnd-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.cnd-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.cnd-label {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.cnd-input,
+.cnd-select,
+.cnd-textarea {
+  background-color: #2d3748;
+  color: white;
+  border: none;
+  border-radius: 0.375rem;
+  padding: 0.75rem;
+  font-size: 0.95rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.cnd-input::placeholder,
+.cnd-select::placeholder,
+.cnd-textarea::placeholder {
+  color: #718096;
+}
+
+.cnd-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white' width='18px' height='18px'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  padding-right: 2.5rem;
+}
+
+.cnd-editor-toolbar {
+  display: flex;
+  gap: 0.5rem;
+  background-color: #2d3748;
+  border-radius: 0.375rem 0.375rem 0 0;
+  padding: 0.5rem;
+  border-bottom: 1px solid #4a5568;
+}
+
+.cnd-toolbar-btn {
+  background: none;
+  border: none;
+  color: #a0aec0;
+  font-size: 1rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.cnd-toolbar-btn:hover {
+  background-color: #4a5568;
+  color: white;
+}
+
+.cnd-bold-btn {
+  font-weight: bold;
+}
+
+.cnd-italic-btn {
+  font-style: italic;
+}
+
+.cnd-textarea {
+  min-height: 250px;
+  resize: vertical;
+  border-radius: 0 0 0.375rem 0.375rem;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    sans-serif;
+}
+
+.cnd-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.cnd-submit-btn {
+  background-color: #3182ce;
+  color: white;
+  border: none;
+  border-radius: 0.375rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.cnd-submit-btn:hover {
+  background-color: #2b6cb0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .cnd-container {
+    padding: 1.5rem;
+  }
+
+  .cnd-actions {
+    flex-direction: column;
+  }
+}

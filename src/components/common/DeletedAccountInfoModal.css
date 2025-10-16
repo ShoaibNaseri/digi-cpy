@@ -1,0 +1,382 @@
+/* Deleted Account Info Modal - Clean & Centered */
+.deleted-account-info-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.deleted-account-info-modal {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 500px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  animation: slideIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Header */
+.deleted-account-info-modal-header {
+  margin-bottom: 1rem;
+  text-align: center;
+  position: relative;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 0.75rem;
+}
+
+.deleted-account-info-modal-icon {
+  background: #fef2f2;
+  border: 2px solid #fecaca;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.deleted-account-info-modal-icon svg {
+  color: #dc2626;
+  font-size: 1.8rem;
+}
+
+.deleted-account-info-modal-header h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #000000;
+  margin: 0;
+}
+
+.deleted-account-info-modal-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #f3f4f6;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #6b7280;
+}
+
+.deleted-account-info-modal-close:hover {
+  background: #e5e7eb;
+  color: #374151;
+  transform: rotate(90deg);
+}
+
+.deleted-account-info-modal-close svg {
+  font-size: 1rem;
+}
+
+/* Content */
+.deleted-account-info-modal-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.deleted-account-info-child-details {
+  text-align: center;
+  padding: 0.75rem;
+  background: #f9fafb;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.deleted-account-info-child-details h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 1rem 0;
+  text-align: center;
+}
+
+.account-details-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.account-detail-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.account-detail-item:last-child {
+  border-bottom: none;
+}
+
+.detail-label {
+  font-weight: 600;
+  color: #374151;
+  font-size: 0.9rem;
+}
+
+.detail-value {
+  color: #111827;
+  font-size: 0.9rem;
+  text-align: right;
+}
+
+.detail-value.status-deleted {
+  color: #dc2626;
+  font-weight: 600;
+  background: #fef2f2;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #fecaca;
+}
+
+/* Timeline */
+.deleted-account-info-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.deleted-account-info-timeline-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background: #f9fafb;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.timeline-icon {
+  color: #6b7280;
+  font-size: 1.25rem;
+  margin-top: 0.25rem;
+  flex-shrink: 0;
+}
+
+.timeline-icon.warning {
+  color: #f59e0b;
+}
+
+.timeline-content h5 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #374151;
+  margin: 0 0 0.25rem 0;
+}
+
+.timeline-content p {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* Warning Section */
+.deleted-account-info-warning {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  padding: 0.75rem;
+}
+
+.warning-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.warning-icon {
+  color: #dc2626;
+  font-size: 1.25rem;
+  margin-top: 0.125rem;
+  flex-shrink: 0;
+}
+
+.warning-content h5 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #dc2626;
+  margin: 0 0 0.5rem 0;
+}
+
+.warning-content p {
+  font-size: 0.9rem;
+  color: #7f1d1d;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Contact Section */
+.deleted-account-info-contact {
+  background: #f0f9ff;
+  border: 1px solid #bae6fd;
+  border-radius: 8px;
+  padding: 0.75rem;
+  text-align: center;
+}
+
+.deleted-account-info-contact h5 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0c4a6e;
+  margin: 0 0 0.5rem 0;
+}
+
+.deleted-account-info-contact p {
+  font-size: 0.9rem;
+  color: #0c4a6e;
+  margin: 0 0 1rem 0;
+  line-height: 1.5;
+}
+
+.contact-options {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contact-support-btn,
+.request-inquiry-btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: none;
+}
+
+.contact-support-btn {
+  background: #0ea5e9;
+  color: white;
+}
+
+.contact-support-btn:hover {
+  background: #0284c7;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3);
+}
+
+.request-inquiry-btn {
+  background: #f3f4f6;
+  color: #374151;
+  border: 1px solid #d1d5db;
+}
+
+.request-inquiry-btn:hover {
+  background: #e5e7eb;
+  border-color: #9ca3af;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .deleted-account-info-modal {
+    width: 95%;
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+
+  .contact-options {
+    flex-direction: column;
+  }
+
+  .contact-support-btn,
+  .request-inquiry-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Custom Scrollbar Styling */
+.deleted-account-info-modal::-webkit-scrollbar {
+  width: 4px;
+}
+
+.deleted-account-info-modal::-webkit-scrollbar-track {
+  /* background: #f1f5f9; */
+  border-radius: 0px;
+}
+
+.deleted-account-info-modal::-webkit-scrollbar-thumb {
+  /* background: linear-gradient(135deg, #726c6c, #594f4f); */
+  border-radius: 0px;
+  border: 0.5px solid #fecaca;
+}
+
+/* .deleted-account-info-modal::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #817373, #726565);
+} */
+
+/* .deleted-account-info-modal::-webkit-scrollbar-thumb:active {
+  background: linear-gradient(135deg, #6c6363, #6c6767);
+} */
+
+/* Firefox scrollbar styling */
+.deleted-account-info-modal {
+  scrollbar-width: thin;
+  scrollbar-color: #b5b0b0 #f1f5f9;
+}
+
+/* Focus states for accessibility */
+.deleted-account-info-modal-close:focus,
+.contact-support-btn:focus,
+.request-inquiry-btn:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}

@@ -1,0 +1,41 @@
+.history-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 16px;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.history-item__type {
+  font-size: 16px;
+  color: #1f2937;
+}
+
+.history-item__date {
+  font-size: 14px;
+  font-weight: 400;
+  color: #9ca3af;
+}
+
+.history-item__amount-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.history-item__amount {
+  font-size: 16px;
+  color: #371f1f;
+}
+
+.history-item__amount-container button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.history-item__amount-container button:focus {
+  outline: none;
+}

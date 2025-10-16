@@ -1,0 +1,265 @@
+.audit-log {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.audit-log-header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+
+.audit-log-header h1 {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 600;
+  color: #000;
+}
+
+.audit-log-header p {
+  font-size: 16px;
+  line-height: 24px;
+  color: #000;
+}
+
+.audit-log-filter-input {
+  margin-top: 12px;
+  padding: 8px 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  max-width: 320px;
+  outline: none;
+  transition: border 0.2s;
+}
+.audit-log-filter-input:focus {
+  border: 1.5px solid #1f2937;
+}
+
+.audit-log-action-dropdown {
+  padding: 8px 32px 8px 12px;
+  font-size: 16px;
+  border: 1px solid #1f2937;
+  border-radius: 6px;
+  outline: none;
+  transition: border 0.2s, box-shadow 0.2s;
+  background: #fff;
+  color: #000;
+  min-width: 300px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  margin-right: 12px;
+  font-family: inherit;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 6l4 4 4-4' stroke='%231f2937' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 18px 18px;
+}
+.audit-log-action-dropdown:focus {
+  border: 1.5px solid #1f2937;
+  box-shadow: 0 0 0 2px #cce4ff;
+}
+
+.audit-log-action-label {
+  font-size: 15px;
+  font-weight: 500;
+  margin-right: 8px;
+  color: #222;
+}
+
+.audit-log-header .audit-log-filters {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 12px;
+  margin-bottom: 18px;
+}
+
+.audit-log-table {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.audit-log-table-scroll {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 20px;
+}
+
+.audit-log-table-scroll table {
+  min-width: 600px;
+}
+
+.audit-log-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+.audit-log-table th,
+.audit-log-table td {
+  padding: 14px 16px;
+  text-align: left;
+}
+.audit-log-table th {
+  background: #f7f7f7;
+  font-weight: 600;
+  user-select: none;
+}
+.audit-log-table th[style*='cursor: pointer']:hover {
+  background: #e9ecef;
+}
+.audit-log-table tbody tr:nth-child(even) {
+  background: #fafbfc;
+}
+.audit-log-table tbody tr:hover {
+  background: #f1f3f6;
+}
+.audit-log-table td {
+  font-size: 15px;
+  color: #222;
+}
+.audit-log-table-th {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+}
+
+@media (max-width: 768px) {
+  .audit-log {
+    max-width: 100%;
+    padding: 0 12px;
+  }
+
+  .audit-log-header h1 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .audit-log-header p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .audit-log-filters {
+    flex-direction: column;
+    align-items: stretch !important;
+    gap: 12px !important;
+  }
+
+  .audit-log-action-dropdown {
+    width: 100%;
+    min-width: unset;
+    margin-right: 0;
+  }
+
+  .audit-log-table {
+    width: 100%;
+  }
+
+  .audit-log-table-scroll {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 16px;
+  }
+
+  .audit-log-table-scroll table {
+    min-width: 600px;
+  }
+
+  .audit-log-table th,
+  .audit-log-table td {
+    padding: 10px 8px;
+    font-size: 13px;
+    white-space: nowrap;
+  }
+
+  .audit-log-filter-input {
+    font-size: 14px;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .audit-log-header h1 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .audit-log-table th,
+  .audit-log-table td {
+    padding: 8px 6px;
+    font-size: 12px;
+  }
+
+  .audit-log-pagination-btn {
+    font-size: 14px;
+  }
+}
+
+.audit-log-pagination {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 16px;
+  margin: 20px 0 10px 0;
+}
+.audit-log-pagination-btn {
+  padding: 6px 18px;
+  font-size: 15px;
+  border: 1px solid #1f2937;
+  border-radius: 5px;
+  background: #fff;
+  color: #1f2937;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+}
+.audit-log-pagination-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: #f3f4f6;
+}
+.audit-log-pagination-btn:not(:disabled):hover {
+  background: #1f2937;
+  color: #fff;
+}
+.audit-log-pagination-info {
+  font-size: 15px;
+  color: #222;
+  font-weight: 500;
+}
+
+.audit-log-export-btn {
+  height: 100%;
+  background-color: transparent;
+  color: #000;
+  border: 1px solid #1f2937;
+  border-radius: 6px;
+  padding: 8px 32px 8px 32px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.audit-log-export-btn:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.audit-log-filters-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}

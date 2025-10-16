@@ -1,0 +1,112 @@
+.plan-modal__current {
+  display: flex;
+  flex-direction: column;
+  background-color: #374151;
+  padding: 18px 16px;
+  border-radius: 8px;
+  gap: 19px;
+}
+
+.plan-modal__current-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.plan-modal__current-header button {
+  border: none;
+  height: 32px;
+  width: 72px;
+  line-height: 16px;
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 25px;
+  padding: 6px 12px;
+  background-color: #4b5563;
+}
+
+.plan-modal__membership {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.plan-modal__membership p {
+  font-size: 16px;
+}
+
+.plan-modal__membership .plan-modal__title {
+  color: #fff;
+}
+
+.plan-modal__membership .plan-modal__type {
+  color: #9ca3af;
+}
+
+.plan-modal__details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.plan-modal__billing-date {
+  font-size: 14px;
+  font-weight: 400;
+  color: #9ca3af;
+}
+
+.plan-modal__price {
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.plan-modal__plans-title {
+  font-size: 18px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.plan-modal__plans {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.plan-modal__info {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 21px 16px;
+  background-color: #374151;
+  color: #9ca3af;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.plan-modal__footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+}
+
+.plan-modal__cancel {
+  background-color: transparent;
+  color: #fff;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 16px;
+  font-weight: 400;
+  border: none;
+}
+
+.plan-modal__update {
+  background-color: #fff;
+  color: #111827;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 16px;
+  font-weight: 400;
+  border: none;
+}

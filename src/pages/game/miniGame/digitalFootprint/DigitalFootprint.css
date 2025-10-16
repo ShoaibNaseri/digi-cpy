@@ -1,0 +1,760 @@
+/* Digital Footprint Game Styles */
+.footprint-game-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+    135deg,
+    #00ff87 0%,
+    #00d4ff 25%,
+    #4a90e2 50%,
+    #8e44ad 75%,
+    #9b59b6 100%
+  );
+  overflow: hidden;
+  font-family: 'content-font', sans-serif;
+  user-select: none;
+  cursor: crosshair;
+}
+
+/* Introduction Screen */
+.footprint-game-introduction {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  position: relative;
+}
+
+/* Header */
+.footprint-game-introduction-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: linear-gradient(135deg, #254aef 0%, #7541a9 100%);
+  color: white;
+  z-index: 20;
+}
+
+.footprint-game-header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footprint-game-footprint-icon {
+  font-size: 4.5rem;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  transform: rotate(90deg);
+}
+
+.footprint-game-header-title {
+  font-size: 1.5rem;
+  font-weight: 900;
+  font-family: sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.footprint-game-header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.footprint-game-header-score,
+.footprint-game-header-timer {
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: 'content-font-bold', sans-serif;
+}
+
+.footprint-game-header-timer {
+  color: #4ecdc4;
+}
+
+/* Main Content */
+.footprint-game-introduction-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  padding: 40px;
+  text-align: center;
+  background: linear-gradient(135deg, #041976 0%, #3a0e66 100%);
+}
+
+.footprint-game-main-title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  font-family: sans-serif;
+}
+
+.footprint-game-main-subtitle {
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 40px;
+  font-family: sans-serif;
+}
+
+.footprint-game-start-btn {
+  background: linear-gradient(135deg, #00c851 0%, #00a041 100%);
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 200, 81, 0.3);
+  text-transform: uppercase;
+  font-family: 'content-font-bold', sans-serif;
+}
+
+.footprint-game-start-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 200, 81, 0.4);
+}
+
+/* Bottom Stats */
+.footprint-game-introduction-stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 30px 40px;
+  background: linear-gradient(135deg, #2b4de3 0%, #764ba2 100%);
+  z-index: 20;
+}
+
+.footprint-game-stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: rgb(243, 239, 239);
+  padding: 25px 40px;
+  /* border: 2px solid rgba(255, 255, 255, 0.3); */
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  /* background: rgba(255, 255, 255, 0.1); */
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  flex: 1;
+  max-width: 350px;
+  min-width: 160px;
+}
+
+.footprint-game-stat-item:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.footprint-game-stat-icon {
+  font-size: 2rem;
+  margin-bottom: 12px;
+  transition: transform 0.3s ease;
+}
+
+.footprint-game-stat-item:hover .footprint-game-stat-icon {
+  transform: scale(1.1);
+}
+
+.footprint-game-stat-label1 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-family: 'content-font-bold', sans-serif;
+  opacity: 0.9;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: white;
+}
+
+.footprint-game-stat-value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: sans-serif;
+  /* text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); */
+  line-height: 1;
+  color: white;
+}
+
+.footprint-game-stat-value.precision {
+  color: #4ecdc4;
+  /* text-shadow: 0 2px 10px rgba(78, 205, 196, 0.5); */
+}
+
+.footprint-game-stat-value.speed {
+  color: #ff6b6b;
+  /* text-shadow: 0 2px 10px rgba(255, 107, 107, 0.5); */
+}
+
+/* Game Screen */
+.footprint-game-playing {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    #00ff87 0%,
+    #00d4ff 25%,
+    #4a90e2 50%,
+    #8e44ad 75%,
+    #9b59b6 100%
+  );
+  overflow: hidden;
+}
+
+.footprint-game-ui {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 100;
+}
+
+.footprint-game-score-display,
+.footprint-game-timer-display {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+  padding: 15px 25px;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  font-family: 'content-font-bold', sans-serif;
+}
+
+.footprint-game-timer-display {
+  color: #ffeaa7;
+}
+
+/* Footprints */
+.footprint-game-footprint {
+  position: absolute;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footprint-game-footprint:hover {
+  transform: scale(1.25);
+}
+
+.footprint-game-footprint-icon {
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  width: 100%;
+  height: 100%;
+  transition: all 0.2s ease;
+}
+
+.footprint-game-footprint-icon1 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  transform: rotate(90deg);
+}
+
+.footprint-game-erased-footprint {
+  position: absolute;
+  pointer-events: none;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Score Animation */
+.footprint-game-score-animation {
+  position: absolute;
+  color: #00ff88;
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 0 2px 10px rgba(0, 255, 136, 0.5);
+  pointer-events: none;
+  z-index: 200;
+  font-family: 'content-font-bold', sans-serif;
+}
+
+/* Erasing Effect */
+.footprint-game-erasing-effect {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.8) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 150;
+}
+
+/* Game Over Screen */
+.footprint-game-game-over {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #4a90e2 0%, #6a5acd 50%, #8a2be2 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Falling Particles */
+.footprint-game-particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.footprint-game-particle {
+  position: absolute;
+  animation: fall linear infinite;
+}
+
+.footprint-game-particle.square {
+  width: 8px;
+  height: 8px;
+  background: #ffeb3b;
+  border-radius: 2px;
+}
+
+.footprint-game-particle.diamond {
+  width: 10px;
+  height: 10px;
+  background: #e91e63;
+  transform: rotate(45deg);
+  border-radius: 2px;
+}
+
+.footprint-game-particle.circle {
+  width: 6px;
+  height: 6px;
+  background: #00bcd4;
+  border-radius: 50%;
+}
+
+.footprint-game-particle.triangle {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 10px solid #4caf50;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-100vh) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.footprint-game-game-over-content {
+  background: white;
+  border-radius: 20px;
+  padding: 40px 30px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 400px;
+  max-width: 90vw;
+  z-index: 10;
+  position: relative;
+}
+
+.footprint-game-trophy-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #ffd700 0%, #ffb300 100%);
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  color: white;
+  box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+}
+
+.footprint-game-score-title {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.footprint-game-final-score-number {
+  font-size: 4rem;
+  font-weight: bold;
+  background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 20px;
+  line-height: 1;
+}
+
+.footprint-game-progress-bar {
+  width: 100%;
+  height: 10px;
+  background: #e0e0e0;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.footprint-game-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #00bcd4 0%, #e91e63 100%);
+  border-radius: 10px;
+  transition: width 1s ease;
+}
+
+.footprint-game-stats-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.footprint-game-stat {
+  text-align: center;
+  flex: 1;
+}
+
+.footprint-game-stat-label {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.footprint-game-stat-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.footprint-game-stat-value.precision {
+  color: #00bcd4;
+}
+
+.footprint-game-stat-value.speed {
+  color: #e91e63;
+}
+
+.footprint-game-back-button {
+  width: 100%;
+  background: linear-gradient(135deg, #e91e63 0%, #ad1457 100%);
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(233, 30, 99, 0.3);
+}
+
+.footprint-game-back-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 40px rgba(233, 30, 99, 0.4);
+}
+
+/* Remove old game over styles */
+.footprint-game-game-over::before {
+  display: none;
+}
+
+.footprint-game-game-over-title,
+.footprint-game-final-score,
+.footprint-game-score-label,
+.footprint-game-score-value,
+.footprint-game-score-feedback,
+.footprint-game-game-over-buttons,
+.footprint-game-play-again-button,
+.footprint-game-continue-button {
+  display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footprint-game-introduction-header {
+    padding: 15px 20px;
+  }
+
+  .footprint-game-header-title {
+    font-size: 1.3rem;
+  }
+
+  .footprint-game-header-score,
+  .footprint-game-header-timer {
+    font-size: 1rem;
+  }
+
+  .footprint-game-main-title {
+    font-size: 2.5rem;
+  }
+
+  .footprint-game-main-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .footprint-game-start-btn {
+    padding: 12px 30px;
+    font-size: 1.1rem;
+  }
+
+  .footprint-game-introduction-stats {
+    padding: 20px 15px;
+    gap: 15px;
+  }
+
+  .footprint-game-stat-item {
+    padding: 20px 30px;
+    min-width: 140px;
+    max-width: 280px;
+  }
+
+  .footprint-game-stat-icon {
+    font-size: 1.8rem;
+  }
+
+  .footprint-game-stat-label {
+    font-size: 0.9rem;
+  }
+
+  .footprint-game-stat-value {
+    font-size: 1.3rem;
+  }
+
+  .footprint-game-game-over-title {
+    font-size: 2.5rem;
+  }
+
+  .footprint-game-score-value {
+    font-size: 3rem;
+  }
+
+  .footprint-game-game-over-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footprint-game-play-again-button,
+  .footprint-game-continue-button {
+    width: 100%;
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footprint-game-introduction-header {
+    padding: 10px 15px;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footprint-game-header-left,
+  .footprint-game-header-right {
+    justify-content: center;
+  }
+
+  .footprint-game-header-title {
+    font-size: 1.1rem;
+  }
+
+  .footprint-game-header-score,
+  .footprint-game-header-timer {
+    font-size: 0.9rem;
+  }
+
+  .footprint-game-main-title {
+    font-size: 2rem;
+  }
+
+  .footprint-game-main-subtitle {
+    font-size: 1rem;
+  }
+
+  .footprint-game-introduction-stats {
+    padding: 15px 10px;
+    gap: 10px;
+  }
+
+  .footprint-game-stat-item {
+    padding: 15px 20px;
+    min-width: 90px;
+    max-width: 120px;
+  }
+
+  .footprint-game-stat-icon {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+  }
+
+  .footprint-game-stat-label {
+    font-size: 0.8rem;
+    margin-bottom: 6px;
+  }
+
+  .footprint-game-stat-value {
+    font-size: 1.4rem;
+  }
+
+  .footprint-game-game-over-content {
+    padding: 20px;
+    margin: 20px;
+  }
+
+  .footprint-game-game-over-title {
+    font-size: 2rem;
+  }
+
+  .footprint-game-score-value {
+    font-size: 2.5rem;
+  }
+
+  .footprint-game-ui {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footprint-game-score-display,
+  .footprint-game-timer-display {
+    text-align: center;
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
+
+/* Animation Keyframes */
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes sparkle {
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+/* Game cursor effects */
+.footprint-game-playing {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="rgba(255,255,255,0.5)" stroke="white" stroke-width="2"/><circle cx="12" cy="12" r="3" fill="white"/></svg>'),
+    auto;
+}
+
+/* Footprint glow effect */
+.footprint-game-footprint {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.footprint-game-footprint:nth-child(odd) {
+  animation-delay: 0.5s;
+}
+
+.footprint-game-footprint:nth-child(even) {
+  animation-delay: 1s;
+}
+
+/* Special effects for high scores */
+.footprint-game-score-animation {
+  animation: sparkle 1s ease-out;
+}
+
+/* Background particles effect */
+.footprint-game-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(
+      circle at 20% 20%,
+      rgba(255, 255, 255, 0.1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(255, 255, 255, 0.1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 40% 60%,
+      rgba(255, 255, 255, 0.05) 0%,
+      transparent 50%
+    );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Ensure game elements are above background */
+.footprint-game-introduction,
+.footprint-game-playing,
+.footprint-game-game-over {
+  z-index: 10;
+  position: relative;
+}

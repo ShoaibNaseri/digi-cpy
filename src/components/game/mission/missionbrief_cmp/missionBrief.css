@@ -1,0 +1,23 @@
+.welcome-final-image {
+  top: 44.1%;
+  left: 73%;
+  /* width: 24%; */
+  width: 25%;
+  position: absolute;
+
+  overflow: visible; /* Keep this to allow 3D effects */
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.welcome-final-image img {
+  padding-top: 15%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-bottom-right-radius: 180px;
+  /* scale: 1.3; */
+  margin-left: 10%;
+}

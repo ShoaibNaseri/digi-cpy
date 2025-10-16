@@ -1,0 +1,15 @@
+.minor-onboarding-header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #eaeaea;
+  width: 100%;
+}
+
+.minor-onboarding-header-container {
+  margin: 0 auto;
+}
+
+.minor-onboarding-logo {
+  width: 100px;
+  height: 50px;
+  padding: 14px 20px;
+}

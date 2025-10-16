@@ -1,0 +1,433 @@
+.thumb-scan-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background: #000;
+}
+
+.scanner-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+
+.scanners-row {
+  display: flex;
+  gap: 9rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-section {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.scanner-title {
+  color: #00d4ff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+/* Fingerprint Scanner */
+.fingerprint-scanner {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #2a2a3e, #1a1a2e);
+  border: 5px solid #00d4ff;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 40px rgba(0, 212, 255, 0.5),
+    inset 0 0 40px rgba(0, 212, 255, 0.1);
+  overflow: hidden;
+}
+
+.scanner-image {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+  z-index: 1;
+  position: relative;
+}
+
+.percentage-counter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #00d4ff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  z-index: 3;
+  text-shadow: 0 0 10px rgba(0, 212, 255, 0.8);
+  background: rgba(0, 0, 0, 0.7);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  border: 2px solid rgba(0, 212, 255, 0.5);
+  backdrop-filter: blur(5px);
+}
+
+.scan-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(0, 212, 255, 0.3) 50%,
+    transparent 100%
+  );
+  animation: scanSweep 2s ease-in-out infinite;
+  z-index: 2;
+}
+
+.fingerprint-scanner::before {
+  content: '';
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: repeating-radial-gradient(
+    circle at center,
+    transparent 0,
+    transparent 2px,
+    rgba(0, 212, 255, 0.1) 2px,
+    rgba(0, 212, 255, 0.1) 4px
+  );
+  animation: fingerprintPulse 2s ease-in-out infinite;
+}
+
+.fingerprint-scanner::after {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: radial-gradient(
+      circle at 30% 30%,
+      rgba(0, 212, 255, 0.8) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 70% 70%,
+      rgba(0, 212, 255, 0.6) 0%,
+      transparent 50%
+    );
+  animation: fingerprintScan 3s ease-in-out infinite;
+}
+
+@keyframes fingerprintPulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+@keyframes fingerprintScan {
+  0% {
+    transform: scale(0.8) rotate(0deg);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.2) rotate(180deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.8) rotate(360deg);
+    opacity: 0.3;
+  }
+}
+
+@keyframes scanSweep {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Facial Scanner */
+.facial-scanner {
+  width: 280px;
+  height: 280px;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #2a2a3e, #1a1a2e);
+  border: 5px solid #00d4ff;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 40px rgba(0, 212, 255, 0.5),
+    inset 0 0 40px rgba(0, 212, 255, 0.1);
+  overflow: hidden;
+}
+
+.facial-scanner .scan-overlay {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(0, 212, 255, 0.3) 50%,
+    transparent 100%
+  );
+}
+
+.facial-scanner::before {
+  content: '';
+  position: absolute;
+  width: 140px;
+  height: 80px;
+  border: 2px solid rgba(0, 212, 255, 0.6);
+  border-radius: 50px;
+  animation: facialScan 2.5s ease-in-out infinite;
+}
+
+.facial-scanner::after {
+  content: '';
+  position: absolute;
+  width: 120px;
+  height: 60px;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0, 212, 255, 0.8) 0%,
+    transparent 70%
+  );
+  animation: facialGlow 3s ease-in-out infinite;
+}
+
+@keyframes facialScan {
+  0%,
+  100% {
+    transform: translateY(-20px) scale(0.8);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(20px) scale(1.2);
+    opacity: 1;
+  }
+}
+
+@keyframes facialGlow {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+/* Progress Bars */
+.progress-container {
+  width: 100%;
+  max-width: 250px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 4px;
+  position: relative;
+  margin-top: 1rem;
+}
+
+.progress-bar {
+  height: 8px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #00d4ff, #0099cc);
+  width: 0%;
+  transition: width 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-bar.facial {
+  background: linear-gradient(90deg, #ff6b6b, #ff4757);
+}
+
+.progress-bar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  animation: progressShine 2s ease-in-out infinite;
+}
+
+@keyframes progressShine {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.progress-text {
+  color: #ffffff;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+/* Scanning Status */
+.scanning-status {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: #00d4ff;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  animation: statusBlink 1.5s ease-in-out infinite;
+}
+
+@keyframes statusBlink {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Success Animation */
+.scanner-section.success .fingerprint-scanner,
+.scanner-section.success .facial-scanner {
+  border-color: #00ff88;
+  box-shadow: 0 0 30px rgba(0, 255, 136, 0.5),
+    inset 0 0 20px rgba(0, 255, 136, 0.2);
+}
+
+.scanner-section.success::after {
+  content: '✓';
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 30px;
+  height: 30px;
+  background: #00ff88;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1a1a2e;
+  font-weight: bold;
+  font-size: 1.2rem;
+  animation: successPop 0.5s ease-out;
+}
+
+@keyframes successPop {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.thumb-scan-next-button {
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #00d4ff, #0099cc);
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 2rem;
+  box-shadow: 0 8px 20px rgba(0, 212, 255, 0.3);
+  animation: buttonAppear 0.5s ease-out;
+}
+
+.next-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(0, 212, 255, 0.4);
+}
+
+.next-button:active {
+  transform: translateY(0);
+}
+
+@keyframes buttonAppear {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .thumb-scan-container {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+
+  .fingerprint-scanner {
+    width: 180px;
+    height: 180px;
+  }
+
+  .facial-scanner {
+    width: 200px;
+    height: 200px;
+  }
+
+  .scanners-row {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .progress-container {
+    max-width: 200px;
+  }
+
+  .percentage-counter {
+    font-size: 1.2rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .progress-container {
+    max-width: 150px;
+  }
+}

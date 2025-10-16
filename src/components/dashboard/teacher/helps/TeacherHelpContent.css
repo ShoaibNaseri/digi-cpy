@@ -1,0 +1,461 @@
+/* 
+ * TeacherHelpContent.css
+ * Main styling for the Teacher Help Center component
+ */
+
+/* ---------- CONTAINER ---------- */
+.teacher-helpcenter-container,
+.teacher-helpcenter-container * {
+  box-sizing: border-box;
+}
+
+.teacher-helpcenter-container {
+  max-width: 100%;
+  width: 100%;
+  padding: 2rem;
+  background-color: #f9f9f9 !important;
+  color: #000000;
+  font-family: 'Urbanist', sans-serif;
+  overflow: visible;
+  position: relative;
+  height: auto;
+  min-height: fit-content;
+}
+
+.teacher-helpcenter-faq-question-content {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #fff;
+}
+/* ---------- HEADER SECTION ---------- */
+.teacher-helpcenter-header {
+  margin-bottom: 2rem;
+}
+
+.teacher-helpcenter-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+  text-align: left;
+  align-self: flex-start;
+}
+
+.teacher-helpcenter-subtitle {
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #000000;
+}
+
+/* ---------- RESOURCES SECTION ---------- */
+.teacher-helpcenter-resources {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.teacher-helpcenter-resource-card {
+  flex: 1;
+  background-color: #ffffff;
+  border-radius: 12px;
+  border-bottom: 4px solid black;
+  padding: 1.5rem;
+  text-align: left;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.teacher-helpcenter-resource-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-color: none !important;
+  background-color: #ffffff;
+}
+
+.teacher-helpcenter-resource-card:active {
+  background-color: #ffffff;
+}
+
+.teacher-helpcenter-resource-icon {
+  width: 60px;
+  height: 60px;
+  align-items: left;
+  color: #8b5cf6;
+}
+
+/* Documentation icon color */
+.teacher-helpcenter-resource-card:nth-child(1)
+  .teacher-helpcenter-resource-icon {
+  color: #d30d7d;
+}
+
+/* Video Tutorials icon color */
+.teacher-helpcenter-resource-card:nth-child(2)
+  .teacher-helpcenter-resource-icon {
+  color: #8f2bb0;
+}
+
+/* Community icon color */
+.teacher-helpcenter-resource-card:nth-child(3)
+  .teacher-helpcenter-resource-icon {
+  color: #0454ac;
+}
+
+.teacher-helpcenter-resource-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0.75rem 0 0.5rem;
+  color: #000000;
+}
+
+/* Documentation title color */
+.teacher-helpcenter-resource-card:nth-child(1)
+  .teacher-helpcenter-resource-title {
+  color: #d30d7d;
+}
+
+/* Video Tutorials title color */
+.teacher-helpcenter-resource-card:nth-child(2)
+  .teacher-helpcenter-resource-title {
+  color: #902bb0;
+}
+
+/* Community title color */
+.teacher-helpcenter-resource-card:nth-child(3)
+  .teacher-helpcenter-resource-title {
+  color: #0454ac;
+}
+
+.teacher-helpcenter-resource-description {
+  font-size: 0.875rem;
+  color: #000000;
+  margin: 0;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+/* ---------- FAQ SECTION ---------- */
+.teacher-helpcenter-faq {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.teacher-helpcenter-faq-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.teacher-helpcenter-faq-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  color: #000000;
+}
+
+.teacher-helpcenter-faq-controls {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.teacher-helpcenter-faq-dropdown-btn {
+  background-color: #7b34bf;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  /* padding: 0.5rem 1rem; */
+  padding: 13px 16px 13px 17px;
+  width: 239px;
+  height: 50px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.teacher-helpcenter-faq-dropdown-btn:hover {
+  background-color: #7c3aed;
+}
+
+.teacher-helpcenter-faq-search-wrapper {
+  position: relative;
+  color: #4b5563;
+  display: flex;
+  align-items: center;
+  width: 300px;
+}
+
+.teacher-helpcenter-faq-search-icon {
+  position: absolute;
+  left: 12px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.teacher-helpcenter-faq-search-input {
+  /* padding: 0.5rem 1rem 0.5rem 44px; */
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 100%;
+  height: 50px;
+  background-color: #ffffff;
+}
+
+.teacher-helpcenter-faq-search-input::placeholder {
+  color: #9ca3af;
+}
+
+/* Clear button for search */
+.clear-button {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+.clear-button:hover {
+  background-color: #f5f5f5;
+  color: #666;
+}
+
+/* No results message */
+.teacher-helpcenter-faq-no-results {
+  text-align: center;
+  padding: 2rem;
+  color: #6b7280;
+  font-size: 1rem;
+}
+
+/* Category Filters */
+.teacher-helpcenter-faq-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.teacher-helpcenter-faq-category-btn {
+  background-color: #f3f4f6;
+  color: #374151;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.teacher-helpcenter-faq-category-btn:hover {
+  background-color: #e5e7eb;
+  border-color: #9ca3af;
+}
+
+.teacher-helpcenter-faq-category-btn.active {
+  background-color: #7b34bf;
+  color: #ffffff;
+  border-color: #7b34bf;
+}
+
+.teacher-helpcenter-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.teacher-helpcenter-faq-item {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.teacher-helpcenter-faq-item.active {
+  background-color: #f8fafc;
+}
+
+.teacher-helpcenter-faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 1rem;
+  background-color: #4b5563;
+  transition: background-color 0.2s ease;
+  gap: 1rem;
+}
+.teacher-helpcenter-faq-question h4 {
+  font-size: 1.125rem;
+  margin: 0;
+  font-weight: 700;
+  flex: 1;
+  color: #ffffff;
+}
+
+.teacher-helpcenter-faq-question:hover {
+  background-color: #6b7280;
+}
+
+.teacher-helpcenter-faq-question:hover h4 {
+  color: #ffffff;
+}
+
+.teacher-helpcenter-faq-question:hover .teacher-helpcenter-faq-toggle {
+  color: #e5e7eb;
+}
+
+.teacher-helpcenter-faq-number {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  color: #ffffff;
+  min-width: 24px;
+  transition: color 0.2s ease;
+}
+
+.teacher-helpcenter-faq-question:hover .teacher-helpcenter-faq-number {
+  color: #ffffff;
+}
+
+.teacher-helpcenter-faq-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.25rem;
+  transition: color 0.2s ease;
+}
+
+.teacher-helpcenter-faq-toggle:hover {
+  color: #4b5563;
+}
+
+.teacher-helpcenter-faq-answer {
+  padding: 1rem;
+  background-color: #f8fafc;
+  border-top: 1px solid #e5e7eb;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+.teacher-helpcenter-faq-answer p {
+  margin: 0;
+}
+
+.teacher-helpcenter-faq-more {
+  text-align: center;
+}
+
+.teacher-helpcenter-faq-more-btn {
+  background: linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  width: 243px;
+  height: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.teacher-helpcenter-faq-more-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+}
+
+/* ---------- RESPONSIVE DESIGN ---------- */
+@media (max-width: 768px) {
+  .teacher-helpcenter-container {
+    padding: 1rem;
+    width: 100%;
+    max-width: 100%;
+    overflow: visible;
+  }
+
+  .teacher-helpcenter-resources {
+    flex-direction: column;
+  }
+
+  .teacher-helpcenter-faq-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .teacher-helpcenter-faq-controls {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .teacher-helpcenter-faq-search-input {
+    width: 100%;
+  }
+
+  .teacher-helpcenter-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .teacher-helpcenter-container {
+    padding: 0.5rem;
+    width: 100%;
+    max-width: 100%;
+    overflow: visible;
+  }
+
+  .teacher-helpcenter-faq-controls {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .teacher-helpcenter-faq-dropdown-btn,
+  .teacher-helpcenter-faq-search-input {
+    width: 100%;
+  }
+}
+
+/* Prevent dashboard scrolling issues */
+.teacher-helpcenter-container {
+  contain: layout style;
+  isolation: isolate;
+}
+
+/* Ensure content doesn't overflow parent containers */
+.teacher-helpcenter-container > * {
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}

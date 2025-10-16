@@ -1,0 +1,1383 @@
+/* Add this to your CSS file */
+
+/* Enhanced focus style for checkbox items */
+.tcr-checkbox-item input[type='checkbox']:focus + label {
+  outline: 3px solid #60a5fa;
+  outline-offset: 2px;
+  position: relative;
+  z-index: 9;
+  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.5);
+}
+
+/* Existing style for tab-focus can also be applied */
+.tcr-checkbox-item input[type='checkbox']:focus + label {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+/* Animation to make the focus more noticeable */
+@keyframes pulse-focus {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.tcr-checkbox-item input[type='checkbox']:focus + label {
+  animation: pulse-focus 0.5s ease-in-out;
+}
+
+/* ========== MAIN CONTAINERS ========== */
+.tcr-class-form-container {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  color: #111827;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+  /* Allow scrolling within the modal */
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+.tcr-class-form-content-container {
+  padding: 0 20px 20px 20px;
+  max-width: 700px;
+  margin: 0 auto;
+  width: 100%;
+  background-color: transparent;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.tcr-class-form-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 650px;
+  max-height: 85vh;
+  overflow-y: auto;
+}
+
+/* ========== HEADER STYLING ========== */
+.tcr-class-form-header {
+  display: flex;
+  align-items: center;
+  color: #111827;
+  padding: 20px 20px 16px 20px;
+  border-bottom: none;
+  background-color: transparent;
+  justify-content: center;
+}
+
+.tcr-class-form-back-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  margin-right: 16px;
+  color: #6b7280;
+}
+
+.tcr-class-form-header-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.tcr-class-form-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+  color: #111827;
+}
+
+.tcr-class-form-subtitle {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 4px 0 0 0;
+}
+
+/* ========== FORM SECTIONS ========== */
+.tcr-form-section {
+  margin-bottom: 24px;
+}
+
+/* ========== FORM FIELD STYLING ========== */
+.tcr-form-field-group {
+  margin-bottom: 24px;
+  margin-top: 0;
+  box-sizing: border-box;
+}
+
+.tcr-form-field-group label {
+  display: flex;
+
+  margin-bottom: 8px;
+  margin-top: 0;
+  font-size: 18px;
+  font-family: Urbanist;
+  font-weight: 600;
+  color: #666666;
+  box-sizing: border-box;
+}
+.tcr-section-label-days-create-class{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  margin-bottom: 2rem !important;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+/* Style for required fields */
+.tcr-required-field::after {
+  content: ' *';
+  color: #ef4444;
+}
+
+/* Style for section labels */
+.tcr-section-label {
+  font-size: 16px;
+  font-weight: 500;
+  color: #111827;
+  text-align: center;
+  margin-bottom: 16px;
+}
+.tcr-section-label-heading{
+  font-size: 24px !important;
+  align-items: center !important;
+  font-weight: 600 !important;
+  justify-content: center !important;
+  align-self: center !important;
+  align-content: center !important;
+  color: #111827 !important;
+  text-align: left !important;
+  margin-bottom: 16px !important;
+}
+
+/* ========== INPUT WITH ICONS ========== */
+.tcr-input-with-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.tcr-input-icon {
+  position: absolute;
+  left: 16px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4B5563 !important;
+}
+
+.tcr-clickable-icon {
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.tcr-clickable-icon:hover {
+  color: #3b82f6 !important;
+  transform: scale(1.05);
+}
+
+.tcr-clickable-icon:active {
+  transform: scale(0.95);
+}
+
+.tcr-clickable-icon:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.tcr-input-with-icon-control {
+  padding-left: 48px !important;
+}
+
+/* Custom dropdown styling within input-with-icon */
+.tcr-input-with-icon .custom-dropdown {
+  flex: 1;
+  margin-left: 0; /* Remove margin to keep icon inside */
+}
+
+.tcr-input-with-icon .custom-dropdown-header {
+  height: 44px;
+  border-radius: 8px;
+  background-color: #f9fafb;
+  border: 1px solid #d1d5db;
+  padding-left: 48px; /* Add left padding to make space for the icon */
+}
+
+.tcr-input-with-icon .custom-dropdown-header:hover {
+  border-color: #9ca3af;
+  background-color: #f3f4f6;
+}
+
+.tcr-input-with-icon .custom-dropdown-header:focus,
+.tcr-input-with-icon .custom-dropdown-header.open {
+  border-color: #3b82f6;
+  background-color: white;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Form control base styling */
+.tcr-form-control {
+  width: 100%;
+  padding: 12px 16px;
+  background-color: #f9fafb;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  color: #4B5563;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.2s;
+  box-sizing: border-box;
+  height: 44px;
+}
+
+.tcr-form-control:focus {
+  outline: none;
+  border-color: #3b82f6;
+  background-color: white;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.tcr-form-control::placeholder {
+  color: #9ca3af;
+}
+
+/* ========== CHECKBOX AND RADIO STYLING ========== */
+/* Updated Checkbox group styling */
+.tcr-checkbox-group {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.tcr-checkbox-item {
+  position: relative;
+  flex: 1;
+}
+
+/* Hide the original checkbox */
+.tcr-checkbox-item input[type='checkbox'] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Create the button-style appearance */
+.tcr-checkbox-item label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 44px;
+  background-color: #f3f4f6;
+  color: #6b7280;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 12px;
+  transition: all 0.2s ease;
+  margin: 0;
+  text-align: center;
+  border: 1px solid #e5e7eb;
+}
+
+/* Style for checked state */
+.tcr-checkbox-item input[type='checkbox']:checked + label {
+  color: black;
+  background-color: #CAFD06;
+}
+
+/* Focus outline for accessibility */
+.tcr-checkbox-item input[type='checkbox']:focus + label {
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+}
+
+/* Hover state */
+.tcr-checkbox-item label:hover {
+  background-color: #e5e7eb;
+  color: #374151;
+}
+
+/* ========== FORM UTILITY STYLES ========== */
+/* Form validation and help text */
+.tcr-form-help-text {
+  color: #6b7280;
+  font-size: 12px;
+  margin-top: 8px;
+  text-align: center;
+}
+
+/* Custom dropdown styling - now handled by CustomDropdown.css */
+
+/* Grade dropdown specific styling - only for CreateClassForm */
+/* Target the grade dropdown within the form */
+.tcr-form-field-group:has(label[for='grade']) .custom-dropdown-header {
+  color: #757575 !important;
+}
+
+.tcr-form-field-group:has(label[for='grade']) .custom-dropdown-header .custom-dropdown-value {
+  color: #757575 !important;
+}
+
+/* Ensure selected values are visible */
+.tcr-form-field-group:has(label[for='grade']) .custom-dropdown-header .custom-dropdown-value {
+  color: #757575 !important;
+}
+
+/* Alternative targeting for browsers that don't support :has() */
+.tcr-form-field-group:nth-child(2) .custom-dropdown-header {
+  color: #757575 !important;
+}
+
+.tcr-form-field-group:nth-child(2) .custom-dropdown-header .custom-dropdown-value {
+  color: #757575 !important;
+}
+
+/* Error message styling */
+.tcr-error-message {
+  background-color: rgba(239, 68, 68, 0.1);
+  border-left: 3px solid #ef4444;
+  color: #dc2626;
+  padding: 0.75rem;
+  margin-top: 1rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+}
+
+/* Form action buttons */
+.tcr-form-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.tcr-cancel-button {
+  padding: 12px 24px;
+  border-radius: 8px;
+  background-color: #f3f4f6;
+  border: 1px solid #d1d5db;
+  color: #374151;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tcr-cancel-button:hover {
+  background-color: #e5e7eb;
+}
+
+.tcr-create-button {
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tcr-create-button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+}
+
+.tcr-create-button:disabled {
+  background: #d1d5db;
+  cursor: not-allowed;
+  opacity: 0.7;
+  transform: none;
+  box-shadow: none;
+}
+
+/* ========== FREQUENCY BUTTON STYLING ========== */
+.tcr-frequency-button-group {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.tcr-frequency-button {
+  flex: 1;
+  background-color: #f3f4f6;
+  color: #4B5563;
+  border: 1px solid #d1d5db;
+  padding: 12px 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.tcr-frequency-button.active {
+  background: linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%);
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 2px 8px rgba(139, 92, 246, 0.3);
+}
+
+.tcr-frequency-button:hover:not(.active) {
+  background-color: #e5e7eb;
+  color: #374151;
+}
+
+.tcr-frequency-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ========== STUDENT IMPORT SECTION ========== */
+.tcr-section-title {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 16px;
+  color: #111827;
+  text-align: center;
+}
+
+/* Tab styling for student import */
+.tcr-student-import-tabs {
+  display: flex;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #d1d5db;
+  background-color: #f9fafb;
+}
+
+.tcr-tab-button {
+  flex: 1;
+  background-color: transparent;
+  color: #6b7280;
+  border: none;
+  padding: 12px 16px;
+  width: 279px !important;
+  height: 50px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  background-color: #E5E7EB;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.tcr-tab-button.active {
+  background: linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%);
+  color: white;
+  position: relative;
+}
+
+.tcr-tab-button:hover:not(.active) {
+  background-color: #e5e7eb;
+  color: #374151;
+  
+}
+
+.tcr-tab-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Tab content styling */
+.tcr-tab-content {
+  margin-top: 20px;
+}
+
+/* CSV Upload Area */
+.tcr-csv-upload-area {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.tcr-csv-upload-container {
+  border: 2px dashed #d1d5db;
+  border-radius: 8px;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  background-color: #f9fafb;
+  margin-top: 15px;
+  transition: all 0.2s ease;
+}
+
+.tcr-csv-upload-container:hover {
+  border-color: #9ca3af;
+  background-color: #f3f4f6;
+}
+
+.tcr-csv-upload-container.dragover {
+  border-color: #9ca3af;
+  background-color: #f3f4f6;
+}
+
+.tcr-csv-upload-container.processing {
+  border-color: #3b82f6;
+  background-color: #eff6ff;
+}
+
+.tcr-csv-upload-container.dragover {
+  border-color: #9ca3af;
+  background-color: #f3f4f6;
+  transform: scale(1.02);
+  transition: all 0.2s ease;
+}
+
+.tcr-csv-icon {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tcr-csv-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #6b7280;
+  margin-top: 4px;
+}
+
+.tcr-csv-instructions {
+  color: #6b7280;
+  font-size: 14px;
+  text-align: center;
+}
+
+.tcr-browse-files-button {
+  background-color: white;
+  color: #111827;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin: 8px 0;
+  min-width: 140px;
+  text-align: center;
+}
+
+.tcr-browse-files-button:hover {
+  background-color: #f3f4f6;
+  border-color: #9ca3af;
+}
+
+.tcr-csv-format-hint {
+  color: #9ca3af;
+  font-size: 12px;
+  text-align: center;
+  max-width: 300px;
+}
+
+/* Template link container */
+.tcr-template-link-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.tcr-need-template {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.tcr-download-link {
+  color: #8b5cf6;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.tcr-download-link:hover {
+  text-decoration: underline;
+}
+
+/* Manual entry link */
+.tcr-create-manually-link {
+  display: block;
+  color: #8b5cf6;
+  text-decoration: none;
+  font-size: 14px;
+  text-align: center;
+  margin: 20px 0;
+  font-weight: 500;
+}
+
+.tcr-create-manually-link:hover {
+  text-decoration: underline;
+}
+
+/* ========== SUMMARY SECTION STYLING ========== */
+.tcr-summary-section {
+  background-color: #f9fafb;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 24px;
+  border: 1px solid #e5e7eb;
+}
+
+.tcr-summary-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.tcr-summary-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.tcr-summary-label {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.tcr-summary-value {
+  font-size: 14px;
+  font-weight: 500;
+  color: #111827;
+}
+
+.tcr-students-imported {
+  color: #8b5cf6;
+  font-weight: 600;
+}
+
+/* ========== MODAL STYLING ========== */
+.tcr-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tcr-modal-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.tcr-modal-content {
+  position: relative;
+  width: 90%;
+  max-width: 600px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  z-index: 1001;
+}
+
+.tcr-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.tcr-modal-header h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+  color: #111827;
+}
+
+.tcr-modal-close-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #6b7280;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tcr-modal-body {
+  padding: 24px;
+}
+
+/* ========== MANUAL ENTRY STYLING ========== */
+.tcr-manual-entry-area {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.tcr-manual-entry-container {
+  border: 2px dashed #999999;
+  border-radius: 8px;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  background-color: #E5E7EB;
+  margin-top: 15px;
+  transition: all 0.2s;
+}
+
+.tcr-manual-entry-container:hover {
+  border-color: #9ca3af;
+  background-color: #f3f4f6;
+}
+
+.tcr-manual-entry-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tcr-manual-entry-text {
+  color: #6b7280;
+  font-size: 14px;
+  text-align: center;
+}
+
+.tcr-manual-entry-button {
+  background-color: white;
+  color: #111827;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  min-width: 140px;
+  text-align: center;
+}
+
+.tcr-manual-entry-button:hover {
+  background-color: #f3f4f6;
+  border-color: #9ca3af;
+}
+
+/* ========== IMPROVED INPUT STYLING ========== */
+/* Time input styling */
+.tcr-time-input {
+  color: #111827 !important;
+  font-weight: 500;
+  background-color: #f9fafb;
+  border: 1px solid #d1d5db;
+  cursor: pointer;
+  padding-right: 40px;
+  appearance: textfield;
+}
+
+/* Date input styling */
+.tcr-form-control[type='date'] {
+  color: #111827 !important;
+  font-weight: 500;
+  background-color: #f9fafb;
+  border: 1px solid #d1d5db;
+  cursor: pointer;
+}
+
+/* Improve date input appearance */
+input[type='date'].tcr-form-control {
+  position: relative;
+  padding-right: 16px; /* Remove extra padding since we don't have right icon */
+}
+
+/* Ensure date inputs work properly with the icon layout */
+input[type='date'].tcr-input-with-icon-control {
+  padding-left: 48px !important;
+  padding-right: 16px !important;
+}
+
+/* Date input wrapper for positioning the calendar icon - REMOVED */
+/* Calendar icon styling - REMOVED */
+
+/* Hide the default browser calendar picker indicator */
+input[type='date']::-webkit-calendar-picker-indicator {
+  display: none; /* Completely hide the default indicator */
+}
+
+/* Enhance the calendar icon visibility */
+input[type='date']::-webkit-calendar-picker-indicator {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%236B7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='4' width='18' height='18' rx='2' ry='2'%3E%3C/rect%3E%3Cline x1='16' y1='2' x2='16' y2='6' stroke='%236B7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/line%3E%3Cline x1='8' y1='2' x2='8' y2='6' stroke='%236B7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/line%3E%3Cline x1='3' y1='10' x2='21' y2='10' stroke='%236B7280' stroke-width='2'%3E%3C/line%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 18px;
+  opacity: 0.8;
+  cursor: pointer;
+  height: 20px;
+  position: absolute;
+  right: 10px;
+  width: 20px;
+  background-color: transparent;
+  color: transparent;
+}
+
+/* Style the time input arrow/dropdown icon */
+input[type='time']::-webkit-calendar-picker-indicator {
+  display: none; /* Completely hide the default indicator */
+}
+
+/* Select wrapper styling */
+.tcr-select-wrapper {
+  position: relative;
+}
+
+.tcr-select-wrapper::after {
+  content: '';
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 6px;
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%236B7280' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  pointer-events: none;
+}
+
+/* Update Summary section to update in real-time */
+.tcr-summary-section {
+  transition: all 0.3s ease;
+}
+
+.tcr-summary-value {
+  transition: all 0.3s ease;
+}
+
+/* Highlight changes in the summary when values update */
+.tcr-summary-value.updated {
+  animation: highlight 1s ease;
+}
+
+@keyframes highlight {
+  0% {
+    background-color: rgba(139, 92, 246, 0.2);
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+/* ==========================================================================
+   Class Setup Success Modal
+   ========================================================================== */
+
+.class-setup-success-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.class-setup-success-container {
+  background: #ffffff;
+  border-radius: 12px;
+  max-width: 611px;
+  width: 92%;
+  max-height: 98vh;
+  width: 611px;
+  padding: 2rem;
+  text-align: center;
+  overflow: hidden;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  position: relative;
+}
+
+/* Success Icon */
+.class-setup-success-icon {
+  width: 64px;
+  height: 64px;
+  background: #10b981;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+}
+
+.class-setup-success-icon img {
+  width: 32px;
+  height: 32px;
+  filter: brightness(0) invert(1);
+}
+
+/* Title and Description */
+.class-setup-success-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #000;
+  margin: 0 0 0.5rem 0;
+  font-family: Urbanist;
+}
+
+.class-setup-success-description {
+  font-size: 1.125;
+  color: #666;
+  margin: 0 0 2rem 0;
+  line-height: 1.5;
+}
+
+/* Instructions Box */
+.class-setup-instructions-box {
+  background: #E5E7EB;
+  border-radius: 8px;
+  padding: 1.5rem;
+  width: 555px;
+
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.class-setup-instructions-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.class-setup-instructions-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #4B5563;
+  margin: 0;
+  flex: 1;
+}
+
+.class-setup-info-icon {
+  color: #6b7280;
+  margin-left: 0.5rem;
+  flex-shrink: 0;
+}
+
+.class-setup-instructions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.class-setup-instruction-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 1rem;
+  color: #4B5563;
+  line-height: 1.4;
+}
+
+.class-setup-instruction-icon {
+  color: #6b7280;
+  flex-shrink: 0;
+  margin-top: 0.125rem;
+}
+
+.class-setup-instruction-icon img {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) saturate(100%) invert(45%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(90%) contrast(90%);
+}
+
+/* Website Section */
+.class-setup-website-section {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: #eff6ff;
+  border: 1px solid #dbeafe;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.class-setup-website-icon {
+  flex-shrink: 0;
+}
+
+.class-setup-website-icon img {
+  width: 24px;
+  height: 24px;
+}
+
+.class-setup-website-text {
+  color: #4B5563;
+  font-family: Urbanist;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.class-setup-website-url {
+  font-weight: 600;
+  text-decoration: underline;
+  color: #7B34BF;
+}
+
+/* Action Button */
+.class-setup-success-actions {
+  margin-bottom: 1rem;
+}
+
+.class-setup-generate-button {
+  background: linear-gradient(90deg, #d60c7b 0%, #8b2db3 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.875rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  transition: all 0.2s ease;
+}
+
+.class-setup-generate-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.class-setup-button-icon {
+  color: white;
+}
+
+.class-setup-button-icon img {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) invert(1);
+}
+
+/* Close Button */
+.class-setup-close-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: #6b7280;
+  font-size: 1.75rem;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0.5rem;
+  line-height: 1;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.class-setup-close-button:hover {
+  color: #374151;
+  background: #f3f4f6;
+  transform: scale(1.1);
+}
+
+.class-setup-close-button:active {
+  transform: scale(0.95);
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .class-setup-success-container {
+    width: 95%;
+    padding: 1.5rem;
+  }
+  
+  .class-setup-success-title {
+    font-size: 1.25rem;
+  }
+  
+  .class-setup-instructions-box {
+    padding: 1rem;
+  }
+  
+  .class-setup-instructions-title {
+    font-size: 0.875rem;
+  }
+  
+  .class-setup-instruction-item {
+    font-size: 0.8rem;
+  }
+  
+  .class-setup-website-section {
+    padding: 0.75rem;
+  }
+  
+  .class-setup-website-text {
+    font-size: 0.8rem;
+  }
+  
+  /* Mobile close button adjustments */
+  .class-setup-close-button {
+    top: 0.75rem;
+    right: 0.75rem;
+    width: 36px;
+    height: 36px;
+    font-size: 1.5rem;
+  }
+}
+
+/* ========== WIZARD STYLES ========== */
+
+/* Wizard Progress Container */
+.wizard-progress-container {
+  padding: 0;
+  margin-bottom: 24px;
+  width: 100%;
+}
+
+/* Wizard Progress Bar */
+.wizard-progress-bar {
+  height: 9.892px;
+  background-color: #e5e7eb;
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 0 auto 24px auto;
+}
+
+.wizard-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #d60c7b 0%, #8b2db3 100%);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+/* Wizard Step Content */
+
+.wizard-step-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.wizard-step-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #000;
+  margin: 0 0 8px 0;
+  font-family: Urbanist;
+
+}
+
+.wizard-step-subtitle {
+  font-size: 16px;
+  color: #6b7280;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Wizard Navigation */
+.wizard-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+  padding-top: 24px;
+}
+
+.wizard-cancel-button {
+  background-color: #f3f4f6;
+  color: #374151;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: 600;
+  width: 263px;
+  height: 51.335px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.wizard-cancel-button:hover {
+  background-color: #e5e7eb;
+  border-color: #9ca3af;
+}
+
+.wizard-step-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.wizard-back-button {
+  background-color: #f3f4f6;
+  color: #374151;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 12px 24px;
+  
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.wizard-back-button:hover {
+  background-color: #e5e7eb;
+  border-color: #9ca3af;
+}
+
+.wizard-next-button {
+  background: linear-gradient(90deg, #d60c7b 0%, #8b2db3 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 18px;
+  width: 263px;
+  height: 51.335px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.wizard-next-button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(214, 12, 123, 0.3);
+}
+
+.wizard-next-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  width: 263px;
+height: 51.335px;
+  transform: none;
+}
+
+.wizard-confirm-button {
+  background: linear-gradient(90deg, #d60c7b 0%, #8b2db3 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: 600;
+  width: 263px;
+  height: 51.335px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.wizard-confirm-button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(214, 12, 123, 0.3);
+}
+
+.wizard-confirm-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Responsive Wizard */
+@media (max-width: 640px) {
+  .wizard-navigation {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .wizard-step-buttons {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .wizard-cancel-button,
+  .wizard-back-button,
+  .wizard-next-button,
+  .wizard-confirm-button {
+    width: 100%;
+    max-width: 200px;
+  }
+}
+
+/* ========== CUSTOM SCROLLBAR STYLING ========== */
+/* Hide scrollbars while keeping scroll functionality */
+.tcr-class-form-content-container::-webkit-scrollbar,
+.tcr-class-form-card::-webkit-scrollbar {
+  width: 0;
+  display: none;
+}
+
+.tcr-class-form-content-container::-webkit-scrollbar-track,
+.tcr-class-form-card::-webkit-scrollbar-track {
+  display: none;
+}
+
+.tcr-class-form-content-container::-webkit-scrollbar-thumb,
+.tcr-class-form-card::-webkit-scrollbar-thumb {
+  display: none;
+}
+
+/* For Firefox and other browsers */
+.tcr-class-form-content-container,
+.tcr-class-form-card {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
