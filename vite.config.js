@@ -14,9 +14,9 @@ export default defineConfig({
     include: ['html2canvas', 'jspdf', 'pdfjs-dist']
   },
   server: {
-    allowedHosts: [
-      '5fc7993d-f9da-4b0d-bb27-67808b15aa1b-00-3ophc9gmyz5rr.worf.replit.dev'
-    ]
+    host: true,
+    strictPort: false,
+    allowedHosts: 'all'
   },
   build: {
     rollupOptions: {
